@@ -2,7 +2,7 @@
 Этот агент проверяет код аэропорта и возвращает выходную структуру.
 
 **Класс действия:**
-action_find_international_airport
+action_find_international_flight
 
 **Параметры:**
 1. input_XML - входный XML-пример.
