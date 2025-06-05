@@ -14,11 +14,12 @@ action_translate_XML
 ### Пример
 Пример входной структуры (XML-пример): 
 
+![image](https://github.com/user-attachments/assets/a832cb9f-6f8d-413d-9cd4-dd96b4b7017f)
+
+Выходная структура:
+
 ![image](https://github.com/user-attachments/assets/9772a024-dc1e-4a8d-9bcc-e15c454cd979)
 
-Пример правил:
-
-![image](https://github.com/user-attachments/assets/a832cb9f-6f8d-413d-9cd4-dd96b4b7017f)
 
 ### Результат
 Возможные коды результата:
