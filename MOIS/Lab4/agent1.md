@@ -20,11 +20,6 @@ action_translate_XML
 
 ![image](https://github.com/user-attachments/assets/a832cb9f-6f8d-413d-9cd4-dd96b4b7017f)
 
-Пример выходной структуры:
-
-![image](https://github.com/user-attachments/assets/97142d66-b5e2-463e-8a77-5d144d2745bb)
-
-
 ### Результат
 Возможные коды результата:
 * `SC_RESULT_OK` — данные для нахождения международных рейсов сформированы.
