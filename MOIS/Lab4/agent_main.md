@@ -2,6 +2,7 @@
 Этот агент делает вывод о том, международный рейс или национальный.
 
 **Классы действия:**
+
 action_translate_XML
 
 action_find_international_flight
@@ -9,8 +10,8 @@ action_find_international_flight
 
 **Параметры:**
 1. check_airport_code — проверка кодов аэропортов
-2. input_structure - входная структура.
-3. identify_existing_of_international_flight - вывод о типе рейса
+2. input_structure — входная структура.
+3. identify_existing_of_international_flight — вывод о типе рейса
    
 **Рабочий процесс:**
 - Агенты загружают файл с примером, извлекают из него данные о рейсе, преобразуют в удобный формат, сравниваеют коды аэропортов и делают вывод о типе рейса.
