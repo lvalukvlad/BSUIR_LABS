@@ -1,0 +1,41 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+*.iml
+
+# Build / deps
+node_modules/
+dist/
+build/
+out/
+target/
+*.class
+*.o
+*.exe
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+
+# Archives & bulky junk
+*.zip
+*.rar
+*.7z
+*.tar
+*.tar.gz
+*.iso
+
+# Locks / temp office
+.~lock.*
+~$*
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
