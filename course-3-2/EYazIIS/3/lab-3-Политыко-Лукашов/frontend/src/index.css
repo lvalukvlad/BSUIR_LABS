@@ -1,0 +1,771 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  opacity: 0.9;
+}
+
+.tabs {
+  display: flex;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.tab:hover {
+  background: #f0f0f0;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom: 3px solid #667eea;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.panel h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.upload-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-btn:hover {
+  background: #5568d3;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+.hint {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.error {
+  background: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+}
+
+.documents-list h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.documents-list ul {
+  list-style: none;
+}
+
+.document-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.doc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.doc-info strong {
+  color: #333;
+}
+
+.word-count {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.doc-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.doc-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.doc-actions button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.doc-actions button:first-child:hover {
+  background: #5568d3;
+}
+
+.doc-actions button:nth-child(2) {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.doc-actions button:nth-child(2):hover {
+  background: #e0e0e0;
+}
+
+.delete-btn {
+  background: #fee !important;
+  color: #c33 !important;
+}
+
+.delete-btn:hover {
+  background: #fdd !important;
+}
+
+.document-view, .document-edit {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.document-view h3 {
+  margin-bottom: 1rem;
+}
+
+.document-view-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.document-view-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.document-view-actions button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.document-view-actions button:first-child:hover {
+  background: #5568d3;
+}
+
+.document-view-actions button:last-child {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.document-view-actions button:last-child:hover {
+  background: #e0e0e0;
+}
+
+.metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.metadata p {
+  font-size: 0.9rem;
+}
+
+.content {
+  margin-bottom: 1.5rem;
+}
+
+.content pre {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+textarea.edit-textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-actions button:first-child {
+  background: #667eea;
+  color: white;
+}
+
+.edit-actions button:first-child:hover {
+  background: #5568d3;
+}
+
+.edit-actions button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.results-table th,
+.results-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.results-table th {
+  background: #f9f9f9;
+  font-weight: 600;
+  color: #333;
+}
+
+.results-table tr:hover {
+  background: #f9f9f9;
+}
+
+.results-table .token {
+  font-weight: 500;
+  color: #333;
+}
+
+.results-table .pos {
+  color: #667eea;
+}
+
+.results-table .syntax-role {
+  font-weight: 500;
+}
+
+.results-table .syntax-role.subject {
+  color: #10b981;
+}
+
+.results-table .syntax-role.predicate {
+  color: #f59e0b;
+}
+
+.results-table .syntax-role.object {
+  color: #8b5cf6;
+}
+
+.results-table .syntax-role.attribute {
+  color: #ec4899;
+}
+
+.results-table .syntax-role.adverbial {
+  color: #06b6d4;
+}
+
+.grammemes {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.statistics {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.statistics h3 {
+  margin-bottom: 1rem;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 6px;
+}
+
+.stat-item h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.stat-item ul {
+  list-style: none;
+}
+
+.stat-item li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.text-input-section {
+  margin-bottom: 2rem;
+}
+
+.text-input-section textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.analyze-text-btn {
+  padding: 0.75rem 1.5rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.analyze-text-btn:hover {
+  background: #5568d3;
+}
+
+.analyze-text-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.sentence-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.sentence-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sentence-header h4 {
+  color: #333;
+}
+
+.sentence-header span {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.select-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.role-select {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  background: white;
+}
+
+.help-content {
+  line-height: 1.8;
+}
+
+.help-content h3 {
+  margin: 1.5rem 0 1rem;
+  color: #333;
+}
+
+.help-content ul {
+  margin-left: 1.5rem;
+}
+
+.help-content li {
+  margin-bottom: 0.5rem;
+}
+
+.help-content code {
+  background: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+.relations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.relations-table th,
+.relations-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.relations-table th {
+  background: #f9f9f9;
+  font-weight: 600;
+  color: #333;
+}
+
+.relations-table tr:hover {
+  background: #f9f9f9;
+}
+
+.relations-table td:first-child {
+  width: 50px;
+  text-align: center;
+  color: #999;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #667eea;
+  color: white;
+  transition: background 0.3s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.pagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  color: #666;
+  font-weight: 500;
+}
+
+.sentence-relations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.sentence-relations-table th,
+.sentence-relations-table td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.sentence-relations-table th {
+  background: #f9f9f9;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.sentence-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+}
+
+.sentence-pagination button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  font-size: 0.8rem;
+}
+
+.sentence-pagination button:disabled {
+  background: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.sentence-pagination span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.tree-visualization {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.tree-visualization .no-trees {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+.tree-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tree-tabs button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tree-tabs button:hover {
+  background: #f0f0f0;
+}
+
+.tree-tabs button.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.tree-sentence-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tree-sentence-selector label {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tree-sentence-selector select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.tree-view {
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.tree-view h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.tree-sentence {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.tree-root {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.tree-linearized {
+  font-size: 0.85rem;
+  color: #666;
+  background: #f0f0f0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-family: monospace;
+  margin-bottom: 1rem;
+}
+
+.tree-svg-container {
+  overflow-x: auto;
+  padding: 1rem 0 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tree-empty {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+.tree-node-meta {
+  margin-top: 1.25rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid #eef0f4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.tree-node-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #f4f7ff;
+  border: 1px solid #dbe5ff;
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
+  font-size: 0.76rem;
+  color: #334155;
+}
+
+.tree-node-meta-item strong {
+  color: #111827;
+}
+
+.tree-node-meta-pos {
+  background: #dde7ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 0.05rem 0.36rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.tree-toggle-btn,
+.relations-toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #667eea;
+  color: white;
+  transition: background 0.3s;
+}
+
+.tree-toggle-btn:hover,
+.relations-toggle-btn:hover {
+  background: #5568d3;
+}

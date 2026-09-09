@@ -1,0 +1,41 @@
+// frontend/src/api/types.ts — синхронизируйте с backend/schemas/
+
+export interface LemmaEntry {
+  lemma: string;           // "стол"
+  stem: string;            // "стол"
+  pos: string;             // "существительное"
+  rules: MorphRule[];      // правила словоизменения
+  frequency: number;       // частота в тексте
+  meta?: string;           // заметки пользователя
+}
+
+export interface MorphRule {
+  ending: string;                          // "у", "ом", "е"...
+  grammemes: Record<string, string>;       // {падеж: "дательный", число: "ед"}
+}
+
+export interface AnalysisResult {
+  total_tokens: number;
+  unique_lemmas: number;
+  lemmas: LemmaEntry[];
+  processing_time_ms: number;
+}
+
+export interface GenerateRequest {
+  lemma: string;
+  grammemes: Record<string, string>;  // {падеж: "предложный", число: "ед"}
+}
+
+export interface GenerateResponse {
+  form: string | null;    // "столе" или null, если форма не найдена
+  source_rule?: MorphRule; // какое правило сработало
+}
+
+// Эндпоинты:
+// POST /api/upload          {file: File} → {task_id: string}
+// POST /api/analyze         {file: File} → AnalysisResult
+// GET  /api/dictionary      ?search=...&pos=... → LemmaEntry[]
+// POST /api/dictionary      {LemmaEntry} → {success: true, lemma: string}
+// PUT  /api/dictionary/:lemma → {success: true}
+// POST /api/generate        GenerateRequest → GenerateResponse
+// GET  /api/help            → {sections: Array<{title, content}>}

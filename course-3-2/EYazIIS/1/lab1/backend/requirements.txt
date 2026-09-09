@@ -1,0 +1,9 @@
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pymorphy3>=0.9.1
+pymorphy3-dicts-ru>=2.4.417127.4579844
+razdel>=0.5.0
+striprtf>=0.0.26
+chardet>=5.2.0
+pydantic>=2.5.0
+python-multipart>=0.0.6
