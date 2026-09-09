@@ -1,0 +1,53 @@
+:root {
+  /* --- Основные цвета --- */
+  --background: #FEFCFF;        /* основной фон */
+  --foreground: #F7DEF8;        /* вспомогательный фон / трек слайдера */
+  --primary: #D32F2F;           /* красный - основной акцент */
+  --primary-hover: #B71C1C;     /* hover для primary */
+  --secondary: #388E3C;         /* зелёный - второстепенные кнопки */
+  --secondary-hover: #2E7D32;   /* hover для secondary */
+  --text: #D32F2F;              /* основной текст */
+  --text-inverse: #FEFCFF;      /* текст на тёмном фоне */
+  --border: #E5E5E5;            /* границы, разделители */
+
+  /* --- Слайдер --- */
+  --slider-track: var(--foreground);
+  --slider-range: var(--primary);
+  --slider-thumb: var(--primary);
+  --slider-thumb-border: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #181118;
+    --foreground: #2E2A2A;
+    --primary: #A53939;           /* приглушённый красный */
+    --primary-hover: #8B2B2B;
+    --secondary: #317B31;         /* приглушённый зелёный */
+    --secondary-hover: #276427;
+    --text: #A53939;              /* приглушённый красный для текста */
+    --text-inverse: #181118;
+    --border: #3b3b3b;
+
+    --slider-track: var(--foreground);
+    --slider-range: var(--primary);
+    --slider-thumb: var(--primary);
+    --slider-thumb-border: var(--foreground);
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Oswald Variable', sans-serif;
+}
+
+li::marker {
+  content: none;
+}

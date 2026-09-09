@@ -1,0 +1,72 @@
+/* analytics.module.css */
+
+.main {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+/* ——— КАРТА ——— */
+
+.mapContainer {
+  margin: 0 5%;
+}
+
+/* ——— ПАНЕЛЬ ГРАФИКОВ ——— */
+
+.graphPanel {
+  margin: 0 5%;
+  background-color: var(--primary, #A53939);
+  color: var(--foreground, #fff);
+  padding: 20px 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+}
+
+.regionTitle {
+  font-family: "Oswald Variable", serif;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 6px;
+}
+
+.note {
+  opacity: 0.85;
+  margin-top: 8px;
+}
+
+/* ——— СЕТКА ДЛЯ ГРАФИКОВ ——— */
+
+.grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* адаптив для планшетов и ниже */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— КАРТЫ ГРАФИКОВ ——— */
+
+.chartCard {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.chartTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.3px;
+}

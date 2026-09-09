@@ -1,0 +1,15 @@
+.div{
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+  gap: 15px;
+}
+
+.rightLi{
+  height: 100%;
+  background-color: var(--primary, #A53939);
+  color: var(--foreground, #fff);
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+  min-width: 220px;
+}

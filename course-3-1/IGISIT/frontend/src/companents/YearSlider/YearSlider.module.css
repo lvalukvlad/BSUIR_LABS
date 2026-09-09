@@ -1,0 +1,68 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  background: var(--background);
+  color: var(--text);
+  margin-top: 30px;
+}
+
+/* --- Слайдер --- */
+.sliderRoot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 60px); /* отступ 30px слева и справа */
+  height: 16px; /* толщина трека */
+  margin: 0 30px;
+  touch-action: none;
+}
+
+/* --- Трек --- */
+.sliderTrack {
+  position: relative;
+  flex-grow: 1;
+  height: 16px; /* толщина трека */
+  border-radius: 8px;
+  background-color: var(--slider-track);
+  overflow: hidden;
+}
+
+/* --- Активная часть трека --- */
+.sliderRange {
+  position: absolute;
+  height: 100%;
+  background-color: var(--slider-range);
+  border-radius: 8px;
+  transition: background-color 0.25s ease;
+}
+
+/* --- Ползунок --- */
+.sliderThumb {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--slider-thumb);
+  border: 3px solid var(--slider-thumb-border);
+  cursor: grab;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.sliderThumb:hover {
+  transform: scale(1.15);
+}
+
+.sliderThumb:active {
+  cursor: grabbing;
+}
+
+/* --- Подпись года --- */
+.yearLabel {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+}
