@@ -1,0 +1,373 @@
+Размер датасета: (1460, 81)
+
+Первые 5 строк:
+   Id  MSSubClass MSZoning  ...  SaleType  SaleCondition SalePrice
+0   1          60       RL  ...        WD         Normal    208500
+1   2          20       RL  ...        WD         Normal    181500
+2   3          60       RL  ...        WD         Normal    223500
+3   4          70       RL  ...        WD        Abnorml    140000
+4   5          60       RL  ...        WD         Normal    250000
+
+[5 rows x 81 columns]
+
+Информация о датасете:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1460 entries, 0 to 1459
+Data columns (total 81 columns):
+ #   Column         Non-Null Count  Dtype  
+---  ------         --------------  -----  
+ 0   Id             1460 non-null   int64  
+ 1   MSSubClass     1460 non-null   int64  
+ 2   MSZoning       1460 non-null   object 
+ 3   LotFrontage    1201 non-null   float64
+ 4   LotArea        1460 non-null   int64  
+ 5   Street         1460 non-null   object 
+ 6   Alley          91 non-null     object 
+ 7   LotShape       1460 non-null   object 
+ 8   LandContour    1460 non-null   object 
+ 9   Utilities      1460 non-null   object 
+ 10  LotConfig      1460 non-null   object 
+ 11  LandSlope      1460 non-null   object 
+ 12  Neighborhood   1460 non-null   object 
+ 13  Condition1     1460 non-null   object 
+ 14  Condition2     1460 non-null   object 
+ 15  BldgType       1460 non-null   object 
+ 16  HouseStyle     1460 non-null   object 
+ 17  OverallQual    1460 non-null   int64  
+ 18  OverallCond    1460 non-null   int64  
+ 19  YearBuilt      1460 non-null   int64  
+ 20  YearRemodAdd   1460 non-null   int64  
+ 21  RoofStyle      1460 non-null   object 
+ 22  RoofMatl       1460 non-null   object 
+ 23  Exterior1st    1460 non-null   object 
+ 24  Exterior2nd    1460 non-null   object 
+ 25  MasVnrType     588 non-null    object 
+ 26  MasVnrArea     1452 non-null   float64
+ 27  ExterQual      1460 non-null   object 
+ 28  ExterCond      1460 non-null   object 
+ 29  Foundation     1460 non-null   object 
+ 30  BsmtQual       1423 non-null   object 
+ 31  BsmtCond       1423 non-null   object 
+ 32  BsmtExposure   1422 non-null   object 
+ 33  BsmtFinType1   1423 non-null   object 
+ 34  BsmtFinSF1     1460 non-null   int64  
+ 35  BsmtFinType2   1422 non-null   object 
+ 36  BsmtFinSF2     1460 non-null   int64  
+ 37  BsmtUnfSF      1460 non-null   int64  
+ 38  TotalBsmtSF    1460 non-null   int64  
+ 39  Heating        1460 non-null   object 
+ 40  HeatingQC      1460 non-null   object 
+ 41  CentralAir     1460 non-null   object 
+ 42  Electrical     1459 non-null   object 
+ 43  1stFlrSF       1460 non-null   int64  
+ 44  2ndFlrSF       1460 non-null   int64  
+ 45  LowQualFinSF   1460 non-null   int64  
+ 46  GrLivArea      1460 non-null   int64  
+ 47  BsmtFullBath   1460 non-null   int64  
+ 48  BsmtHalfBath   1460 non-null   int64  
+ 49  FullBath       1460 non-null   int64  
+ 50  HalfBath       1460 non-null   int64  
+ 51  BedroomAbvGr   1460 non-null   int64  
+ 52  KitchenAbvGr   1460 non-null   int64  
+ 53  KitchenQual    1460 non-null   object 
+ 54  TotRmsAbvGrd   1460 non-null   int64  
+ 55  Functional     1460 non-null   object 
+ 56  Fireplaces     1460 non-null   int64  
+ 57  FireplaceQu    770 non-null    object 
+ 58  GarageType     1379 non-null   object 
+ 59  GarageYrBlt    1379 non-null   float64
+ 60  GarageFinish   1379 non-null   object 
+ 61  GarageCars     1460 non-null   int64  
+ 62  GarageArea     1460 non-null   int64  
+ 63  GarageQual     1379 non-null   object 
+ 64  GarageCond     1379 non-null   object 
+ 65  PavedDrive     1460 non-null   object 
+ 66  WoodDeckSF     1460 non-null   int64  
+ 67  OpenPorchSF    1460 non-null   int64  
+ 68  EnclosedPorch  1460 non-null   int64  
+ 69  3SsnPorch      1460 non-null   int64  
+ 70  ScreenPorch    1460 non-null   int64  
+ 71  PoolArea       1460 non-null   int64  
+ 72  PoolQC         7 non-null      object 
+ 73  Fence          281 non-null    object 
+ 74  MiscFeature    54 non-null     object 
+ 75  MiscVal        1460 non-null   int64  
+ 76  MoSold         1460 non-null   int64  
+ 77  YrSold         1460 non-null   int64  
+ 78  SaleType       1460 non-null   object 
+ 79  SaleCondition  1460 non-null   object 
+ 80  SalePrice      1460 non-null   int64  
+dtypes: float64(3), int64(35), object(43)
+memory usage: 924.0+ KB
+None
+
+Количество пропущенных значений по колонкам:
+Id                 0
+MSSubClass         0
+MSZoning           0
+LotFrontage      259
+LotArea            0
+                ... 
+MoSold             0
+YrSold             0
+SaleType           0
+SaleCondition      0
+SalePrice          0
+Length: 81, dtype: int64
+
+Процент пропущенных значений по колонкам:
+LotFrontage     17.739726
+Alley           93.767123
+MasVnrType      59.726027
+MasVnrArea       0.547945
+BsmtQual         2.534247
+BsmtCond         2.534247
+BsmtExposure     2.602740
+BsmtFinType1     2.534247
+BsmtFinType2     2.602740
+Electrical       0.068493
+FireplaceQu     47.260274
+GarageType       5.547945
+GarageYrBlt      5.547945
+GarageFinish     5.547945
+GarageQual       5.547945
+GarageCond       5.547945
+PoolQC          99.520548
+Fence           80.753425
+MiscFeature     96.301370
+dtype: float64
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+
+Количество пропущенных значений после обработки:
+Id               0
+MSSubClass       0
+MSZoning         0
+LotFrontage      0
+LotArea          0
+                ..
+MoSold           0
+YrSold           0
+SaleType         0
+SaleCondition    0
+SalePrice        0
+Length: 81, dtype: int64
+
+Выбросы в LotFrontage:
+Количество выбросов: 106
+Процент выбросов: 7.26%
+Значения выбросов: [110.0, 108.0, 112.0, 115.0, 110.0]...
+
+Выбросы в LotArea:
+Количество выбросов: 69
+Процент выбросов: 4.73%
+Значения выбросов: [50271, 19900, 21000, 21453, 19378]...
+
+Выбросы в YearBuilt:
+Количество выбросов: 7
+Процент выбросов: 0.48%
+Значения выбросов: [1880, 1880, 1880, 1882, 1880]...
+
+Выбросы в MasVnrArea:
+Количество выбросов: 98
+Процент выбросов: 6.71%
+Значения выбросов: [640.0, 650.0, 412.0, 456.0, 1031.0]...
+
+Выбросы в BsmtFinSF1:
+Количество выбросов: 7
+Процент выбросов: 0.48%
+Значения выбросов: [1810, 1880, 1904, 2260, 2188]...
+
+Выбросы в BsmtFinSF2:
+Количество выбросов: 167
+Процент выбросов: 11.44%
+Значения выбросов: [32, 668, 486, 93, 491]...
+
+Выбросы в BsmtUnfSF:
+Количество выбросов: 29
+Процент выбросов: 1.99%
+Значения выбросов: [1777, 1768, 1907, 1686, 2336]...
+
+Выбросы в TotalBsmtSF:
+Количество выбросов: 61
+Процент выбросов: 4.18%
+Значения выбросов: [0, 0, 2223, 0, 0]...
+
+Выбросы в 1stFlrSF:
+Количество выбросов: 20
+Процент выбросов: 1.37%
+Значения выбросов: [2207, 2223, 2259, 2158, 2234]...
+
+Выбросы в 2ndFlrSF:
+Количество выбросов: 2
+Процент выбросов: 0.14%
+Значения выбросов: [1872, 2065]...
+
+Выбросы в GrLivArea:
+Количество выбросов: 31
+Процент выбросов: 2.12%
+Значения выбросов: [2945, 3222, 3608, 3112, 2794]...
+
+Выбросы в GarageYrBlt:
+Количество выбросов: 1
+Процент выбросов: 0.07%
+Значения выбросов: [1900.0]...
+
+Выбросы в GarageArea:
+Количество выбросов: 21
+Процент выбросов: 1.44%
+Значения выбросов: [1166, 968, 1053, 1025, 947]...
+
+Выбросы в WoodDeckSF:
+Количество выбросов: 32
+Процент выбросов: 2.19%
+Значения выбросов: [857, 576, 476, 574, 441]...
+
+Выбросы в OpenPorchSF:
+Количество выбросов: 77
+Процент выбросов: 5.27%
+Значения выбросов: [204, 213, 258, 199, 234]...
+
+Выбросы в EnclosedPorch:
+Количество выбросов: 208
+Процент выбросов: 14.25%
+Значения выбросов: [272, 228, 205, 176, 205]...
+
+Выбросы в ScreenPorch:
+Количество выбросов: 116
+Процент выбросов: 7.95%
+Значения выбросов: [176, 198, 291, 252, 99]...
+
+Выбросы в SalePrice:
+Количество выбросов: 61
+Процент выбросов: 4.18%
+Значения выбросов: [345000, 385000, 438780, 383970, 372402]...
+
+Статистика после обработки выбросов:
+LotFrontage: min=31.50, max=107.50
+LotArea: min=1481.50, max=17673.50
+MasVnrArea: min=0.00, max=410.62
+BsmtFinSF1: min=0.00, max=1780.62
+GrLivArea: min=334.00, max=2747.62
+GarageArea: min=0.00, max=938.25
+
+Уникальные значения в MSZoning:
+['RL' 'RM' 'C (all)' 'FV' 'RH']
+
+Уникальные значения в Street:
+['Pave' 'Grvl']
+
+Уникальные значения в Alley:
+['None' 'Grvl' 'Pave']
+
+Уникальные значения в LotShape:
+['Reg' 'IR1' 'IR2' 'IR3']
+
+Уникальные значения в LandContour:
+['Lvl' 'Bnk' 'Low' 'HLS']
+
+Размер датасета после кодирования: (1460, 261)
+
+Первые 5 строк после кодирования:
+   MSSubClass  LotFrontage  ...  SaleCondition_Normal  SaleCondition_Partial
+0          60         65.0  ...                   1.0                    0.0
+1          20         80.0  ...                   1.0                    0.0
+2          60         68.0  ...                   1.0                    0.0
+3          70         60.0  ...                   0.0                    0.0
+4          60         84.0  ...                   1.0                    0.0
+
+[5 rows x 261 columns]
+
+Информация о датасете после кодирования:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1460 entries, 0 to 1459
+Columns: 261 entries, MSSubClass to SaleCondition_Partial
+dtypes: float64(231), int64(30)
+memory usage: 2.9 MB
+None
+
+Числовые колонки для масштабирования: ['MSSubClass', 'LotFrontage', 'LotArea', 'OverallQual', 'OverallCond', 'YearBuilt', 'YearRemodAdd', 'MasVnrArea', 'BsmtFinSF1', 'BsmtFinSF2', 'BsmtUnfSF', 'TotalBsmtSF', '1stFlrSF', '2ndFlrSF', 'LowQualFinSF', 'GrLivArea', 'BsmtFullBath', 'BsmtHalfBath', 'FullBath', 'HalfBath', 'BedroomAbvGr', 'KitchenAbvGr', 'TotRmsAbvGrd', 'Fireplaces', 'GarageYrBlt', 'GarageCars', 'GarageArea', 'WoodDeckSF', 'OpenPorchSF', 'EnclosedPorch', '3SsnPorch', 'ScreenPorch', 'PoolArea', 'MiscVal', 'MoSold', 'YrSold', 'MSZoning_FV', 'MSZoning_RH', 'MSZoning_RL', 'MSZoning_RM', 'Street_Pave', 'Alley_None', 'Alley_Pave', 'LotShape_IR2', 'LotShape_IR3', 'LotShape_Reg', 'LandContour_HLS', 'LandContour_Low', 'LandContour_Lvl', 'Utilities_NoSeWa', 'LotConfig_CulDSac', 'LotConfig_FR2', 'LotConfig_FR3', 'LotConfig_Inside', 'LandSlope_Mod', 'LandSlope_Sev', 'Neighborhood_Blueste', 'Neighborhood_BrDale', 'Neighborhood_BrkSide', 'Neighborhood_ClearCr', 'Neighborhood_CollgCr', 'Neighborhood_Crawfor', 'Neighborhood_Edwards', 'Neighborhood_Gilbert', 'Neighborhood_IDOTRR', 'Neighborhood_MeadowV', 'Neighborhood_Mitchel', 'Neighborhood_NAmes', 'Neighborhood_NPkVill', 'Neighborhood_NWAmes', 'Neighborhood_NoRidge', 'Neighborhood_NridgHt', 'Neighborhood_OldTown', 'Neighborhood_SWISU', 'Neighborhood_Sawyer', 'Neighborhood_SawyerW', 'Neighborhood_Somerst', 'Neighborhood_StoneBr', 'Neighborhood_Timber', 'Neighborhood_Veenker', 'Condition1_Feedr', 'Condition1_Norm', 'Condition1_PosA', 'Condition1_PosN', 'Condition1_RRAe', 'Condition1_RRAn', 'Condition1_RRNe', 'Condition1_RRNn', 'Condition2_Feedr', 'Condition2_Norm', 'Condition2_PosA', 'Condition2_PosN', 'Condition2_RRAe', 'Condition2_RRAn', 'Condition2_RRNn', 'BldgType_2fmCon', 'BldgType_Duplex', 'BldgType_Twnhs', 'BldgType_TwnhsE', 'HouseStyle_1.5Unf', 'HouseStyle_1Story', 'HouseStyle_2.5Fin', 'HouseStyle_2.5Unf', 'HouseStyle_2Story', 'HouseStyle_SFoyer', 'HouseStyle_SLvl', 'RoofStyle_Gable', 'RoofStyle_Gambrel', 'RoofStyle_Hip', 'RoofStyle_Mansard', 'RoofStyle_Shed', 'RoofMatl_CompShg', 'RoofMatl_Membran', 'RoofMatl_Metal', 'RoofMatl_Roll', 'RoofMatl_Tar&Grv', 'RoofMatl_WdShake', 'RoofMatl_WdShngl', 'Exterior1st_AsphShn', 'Exterior1st_BrkComm', 'Exterior1st_BrkFace', 'Exterior1st_CBlock', 'Exterior1st_CemntBd', 'Exterior1st_HdBoard', 'Exterior1st_ImStucc', 'Exterior1st_MetalSd', 'Exterior1st_Plywood', 'Exterior1st_Stone', 'Exterior1st_Stucco', 'Exterior1st_VinylSd', 'Exterior1st_Wd Sdng', 'Exterior1st_WdShing', 'Exterior2nd_AsphShn', 'Exterior2nd_Brk Cmn', 'Exterior2nd_BrkFace', 'Exterior2nd_CBlock', 'Exterior2nd_CmentBd', 'Exterior2nd_HdBoard', 'Exterior2nd_ImStucc', 'Exterior2nd_MetalSd', 'Exterior2nd_Other', 'Exterior2nd_Plywood', 'Exterior2nd_Stone', 'Exterior2nd_Stucco', 'Exterior2nd_VinylSd', 'Exterior2nd_Wd Sdng', 'Exterior2nd_Wd Shng', 'MasVnrType_BrkFace', 'MasVnrType_None', 'MasVnrType_Stone', 'ExterQual_Fa', 'ExterQual_Gd', 'ExterQual_TA', 'ExterCond_Fa', 'ExterCond_Gd', 'ExterCond_Po', 'ExterCond_TA', 'Foundation_CBlock', 'Foundation_PConc', 'Foundation_Slab', 'Foundation_Stone', 'Foundation_Wood', 'BsmtQual_Fa', 'BsmtQual_Gd', 'BsmtQual_None', 'BsmtQual_TA', 'BsmtCond_Gd', 'BsmtCond_None', 'BsmtCond_Po', 'BsmtCond_TA', 'BsmtExposure_Gd', 'BsmtExposure_Mn', 'BsmtExposure_No', 'BsmtExposure_None', 'BsmtFinType1_BLQ', 'BsmtFinType1_GLQ', 'BsmtFinType1_LwQ', 'BsmtFinType1_None', 'BsmtFinType1_Rec', 'BsmtFinType1_Unf', 'BsmtFinType2_BLQ', 'BsmtFinType2_GLQ', 'BsmtFinType2_LwQ', 'BsmtFinType2_None', 'BsmtFinType2_Rec', 'BsmtFinType2_Unf', 'Heating_GasA', 'Heating_GasW', 'Heating_Grav', 'Heating_OthW', 'Heating_Wall', 'HeatingQC_Fa', 'HeatingQC_Gd', 'HeatingQC_Po', 'HeatingQC_TA', 'CentralAir_Y', 'Electrical_FuseF', 'Electrical_FuseP', 'Electrical_Mix', 'Electrical_None', 'Electrical_SBrkr', 'KitchenQual_Fa', 'KitchenQual_Gd', 'KitchenQual_TA', 'Functional_Maj2', 'Functional_Min1', 'Functional_Min2', 'Functional_Mod', 'Functional_Sev', 'Functional_Typ', 'FireplaceQu_Fa', 'FireplaceQu_Gd', 'FireplaceQu_None', 'FireplaceQu_Po', 'FireplaceQu_TA', 'GarageType_Attchd', 'GarageType_Basment', 'GarageType_BuiltIn', 'GarageType_CarPort', 'GarageType_Detchd', 'GarageType_None', 'GarageFinish_None', 'GarageFinish_RFn', 'GarageFinish_Unf', 'GarageQual_Fa', 'GarageQual_Gd', 'GarageQual_None', 'GarageQual_Po', 'GarageQual_TA', 'GarageCond_Fa', 'GarageCond_Gd', 'GarageCond_None', 'GarageCond_Po', 'GarageCond_TA', 'PavedDrive_P', 'PavedDrive_Y', 'PoolQC_Fa', 'PoolQC_Gd', 'PoolQC_None', 'Fence_GdWo', 'Fence_MnPrv', 'Fence_MnWw', 'Fence_None', 'MiscFeature_None', 'MiscFeature_Othr', 'MiscFeature_Shed', 'MiscFeature_TenC', 'SaleType_CWD', 'SaleType_Con', 'SaleType_ConLD', 'SaleType_ConLI', 'SaleType_ConLw', 'SaleType_New', 'SaleType_Oth', 'SaleType_WD', 'SaleCondition_AdjLand', 'SaleCondition_Alloca', 'SaleCondition_Family', 'SaleCondition_Normal', 'SaleCondition_Partial']
+
+Статистика после масштабирования:
+         MSSubClass   LotFrontage  ...  SaleCondition_Normal  SaleCondition_Partial
+count  1.460000e+03  1.460000e+03  ...          1.460000e+03           1.460000e+03
+mean  -8.455945e-17 -3.443212e-16  ...         -9.915965e-17           7.056760e-17
+std    1.000343e+00  1.000343e+00  ...          1.000343e+00           1.000343e+00
+min   -8.725628e-01 -2.182189e+00  ...         -2.138345e+00          -3.059950e-01
+25%   -8.725628e-01 -5.277143e-01  ...          4.676514e-01          -3.059950e-01
+50%   -1.631095e-01 -5.248515e-03  ...          4.676514e-01          -3.059950e-01
+75%    3.098594e-01  5.752691e-01  ...          4.676514e-01          -3.059950e-01
+max    3.147673e+00  2.229744e+00  ...          4.676514e-01           3.268027e+00
+
+[8 rows x 260 columns]
+
+Первые 5 строк после масштабирования:
+   MSSubClass  LotFrontage  ...  SaleCondition_Normal  SaleCondition_Partial
+0    0.073375    -0.237456  ...              0.467651              -0.305995
+1   -0.872563     0.633321  ...              0.467651              -0.305995
+2    0.073375    -0.063300  ...              0.467651              -0.305995
+3    0.309859    -0.527714  ...             -2.138345              -0.305995
+4    0.073375     0.865528  ...              0.467651              -0.305995
+
+[5 rows x 261 columns]
+/home/ubuntuuser/Desktop/3 course/StatOIV/Slavyk/lab3/lab3_classification/main.py:153: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  df_encoded['is_expensive'] = (df_encoded['SalePrice'] > median_price).astype(int)
+
+Размер обучающей выборки (X_train): (1168, 260)
+Размер тестовой выборки (X_test): (292, 260)
+Размер обучающей выборки (y_train): (1168,)
+Размер тестовой выборки (y_test): (292,)
+
+Первые 5 строк X_train:
+      MSSubClass  LotFrontage  ...  SaleCondition_Normal  SaleCondition_Partial
+254    -0.872563     0.052803  ...              0.467651              -0.305995
+1066    0.073375    -0.585766  ...              0.467651              -0.305995
+638    -0.636078    -0.121352  ...              0.467651              -0.305995
+799    -0.163109    -0.527714  ...              0.467651              -0.305995
+380    -0.163109    -1.108232  ...              0.467651              -0.305995
+
+[5 rows x 260 columns]
+
+Первые 5 значений y_train:
+254     0
+1066    1
+638     0
+799     1
+380     0
+Name: is_expensive, dtype: int64
+
+Результаты DecisionTreeClassifier:
+Accuracy: 0.90
+Precision: 0.86
+Recall: 0.94
+F1-Score: 0.90
+ROC-AUC: 0.91
+
+Результаты KNeighborsClassifier:
+Accuracy: 0.92
+Precision: 0.91
+Recall: 0.90
+F1-Score: 0.91
+ROC-AUC: 0.96
+
+Результаты LogisticRegression:
+Accuracy: 0.94
+Precision: 0.91
+Recall: 0.97
+F1-Score: 0.94
+ROC-AUC: 0.97
+
+Результаты GaussianNB:
+Accuracy: 0.69
+Precision: 0.59
+Recall: 0.98
+F1-Score: 0.74
+ROC-AUC: 0.74
+
+Сравнительная таблица метрик:
+                    Accuracy  Precision  Recall  F1-Score  ROC-AUC
+DecisionTree            0.90       0.86    0.94      0.90     0.91
+KNeighbors              0.92       0.91    0.90      0.91     0.96
+LogisticRegression      0.94       0.91    0.97      0.94     0.97
+GaussianNB              0.69       0.59    0.98      0.74     0.74
+
+Process finished with exit code 0

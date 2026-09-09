@@ -1,0 +1,99 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler, PolynomialFeatures
+from sklearn.model_selection import train_test_split
+
+# Загрузка датасета
+data = pd.read_csv('spotify_songs.csv')
+
+# Первые 5 строк
+print(data.head())
+
+# Информация о данных (типы, пропуски)
+print(data.info())
+
+# Статистика числовых столбцов
+print(data.describe())
+
+# Уникальные значения категорий
+print(data['playlist_genre'].unique())
+print(data['playlist_subgenre'].unique())
+
+# Проверка и обработка пропусков
+print(data.isnull().sum())
+data['track_name'].fillna('unknown', inplace=True)
+data['track_artist'].fillna('unknown', inplace=True)
+data['track_album_name'].fillna('unknown', inplace=True)
+numeric_cols = ['danceability', 'energy', 'key', 'loudness', 'mode', 'speechiness', 'acousticness',
+                'instrumentalness', 'liveness', 'valence', 'tempo', 'duration_ms', 'track_popularity']
+for col in numeric_cols:
+    data[col].fillna(data[col].median(), inplace=True)
+data = data.dropna(subset=['track_popularity'])
+print(f"Размер после обработки пропусков: {data.shape}")
+
+# Визуализация выбросов (разобьём на 2 графика для читаемости)
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=data[['track_popularity', 'loudness', 'tempo', 'duration_ms']])
+plt.xticks(rotation=45)
+plt.title('Boxplots для ключевых признаков (1)')
+plt.show()
+
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=data[['danceability', 'energy', 'speechiness', 'acousticness']])
+plt.xticks(rotation=45)
+plt.title('Boxplots для ключевых признаков (2)')
+plt.show()
+
+# Обработка выбросов
+for col in numeric_cols:
+    Q1 = data[col].quantile(0.25)
+    Q3 = data[col].quantile(0.75)
+    IQR = Q3 - Q1
+    data = data[(data[col] >= Q1 - 1.5 * IQR) & (data[col] <= Q3 + 1.5 * IQR)]
+print(f"Размер после удаления выбросов: {data.shape}")
+
+# Масштабирование и нормализация (1.1)
+feature = np.array([[-500.5], [-100.1], [0], [100.1], [900.9]])
+minmax_scaler = MinMaxScaler(feature_range=(0, 1))
+scaled_feature = minmax_scaler.fit_transform(feature)
+print("MinMaxScaler результат:", scaled_feature)
+
+# Стандартизация (1.2)
+x = np.array([[-1000.1], [-200.2], [500.5], [600.6], [9000.9]])
+scaler = StandardScaler()
+standardized = scaler.fit_transform(x)
+print("StandardScaler результат:", standardized)
+print("Среднее:", round(standardized.mean(), 2))
+print("Стандартное отклонение:", round(standardized.std(), 2))
+
+# Работа с выбросами (1.3)
+robust_scaler = RobustScaler()
+robust_scaled = robust_scaler.fit_transform(x)
+print("RobustScaler результат:", robust_scaled)
+
+# Полиномиальные признаки (1.4)
+features = np.array([[2, 3], [2, 3], [2, 3]])
+polynomial_interaction = PolynomialFeatures(degree=2, include_bias=False)
+poly_features = polynomial_interaction.fit_transform(features)
+print("Полиномиальные признаки:", poly_features)
+
+interaction = PolynomialFeatures(degree=2, interaction_only=True, include_bias=False)
+interaction_features = interaction.fit_transform(features)
+print("Взаимодействия:", interaction_features)
+
+# Кодирование категориальных переменных
+data_encoded = pd.get_dummies(data, columns=['playlist_genre', 'playlist_subgenre'], drop_first=True)
+print(data_encoded.head())
+
+# Стандартизация реальных данных
+numeric_cols = [col for col in numeric_cols if col != 'track_popularity']  # Исключаем целевую
+data_encoded[numeric_cols] = scaler.fit_transform(data_encoded[numeric_cols])
+print(data_encoded[numeric_cols].describe())
+
+# Разделение на train/test
+X = data_encoded.drop(columns=['track_popularity'])
+y = data_encoded['track_popularity']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print(f"Train: {X_train.shape}, Test: {X_test.shape}")

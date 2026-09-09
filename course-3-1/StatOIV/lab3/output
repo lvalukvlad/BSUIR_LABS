@@ -1,0 +1,371 @@
+/usr/bin/python3.10 /home/ubuntuuser/Desktop/3 course/StatOIV/lab3/lab3_classification/main.py 
+Размер датасета: (100000, 54)
+
+Первые 5 строк:
+   person_id  age     sex  ... proc_lab_count is_high_risk  had_major_procedure
+0      75722   52  Female  ...              1            0                    0
+1      80185   79  Female  ...              1            1                    0
+2      19865   68    Male  ...              0            1                    0
+3      76700   15    Male  ...              0            0                    0
+4      92992   53    Male  ...              0            1                    0
+
+[5 rows x 54 columns]
+
+Информация о датасете:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 100000 entries, 0 to 99999
+Data columns (total 54 columns):
+ #   Column                       Non-Null Count   Dtype  
+---  ------                       --------------   -----  
+ 0   person_id                    100000 non-null  int64  
+ 1   age                          100000 non-null  int64  
+ 2   sex                          100000 non-null  object 
+ 3   region                       100000 non-null  object 
+ 4   urban_rural                  100000 non-null  object 
+ 5   income                       100000 non-null  float64
+ 6   education                    100000 non-null  object 
+ 7   marital_status               100000 non-null  object 
+ 8   employment_status            100000 non-null  object 
+ 9   household_size               100000 non-null  int64  
+ 10  dependents                   100000 non-null  int64  
+ 11  bmi                          100000 non-null  float64
+ 12  smoker                       100000 non-null  object 
+ 13  alcohol_freq                 69917 non-null   object 
+ 14  visits_last_year             100000 non-null  int64  
+ 15  hospitalizations_last_3yrs   100000 non-null  int64  
+ 16  days_hospitalized_last_3yrs  100000 non-null  int64  
+ 17  medication_count             100000 non-null  int64  
+ 18  systolic_bp                  100000 non-null  float64
+ 19  diastolic_bp                 100000 non-null  float64
+ 20  ldl                          100000 non-null  float64
+ 21  hba1c                        100000 non-null  float64
+ 22  plan_type                    100000 non-null  object 
+ 23  network_tier                 100000 non-null  object 
+ 24  deductible                   100000 non-null  int64  
+ 25  copay                        100000 non-null  int64  
+ 26  policy_term_years            100000 non-null  int64  
+ 27  policy_changes_last_2yrs     100000 non-null  int64  
+ 28  provider_quality             100000 non-null  float64
+ 29  risk_score                   100000 non-null  float64
+ 30  annual_medical_cost          100000 non-null  float64
+ 31  annual_premium               100000 non-null  float64
+ 32  monthly_premium              100000 non-null  float64
+ 33  claims_count                 100000 non-null  int64  
+ 34  avg_claim_amount             100000 non-null  float64
+ 35  total_claims_paid            100000 non-null  float64
+ 36  chronic_count                100000 non-null  int64  
+ 37  hypertension                 100000 non-null  int64  
+ 38  diabetes                     100000 non-null  int64  
+ 39  asthma                       100000 non-null  int64  
+ 40  copd                         100000 non-null  int64  
+ 41  cardiovascular_disease       100000 non-null  int64  
+ 42  cancer_history               100000 non-null  int64  
+ 43  kidney_disease               100000 non-null  int64  
+ 44  liver_disease                100000 non-null  int64  
+ 45  arthritis                    100000 non-null  int64  
+ 46  mental_health                100000 non-null  int64  
+ 47  proc_imaging_count           100000 non-null  int64  
+ 48  proc_surgery_count           100000 non-null  int64  
+ 49  proc_physio_count            100000 non-null  int64  
+ 50  proc_consult_count           100000 non-null  int64  
+ 51  proc_lab_count               100000 non-null  int64  
+ 52  is_high_risk                 100000 non-null  int64  
+ 53  had_major_procedure          100000 non-null  int64  
+dtypes: float64(13), int64(31), object(10)
+memory usage: 41.2+ MB
+None
+
+Количество пропущенных значений по колонкам:
+person_id                          0
+age                                0
+sex                                0
+region                             0
+urban_rural                        0
+income                             0
+education                          0
+marital_status                     0
+employment_status                  0
+household_size                     0
+dependents                         0
+bmi                                0
+smoker                             0
+alcohol_freq                   30083
+visits_last_year                   0
+hospitalizations_last_3yrs         0
+days_hospitalized_last_3yrs        0
+medication_count                   0
+systolic_bp                        0
+diastolic_bp                       0
+ldl                                0
+hba1c                              0
+plan_type                          0
+network_tier                       0
+deductible                         0
+copay                              0
+policy_term_years                  0
+policy_changes_last_2yrs           0
+provider_quality                   0
+risk_score                         0
+annual_medical_cost                0
+annual_premium                     0
+monthly_premium                    0
+claims_count                       0
+avg_claim_amount                   0
+total_claims_paid                  0
+chronic_count                      0
+hypertension                       0
+diabetes                           0
+asthma                             0
+copd                               0
+cardiovascular_disease             0
+cancer_history                     0
+kidney_disease                     0
+liver_disease                      0
+arthritis                          0
+mental_health                      0
+proc_imaging_count                 0
+proc_surgery_count                 0
+proc_physio_count                  0
+proc_consult_count                 0
+proc_lab_count                     0
+is_high_risk                       0
+had_major_procedure                0
+dtype: int64
+
+Процент пропущенных значений по колонкам:
+alcohol_freq    30.083
+dtype: float64
+Warning: Ignoring XDG_SESSION_TYPE=wayland on Gnome. Use QT_QPA_PLATFORM=wayland to run on Wayland anyway.
+
+Размер после удаления строк: (69917, 54)
+Размер после удаления колонок: (100000, 54)
+
+Выбросы в age:
+Количество выбросов: 864
+Процент выбросов: 0.86%
+Значения выбросов: [91, 96, 0, 2, 5]...
+
+Выбросы в bmi:
+Количество выбросов: 676
+Процент выбросов: 0.68%
+Значения выбросов: [42.9, 13.0, 12.0, 41.4, 40.7]...
+
+Выбросы в systolic_bp:
+Количество выбросов: 613
+Процент выбросов: 0.61%
+Значения выбросов: [160.0, 163.0, 161.0, 164.0, 160.0]...
+
+Выбросы в ldl:
+Количество выбросов: 668
+Процент выбросов: 0.67%
+Значения выбросов: [30.0, 202.1, 30.0, 220.2, 35.1]...
+
+Выбросы в income:
+Количество выбросов: 6236
+Процент выбросов: 6.24%
+Значения выбросов: [305000.0, 158700.0, 211200.0, 201300.0, 148600.0]...
+
+Выбросы в annual_medical_cost:
+Количество выбросов: 6772
+Процент выбросов: 6.77%
+Значения выбросов: [7661.01, 10011.08, 11644.96, 8031.39, 7871.35]...
+
+Статистика после обработки выбросов:
+income: min=1100.00, max=123850.00
+bmi: min=13.40, max=40.60
+
+Уникальные значения в sex:
+['Female' 'Male' 'Other']
+
+Уникальные значения в region:
+['North' 'Central' 'West' 'South' 'East']
+
+Уникальные значения в urban_rural:
+['Suburban' 'Urban' 'Rural']
+
+Уникальные значения в education:
+['Doctorate' 'No HS' 'HS' 'Some College' 'Masters' 'Bachelors']
+
+Уникальные значения в marital_status:
+['Married' 'Single' 'Divorced' 'Widowed']
+
+Уникальные значения в employment_status:
+['Retired' 'Employed' 'Self-employed' 'Unemployed']
+
+Уникальные значения в smoker:
+['Never' 'Current' 'Former']
+
+Уникальные значения в alcohol_freq:
+[nan 'Weekly' 'Daily' 'Occasional']
+
+Уникальные значения в plan_type:
+['PPO' 'POS' 'HMO' 'EPO']
+
+Уникальные значения в network_tier:
+['Bronze' 'Gold' 'Platinum' 'Silver']
+
+Размер датасета после кодирования: (100000, 58)
+
+Первые 5 строк после кодирования:
+   person_id  age  ...  network_tier_Platinum  network_tier_Silver
+0      75722   52  ...                    0.0                  0.0
+1      80185   79  ...                    0.0                  0.0
+2      19865   68  ...                    1.0                  0.0
+3      76700   15  ...                    0.0                  1.0
+4      92992   53  ...                    1.0                  0.0
+
+[5 rows x 58 columns]
+
+Информация о датасете после кодирования:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 100000 entries, 0 to 99999
+Data columns (total 58 columns):
+ #   Column                       Non-Null Count   Dtype  
+---  ------                       --------------   -----  
+ 0   person_id                    100000 non-null  int64  
+ 1   age                          100000 non-null  int64  
+ 2   income                       100000 non-null  float64
+ 3   household_size               100000 non-null  int64  
+ 4   dependents                   100000 non-null  int64  
+ 5   bmi                          100000 non-null  float64
+ 6   visits_last_year             100000 non-null  int64  
+ 7   hospitalizations_last_3yrs   100000 non-null  int64  
+ 8   days_hospitalized_last_3yrs  100000 non-null  int64  
+ 9   medication_count             100000 non-null  int64  
+ 10  systolic_bp                  100000 non-null  float64
+ 11  diastolic_bp                 100000 non-null  float64
+ 12  ldl                          100000 non-null  float64
+ 13  hba1c                        100000 non-null  float64
+ 14  deductible                   100000 non-null  int64  
+ 15  copay                        100000 non-null  int64  
+ 16  policy_term_years            100000 non-null  int64  
+ 17  policy_changes_last_2yrs     100000 non-null  int64  
+ 18  provider_quality             100000 non-null  float64
+ 19  risk_score                   100000 non-null  float64
+ 20  annual_medical_cost          100000 non-null  float64
+ 21  annual_premium               100000 non-null  float64
+ 22  monthly_premium              100000 non-null  float64
+ 23  claims_count                 100000 non-null  int64  
+ 24  avg_claim_amount             100000 non-null  float64
+ 25  total_claims_paid            100000 non-null  float64
+ 26  chronic_count                100000 non-null  int64  
+ 27  hypertension                 100000 non-null  int64  
+ 28  diabetes                     100000 non-null  int64  
+ 29  asthma                       100000 non-null  int64  
+ 30  copd                         100000 non-null  int64  
+ 31  cardiovascular_disease       100000 non-null  int64  
+ 32  cancer_history               100000 non-null  int64  
+ 33  kidney_disease               100000 non-null  int64  
+ 34  liver_disease                100000 non-null  int64  
+ 35  arthritis                    100000 non-null  int64  
+ 36  mental_health                100000 non-null  int64  
+ 37  proc_imaging_count           100000 non-null  int64  
+ 38  proc_surgery_count           100000 non-null  int64  
+ 39  proc_physio_count            100000 non-null  int64  
+ 40  proc_consult_count           100000 non-null  int64  
+ 41  proc_lab_count               100000 non-null  int64  
+ 42  is_high_risk                 100000 non-null  int64  
+ 43  had_major_procedure          100000 non-null  int64  
+ 44  sex_Male                     100000 non-null  float64
+ 45  sex_Other                    100000 non-null  float64
+ 46  region_East                  100000 non-null  float64
+ 47  region_North                 100000 non-null  float64
+ 48  region_South                 100000 non-null  float64
+ 49  region_West                  100000 non-null  float64
+ 50  urban_rural_Suburban         100000 non-null  float64
+ 51  urban_rural_Urban            100000 non-null  float64
+ 52  plan_type_HMO                100000 non-null  float64
+ 53  plan_type_POS                100000 non-null  float64
+ 54  plan_type_PPO                100000 non-null  float64
+ 55  network_tier_Gold            100000 non-null  float64
+ 56  network_tier_Platinum        100000 non-null  float64
+ 57  network_tier_Silver          100000 non-null  float64
+dtypes: float64(27), int64(31)
+memory usage: 44.3 MB
+None
+
+Числовые колонки для масштабирования: ['person_id', 'age', 'income', 'household_size', 'dependents', 'bmi', 'visits_last_year', 'hospitalizations_last_3yrs', 'days_hospitalized_last_3yrs', 'medication_count', 'systolic_bp', 'diastolic_bp', 'ldl', 'hba1c', 'deductible', 'copay', 'policy_term_years', 'policy_changes_last_2yrs', 'provider_quality', 'risk_score', 'annual_medical_cost', 'annual_premium', 'monthly_premium', 'claims_count', 'avg_claim_amount', 'total_claims_paid', 'chronic_count', 'proc_imaging_count', 'proc_surgery_count', 'proc_physio_count', 'proc_consult_count', 'proc_lab_count']
+
+Статистика после масштабирования:
+          person_id           age  ...  proc_consult_count  proc_lab_count
+count  1.000000e+05  1.000000e+05  ...        1.000000e+05    1.000000e+05
+mean  -1.207923e-18 -2.051337e-16  ...        7.759127e-17   -7.014833e-17
+std    1.000005e+00  1.000005e+00  ...        1.000005e+00    1.000005e+00
+min   -1.732033e+00 -2.972198e+00  ...       -6.758387e-01   -6.784455e-01
+25%   -8.660167e-01 -6.580596e-01  ...       -6.758387e-01   -6.784455e-01
+50%    0.000000e+00  2.992744e-02  ...       -6.758387e-01   -6.784455e-01
+75%    8.660167e-01  6.553702e-01  ...        6.510785e-01    6.540868e-01
+max    1.732033e+00  3.282230e+00  ...        8.612582e+00    8.649281e+00
+
+[8 rows x 32 columns]
+
+Первые 5 строк после масштабирования:
+   person_id       age  ...  network_tier_Platinum  network_tier_Silver
+0   0.891019  0.280105  ...                    0.0                  0.0
+1   1.045622  1.968800  ...                    0.0                  0.0
+2  -1.043924  1.280813  ...                    1.0                  0.0
+3   0.924898 -2.034034  ...                    0.0                  1.0
+4   1.489269  0.342649  ...                    1.0                  0.0
+
+[5 rows x 58 columns]
+
+Размер обучающей выборки (X_train): (80000, 57)
+Размер тестовой выборки (X_test): (20000, 57)
+Размер обучающей выборки (y_train): (80000,)
+Размер тестовой выборки (y_test): (20000,)
+
+Первые 5 строк X_train:
+       person_id       age  ...  network_tier_Platinum  network_tier_Silver
+75220   0.790595  1.593534  ...                    1.0                  0.0
+48955  -0.153789 -0.282794  ...                    0.0                  0.0
+44966  -0.775422  1.405902  ...                    0.0                  1.0
+13568  -1.552836 -0.970781  ...                    0.0                  0.0
+92727  -1.105031 -0.908237  ...                    0.0                  0.0
+
+[5 rows x 57 columns]
+
+Первые 5 значений y_train:
+75220    1
+48955    0
+44966    1
+13568    0
+92727    0
+Name: is_high_risk, dtype: int64
+
+Результаты DecisionTreeClassifier:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1-Score: 1.00
+ROC-AUC: 1.00
+
+Результаты KNeighborsClassifier:
+Accuracy: 0.88
+Precision: 0.91
+Recall: 0.74
+F1-Score: 0.82
+ROC-AUC: 0.94
+
+Результаты LogisticRegression:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1-Score: 1.00
+ROC-AUC: 1.00
+
+Результаты GaussianNB:
+Accuracy: 0.83
+Precision: 0.78
+Recall: 0.74
+F1-Score: 0.76
+ROC-AUC: 0.91
+
+Сравнительная таблица метрик:
+                    Accuracy  Precision  Recall  F1-Score  ROC-AUC
+DecisionTree            1.00       1.00    1.00      1.00     1.00
+KNeighbors              0.88       0.91    0.74      0.82     0.94
+LogisticRegression      1.00       1.00    1.00      1.00     1.00
+GaussianNB              0.83       0.78    0.74      0.76     0.91
+
+Process finished with exit code 0
+

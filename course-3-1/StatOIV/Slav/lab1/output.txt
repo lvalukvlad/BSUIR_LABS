@@ -1,0 +1,476 @@
+Загрузка данных...
+
+Первые 5 строк датасета:
+   Observation ID  ...                                              Notes
+0               1  ...           Cause bill scientist nation opportunity.
+1               2  ...  Ago current practice nation determine operatio...
+2               3  ...  Democratic shake bill here grow gas enough ana...
+3               4  ...        Officer relate animal direction eye bag do.
+4               5  ...  Class great prove reduce raise author play mov...
+
+[5 rows x 15 columns]
+
+Информация о датасете (info):
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 15 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Observation ID        1000 non-null   int64  
+ 1   Common Name           1000 non-null   object 
+ 2   Scientific Name       1000 non-null   object 
+ 3   Family                1000 non-null   object 
+ 4   Genus                 1000 non-null   object 
+ 5   Observed Length (m)   1000 non-null   float64
+ 6   Observed Weight (kg)  1000 non-null   float64
+ 7   Age Class             1000 non-null   object 
+ 8   Sex                   1000 non-null   object 
+ 9   Date of Observation   1000 non-null   object 
+ 10  Country/Region        1000 non-null   object 
+ 11  Habitat Type          1000 non-null   object 
+ 12  Conservation Status   1000 non-null   object 
+ 13  Observer Name         1000 non-null   object 
+ 14  Notes                 1000 non-null   object 
+dtypes: float64(2), int64(1), object(12)
+memory usage: 117.3+ KB
+None
+
+Краткая статистика (describe):
+        Observation ID  ...                                              Notes
+count      1000.000000  ...                                               1000
+unique             NaN  ...                                               1000
+top                NaN  ...  Ok community right then police day so store co...
+freq               NaN  ...                                                  1
+mean        500.500000  ...                                                NaN
+std         288.819436  ...                                                NaN
+min           1.000000  ...                                                NaN
+25%         250.750000  ...                                                NaN
+50%         500.500000  ...                                                NaN
+75%         750.250000  ...                                                NaN
+max        1000.000000  ...                                                NaN
+
+[11 rows x 15 columns]
+
+Размер датасета: (1000, 15)
+
+Типы данных:
+Observation ID            int64
+Common Name              object
+Scientific Name          object
+Family                   object
+Genus                    object
+Observed Length (m)     float64
+Observed Weight (kg)    float64
+Age Class                object
+Sex                      object
+Date of Observation      object
+Country/Region           object
+Habitat Type             object
+Conservation Status      object
+Observer Name            object
+Notes                    object
+dtype: object
+
+Обработка пропусков.
+Количество пропусков по столбцам:
+Observation ID          0
+Common Name             0
+Scientific Name         0
+Family                  0
+Genus                   0
+Observed Length (m)     0
+Observed Weight (kg)    0
+Age Class               0
+Sex                     0
+Date of Observation     0
+Country/Region          0
+Habitat Type            0
+Conservation Status     0
+Observer Name           0
+Notes                   0
+dtype: int64
+
+Процент пропусков:
+Observation ID          0.0
+Common Name             0.0
+Scientific Name         0.0
+Family                  0.0
+Genus                   0.0
+Observed Length (m)     0.0
+Observed Weight (kg)    0.0
+Age Class               0.0
+Sex                     0.0
+Date of Observation     0.0
+Country/Region          0.0
+Habitat Type            0.0
+Conservation Status     0.0
+Observer Name           0.0
+Notes                   0.0
+dtype: float64
+
+Числовые столбцы для заполнения медианой: ['Observation ID', 'Observed Length (m)', 'Observed Weight (kg)']
+
+Пропуски после первичной обработки:
+Observation ID          0
+Common Name             0
+Scientific Name         0
+Family                  0
+Genus                   0
+Observed Length (m)     0
+Observed Weight (kg)    0
+Age Class               0
+Sex                     0
+Date of Observation     0
+Country/Region          0
+Habitat Type            0
+Conservation Status     0
+Observer Name           0
+Notes                   0
+dtype: int64
+
+Количество дубликатов: 0
+Дубликатов после удаления: 0
+Новый размер датасета: (1000, 15)
+
+Анализ выбросов (IQR) для ключевых числовых столбцов.
+
+Столбец: Observed Length (m)
+Q1=1.637, Q3=3.010, IQR=1.372
+Нижняя граница: -0.421, Верхняя граница: 5.069
+Количество выбросов: 19
+Примеры выбросов: [5.83, 5.43, 5.07, 5.1, 5.22]
+
+Столбец: Observed Weight (kg)
+Q1=53.225, Q3=168.875, IQR=115.650
+Нижняя граница: -120.250, Верхняя граница: 342.350
+Количество выбросов: 115
+Примеры выбросов: [565.0, 350.9, 759.8, 367.9, 576.6]
+
+Преобразование типов данных
+Преобразованы даты. Примеры:
+  Date of Observation  Observation Year  Observation Month
+0          2018-03-31              2018                  3
+1          2015-01-28              2015                  1
+2          2010-12-07              2010                 12
+3          2019-11-01              2019                 11
+4          2019-07-15              2019                  7
+
+Типы данных после преобразования:
+Observation ID                   int64
+Common Name                   category
+Scientific Name               category
+Family                        category
+Genus                         category
+Observed Length (m)            float64
+Observed Weight (kg)           float64
+Age Class                     category
+Sex                           category
+Date of Observation     datetime64[ns]
+Country/Region                category
+Habitat Type                  category
+Conservation Status           category
+Observer Name                 category
+Notes                           object
+Observation Year                 int32
+Observation Month                int32
+dtype: object
+
+Создание производных признаков.
+Создан признак 'Weight_per_m'
+Флаг 'Is_Large' создан с порогом 3.83 м (90-й перцентиль = 3.83)
+Добавлен признак 'Season' (Winter/Spring/Summer/Autumn)
+
+Чистый датасет: cleaned_crocodile_dataset.csv
+
+Описательная статистика.
+                       count unique  ...                  max         std
+Observation ID        1000.0    NaN  ...               1000.0  288.819436
+Common Name             1000     18  ...                  NaN         NaN
+Scientific Name         1000     18  ...                  NaN         NaN
+Family                  1000      1  ...                  NaN         NaN
+Genus                   1000      3  ...                  NaN         NaN
+Observed Length (m)   1000.0    NaN  ...                 6.12    1.097542
+Observed Weight (kg)  1000.0    NaN  ...               1139.7  175.186788
+Age Class               1000      4  ...                  NaN         NaN
+Sex                     1000      3  ...                  NaN         NaN
+Date of Observation     1000    NaN  ...  2025-12-23 00:00:00         NaN
+Country/Region          1000     47  ...                  NaN         NaN
+Habitat Type            1000     29  ...                  NaN         NaN
+Conservation Status     1000      5  ...                  NaN         NaN
+Observer Name           1000    989  ...                  NaN         NaN
+Notes                   1000   1000  ...                  NaN         NaN
+Observation Year      1000.0    NaN  ...               2025.0    5.910964
+Observation Month     1000.0    NaN  ...                 12.0    3.368642
+Weight_per_m          1000.0    NaN  ...           497.924528   40.947784
+Is_Large              1000.0    NaN  ...                  1.0     0.30015
+Season                  1000      4  ...                  NaN         NaN
+
+[20 rows x 11 columns]
+
+Статистика для Observed Length (m):
+Медиана: 2.430
+Мода: 2.26
+Дисперсия: 1.205
+Стандартное отклонение: 1.098
+Скос: 0.347
+Куртозис: 0.230
+Интерпретация: распределение смещено вправо — много мелких особей и несколько очень больших.
+Куртозис положительный — тяжёлые хвосты/ярко выраженный пик.
+
+Статистика для Observed Weight (kg):
+Медиана: 100.600
+Мода: 11.3
+Дисперсия: 30690.411
+Стандартное отклонение: 175.187
+Скос: 2.442
+Куртозис: 6.494
+Интерпретация: распределение смещено вправо — много мелких особей и несколько очень больших.
+Куртозис положительный — тяжёлые хвосты/ярко выраженный пик.
+
+Статистика для Weight_per_m:
+Медиана: 43.634
+Мода: 10.0
+Дисперсия: 1676.721
+Стандартное отклонение: 40.948
+Скос: 2.810
+Куртозис: 16.431
+Интерпретация: распределение смещено вправо — много мелких особей и несколько очень больших.
+Куртозис положительный — тяжёлые хвосты/ярко выраженный пик.
+
+Корреляционный анализ.
+
+Матрица корреляций (числовые признаки):
+                      Observation ID  ...  Is_Large
+Observation ID              1.000000  ...  0.008245
+Observed Length (m)         0.006578  ...  0.641781
+Observed Weight (kg)       -0.030089  ...  0.813031
+Observation Year            0.035684  ... -0.019239
+Observation Month          -0.004030  ...  0.032670
+Weight_per_m               -0.038650  ...  0.570869
+Is_Large                    0.008245  ...  1.000000
+
+[7 rows x 7 columns]
+
+Корреляция между длиной и весом: 0.843
+Pearson r = 0.843, p-value = 0.0000
+Корреляция статистически значима (p < 0.05).
+
+Группировки и агрегации.
+
+Статистика по Common Name (первые 10):
+                                          Observed Length (m)  ... Observed Weight (kg)
+                                                         mean  ...                  std
+Common Name                                                    ...                     
+American Crocodile                                   2.878636  ...            82.395892
+Borneo Crocodile (disputed)                          2.517612  ...            61.738764
+Central African Slender-snouted Crocodile            1.995893  ...            44.174978
+Congo Dwarf Crocodile                                1.228750  ...             8.567056
+Cuban Crocodile                                      2.317966  ...            38.388012
+Freshwater Crocodile (Johnstone's)                   1.847333  ...            25.173912
+Hall's New Guinea Crocodile                          2.401633  ...            45.539695
+Morelet's Crocodile                                  2.151094  ...            35.536738
+Mugger Crocodile (Marsh Crocodile)                   2.820000  ...            64.240569
+New Guinea Crocodile                                 2.145441  ...            33.298807
+
+[10 rows x 11 columns]
+
+Сводная таблица: средняя длина по странам и возрастным классам (обрезано):
+Age Class                    Adult  Hatchling  Juvenile  Subadult
+Country/Region                                                   
+Australia                 2.821154      0.330  1.237857  2.972500
+Belize                    2.299167      0.260  1.060000  2.600000
+Cambodia                  2.741250        NaN  1.462500  2.630000
+Cameroon                  1.933750      0.425  0.910000  1.930000
+Central African Republic  1.417500      0.140  0.475000  1.280000
+Chad                      2.906667        NaN  1.360000  2.595000
+Colombia                  3.641429      0.490  2.113333  3.110000
+Congo (DRC)               1.482353      0.170  0.746000  1.237273
+Congo Basin Countries     2.543636      0.330  1.047143  2.238333
+Costa Rica                2.900000      0.470  1.595000  3.620000
+
+Временные ряды и тренды.
+
+Средние по годам (последние 10):
+                     Observed Length (m)  Observed Weight (kg)
+Date of Observation                                           
+2016-12-31                      2.242000            123.177500
+2017-12-31                      2.081636            122.716364
+2018-12-31                      2.445294            169.331373
+2019-12-31                      2.325660            142.694340
+2020-12-31                      2.581167            192.818333
+2021-12-31                      2.392917            140.193750
+2022-12-31                      2.466875            141.677083
+2023-12-31                      2.478667            128.222222
+2024-12-31                      2.339459            139.024324
+2025-12-31                      2.507273            183.968182
+
+Примеры скользящих средних длины (первые 5):
+     Observed Length (m)  rolling_length_3
+993                 0.39          0.390000
+750                 2.50          1.445000
+143                 3.11          2.000000
+687                 0.43          2.013333
+353                 0.88          1.473333
+
+.Визуализации: одномерные.
+
+Визуализации: категориальные признаки.
+
+Визуализации: многомерные.
+
+Визуализация количественных по группам.
+
+Таблицы сопряженности.
+Таблица сопряженности Age Class x Sex:
+Sex        Female  Male  Unknown
+Age Class                       
+Adult         159   174      177
+Hatchling      18    14       17
+Juvenile       64    65       65
+Subadult       80    72       95
+
+Процентная таблица Age Class x Habitat Type:
+Habitat Type  Billabongs  Brackish Rivers  ...  Swamps  Tidal Rivers
+Age Class                                  ...                      
+Adult                1.4              1.4  ...    16.3           0.8
+Hatchling            4.1              0.0  ...    14.3           0.0
+Juvenile             2.6              2.1  ...    12.9           1.0
+Subadult             1.2              0.8  ...    16.6           1.6
+
+[4 rows x 29 columns]
+
+Многопанельный график: обзор нескольких визуализаций.
+
+============================================================
+Аналитические запросы и ответы
+============================================================
+
+1) Средняя длина по видам (топ 10):
+                                            mean  median  count
+Common Name                                                    
+Saltwater Crocodile                     4.407759   4.475     58
+Nile Crocodile                          3.666667   3.805     48
+Orinoco Crocodile                       3.021897   3.320     58
+American Crocodile                      2.878636   3.060     66
+Mugger Crocodile (Marsh Crocodile)      2.820000   3.010     47
+Borneo Crocodile (disputed)             2.517612   2.590     67
+West African Slender-snouted Crocodile  2.471636   2.640     55
+Hall's New Guinea Crocodile             2.401633   2.690     49
+West African Crocodile                  2.335577   2.530     52
+Cuban Crocodile                         2.317966   2.420     59
+ОТВЕТ: Вид 'Saltwater Crocodile' имеет самую большую среднюю длину: 4.41 м
+ИНТЕРПРЕТАЦИЯ: этот вид, вероятно, достигает больших размеров; возможно, это взрослые особи или крупные популяции.
+
+2) Корреляция Length vs Weight: 0.843
+ИНТЕРПРЕТАЦИЯ: высокая положительная корреляция указывает, что чем длиннее, тем тяжелее; если корр < 0.3 — влияние слабое.
+
+3) Средняя длина по возрастным классам:
+               mean  median  count
+Age Class                         
+Adult      2.835784    2.74    510
+Subadult   2.625547    2.56    247
+Juvenile   1.546701    1.52    194
+Hatchling  0.414082    0.41     49
+ИНТЕРПРЕТАЦИЯ: молодые особи обычно имеют меньшую длину, взрослые — большую (ожидаемо).
+
+4) Средняя длина по странам (топ 10):
+Country/Region
+Malaysia        4.555556
+Indonesia       4.555000
+Tanzania        3.936667
+Egypt           3.766667
+India           3.601765
+Uganda          3.477143
+Kenya           3.472500
+South Africa    3.400000
+Colombia        3.190000
+Sudan           3.124000
+Name: Observed Length (m), dtype: float64
+ИНТЕРПРЕТАЦИЯ: факторы среды и локальные популяции влияют на средний размер.
+
+5) Средняя длина по сезонам:
+            mean  count
+Season                 
+Autumn  2.563320    250
+Spring  2.281570    242
+Summer  2.445481    270
+Winter  2.360756    238
+ИНТЕРПРЕТАЦИЯ: сезонные изменения могут быть связаны с размножением, активностью или видимостью особей.
+
+6) Длина по полу:
+             mean  median  count
+Sex                             
+Female   2.378318    2.40    321
+Male     2.407077    2.43    325
+Unknown  2.455847    2.52    354
+ИНТЕРПРЕТАЦИЯ: часто самцы/самки различаются по размерам; проверьте статистическую значимость при желании.
+
+7) Средняя длина по типу среды:
+                      mean  median  count
+Habitat Type                             
+Coastal Wetlands  4.683125   4.420     16
+Tidal Rivers      4.317000   4.545     10
+Mangroves         3.726562   3.725     32
+Estuaries         3.522353   3.695     34
+Large Rivers      3.498889   3.700     27
+Marshes           3.451250   3.515     24
+Reservoirs        3.045172   3.130     29
+Brackish Rivers   3.002308   3.360     13
+Flooded Savannas  2.606452   2.870     31
+Coastal Lagoons   2.605263   2.760     19
+ИНТЕРПРЕТАЦИЯ: среда обитания (река/болото/прибрежье) влияет на ресурсы и условия роста.
+
+8) Средняя длина по годам (последние 10):
+Observation Year
+2016    2.242000
+2017    2.081636
+2018    2.445294
+2019    2.325660
+2020    2.581167
+2021    2.392917
+2022    2.466875
+2023    2.478667
+2024    2.339459
+2025    2.507273
+Name: Observed Length (m), dtype: float64
+Тренд (наклон регрессии): -0.0018 м/год
+ОТВЕТ: Стабильность по годам.
+
+9) Длина по статусу сохранения:
+                           mean  median  count
+Conservation Status                           
+Least Concern          2.701745   2.560    384
+Critically Endangered  2.370255   2.400    275
+Vulnerable             2.272882   2.515    170
+Endangered             1.995893   2.230     56
+Data Deficient         1.979652   1.730    115
+ИНТЕРПРЕТАЦИЯ: различия могут указывать на влияние антропогенных факторов и отбора.
+
+10) Средняя длина по наблюдателям (топ 10 по количеству):
+                  mean       std  count
+Observer Name                          
+Sandra Becker    1.340  1.145513      2
+Ashley Hall      3.695  0.162635      2
+Matthew Smith    1.725  0.982878      2
+Matthew Miller   3.430  1.994041      2
+William Brooks   3.930  1.244508      2
+Christina Davis  1.630  1.697056      2
+Shannon Clark    1.720  1.442498      2
+Jennifer Ortiz   1.375  0.700036      2
+David Smith      2.865  1.039447      2
+Michael Lee      1.365  0.289914      2
+ИНТЕРПРЕТАЦИЯ: существенные различия могут указывать на методологию измерения или систематические ошибки.
+
+============================================================
+ОБЩИЕ ВЫВОДЫ ПО АНАЛИЗУ:
+============================================================
+- Корреляция длины и веса: 0.84 — сильная связь.
+- Средняя длина по сезонам (Winter->Autumn): {'Autumn': 2.56332, 'Spring': 2.2815702479338844, 'Summer': 2.4454814814814814, 'Winter': 2.3607563025210085}
+- Возрастные классы по средней длине: {'Adult': 2.8357843137254903, 'Subadult': 2.6255465587044533, 'Juvenile': 1.546701030927835, 'Hatchling': 0.4140816326530612}
+
+Общая измеренная длина (сумма): 2415.11 м
+Средняя длина: 2.42 м
+Количество измерений длины: 1000
+
+Process finished with exit code 0
+
