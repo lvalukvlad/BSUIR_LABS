@@ -1,0 +1,939 @@
+1. 
+// ========== Базовое определение ==========
+concept_housing_communal_equipment => 
+    n_main_idtf: "Оборудование жилищно-коммунального хозяйства"[*sc_link_content* := 
+        "Совокупность технических устройств и систем, обеспечивающих функционирование инженерной инфраструктуры"
+    ];
+
+// ========== Декомпозиция по типам ==========
+concept_housing_communal_equipment -> nrel_system_composition -> {
+    concept_sanitary_equipment => n_main_idtf: "Санитарно-техническое оборудование";
+    concept_electrical_equipment => n_main_idtf: "Электротехническое оборудование";
+    concept_thermal_equipment => n_main_idtf: "Тепловое оборудование";
+    concept_accounting_equipment => n_main_idtf: "Учётно-аналитическое оборудование";
+};
+
+// ========== Классификация по назначению ==========
+concept_housing_communal_equipment -> nrel_classification -> {
+    concept_primary_equipment => n_main_idtf: "Основное технологическое оборудование";
+    concept_auxiliary_equipment => n_main_idtf: "Вспомогательное оборудование";
+    concept_emergency_equipment => n_main_idtf: "Аварийное оборудование";
+    concept_control_equipment => n_main_idtf: "Контрольно-измерительное оборудование";
+};
+
+// ========== Нормативные документы ==========
+concept_housing_communal_equipment -> nrel_standard -> {
+    concept_GOST_30494 => n_main_idtf: "ГОСТ 30494-2011";
+    concept_SP_60 => n_main_idtf: "СП 60.13330.2016";
+};
+
+2.
+// ========== Ядро определения ==========
+concept_pump_station => 
+    n_main_idtf: "Насосная станция водоснабжения"[*sc_link_content* := 
+        "Комплекс оборудования для создания давления и подачи воды в систему центрального водоснабжения"
+    ];
+
+// ========== Состав оборудования ==========
+concept_pump_station -> nrel_consists_of -> {
+    concept_pump_aggregate => n_main_idtf: "Насосные агрегаты";
+    concept_pipeline_system => n_main_idtf: "Трубопроводы";
+    concept_shutoff_valves => n_main_idtf: "Запорная арматура";
+    concept_control_system => n_main_idtf: "Система управления";
+};
+
+// ========== Технические параметры ==========
+concept_pump_station -> nrel_has_parameter -> {
+    rrel_productivity => [*sc_link_content* := "10-1000 м³/ч"(* <- unit_m3_per_hour *)];
+    rrel_pressure => [*sc_link_content* := "15-150 м"(* <- unit_meter_water_column *)];
+    rrel_power => [*sc_link_content* := "0.75-315 кВт"(* <- unit_kW *)];
+};
+
+// ========== Эксплуатационные характеристики ==========
+concept_pump_station -> nrel_characteristic -> {
+    rrel_lifetime => [*sc_link_content* := "8-12 лет"];
+    rrel_maintenance_interval => [*sc_link_content* := "2-3 года"];
+};
+
+// ========== Автоматизация ==========
+concept_control_system -> nrel_includes -> {
+    concept_frequency_converter => n_main_idtf: "Частотное регулирование";
+    concept_flow_sensor => n_main_idtf: "Датчик расхода";
+    concept_pressure_sensor => n_main_idtf: "Датчик давления";
+};
+
+3.
+// ========== Базовое определение ==========
+concept_centrifugal_pump => 
+    n_main_idtf: "Центробежный насос"[*sc_link_content* := 
+        "Гидравлическая машина для перемещения жидкостей путём преобразования механической энергии"
+    ];
+
+// ========== Конструктивные элементы ==========
+concept_centrifugal_pump -> nrel_structural_component -> {
+    concept_impeller => n_main_idtf: "Рабочее колесо (крыльчатка)";
+    concept_volute => n_main_idtf: "Спиральный отвод";
+    concept_shaft => n_main_idtf: "Вал";
+    concept_bearing => n_main_idtf: "Подшипниковый узел";
+    concept_seal => n_main_idtf: "Торцевое уплотнение";
+};
+
+// ========== Материалы исполнения ==========
+concept_centrifugal_pump -> nrel_material -> {
+    concept_cast_iron => n_main_idtf: "Чугун"(* <- material_cast_iron *);
+    concept_stainless_steel => n_main_idtf: "Нержавеющая сталь"(* <- material_steel *);
+    concept_silicon_carbide => n_main_idtf: "Карбид кремния"(* <- material_SiC *);
+};
+
+// ========== Технические параметры ==========
+concept_centrifugal_pump -> nrel_technical_specification -> {
+    rrel_flow_rate => [*sc_link_content* := "10-1000 м³/ч"];
+    rrel_head => [*sc_link_content* := "15-150 м"];
+    rrel_efficiency => [*sc_link_content* := "60-85%"];
+    rrel_power => [*sc_link_content* := "0.75-315 кВт"];
+};
+
+// ========== Применение в ЖКХ ==========
+concept_centrifugal_pump -> nrel_application -> {
+    concept_cold_water_supply => n_main_idtf: "Системы холодного водоснабжения";
+    concept_hot_water_supply => n_main_idtf: "Системы горячего водоснабжения";
+    concept_heating_system => n_main_idtf: "Циркуляционные системы отопления";
+};
+
+4.
+// ========== Базовое определение ==========
+concept_heat_point => 
+    n_main_idtf: "Тепловой пункт"[*sc_link_content* := 
+        "Комплекс оборудования для подключения системы отопления здания к тепловым сетям"
+    ];
+
+// ========== Основные компоненты ==========
+concept_heat_point -> nrel_contains -> {
+    concept_heat_exchanger => n_main_idtf: "Теплообменник";
+    concept_circulation_pump => n_main_idtf: "Циркуляционный насос";
+    concept_control_valve => n_main_idtf: "Регулятор температуры";
+    concept_filter => n_main_idtf: "Фильтр";
+    concept_heat_meter => n_main_idtf: "Прибор учёта тепла";
+};
+
+// ========== Типы схем подключения ==========
+concept_heat_point -> nrel_scheme_type -> {
+    concept_dependent_scheme => n_main_idtf: "Зависимая схема";
+    concept_independent_scheme => n_main_idtf: "Независимая схема";
+    concept_mixed_scheme => n_main_idtf: "Смешанная схема";
+};
+
+// ========== Параметры контроля ==========
+concept_heat_point -> nrel_control_parameter -> {
+    rrel_supply_temp => [*sc_link_content* := "70-95 °C"];
+    rrel_return_temp => [*sc_link_content* := "40-70 °C"];
+    rrel_pressure_drop => [*sc_link_content* := "0.1-0.3 МПа"];
+};
+
+// ========== Автоматика ==========
+concept_automation_system -> nrel_includes -> {
+    concept_weather_compensation => n_main_idtf: "Погодное регулирование";
+    concept_flow_balancing => n_main_idtf: "Балансировка потоков";
+    concept_safety_control => n_main_idtf: "Защита от превышения параметров";
+};
+
+5.
+// ========== Базовое определение ==========
+concept_smart_water_meter => 
+    n_main_idtf: "Умный водосчётчик"[*sc_link_content* := 
+        "Прибор учёта расхода воды с интегрированными средствами дистанционного съёма данных"
+    ];
+
+// ========== Технологии связи ==========
+concept_smart_water_meter -> nrel_communication_technology -> {
+    concept_NB_IoT => n_main_idtf: "NB-IoT";
+    concept_LoRaWAN => n_main_idtf: "LoRaWAN";
+    concept_M-Bus => n_main_idtf: "M-Bus";
+};
+
+// ========== Конструктивные особенности ==========
+concept_smart_water_meter -> nrel_design_feature -> {
+    concept_dry_sensor => n_main_idtf: "Сухоходное исполнение";
+    concept_pulse_output => n_main_idtf: "Импульсный выход";
+    concept_embedded_modem => n_main_idtf: "Встроенный модуль связи";
+};
+
+// ========== Технические параметры ==========
+concept_smart_water_meter -> nrel_technical_specification -> {
+    rrel_diameter => [*sc_link_content* := "DN15-DN40"];
+    rrel_accuracy => [*sc_link_content* := "Класс B, C"];
+    rrel_calibration_interval => [*sc_link_content* := "4-6 лет"];
+};
+
+// ========== Функциональные возможности ==========
+concept_smart_water_meter -> nrel_functionality -> {
+    concept_auto_reading => n_main_idtf: "Автоматический съём показаний";
+    concept_leak_detection => n_main_idtf: "Обнаружение утечек";
+    concept_pressure_monitoring => n_main_idtf: "Контроль давления";
+};
+
+6.
+// ========== Ядро определения ==========
+concept_telemetry_module => 
+    n_main_idtf: "Телеметрический модуль"[*sc_link_content* := 
+        "Устройство для сбора, обработки и передачи данных о состоянии инженерного оборудования"
+    ];
+
+// ========== Аппаратные компоненты ==========
+concept_telemetry_module -> nrel_hardware_component -> {
+    concept_microprocessor => n_main_idtf: "Микропроцессор";
+    concept_communication_module => n_main_idtf: "Модуль связи";
+    concept_sensor_interface => n_main_idtf: "Интерфейсы датчиков";
+    concept_power_supply => n_main_idtf: "Источник питания";
+};
+
+// ========== Поддерживаемые протоколы ==========
+concept_telemetry_module -> nrel_communication_protocol -> {
+    concept_Modbus_RTU => n_main_idtf: "Modbus RTU";
+    concept_MQTT => n_main_idtf: "MQTT";
+    concept_OPC_UA => n_main_idtf: "OPC UA";
+};
+
+// ========== Эксплуатационные параметры ==========
+concept_telemetry_module -> nrel_operational_parameter -> {
+    rrel_temperature_range => [*sc_link_content* := "-40...+70 °C"];
+    rrel_protection_class => [*sc_link_content* := "IP65"];
+    rrel_battery_life => [*sc_link_content* := "до 5 лет"];
+};
+
+// ========== Типы подключений ==========
+concept_telemetry_module -> nrel_connection_type -> {
+    concept_wired_connection -> nrel_example -> concept_RS485;
+    concept_wireless_connection -> nrel_example -> concept_LoRa;
+};
+
+7.
+// ========== Базовое определение ==========
+concept_shutoff_valve => 
+    n_main_idtf: "Запорная арматура"[*sc_link_content* := 
+        "Технические устройства для управления потоком рабочей среды"
+    ];
+
+// ========== Классификация по конструкции ==========
+concept_shutoff_valve -> nrel_design_type -> {
+    concept_gate_valve => n_main_idtf: "Задвижка";
+    concept_ball_valve => n_main_idtf: "Шаровой кран";
+    concept_globe_valve => n_main_idtf: "Вентиль";
+};
+
+// ========== Материалы исполнения ==========
+concept_shutoff_valve -> nrel_material -> {
+    concept_cast_iron => n_main_idtf: "Чугун";
+    concept_stainless_steel => n_main_idtf: "Нержавеющая сталь";
+    concept_brass => n_main_idtf: "Латунь";
+};
+
+// ========== Ключевые параметры ==========
+concept_shutoff_valve -> nrel_technical_parameter -> {
+    rrel_nominal_diameter => [*sc_link_content* := "DN15-DN1600"];
+    rrel_pressure_rating => [*sc_link_content* := "PN6-PN400"];
+    rrel_temperature_range => [*sc_link_content* := "-200..+600 °C"];
+};
+
+// ========== Типы приводов ==========
+concept_shutoff_valve -> nrel_actuator_type -> {
+    concept_manual_actuator => n_main_idtf: "Ручной привод";
+    concept_electric_actuator => n_main_idtf: "Электропривод";
+    concept_pneumatic_actuator => n_main_idtf: "Пневмопривод";
+};
+
+8.
+// ========== Базовое определение ==========
+concept_pressure_regulator => 
+    n_main_idtf: "Регулятор давления"[*sc_link_content* := 
+        "Автоматическое устройство для поддержания постоянного давления"
+    ];
+
+// ========== Принципы действия ==========
+concept_pressure_regulator -> nrel_operation_principle -> {
+    concept_direct_acting => n_main_idtf: "Прямого действия";
+    concept_pilot_operated => n_main_idtf: "Непрямого действия";
+};
+
+// ========== Конструктивные элементы ==========
+concept_pressure_regulator -> nrel_structural_component -> {
+    concept_body => n_main_idtf: "Корпус";
+    concept_valve_assembly => n_main_idtf: "Регулирующий орган";
+    concept_membrane => n_main_idtf: "Чувствительная мембрана";
+};
+
+// ========== Технические характеристики ==========
+concept_pressure_regulator -> nrel_technical_specification -> {
+    rrel_pressure_range => [*sc_link_content* := "0.5-16 бар"];
+    rrel_accuracy => [*sc_link_content* := "±5-10%"];
+    rrel_flow_coefficient => [*sc_link_content* := "Kvs 0.01-500 м³/ч"];
+};
+
+// ========== Применение в ЖКХ ==========
+concept_pressure_regulator -> nrel_application -> {
+    concept_distribution_network => n_main_idtf: "Распределительные сети";
+    concept_building_inlet => n_main_idtf: "Ввод в здание";
+    concept_hydraulic_shock => n_main_idtf: "Защита от гидроударов";
+};
+
+9.
+// ========== Базовое определение ==========
+concept_hydraulic_accumulator => 
+    n_main_idtf: "Гидроаккумулятор"[*sc_link_content* := 
+        "Устройство для накопления гидравлической энергии"
+    ];
+
+// ========== Типы конструкции ==========
+concept_hydraulic_accumulator -> nrel_design_type -> {
+    concept_membrane_type => n_main_idtf: "Мембранный";
+    concept_piston_type => n_main_idtf: "Поршневой";
+};
+
+// ========== Основные параметры ==========
+concept_hydraulic_accumulator -> nrel_technical_parameter -> {
+    rrel_volume => [*sc_link_content* := "5-1000 литров"];
+    rrel_working_pressure => [*sc_link_content* := "6-16 бар"];
+    rrel_precharge_pressure => [*sc_link_content* := "1.5 бар"];
+};
+
+// ========== Функции в системе ==========
+concept_hydraulic_accumulator -> nrel_function -> {
+    concept_water_reserve => n_main_idtf: "Создание резерва воды";
+    concept_pump_protection => n_main_idtf: "Защита насоса";
+    concept_pressure_stabilization => n_main_idtf: "Стабилизация давления";
+};
+
+// ========== Компоненты ==========
+concept_hydraulic_accumulator -> nrel_component -> {
+    concept_membrane => n_main_idtf: "Эластомерная мембрана";
+    concept_air_valve => n_main_idtf: "Воздушный клапан";
+    concept_flange => n_main_idtf: "Фланец";
+};
+
+10.
+// ========== Базовое определение ==========
+concept_plate_heat_exchanger => 
+    n_main_idtf: "Пластинчатый теплообменник"[*sc_link_content* := 
+        "Устройство для передачи тепла между средами через тонкие металлические пластины"
+    ];
+
+// ========== Типы конструкции ==========
+concept_plate_heat_exchanger -> nrel_construction_type -> {
+    concept_gasketed => n_main_idtf: "Разборный";
+    concept_brazed => n_main_idtf: "Паяный";
+};
+
+// ========== Материалы ==========
+concept_plate_heat_exchanger -> nrel_material -> {
+    concept_plate_material => n_main_idtf: "Пластины AISI 316";
+    concept_gasket_material => n_main_idtf: "Прокладки EPDM";
+};
+
+// ========== Технические параметры ==========
+concept_plate_heat_exchanger -> nrel_technical_parameter -> {
+    rrel_heat_area => [*sc_link_content* := "0.1-2000 м²"];
+    rrel_pressure => [*sc_link_content* := "до 25 бар"];
+    rrel_efficiency => [*sc_link_content* := "до 90%"];
+};
+
+// ========== Обслуживание ==========
+concept_plate_heat_exchanger -> nrel_maintenance -> {
+    concept_cleaning_interval => [*sc_link_content* := "1-2 раза в год"];
+    concept_cleaning_method => n_main_idtf: "Гидропневматическая промывка";
+};
+
+11.
+// ========== Ядро определения ==========
+concept_heating_elevator => 
+    n_main_idtf: "Элеватор отопительный"[*sc_link_content* := 
+        "Струйный насос для смешения высокотемпературного теплоносителя с обратной водой"
+    ];
+
+// ========== Конструктивные элементы ==========
+concept_heating_elevator -> nrel_structural_component -> {
+    concept_nozzle => n_main_idtf: "Сопло";
+    concept_mixing_chamber => n_main_idtf: "Камера смешения";
+    concept_diffuser => n_main_idtf: "Диффузор";
+};
+
+// ========== Технические параметры ==========
+concept_heating_elevator -> nrel_technical_parameter -> {
+    rrel_nominal_diameter => [*sc_link_content* := "DN20-DN100"];
+    rrel_mixing_ratio => [*sc_link_content* := "2-5"];
+    rrel_flow_rate => [*sc_link_content* := "2-100 т/ч"];
+};
+
+// ========== Особенности эксплуатации ==========
+concept_heating_elevator -> nrel_operational_feature -> {
+    concept_no_electricity => n_main_idtf: "Не требует электропитания";
+    concept_self_regulating => n_main_idtf: "Саморегулирующаяся система";
+};
+
+12.
+// ========== Базовое определение ==========
+concept_backup_generator => 
+    n_main_idtf: "Резервный генератор"[*sc_link_content* := 
+        "Автономный источник электроснабжения на базе ДВС"
+    ];
+
+// ========== Типы генераторов ==========
+concept_backup_generator -> nrel_generator_type -> {
+    concept_diesel_generator => n_main_idtf: "Дизельный";
+    concept_gas_generator => n_main_idtf: "Газовый";
+};
+
+// ========== Технические характеристики ==========
+concept_backup_generator -> nrel_technical_specification -> {
+    rrel_power_output => [*sc_link_content* := "5-2000 кВт"];
+    rrel_autonomy_time => [*sc_link_content* := "8-72 часа"];
+    rrel_startup_time => [*sc_link_content* := "3-10 секунд"];
+};
+
+// ========== Система автоматики ==========
+concept_backup_generator -> nrel_automation_system -> {
+    concept_ats => n_main_idtf: "Автоматический ввод резерва";
+    concept_remote_monitoring => n_main_idtf: "Дистанционный мониторинг";
+};
+
+13.
+// ========== Базовое определение ==========
+concept_sewage_pumping_station => 
+    n_main_idtf: "Канализационная насосная станция"[*sc_link_content* := 
+        "Комплекс оборудования для перекачки сточных вод"
+    ];
+
+// ========== Основные компоненты ==========
+concept_sewage_pumping_station -> nrel_component -> {
+    concept_receiving_well => n_main_idtf: "Приёмный резервуар";
+    concept_sewage_pump => n_main_idtf: "Фекальный насос";
+    concept_pressure_pipeline => n_main_idtf: "Напорный трубопровод";
+};
+
+// ========== Технические параметры ==========
+concept_sewage_pumping_station -> nrel_technical_parameter -> {
+    rrel_capacity => [*sc_link_content* := "5-500 м³/ч"];
+    rrel_pump_power => [*sc_link_content* := "1.5-55 кВт"];
+    rrel_installation_depth => [*sc_link_content* := "2-15 м"];
+};
+
+// ========== Системы безопасности ==========
+concept_sewage_pumping_station -> nrel_safety_system -> {
+    concept_level_control => n_main_idtf: "Контроль уровня";
+    concept_emergency_alarm => n_main_idtf: "Аварийная сигнализация";
+};
+
+14.
+// ========== Базовое определение ==========
+concept_mechanical_filter => 
+    n_main_idtf: "Фильтр механической очистки"[*sc_link_content* := 
+        "Устройство для удаления твёрдых частиц из жидкости"
+    ];
+
+// ========== Типы фильтров ==========
+concept_mechanical_filter -> nrel_filter_type -> {
+    concept_mesh_filter => n_main_idtf: "Сетчатый";
+    concept_disc_filter => n_main_idtf: "Дисковый";
+};
+
+// ========== Технические параметры ==========
+concept_mechanical_filter -> nrel_technical_parameter -> {
+    rrel_filtration_fineness => [*sc_link_content* := "50-500 мкм"];
+    rrel_pressure_loss => [*sc_link_content* := "0.1-0.5 бар"];
+};
+
+// ========== Обслуживание ==========
+concept_mechanical_filter -> nrel_maintenance -> {
+    concept_cleaning_interval => [*sc_link_content* := "1 раз в месяц"];
+    concept_cleaning_method => n_main_idtf: "Обратная промывка";
+};
+
+15.
+// ========== Базовое определение ==========
+concept_street_lighting => 
+    n_main_idtf: "Уличное освещение"[*sc_link_content* := 
+        "Комплекс светотехнического оборудования для освещения территорий"
+    ];
+
+// ========== Компоненты системы ==========
+concept_street_lighting -> nrel_component -> {
+    concept_lighting_pole => n_main_idtf: "Опоры освещения";
+    concept_smart_luminaire => n_main_idtf: "Интеллектуальный светильник";
+    concept_control_cabinet => n_main_idtf: "Шкаф управления";
+};
+
+// ========== Технологии управления ==========
+concept_street_lighting -> nrel_control_technology -> {
+    concept_motion_sensor => n_main_idtf: "Датчик движения";
+    concept_light_sensor => n_main_idtf: "Датчик освещённости";
+    concept_remote_control => n_main_idtf: "Дистанционное управление";
+};
+
+// ========== Технические параметры ==========
+concept_smart_luminaire -> nrel_technical_parameter -> {
+    rrel_power => [*sc_link_content* := "50-200 Вт"];
+    rrel_lifetime => [*sc_link_content* := "50 000 часов"];
+};
+
+16.
+// ========== Ядро определения ==========
+concept_check_valve => 
+    n_main_idtf: "Обратный клапан"[*sc_link_content* := 
+        "Устройство для предотвращения обратного потока рабочей среды"
+    ];
+
+// ========== Конструктивные типы ==========
+concept_check_valve -> nrel_design_type -> {
+    concept_swing_check => n_main_idtf: "Поворотный";
+    concept_lift_check => n_main_idtf: "Подъемный";
+    concept_ball_check => n_main_idtf: "Шаровой";
+};
+
+// ========== Материалы исполнения ==========
+concept_check_valve -> nrel_material_composition -> {
+    concept_valve_body -> nrel_made_of -> concept_ductile_iron;
+    concept_seat -> nrel_made_of -> concept_brass;
+    concept_seal -> nrel_made_of -> concept_NBR;
+};
+
+// ========== Технические параметры ==========
+concept_check_valve -> nrel_technical_parameter -> {
+    rrel_operating_pressure => [*sc_link_content* := "PN10-PN40"];
+    rrel_cracking_pressure => [*sc_link_content* := "0.05-0.5 бар"];
+    rrel_temperature_range => [*sc_link_content* := "-20..+150 °C"];
+};
+
+// ========== Применение в системах ЖКХ ==========
+concept_check_valve -> nrel_application -> {
+    concept_water_supply_system => n_main_idtf: "Системы водоснабжения";
+    concept_heating_system => n_main_idtf: "Тепловые пункты";
+};
+
+17.
+// ========== Базовое определение ==========
+concept_electromagnetic_flowmeter => 
+    n_main_idtf: "Электромагнитный расходомер"[*sc_link_content* := 
+        "Прибор для измерения расхода электропроводящих жидкостей"
+    ];
+
+// ========== Конструктивные элементы ==========
+concept_electromagnetic_flowmeter -> nrel_structural_component -> {
+    concept_measuring_tube => n_main_idtf: "Измерительная трубка";
+    concept_electrodes => n_main_idtf: "Электроды";
+    concept_excitation_coil => n_main_idtf: "Катушки возбуждения";
+};
+
+// ========== Технические характеристики ==========
+concept_electromagnetic_flowmeter -> nrel_technical_specification -> {
+    rrel_accuracy => [*sc_link_content* := "±0.2%"];
+    rrel_diameter_range => [*sc_link_content* := "DN15-DN2000"];
+    rrel_pressure_rating => [*sc_link_content* := "PN16"];
+};
+
+// ========== Эксплуатационные требования ==========
+concept_electromagnetic_flowmeter -> nrel_operational_requirement -> {
+    concept_minimum_conductivity => [*sc_link_content* := "5 μS/cm"];
+    concept_grounding_requirement => n_main_idtf: "Обязательное заземление";
+};
+
+18.
+// ========== Базовое определение ==========
+concept_thermostat => 
+    n_main_idtf: "Терморегулятор"[*sc_link_content* := 
+        "Устройство для автоматического поддержания заданной температуры"
+    ];
+
+// ========== Типы регуляторов ==========
+concept_thermostat -> nrel_regulator_type -> {
+    concept_mechanical_thermostat => n_main_idtf: "Механический";
+    concept_electronic_thermostat => n_main_idtf: "Электронный";
+    concept_programmable_thermostat => n_main_idtf: "Программируемый";
+};
+
+// ========== Функциональные возможности ==========
+concept_thermostat -> nrel_functionality -> {
+    concept_temperature_control => n_main_idtf: "Поддержание температуры";
+    concept_energy_saving => n_main_idtf: "Режим энергосбережения";
+    concept_remote_access => n_main_idtf: "Дистанционное управление";
+};
+
+// ========== Технические параметры ==========
+concept_thermostat -> nrel_technical_parameter -> {
+    rrel_control_range => [*sc_link_content* := "+5..+90 °C"];
+    rrel_accuracy => [*sc_link_content* := "±0.5 °C"];
+    rrel_response_time => [*sc_link_content* := "< 5 мин"];
+};
+
+19.
+// ========== Базовое определение ==========
+concept_transformer_substation => 
+    n_main_idtf: "Трансформаторная подстанция"[*sc_link_content* := 
+        "Электроустановка для преобразования и распределения электроэнергии"
+    ];
+
+// ========== Основные компоненты ==========
+concept_transformer_substation -> nrel_main_component -> {
+    concept_power_transformer => n_main_idtf: "Силовой трансформатор";
+    concept_switchgear => n_main_idtf: "Распределительное устройство";
+    concept_protection_relay => n_main_idtf: "Релейная защита";
+};
+
+// ========== Типы подстанций ==========
+concept_transformer_substation -> nrel_substation_type -> {
+    concept_ktp => n_main_idtf: "КТП (Комплектная)";
+    concept_mtp => n_main_idtf: "МТП (Мачтовая)";
+    concept_ztp => n_main_idtf: "ЗТП (Закрытая)";
+};
+
+// ========== Технические параметры ==========
+concept_transformer_substation -> nrel_technical_parameter -> {
+    rrel_input_voltage => [*sc_link_content* := "6-35 кВ"];
+    rrel_output_voltage => [*sc_link_content* := "0.4 кВ"];
+    rrel_power_capacity => [*sc_link_content* := "100-2500 кВА"];
+};
+
+20.
+// ========== Базовое определение ==========
+concept_ventilation_system => 
+    n_main_idtf: "Система вентиляции"[*sc_link_content* := 
+        "Комплекс оборудования для воздухообмена в помещениях"
+    ];
+
+// ========== Основные компоненты ==========
+concept_ventilation_system -> nrel_system_component -> {
+    concept_ventilation_fan => n_main_idtf: "Вентиляторы";
+    concept_air_duct => n_main_idtf: "Воздуховоды";
+    concept_air_filter => n_main_idtf: "Фильтры";
+    concept_heat_recovery => n_main_idtf: "Рекуператоры";
+};
+
+// ========== Типы систем ==========
+concept_ventilation_system -> nrel_system_type -> {
+    concept_natural_ventilation => n_main_idtf: "Естественная";
+    concept_mechanical_ventilation => n_main_idtf: "Механическая";
+};
+
+// ========== Параметры контроля ==========
+concept_ventilation_system -> nrel_control_parameter -> {
+    rrel_air_flow => [*sc_link_content* := "100-10000 м³/ч"];
+    rrel_noise_level => [*sc_link_content* := "< 45 дБ"];
+    rrel_energy_efficiency => [*sc_link_content* := "Класс A++"];
+};
+
+21.
+// ========== Ядро определения ==========
+concept_elevator_equipment => 
+    n_main_idtf: "Лифтовое оборудование"[*sc_link_content* := 
+        "Комплекс устройств для вертикального транспорта в многоквартирных домах"
+    ];
+
+// ========== Основные компоненты ==========
+concept_elevator_equipment -> nrel_component -> {
+    concept_elevator_car => n_main_idtf: "Кабина лифта"[
+        *sc_link_content* := "Металлическая кабина с системой безопасности"
+    ];
+    concept_hoisting_machine => n_main_idtf: "Лебедка"[
+        *sc_link_content* := "Электромеханическое устройство для перемещения кабины"
+    ];
+    concept_control_system => n_main_idtf: "Система управления"[
+        *sc_link_content* := "Микропроцессорный контроллер с алгоритмами оптимизации"
+    ];
+};
+
+// ========== Технические параметры ==========
+concept_elevator_equipment -> nrel_technical_parameter -> {
+    rrel_capacity => [*sc_link_content* := "320-1000 кг"(* <- unit_kg *)];
+    rrel_speed => [*sc_link_content* := "0.5-4 м/с"(* <- unit_m_per_sec *)];
+    rrel_stops_number => [*sc_link_content* := "5-25 этажей"];
+};
+
+// ========== Системы безопасности ==========
+concept_elevator_equipment -> nrel_safety_system -> {
+    concept_overspeed_governor => n_main_idtf: "Ограничитель скорости";
+    concept_safety_gear => n_main_idtf: "Ловители";
+    concept_emergency_lighting => n_main_idtf: "Аварийное освещение";
+};
+
+// ========== Нормативная база ==========
+concept_elevator_equipment -> nrel_standard -> {
+    concept_gost_r_53780 => n_main_idtf: "ГОСТ Р 53780-2015";
+    concept_technical_regulation => n_main_idtf: "ТР ТС 011/2011";
+};
+
+22.
+// ========== Базовое определение ==========
+concept_fire_pump => 
+    n_main_idtf: "Пожарный насос"[*sc_link_content* := 
+        "Специальный насос для систем противопожарного водоснабжения"
+    ];
+
+// ========== Технические характеристики ==========
+concept_fire_pump -> nrel_technical_specification -> {
+    rrel_head => [*sc_link_content* := "40-200 м"(* <- unit_meter_water_column *)];
+    rrel_flow_rate => [*sc_link_content* := "5-100 л/с"(* <- unit_liter_per_sec *)];
+    rrel_start_time => [*sc_link_content* := "< 15 сек"];
+};
+
+// ========== Типы приводов ==========
+concept_fire_pump -> nrel_drive_type -> {
+    concept_electric_drive => n_main_idtf: "Электрический привод";
+    concept_diesel_drive => n_main_idtf: "Дизельный привод";
+};
+
+// ========== Требования к установке ==========
+concept_fire_pump -> nrel_installation_requirement -> {
+    concept_emergency_power => n_main_idtf: "Резервное питание";
+    concept_remote_start => n_main_idtf: "Дистанционный пуск";
+    concept_weekly_test => n_main_idtf: "Еженедельное тестирование";
+};
+
+23.
+// ========== Базовое определение ==========
+concept_pressure_sensor => 
+    n_main_idtf: "Датчик давления"[*sc_link_content* := 
+        "Устройство для измерения давления жидкостей и газов в системах ЖКХ"
+    ];
+
+// ========== Принципы измерения ==========
+concept_pressure_sensor -> nrel_measurement_principle -> {
+    concept_strain_gauge => n_main_idtf: "Тензометрический";
+    concept_piezoelectric => n_main_idtf: "Пьезоэлектрический";
+    concept_capacitive => n_main_idtf: "Емкостной";
+};
+
+// ========== Технические параметры ==========
+concept_pressure_sensor -> nrel_technical_parameter -> {
+    rrel_measurement_range => [*sc_link_content* := "0-25 бар"];
+    rrel_accuracy => [*sc_link_content* := "±0.5%"];
+    rrel_output_signal => [*sc_link_content* := "4-20 мА"];
+};
+
+// ========== Интерфейсы связи ==========
+concept_pressure_sensor -> nrel_communication_interface -> {
+    concept_analog_output => n_main_idtf: "Аналоговый выход";
+    concept_digital_bus => n_main_idtf: "Цифровая шина";
+};
+
+24.
+// ========== Базовое определение ==========
+concept_leak_protection_system => 
+    n_main_idtf: "Система защиты от протечек"[*sc_link_content* := 
+        "Комплекс устройств для обнаружения и локализации утечек воды"
+    ];
+
+// ========== Компоненты системы ==========
+concept_leak_protection_system -> nrel_system_component -> {
+    concept_water_leak_sensor => n_main_idtf: "Датчик протечки";
+    concept_control_module => n_main_idtf: "Контроллер";
+    concept_motorized_valve => n_main_idtf: "Электромагнитный клапан";
+};
+
+// ========== Технические характеристики ==========
+concept_leak_protection_system -> nrel_technical_parameter -> {
+    rrel_response_time => [*sc_link_content* := "< 3 сек"];
+    rrel_coverage_area => [*sc_link_content* := "100 м² на датчик"];
+};
+
+// ========== Алгоритмы работы ==========
+concept_leak_protection_system -> nrel_operation_algorithm -> {
+    concept_continuous_monitoring => n_main_idtf: "Непрерывный мониторинг";
+    concept_auto_shutoff => n_main_idtf: "Автоматическое отключение";
+    concept_fault_diagnostic => n_main_idtf: "Самодиагностика";
+};
+
+25.
+// ========== Базовое определение ==========
+concept_security_alarm => 
+    n_main_idtf: "Охранная сигнализация"[*sc_link_content* := 
+        "Система для обнаружения несанкционированного доступа на объекты ЖКХ"
+    ];
+
+// ========== Типы датчиков ==========
+concept_security_alarm -> nrel_sensor_type -> {
+    concept_motion_detector => n_main_idtf: "Датчик движения";
+    concept_glass_break_detector => n_main_idtf: "Датчик разбития стекла";
+    concept_door_contact => n_main_idtf: "Магнитный контакт";
+};
+
+// ========== Архитектура системы ==========
+concept_security_alarm -> nrel_system_architecture -> {
+    concept_wired_system => n_main_idtf: "Проводная система";
+    concept_wireless_system => n_main_idtf: "Беспроводная система";
+    concept_hybrid_system => n_main_idtf: "Гибридная система";
+};
+
+// ========== Функциональные возможности ==========
+concept_security_alarm -> nrel_functionality -> {
+    concept_remote_arming => n_main_idtf: "Дистанционная постановка на охрану";
+    concept_event_notification => n_main_idtf: "Уведомление о событиях";
+    concept_integration_with_video => n_main_idtf: "Интеграция с видеонаблюдением";
+};
+
+26.
+// ========== Ядро определения ==========
+concept_automation_controller => 
+    n_main_idtf: "Контроллер автоматики"[*sc_link_content* := 
+        "Программируемое устройство для управления инженерными системами ЖКХ"
+    ];
+
+// ========== Аппаратная архитектура ==========
+concept_automation_controller -> nrel_hardware_structure -> {
+    concept_processor => n_main_idtf: "ЦПУ"[
+        *sc_link_content* := "32-битный микропроцессор 200 МГц"
+    ];
+    concept_memory => n_main_idtf: "Память"[
+        *sc_link_content* := "Flash 64 МБ, RAM 32 МБ"
+    ];
+    concept_io_modules => n_main_idtf: "Модули ввода-вывода";
+};
+
+// ========== Функциональные возможности ==========
+concept_automation_controller -> nrel_functionality -> {
+    concept_data_logging => n_main_idtf: "Регистрация данных"[
+        *sc_link_content* := "Хранение показаний 365 дней"
+    ];
+    concept_alarm_management => n_main_idtf: "Управление авариями";
+    concept_optimization => n_main_idtf: "Алгоритмы оптимизации";
+};
+
+// ========== Поддерживаемые протоколы ==========
+concept_automation_controller -> nrel_communication_protocol -> {
+    concept_modbus => n_main_idtf: "Modbus RTU/TCP";
+    concept_bacnet => n_main_idtf: "BACnet IP";
+    concept_knx => n_main_idtf: "KNX";
+};
+
+// ========== Пример конфигурации ==========
+concept_controller_configuration -> nrel_typical_setup -> {
+    concept_input_channels => [*sc_link_content* := "16 аналоговых + 32 дискретных"];
+    concept_output_channels => [*sc_link_content* := "8 аналоговых + 24 релейных"];
+    concept_sampling_rate => [*sc_link_content* := "100 мс"];
+};
+
+27.
+// ========== Базовое определение ==========
+concept_fire_alarm_system => 
+    n_main_idtf: "Пожарная сигнализация"[*sc_link_content* := 
+        "Автоматизированный комплекс раннего обнаружения возгораний"
+    ];
+
+// ========== Типы извещателей ==========
+concept_fire_alarm_system -> nrel_detector_type -> {
+    concept_smoke_detector => n_main_idtf: "Дымовой"[
+        *sc_link_content* := "Оптико-электронный, 0.05-0.2 дБ/м"
+    ];
+    concept_heat_detector => n_main_idtf: "Тепловой"[
+        *sc_link_content* := "Дифференциальный, 8°C/мин"
+    ];
+    concept_flame_detector => n_main_idtf: "Пламени";
+};
+
+// ========== Структура системы ==========
+concept_fire_alarm_system -> nrel_system_architecture -> {
+    concept_control_panel => n_main_idtf: "Прибор приемно-контрольный";
+    concept_loop => n_main_idtf: "Шлейф сигнализации"[
+        *sc_link_content* := "До 127 устройств на шлейф"
+    ];
+    concept_notification => n_main_idtf: "Средства оповещения";
+};
+
+// ========== Технические параметры ==========
+concept_fire_alarm_system -> nrel_technical_parameter -> {
+    rrel_response_time => [*sc_link_content* := "< 10 сек"];
+    rrel_coverage => [*sc_link_content* := "1 извещатель на 50 м²"];
+    rrel_autonomy => [*sc_link_content* := "24 часа резерв"];
+};
+
+28.
+// ========== Ядро определения ==========
+concept_dispatch_system => 
+    n_main_idtf: "Система диспетчеризации"[*sc_link_content* := 
+        "Программно-аппаратный комплекс мониторинга и управления инженерными системами"
+    ];
+
+// ========== Компоненты системы ==========
+concept_dispatch_system -> nrel_system_component -> {
+    concept_scada => n_main_idtf: "SCADA-система"[
+        *sc_link_content* := "ПО верхнего уровня с HMI-интерфейсом"
+    ];
+    concept_communication => n_main_idtf: "Серверы связи";
+    concept_database => n_main_idtf: "База данных"[
+        *sc_link_content* := "SQL, время хранения - 5 лет"
+    ];
+};
+
+// ========== Функциональные модули ==========
+concept_dispatch_system -> nrel_functional_module -> {
+    concept_alarm_management => n_main_idtf: "Управление авариями";
+    concept_reporting => n_main_idtf: "Формирование отчетов";
+    concept_remote_control => n_main_idtf: "Дистанционное управление";
+};
+
+// ========== Технические характеристики ==========
+concept_dispatch_system -> nrel_technical_parameter -> {
+    rrel_data_update => [*sc_link_content* := "1-60 сек"];
+    rrel_users => [*sc_link_content* := "До 50 операторов"];
+    rrel_servers => [*sc_link_content* := "Кластер из 3 серверов"];
+};
+
+29.
+// ========== Базовое определение ==========
+concept_heat_metering_unit => 
+    n_main_idtf: "Узел учета тепловой энергии"[*sc_link_content* := 
+        "Комплекс приборов для коммерческого учета потребления тепла"
+    ];
+
+// ========== Состав оборудования ==========
+concept_heat_metering_unit -> nrel_component -> {
+    concept_heat_meter => n_main_idtf: "Теплосчетчик"[
+        *sc_link_content* := "Класс точности 1.0 по EN 1434"
+    ];
+    concept_temperature_sensor => n_main_idtf: "Термопара";
+    concept_flowmeter => n_main_idtf: "Расходомер";
+};
+
+// ========== Технические параметры ==========
+concept_heat_metering_unit -> nrel_technical_parameter -> {
+    rrel_accuracy => [*sc_link_content* := "±1.0%"];
+    rrel_measurement_range => [*sc_link_content* := "0.6-2.5 м/с"];
+    rrel_temperature_range => [*sc_link_content* := "+4..+150°C"];
+};
+
+// ========== Требования к установке ==========
+concept_heat_metering_unit -> nrel_installation_requirement -> {
+    concept_straight_pipe => n_main_idtf: "Прямые участки"[
+        *sc_link_content* := "5Д до и 3Д после расходомера"
+    ];
+    concept_filters => n_main_idtf: "Обязательные фильтры";
+};
+
+30.
+// ========== Ядро определения ==========
+concept_video_surveillance => 
+    n_main_idtf: "Система видеонаблюдения"[*sc_link_content* := 
+        "Комплекс устройств для визуального контроля и анализа обстановки"
+    ];
+
+// ========== Компоненты системы ==========
+concept_video_surveillance -> nrel_system_component -> {
+    concept_camera => n_main_idtf: "Камеры"[
+        *sc_link_content* := "Разрешение 4-8 Мп, ИК-подсветка 30 м"
+    ];
+    concept_recorder => n_main_idtf: "Видеорегистратор"[
+        *sc_link_content* := "Хранение 30 дней, 16 каналов"
+    ];
+    concept_analytics => n_main_idtf: "Сервер аналитики";
+};
+
+// ========== Типы камер ==========
+concept_video_surveillance -> nrel_camera_type -> {
+    concept_dome => n_main_idtf: "Купольная";
+    concept_bullet => n_main_idtf: "Цилиндрическая";
+    concept_ptz => n_main_idtf: "Поворотная";
+};
+
+// ========== Функции аналитики ==========
+concept_video_surveillance -> nrel_analytics_function -> {
+    concept_face_recognition => n_main_idtf: "Распознавание лиц";
+    concept_license_plate => n_main_idtf: "Номера автомобилей";
+    concept_anomaly => n_main_idtf: "Детекция аномалий";
+};

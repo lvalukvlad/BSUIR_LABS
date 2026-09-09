@@ -1,0 +1,1200 @@
+// Абсолютные понятия
+// Основные загрязняющие вещества
+
+
+concept_suspended_solids => 
+    n_main_idtf: "взвешенные вещества"[*sc_link_content* := 
+        "сложные соединения органических и неорганических субстанций, находящиеся в воде во взвешенном состоянии."
+    ];
+
+concept_suspended_solids -> nrel_partition -> {
+    concept_organic_suspended_solids => n_main_idtf: "органические (остатки растений, бактерии)";
+    concept_inorganic_suspended_solids => n_main_idtf: "неорганические (песок, глина, ржавчина)";
+};
+
+concept_suspended_solids -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод";
+    concept_water_quality_monitoring => n_main_idtf: "мониторинг качества воды";
+};
+
+concept_suspended_solids -> nrel_technical_parameter -> {
+    rrel_concentration => [*sc_link_content* := "мг/л"];
+    rrel_particle_size => [*sc_link_content* := "мкм"];
+};
+
+concept_suspended_solids -> nrel_operation_principle -> {
+    concept_sedimentation => n_main_idtf: "осаждение";
+    concept_filtration => n_main_idtf: "фильтрация";
+    concept_coagulation => n_main_idtf: "коагуляция";
+};
+
+
+
+concept_biochemical_oxygen_demand => 
+    n_main_idtf: "биохимическое потребление кислорода (БПК₅)"[*sc_link_content* := 
+        "количество кислорода, необходимое для биохимического окисления органических веществ микроорганизмами в воде в течение 5 суток при температуре 20°с."
+    ];
+
+concept_biochemical_oxygen_demand -> nrel_partition -> {
+    concept_BOD_total => n_main_idtf: "БПК полного окисления (БПК∞)";
+    concept_BOD_5 => n_main_idtf: "БПК₅ — стандартное измерение за 5 суток";
+    concept_BOD_1 => n_main_idtf: "БПК₁ — краткосрочное измерение";
+};
+
+concept_biochemical_oxygen_demand -> nrel_application -> {
+    concept_wastewater_quality_control => n_main_idtf: "контроль качества сточных и природных вод";
+    concept_treatment_efficiency_evaluation => n_main_idtf: "определение эффективности очистных сооружений";
+    concept_pollution_assessment => n_main_idtf: "оценка уровня загрязнения водоемов органическими веществами";
+    concept_aeration_calculation => n_main_idtf: "расчет необходимой аэрации в очистных сооружениях";
+};
+
+concept_biochemical_oxygen_demand -> nrel_technical_parameter -> {
+    rrel_unit => [*sc_link_content* := "мг O₂/л"];
+    rrel_standard_duration => [*sc_link_content* := "5 суток при 20°С"];
+    rrel_dependency_factors => [*sc_link_content* := "температура, концентрация микроорганизмов, состав загрязнителей"];
+};
+
+concept_biochemical_oxygen_demand -> nrel_operation_principle -> {
+    concept_oxidation_by_microorganisms => n_main_idtf: "аэробные микроорганизмы окисляют органические соединения";
+    concept_oxygen_consumption => n_main_idtf: "кислород расходуется на биохимическое разложение";
+    concept_dissolved_oxygen_drop => n_main_idtf: "снижение концентрации растворённого O₂ указывает уровень загрязнения";
+};
+
+concept_biochemical_oxygen_demand -> nrel_component -> {
+    concept_organic_pollutants => n_main_idtf: "органические загрязнители (углеводы, белки, жиры)";
+    concept_aerobic_microorganisms => n_main_idtf: "аэробные бактерии и микроорганизмы";
+    concept_dissolved_oxygen => n_main_idtf: "растворённый кислород";
+};
+
+concept_biochemical_oxygen_demand -> nrel_type -> {
+    concept_BOD_total_type => n_main_idtf: "БПК полного разложения (БПК∞)";
+    concept_BOD_5_type => n_main_idtf: "БПК₅ — стандартный лабораторный тест";
+    concept_BOD_1_type => n_main_idtf: "БПК₁ — экспресс-анализ";
+};
+
+
+
+concept_chemical_oxygen_demand => 
+    n_main_idtf: "химическое потребление кислорода (ХПК)"[*sc_link_content* := 
+        "количество кислорода, необходимое для окисления органических и неорганических веществ в воде сильными окислителями (например, дихроматом калия) при стандартных условиях."
+    ];
+
+concept_chemical_oxygen_demand -> nrel_partition -> {
+    concept_COD_organic => n_main_idtf: "ХПК органических веществ";
+    concept_COD_inorganic => n_main_idtf: "ХПК неорганических веществ";
+};
+
+concept_chemical_oxygen_demand -> nrel_application -> {
+    concept_wastewater_monitoring => n_main_idtf: "контроль качества сточных вод";
+    concept_total_pollution_assessment => n_main_idtf: "оценка общей степени загрязнения водоёмов";
+    concept_treatment_efficiency_check => n_main_idtf: "определение эффективности очистных процессов";
+    concept_ecological_monitoring => n_main_idtf: "экологический мониторинг водоёмов и водоснабжения";
+};
+
+concept_chemical_oxygen_demand -> nrel_technical_parameter -> {
+    rrel_unit => [*sc_link_content* := "мг O₂/л"];
+    rrel_standard_method => [*sc_link_content* := "окисление дихроматом калия в кислой среде"];
+    rrel_reaction_time => [*sc_link_content* := "2–3 часа при 150°С"];
+};
+
+concept_chemical_oxygen_demand -> nrel_operation_principle -> {
+    concept_strong_oxidizers_use => n_main_idtf: "использование сильных окислителей (дихромат калия)";
+    concept_oxygen_consumption_for_oxidation => n_main_idtf: "кислород расходуется на окисление органических и неорганических загрязнителей";
+};
+
+concept_chemical_oxygen_demand -> nrel_component -> {
+    concept_organic_pollutants => n_main_idtf: "органические загрязнители (углеводороды, белки, жиры)";
+    concept_inorganic_pollutants => n_main_idtf: "неорганические загрязнители (серо- и азотсодержащие вещества)";
+    concept_oxidizing_agents => n_main_idtf: "окислители (дихромат калия, хлорное железо и другие)";
+};
+
+concept_chemical_oxygen_demand -> nrel_type -> {
+    concept_COD_organic_type => n_main_idtf: "ХПК органического происхождения";
+    concept_COD_inorganic_type => n_main_idtf: "ХПК неорганического происхождения";
+};
+
+
+
+concept_ammonium_ion => 
+    n_main_idtf: "аммоний-ион (азот аммонийный)"[*sc_link_content* := 
+        "положительно заряженный ион аммония, образующийся при диссоциации аммиака в воде, часто встречается в сточных водах."
+    ];
+
+concept_ammonium_ion -> nrel_partition -> {
+    concept_ammonium_in_wastewater => n_main_idtf: "аммоний в сточных водах (NH₄⁺)";
+    concept_ammonium_in_sludge => n_main_idtf: "аммоний в осадках очистки сточных вод";
+};
+
+concept_ammonium_ion -> nrel_application -> {
+    concept_ammonium_removal => n_main_idtf: "очистка сточных вод (удаление аммония)";
+    concept_ammonia_neutralization => n_main_idtf: "нейтрализация аммиака в очистных сооружениях";
+    concept_pollution_monitoring => n_main_idtf: "мониторинг загрязнения водоёмов (предотвращение эвтрофикации)";
+};
+
+concept_ammonium_ion -> nrel_technical_parameter -> {
+    rrel_concentration => [*sc_link_content* := "концентрация аммоний-ионов в сточных водах (мг/л)"];
+    rrel_treatment_efficiency => [*sc_link_content* := "эффективность нитрификации и денитрификации"];
+};
+
+concept_ammonium_ion -> nrel_operation_principle -> {
+    concept_biological_oxidation => n_main_idtf: "нитрификация с помощью нитрифицирующих бактерий → нитраты (NO₃⁻)";
+    concept_chemical_removal => n_main_idtf: "удаление аммония химическими методами (осаждение, ионный обмен)";
+};
+
+concept_ammonium_ion -> nrel_component -> {
+    concept_ammonium => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_nitrifying_microorganisms => n_main_idtf: "нитрифицирующие микроорганизмы (Nitrosomonas, Nitrobacter)";
+    concept_chemical_reagents => n_main_idtf: "химические реагенты для осаждения аммония";
+};
+
+concept_ammonium_ion -> nrel_type -> {
+    concept_ammonium_in_primary_effluent => n_main_idtf: "аммоний в первичных сточных водах";
+    concept_ammonium_in_secondary_sludge => n_main_idtf: "аммоний во вторичных осадках после биологической очистки";
+};
+
+
+
+concept_kjeldahl_nitrogen => 
+    n_main_idtf: "азот по Кьельдалю"[*sc_link_content* := 
+        "общая концентрация азота, определяемая в сточных водах, осадках или других жидкостях методом Кьельдаля, который включает определение общего органического и аммонийного азота."
+    ];
+
+concept_kjeldahl_nitrogen -> nrel_partition -> {
+    concept_organic_nitrogen => n_main_idtf: "органический азот";
+    concept_ammonium_nitrogen => n_main_idtf: "аммонийный азот";
+};
+
+concept_kjeldahl_nitrogen -> nrel_application -> {
+    concept_wastewater_pollution_assessment => n_main_idtf: "оценка загрязнения сточных вод";
+    concept_sludge_nitrogen_measurement => n_main_idtf: "определение общей концентрации азота в осадках";
+    concept_treatment_monitoring => n_main_idtf: "мониторинг эффективности очистных процессов";
+};
+
+concept_kjeldahl_nitrogen -> nrel_technical_parameter -> {
+    rrel_nitrogen_concentration => [*sc_link_content* := "концентрация азота в сточных водах (мг/л)"];
+    rrel_fraction_content => [*sc_link_content* := "количество аммонийного и органического азота в пробах"];
+};
+
+concept_kjeldahl_nitrogen -> nrel_operation_principle -> {
+    concept_acid_digestion => n_main_idtf: "кислотное расщепление, перегонка аммония, титрование";
+    concept_oxidation_to_ammonium => n_main_idtf: "окисление органического азота до аммония с помощью кислоты";
+};
+
+concept_kjeldahl_nitrogen -> nrel_component -> {
+    concept_protein_nitrogen => n_main_idtf: "органический азот (в составе белков, аминокислот, нуклеиновых кислот)";
+    concept_ammonium_ion => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_acid_reagents => n_main_idtf: "кислоты для расщепления органического азота";
+};
+
+concept_kjeldahl_nitrogen -> nrel_type -> {
+    concept_total_nitrogen => n_main_idtf: "общий азот (органический + аммонийный)";
+    concept_extractable_ammonium_nitrogen => n_main_idtf: "аммонийный азот (легко извлекаемая фракция)";
+};
+
+
+
+concept_total_phosphorus => 
+    n_main_idtf: "фосфор общий"[*sc_link_content* := 
+        "общая концентрация фосфора в сточных водах, включающая как растворенные формы (например, фосфаты), так и фосфор, связанный с осадками."
+    ];
+
+concept_total_phosphorus -> nrel_partition -> {
+    concept_dissolved_phosphorus => n_main_idtf: "фосфор в растворенной форме (фосфаты)";
+    concept_sediment_bound_phosphorus => n_main_idtf: "фосфор в осадках";
+};
+
+concept_total_phosphorus -> nrel_application -> {
+    concept_wastewater_quality_monitoring => n_main_idtf: "мониторинг качества сточных вод";
+    concept_eutrophication_control => n_main_idtf: "контроль загрязнения водоёмов (предотвращение эвтрофикации)";
+    concept_treatment_plant_efficiency => n_main_idtf: "оценка эффективности очистных сооружений";
+};
+
+concept_total_phosphorus -> nrel_technical_parameter -> {
+    rrel_total_phosphorus_concentration => [*sc_link_content* := "концентрация общего фосфора (мг/л)"];
+    rrel_dissolved_phosphates_concentration => [*sc_link_content* := "концентрация растворённых фосфатов (мг/л)"];
+};
+
+concept_total_phosphorus -> nrel_operation_principle -> {
+    concept_phosphorus_extraction_and_oxidation => n_main_idtf: "экстракция и окисление фосфора до фосфатов с последующим химическим анализом";
+};
+
+concept_total_phosphorus -> nrel_component -> {
+    concept_phosphates => n_main_idtf: "фосфаты (PO₄³⁻)";
+    concept_organic_phosphorus => n_main_idtf: "органический фосфор";
+    concept_inorganic_phosphorus => n_main_idtf: "неорганический фосфор";
+};
+
+concept_total_phosphorus -> nrel_type -> {
+    concept_dissolved_phosphorus_type => n_main_idtf: "растворённый фосфор";
+    concept_sediment_phosphorus_type => n_main_idtf: "фосфор в осадках";
+    concept_combined_phosphorus_type => n_main_idtf: "общий фосфор (сумма всех форм)";
+};
+
+
+
+concept_phosphate_ion => 
+    n_main_idtf: "фосфат-ион"[*sc_link_content* := 
+        "негативно заряженный ион фосфора, образующийся в результате растворения фосфорных соединений в воде, основная форма фосфора, встречающаяся в водоёмах и сточных водах."
+    ];
+
+concept_phosphate_ion -> nrel_partition -> {
+    concept_dissolved_phosphate => n_main_idtf: "фосфат в растворённой форме (PO₄³⁻)";
+    concept_sediment_bound_phosphate => n_main_idtf: "фосфат в осадках";
+};
+
+concept_phosphate_ion -> nrel_application -> {
+    concept_phosphate_removal => n_main_idtf: "очистка сточных вод (удаление фосфатов)";
+    concept_eutrophication_prevention => n_main_idtf: "мониторинг загрязнения водоёмов (предотвращение эвтрофикации)";
+    concept_phosphorus_control_in_supply => n_main_idtf: "контроль содержания фосфора в водоснабжении";
+};
+
+concept_phosphate_ion -> nrel_technical_parameter -> {
+    rrel_concentration => [*sc_link_content* := "концентрация фосфат-ионов (мг/л)"];
+    rrel_phase_ratio => [*sc_link_content* := "соотношение растворённого и осаждённого фосфора"];
+};
+
+concept_phosphate_ion -> nrel_operation_principle -> {
+    concept_chemical_precipitation => n_main_idtf: "удаление фосфатов осаждением (например, с известью)";
+    concept_biological_removal => n_main_idtf: "удаление фосфатов биологической очисткой";
+    concept_eutrophication_mechanism => n_main_idtf: "фосфаты стимулируют рост водорослей (эвтрофикация)";
+};
+
+concept_phosphate_ion -> nrel_component -> {
+    concept_phosphate => n_main_idtf: "фосфат-ион (PO₄³⁻)";
+    concept_organic_phosphorus => n_main_idtf: "органический фосфор";
+    concept_inorganic_phosphorus => n_main_idtf: "неорганический фосфор (в форме фосфатов)";
+};
+
+concept_phosphate_ion -> nrel_type -> {
+    concept_dissolved_phosphate_type => n_main_idtf: "растворённый фосфат-ион";
+    concept_solid_bound_phosphate_type => n_main_idtf: "осаждённый фосфат (связанный с твердыми частицами)";
+};
+
+
+
+concept_chloride_ion => 
+    n_main_idtf: "хлорид-ион"[*sc_link_content* := 
+        "негативно заряженный ион хлора, образующийся при растворении хлористых соединений, таких как хлорид натрия (NaCl), в воде."
+    ];
+
+concept_chloride_ion -> nrel_partition -> {
+    concept_dissolved_chloride => n_main_idtf: "хлорид в растворённой форме (Cl⁻)";
+    concept_sediment_bound_chloride => n_main_idtf: "хлорид в осадках";
+};
+
+concept_chloride_ion -> nrel_application -> {
+    concept_water_quality_monitoring => n_main_idtf: "мониторинг качества воды и сточных вод";
+    concept_salt_pollution_control => n_main_idtf: "контроль солевого загрязнения воды";
+    concept_water_characteristics_in_treatment => n_main_idtf: "определение характеристик воды в очистных сооружениях";
+};
+
+concept_chloride_ion -> nrel_technical_parameter -> {
+    rrel_chloride_ion_concentration => [*sc_link_content* := "концентрация хлорид-ионов (мг/л)"];
+    rrel_corrosion_and_process_impact => [*sc_link_content* := "влияние на коррозию и изменение характеристик очистных процессов"];
+};
+
+concept_chloride_ion -> nrel_operation_principle -> {
+    concept_no_biological_involvement => n_main_idtf: "хлорид-ион обычно не участвует в биологических процессах очистки воды, но может влиять на коррозию оборудования очистных сооружений";
+    concept_source_in_wastewater => n_main_idtf: "хлориды присутствуют в сточных водах в результате растворения солей и продуктов жизнедеятельности человека";
+};
+
+concept_chloride_ion -> nrel_component -> {
+    concept_chloride_ion => n_main_idtf: "хлорид-ион (Cl⁻)";
+    concept_chloride_compounds => n_main_idtf: "хлоридные соединения (например, хлорид натрия, хлорид кальция)";
+};
+
+concept_chloride_ion -> nrel_type -> {
+    concept_dissolved_chloride_type => n_main_idtf: "растворённый хлорид-ион";
+    concept_sediment_bound_chloride_type => n_main_idtf: "хлорид-ион в осадках";
+};
+
+
+
+concept_petroleum_products => 
+    n_main_idtf: "нефтепродукты"[*sc_link_content* := 
+        "органические вещества, получаемые при переработке нефти, включая углеводороды и их производные, которые могут попадать в сточные воды в виде загрязнителей."
+    ];
+
+concept_petroleum_products -> nrel_partition -> {
+    concept_hydrocarbons => n_main_idtf: "углеводороды (нефть и её фракции, такие как бензин, дизельное топливо, мазут)";
+    concept_petroleum_chemicals => n_main_idtf: "нефтехимические вещества (например, синтетические смолы и растворители)";
+};
+
+concept_petroleum_products -> nrel_application -> {
+    concept_industrial_pollution_control => n_main_idtf: "контроль загрязнения сточных вод от промышленных объектов (нефтехимические предприятия, автозаправочные станции)";
+    concept_water_pollution_monitoring_near_oil_fields => n_main_idtf: "мониторинг загрязнения водоёмов вблизи нефтяных месторождений и трубопроводов";
+    concept_oil_removal_in_treatment_plants => n_main_idtf: "очистка воды от нефтепродуктов на очистных сооружениях";
+};
+
+concept_petroleum_products -> nrel_technical_parameter -> {
+    rrel_petroleum_products_concentration => [*sc_link_content* := "концентрация нефтепродуктов в сточных водах (мг/л)"];
+    rrel_measurement_methods => [*sc_link_content* := "методы измерения — флуресцентные методы, газовая хроматография"];
+};
+
+concept_petroleum_products -> nrel_operation_principle -> {
+    concept_coagulation_flokculation_adsorption => n_main_idtf: "нефтепродукты могут быть удалены с помощью коагуляции, флокуляции и адсорбции на углеродных фильтрах";
+    concept_biological_treatment_inefficiency => n_main_idtf: "биологическая очистка может быть менее эффективной из-за устойчивости некоторых нефтепродуктов к разложению";
+};
+
+concept_petroleum_products -> nrel_component -> {
+    concept_hydrocarbons => n_main_idtf: "углеводороды (например, алканы, ароматические углеводороды)";
+    concept_petroleum_chemicals => n_main_idtf: "нефтехимические соединения (пластики, растворители)";
+};
+
+concept_petroleum_products -> nrel_type -> {
+    concept_oil_hydrocarbons_type => n_main_idtf: "нефтяной углеводород (например, бензин, керосин, мазут)";
+    concept_petroleum_chemical_products_type => n_main_idtf: "нефтехимические продукты (например, синтетические масла, растворители)";
+};
+
+
+
+concept_oils_and_fats => 
+    n_main_idtf: "масла и жиры"[*sc_link_content* := 
+        "органические вещества, состоящие из триглицеридов жирных кислот, которые могут загрязнять сточные воды и осадки, поступая с промышленными и бытовыми отходами."
+    ];
+
+concept_oils_and_fats -> nrel_partition -> {
+    concept_vegetable_oils => n_main_idtf: "растительные масла (например, подсолнечное, соевое)";
+    concept_animal_fats => n_main_idtf: "животные жиры (например, свиной жир, рыбий жир)";
+    concept_synthetic_oils => n_main_idtf: "синтетические масла (получаемые в процессе химического синтеза)";
+};
+
+concept_oils_and_fats -> nrel_application -> {
+    concept_food_industry_pollution_control => n_main_idtf: "контроль загрязнения сточных вод от пищевой промышленности (масложировые производства)";
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод на очистных сооружениях";
+    concept_waste_management_in_industries => n_main_idtf: "управление отходами в нефтехимической и пищевой промышленности";
+};
+
+concept_oils_and_fats -> nrel_technical_parameter -> {
+    rrel_oils_and_fats_concentration => [*sc_link_content* := "концентрация масел и жиров в сточных водах (мг/л)"];
+    rrel_volatile_and_nonvolatile_content => [*sc_link_content* := "содержание летучих и нелетучих веществ в маслах и жирах"];
+};
+
+concept_oils_and_fats -> nrel_operation_principle -> {
+    concept_physical_chemical_methods => n_main_idtf: "масла и жиры могут быть удалены из сточных вод с помощью физико-химических методов, таких как коагуляция, флокуляция и фильтрация";
+    concept_adsorption_materials => n_main_idtf: "используются адсорбционные материалы, такие как активированный уголь и специализированные сорбенты";
+};
+
+concept_oils_and_fats -> nrel_component -> {
+    concept_vegetable_oils_component => n_main_idtf: "растительные масла (например, оливковое, подсолнечное)";
+    concept_animal_fats_component => n_main_idtf: "животные жиры (например, свиной, говяжий жир)";
+    concept_synthetic_oils_fats_component => n_main_idtf: "синтетические масла и жиры (например, моторные масла, трансжиры)";
+};
+
+concept_oils_and_fats -> nrel_type -> {
+    concept_vegetable_oil_type => n_main_idtf: "масла растительного происхождения";
+    concept_animal_fat_type => n_main_idtf: "жиры животного происхождения";
+    concept_synthetic_oils_fats_type => n_main_idtf: "синтетические масла и жиры";
+};
+
+
+
+// Вещества для биогенной подпитки
+
+concept_superphosphate => 
+    n_main_idtf: "суперфосфат"[*sc_link_content* := 
+        "минеральное удобрение, содержащее моно- и дигидрофосфаты кальция, получаемое из фосфатных руд, используемое для питания растений и как источник фосфора."
+    ];
+
+concept_superphosphate -> nrel_partition -> {
+    concept_single_superphosphate => n_main_idtf: "простой суперфосфат (содержит монофосфат кальция)";
+    concept_double_superphosphate => n_main_idtf: "двойной суперфосфат (содержит дигидрофосфат кальция, повышенное содержание фосфора)";
+};
+
+concept_superphosphate -> nrel_application -> {
+    concept_agricultural_fertilizer_use => n_main_idtf: "сельское хозяйство (удобрения для улучшения роста растений)";
+    concept_soil_phosphorus_restoration => n_main_idtf: "восстановление фосфора в почвах, бедных этим элементом";
+    concept_agronomy_application => n_main_idtf: "использование в агрономии и в производстве сельскохозяйственных культур";
+};
+
+concept_superphosphate -> nrel_technical_parameter -> {
+    rrel_phosphorus_content => [*sc_link_content* := "содержание фосфора (P₂O₅) в удобрении (например, 16–20% для простого суперфосфата)"];
+    rrel_phosphate_solubility => [*sc_link_content* := "степень растворимости фосфатов, влияющая на усвояемость растениями"];
+};
+
+concept_superphosphate -> nrel_operation_principle -> {
+    concept_plant_phosphorus_supply => n_main_idtf: "обеспечение растений фосфором, участвующим в фотосинтезе и развитии корневой системы";
+    concept_soil_dissolution_availability => n_main_idtf: "удобрение растворяется в почве, делая фосфор доступным для растений";
+};
+
+concept_superphosphate -> nrel_component -> {
+    concept_calcium_monophosphate => n_main_idtf: "монофосфат кальция (Ca(H₂PO₄)₂)";
+    concept_calcium_dihydrogen_phosphate => n_main_idtf: "дигидрофосфат кальция (CaHPO₄)";
+    concept_free_calcium_and_sulfur => n_main_idtf: "свободный кальций и сера";
+};
+
+concept_superphosphate -> nrel_type -> {
+    concept_single_superphosphate_type => n_main_idtf: "простой суперфосфат";
+    concept_double_superphosphate_type => n_main_idtf: "двойной суперфосфат";
+};
+
+
+
+concept_orthophosphoric_acid => 
+    n_main_idtf: "ортофосфорная кислота"[*sc_link_content* := 
+        "неорганическое кислотное соединение, используемое в производстве удобрений, в пищевой и химической промышленности, а также в процессах очистки воды."
+    ];
+
+concept_orthophosphoric_acid -> nrel_partition -> {
+    concept_technical_grade_phosphoric_acid => n_main_idtf: "техническая ортофосфорная кислота (используется в промышленности)";
+    concept_food_grade_phosphoric_acid => n_main_idtf: "пищевая ортофосфорная кислота (E338, используется в пищевой промышленности)";
+};
+
+concept_orthophosphoric_acid -> nrel_application -> {
+    concept_fertilizer_production => n_main_idtf: "производство удобрений (например, фосфорных удобрений)";
+    concept_water_softening => n_main_idtf: "очистка воды (нейтрализация кальция и магния)";
+    concept_food_additive_use => n_main_idtf: "пищевая промышленность (как консервант и регулятор кислотности)";
+    concept_detergents_and_metallurgy => n_main_idtf: "производство моющих средств и в металлургии";
+};
+
+concept_orthophosphoric_acid -> nrel_technical_parameter -> {
+    rrel_acid_concentration => [*sc_link_content* := "концентрация кислоты (молярность)"];
+    rrel_solution_pH => [*sc_link_content* := "pH раствора (обычно сильно кислый)"];
+};
+
+concept_orthophosphoric_acid -> nrel_operation_principle -> {
+    concept_base_neutralization_reaction => n_main_idtf: "реакция с основными соединениями (например, кальцием и магнием) для образования фосфатов";
+    concept_water_hardness_reduction => n_main_idtf: "уменьшение жесткости воды путём осаждения солей кальция и магния";
+};
+
+concept_orthophosphoric_acid -> nrel_component -> {
+    concept_H3PO4_molecule => n_main_idtf: "ортофосфорная кислота (H₃PO₄)";
+    concept_calcium_magnesium_phosphates => n_main_idtf: "фосфаты кальция и магния (продукты реакции с основаниями)";
+};
+
+concept_orthophosphoric_acid -> nrel_type -> {
+    concept_technical_grade_type => n_main_idtf: "техническая ортофосфорная кислота";
+    concept_food_grade_type => n_main_idtf: "пищевая ортофосфорная кислота";
+};
+
+
+
+concept_ammonium_sulfate =>
+    n_main_idtf: "сульфат аммония"[*sc_link_content* := 
+        "неорганическое удобрение, содержащее аммоний и сульфат, используется для питания растений, особенно в почвах с низким содержанием азота."
+    ];
+
+concept_ammonium_sulfate -> nrel_partition -> {
+    concept_ammonium_sulfate_as_fertilizer => n_main_idtf: "сульфат аммония в качестве удобрения";
+    concept_ammonium_sulfate_in_industry => n_main_idtf: "сульфат аммония в промышленности";
+};
+
+concept_ammonium_sulfate -> nrel_application -> {
+    concept_agriculture_use => n_main_idtf: "сельское хозяйство (удобрение для повышения урожайности)";
+    concept_nitrogen_fertilizer_production => n_main_idtf: "производство удобрений с азотом";
+    concept_chemical_industry_use => n_main_idtf: "химическая промышленность (производство текстиля, химические реакции)";
+};
+
+concept_ammonium_sulfate -> nrel_technical_parameter -> {
+    rrel_nitrogen_content => [*sc_link_content* := "содержание азота (18–21%)"];
+    rrel_sulfur_content => [*sc_link_content* := "содержание серы (24–25%)"];
+    rrel_water_solubility => [*sc_link_content* := "растворимость в воде"];
+};
+
+concept_ammonium_sulfate -> nrel_operation_principle -> {
+    concept_nutrient_supply => n_main_idtf: "обеспечивает растения азотом и серой для роста и синтеза белков";
+    concept_acidifying_effect => n_main_idtf: "увеличивает кислотность почвы при растворении";
+};
+
+concept_ammonium_sulfate -> nrel_component -> {
+    concept_ammonium_ion => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_sulfate_ion => n_main_idtf: "сульфат-ион (SO₄²⁻)";
+};
+
+concept_ammonium_sulfate -> nrel_type -> {
+    concept_powdered_ammonium_sulfate => n_main_idtf: "сульфат аммония в виде порошка";
+    concept_granular_ammonium_sulfate => n_main_idtf: "сульфат аммония в виде гранул";
+};
+
+
+
+concept_ammonium_nitrate =>
+    n_main_idtf: "аммиачная селитра"[*sc_link_content* := 
+        "неорганическое удобрение, содержащее азот в форме аммоний- и нитрат-ионов, широко используется в сельском хозяйстве и промышленности."
+    ];
+
+concept_ammonium_nitrate -> nrel_partition -> {
+    concept_ammonium_nitrate_as_fertilizer => n_main_idtf: "аммиачная селитра в качестве удобрения";
+    concept_ammonium_nitrate_in_industry => n_main_idtf: "аммиачная селитра в промышленности";
+};
+
+concept_ammonium_nitrate -> nrel_application -> {
+    concept_agricultural_use => n_main_idtf: "сельское хозяйство (удобрение, источник азота)";
+    concept_explosives_production => n_main_idtf: "производство взрывчатых веществ (например, в горнодобывающей промышленности)";
+    concept_chemical_industry_use => n_main_idtf: "химическая промышленность (производство азотных кислот, пластмасс)";
+};
+
+concept_ammonium_nitrate -> nrel_technical_parameter -> {
+    rrel_nitrogen_content => [*sc_link_content* := "содержание азота (обычно около 34–35%)"];
+    rrel_water_solubility => [*sc_link_content* := "растворимость в воде (аммиачная селитра хорошо растворяется)"];
+};
+
+concept_ammonium_nitrate -> nrel_operation_principle -> {
+    concept_nitrogen_supply_to_plants => n_main_idtf: "обеспечивает растения азотом для синтеза белков и роста";
+    concept_ion_release_upon_dissolution => n_main_idtf: "в воде высвобождаются NH₄⁺ и NO₃⁻, доступные для усвоения растениями";
+};
+
+concept_ammonium_nitrate -> nrel_component -> {
+    concept_ammonium_ion => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_nitrate_ion => n_main_idtf: "нитрат-ион (NO₃⁻)";
+};
+
+concept_ammonium_nitrate -> nrel_type -> {
+    concept_granular_ammonium_nitrate => n_main_idtf: "аммиачная селитра гранулированная";
+    concept_solution_ammonium_nitrate => n_main_idtf: "аммиачная селитра в растворе (для удобрения с использованием орошения)";
+};
+
+
+
+concept_aqueous_ammonia =>
+    n_main_idtf: "водный аммиак"[*sc_link_content* := 
+        "раствор аммиака (NH₃) в воде, используется в различных химических и промышленных процессах, а также в качестве реагента в очистке сточных вод."
+    ];
+
+concept_aqueous_ammonia -> nrel_partition -> {
+    concept_ammonia_as_reagent => n_main_idtf: "водный аммиак как реагент";
+    concept_ammonia_in_water_treatment => n_main_idtf: "водный аммиак в очистке воды";
+};
+
+concept_aqueous_ammonia -> nrel_application -> {
+    concept_chemical_industry_use => n_main_idtf: "химическая промышленность (производство удобрений, пластмасс)";
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (для нейтрализации кислотности)";
+    concept_cleaning_agent_production => n_main_idtf: "производство моющих средств и в агрохимической промышленности";
+};
+
+concept_aqueous_ammonia -> nrel_technical_parameter -> {
+    rrel_ammonia_concentration => [*sc_link_content* := "концентрация аммиака в растворе (обычно 25–30% NH₃)"];
+    rrel_pH_level => [*sc_link_content* := "pH раствора (обычно высокое, в пределах 11–12)"];
+};
+
+concept_aqueous_ammonia -> nrel_operation_principle -> {
+    concept_acid_neutralization => n_main_idtf: "реагирует с кислотами, образуя аммоний-соли — нейтрализация кислотности";
+    concept_nitrogen_source => n_main_idtf: "используется как источник азота для синтеза удобрений и других веществ";
+};
+
+concept_aqueous_ammonia -> nrel_component -> {
+    concept_ammonia => n_main_idtf: "аммиак (NH₃)";
+    concept_water => n_main_idtf: "вода (H₂O)";
+};
+
+concept_aqueous_ammonia -> nrel_type -> {
+    concept_low_concentration_ammonia => n_main_idtf: "водный аммиак с низкой концентрацией (для бытового использования)";
+    concept_high_concentration_ammonia => n_main_idtf: "водный аммиак с высокой концентрацией (для промышленного использования)";
+};
+
+
+
+concept_urea =>
+    n_main_idtf: "карбамид (мочевина)"[*sc_link_content* := 
+        "органическое соединение, содержащее азот, широко используемое в качестве удобрения, а также в химической и фармацевтической промышленности."
+    ];
+
+concept_urea -> nrel_partition -> {
+    concept_urea_as_fertilizer => n_main_idtf: "карбамид как удобрение";
+    concept_urea_in_industry => n_main_idtf: "карбамид в промышленности";
+};
+
+concept_urea -> nrel_application -> {
+    concept_agriculture => n_main_idtf: "сельское хозяйство (удобрение для растений, улучшение качества почвы)";
+    concept_chemical_industry => n_main_idtf: "химическая промышленность (производство пластмасс, синтетических волокон)";
+    concept_pharmaceutical_industry => n_main_idtf: "фармацевтическая промышленность (используется в составе некоторых препаратов)";
+};
+
+concept_urea -> nrel_technical_parameter -> {
+    rrel_nitrogen_content => [*sc_link_content* := "содержание азота (обычно около 46% азота по массе)"];
+    rrel_solubility => [*sc_link_content* := "растворимость в воде (карбамид хорошо растворим в воде)"];
+};
+
+concept_urea -> nrel_operation_principle -> {
+    concept_hydrolysis_in_soil => n_main_idtf: 
+        "карбамид в почве расщепляется на аммоний-ион (NH₄⁺) и углекислый газ, повышая доступность азота";
+    concept_plant_growth_support => n_main_idtf: 
+        "выделяющийся азот способствует росту растений и синтезу белков";
+};
+
+concept_urea -> nrel_component -> {
+    concept_urea_compound => n_main_idtf: "карбамид (NH₂CONH₂)";
+};
+
+concept_urea -> nrel_type -> {
+    concept_granular_urea => n_main_idtf: "гранулированный карбамид";
+    concept_liquid_urea => n_main_idtf: "жидкий карбамид (мочевина в растворе)";
+};
+
+
+
+concept_diammonium_phosphate =>
+    n_main_idtf: "диаммонийфосфат технический"[*sc_link_content* := 
+        "неорганическое удобрение, содержащее азот и фосфор, используемое для улучшения роста растений и улучшения качества почвы."
+    ];
+
+concept_diammonium_phosphate -> nrel_partition -> {
+    concept_dap_as_fertilizer => n_main_idtf: "диаммонийфосфат как удобрение";
+    concept_dap_in_industry => n_main_idtf: "диаммонийфосфат в промышленности";
+};
+
+concept_diammonium_phosphate -> nrel_application -> {
+    concept_agriculture => n_main_idtf: "сельское хозяйство (удобрение, источник фосфора и азота для растений)";
+    concept_chemical_industry => n_main_idtf: "химическая промышленность (производство других фосфорных соединений)";
+};
+
+concept_diammonium_phosphate -> nrel_technical_parameter -> {
+    rrel_nitrogen_content => [*sc_link_content* := "содержание азота (обычно около 18-20%)"];
+    rrel_phosphorus_content => [*sc_link_content* := "содержание фосфора (обычно около 46-48% P₂O₅)"];
+    rrel_solubility => [*sc_link_content* := "растворимость в воде"];
+};
+
+concept_diammonium_phosphate -> nrel_operation_principle -> {
+    concept_dap_effect_in_soil => n_main_idtf: 
+        "обеспечивает растениям доступный азот и фосфор, способствуя росту и урожайности";
+    concept_phosphorus_role_in_plants => n_main_idtf: 
+        "фосфор участвует в энергетическом обмене и фотосинтезе растений";
+};
+
+concept_diammonium_phosphate -> nrel_component -> {
+    concept_ammonium_ion => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_phosphate_ion => n_main_idtf: "фосфат-ион (HPO₄²⁻)";
+};
+
+concept_diammonium_phosphate -> nrel_type -> {
+    concept_granular_dap => n_main_idtf: "гранулированный диаммонийфосфат";
+    concept_powder_dap => n_main_idtf: "порошковый диаммонийфосфат";
+};
+
+
+concept_ammophos =>
+    n_main_idtf: "аммофос"[*sc_link_content* := 
+        "минеральное удобрение, содержащее азот и фосфор, используется для повышения урожайности сельскохозяйственных культур."
+    ];
+
+concept_ammophos -> nrel_partition -> {
+    concept_ammophos_as_fertilizer => n_main_idtf: "аммофос как удобрение";
+    concept_ammophos_in_industry => n_main_idtf: "аммофос в промышленности";
+};
+
+concept_ammophos -> nrel_application -> {
+    concept_agriculture => n_main_idtf: "сельское хозяйство (удобрение для повышения урожайности)";
+    concept_fertilizer_production => n_main_idtf: "производство минеральных удобрений";
+};
+
+concept_ammophos -> nrel_technical_parameter -> {
+    rrel_nitrogen_content => [*sc_link_content* := "содержание азота (обычно около 12-14%)"];
+    rrel_phosphorus_content => [*sc_link_content* := "содержание фосфора (обычно около 52-54% P₂O₅)"];
+    rrel_solubility => [*sc_link_content* := "растворимость в воде"];
+};
+
+concept_ammophos -> nrel_operation_principle -> {
+    concept_nutrient_supply => n_main_idtf: 
+        "аммофос снабжает растения азотом и фосфором, необходимыми для роста и развития";
+    concept_phosphorus_and_nitrogen_effect => n_main_idtf: 
+        "фосфор способствует корнеобразованию и фотосинтезу, а азот — росту зелёной массы";
+};
+
+concept_ammophos -> nrel_component -> {
+    concept_ammonium_ion => n_main_idtf: "аммоний-ион (NH₄⁺)";
+    concept_phosphate_ion => n_main_idtf: "фосфат-ион (PO₄³⁻)";
+};
+
+concept_ammophos -> nrel_type -> {
+    concept_granular_ammophos => n_main_idtf: "гранулированный аммофос";
+    concept_powder_ammophos => n_main_idtf: "порошковый аммофос";
+};
+
+
+
+
+// Вещества, подлежащие удалению
+
+concept_heavy_metals =>
+    n_main_idtf: "тяжелые металлы"[*sc_link_content* := 
+        "металлические элементы с высокой плотностью, которые могут быть токсичными для живых организмов даже при низких концентрациях, часто обнаруживаются в сточных водах и загрязняют окружающую среду."
+    ];
+
+concept_heavy_metals -> nrel_partition -> {
+    concept_cadmium => n_main_idtf: "кадиум (Cd)";
+    concept_lead => n_main_idtf: "свинец (Pb)";
+    concept_mercury => n_main_idtf: "ртуть (Hg)";
+    concept_chromium => n_main_idtf: "хром (Cr)";
+    concept_arsenic => n_main_idtf: "мышьяк (As)";
+};
+
+concept_heavy_metals -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "контроль загрязнения сточных вод на очистных сооружениях";
+    concept_ecological_monitoring => n_main_idtf: "мониторинг экологической безопасности в промышленных районах";
+    concept_health_risk_management => n_main_idtf: "санитарные исследования и управление рисками для здоровья населения";
+};
+
+concept_heavy_metals -> nrel_technical_parameter -> {
+    rrel_concentration => [*sc_link_content* := "концентрация тяжелых металлов в сточных водах и осадках (мкг/л или мг/л)"];
+    rrel_toxicity => [*sc_link_content* := "токсичность элементов для флоры и фауны (например, предельно допустимые концентрации)"];
+};
+
+concept_heavy_metals -> nrel_operation_principle -> {
+    concept_toxic_effect => n_main_idtf: 
+        "тяжелые металлы оказывают токсическое воздействие на живые организмы, нарушая физиологические процессы";
+    concept_bioaccumulation => n_main_idtf: 
+        "могут накапливаться в биологических системах, вызывая долгосрочные экологические и здоровьесберегающие риски";
+};
+
+concept_heavy_metals -> nrel_component -> {
+    concept_cadmium;
+    concept_lead;
+    concept_mercury;
+    concept_chromium;
+    concept_arsenic;
+};
+
+concept_heavy_metals -> nrel_type -> {
+    concept_heavy_metals_in_wastewater => n_main_idtf: "тяжелые металлы, встречающиеся в сточных водах";
+    concept_heavy_metals_in_soil => n_main_idtf: "тяжелые металлы, загрязняющие почву и водоемы";
+};
+
+
+
+concept_hexavalent_chromium_compounds =>
+    n_main_idtf: "соединения шестивалентного хрома"[*sc_link_content* := 
+        "химические соединения, содержащие хром в степени окисления +6, обладающие высокой токсичностью и канцерогенным воздействием, часто встречаются в сточных водах и промышленных отходах."
+    ];
+
+concept_hexavalent_chromium_compounds -> nrel_partition -> {
+    concept_chromium_trioxide => n_main_idtf: "хромовый ангидрид (CrO₃)";
+    concept_chromates => n_main_idtf: "хроматы (например, натриевый хромат, Na₂CrO₄)";
+    concept_dichromates => n_main_idtf: "дихроматы (например, калийный дихромат, K₂Cr₂O₇)";
+};
+
+concept_hexavalent_chromium_compounds -> nrel_application -> {
+    concept_chroming => n_main_idtf: "хромирование и антикоррозийная обработка";
+    concept_dye_industry => n_main_idtf: "производство красителей и пигментов";
+    concept_metal_processing => n_main_idtf: "обработка металлов и производство легированных сталей";
+};
+
+concept_hexavalent_chromium_compounds -> nrel_technical_parameter -> {
+    rrel_concentration => [*sc_link_content* := "концентрация шестивалентного хрома в сточных водах (мкг/л или мг/л)"];
+    rrel_toxicity => [*sc_link_content* := "токсичность для экосистем и человека (предельно допустимые концентрации, PEL)"];
+};
+
+concept_hexavalent_chromium_compounds -> nrel_operation_principle -> {
+    concept_oxidative_damage => n_main_idtf: 
+        "соединения являются сильными окислителями, вызывающими повреждения биологических молекул, мутации и рак";
+    concept_high_solubility => n_main_idtf: 
+        "высокая растворимость в воде облегчает их проникновение в экосистемы и организм человека";
+};
+
+concept_hexavalent_chromium_compounds -> nrel_component -> {
+    concept_chromium_6_plus => n_main_idtf: "хром (Cr⁶⁺)";
+    concept_chromic_acid => n_main_idtf: "хромовая кислота (H₂CrO₄)";
+};
+
+concept_hexavalent_chromium_compounds -> nrel_type -> {
+    concept_chromates;
+    concept_dichromates;
+};
+
+
+
+concept_oil_emulsions =>
+    n_main_idtf: "маслоэмульсионные соединения"[*sc_link_content* := 
+        "соединения, представляющие собой смеси масла и воды, стабилизированные эмульгаторами, часто используемые в качестве смазочных материалов, а также встречаются в сточных водах с нефтяными загрязнениями."
+    ];
+
+concept_oil_emulsions -> nrel_partition -> {
+    concept_petroleum_based_emulsions => n_main_idtf: "эмульсии на основе нефтяных масел";
+    concept_vegetable_animal_oil_emulsions => n_main_idtf: "эмульсии на основе растительных и животных масел";
+};
+
+concept_oil_emulsions -> nrel_application -> {
+    concept_industry => n_main_idtf: "промышленность (смазочные жидкости для обработки металлов)";
+    concept_agriculture => n_main_idtf: "сельское хозяйство (пестициды и гербициды на основе эмульсий)";
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление нефтяных загрязнителей)";
+};
+
+concept_oil_emulsions -> nrel_technical_parameter -> {
+    rrel_oil_content => [*sc_link_content* := "содержание масла в эмульсии (в процентах)"];
+    rrel_emulsion_stability => [*sc_link_content* := "стабильность эмульсии (время сохранения стабильности)"];
+};
+
+concept_oil_emulsions -> nrel_operation_principle -> {
+    concept_lubrication_cooling => n_main_idtf: 
+        "действуют как смазочные и охлаждающие жидкости, снижая трение и теплообразование";
+    concept_oil_removal => n_main_idtf: 
+        "помогают разлагать нефтяные загрязнители и удалять их из водоемов";
+};
+
+concept_oil_emulsions -> nrel_component -> {
+    concept_oils => n_main_idtf: "масла (нефть, растительные масла)";
+    concept_emulsifiers => n_main_idtf: "эмульгаторы (пищевые или химические вещества)";
+};
+
+concept_oil_emulsions -> nrel_type -> {
+    concept_mineral_oil_emulsions => n_main_idtf: "эмульсии на основе минеральных масел";
+    concept_vegetable_oil_emulsions => n_main_idtf: "эмульсии на основе растительных масел";
+};
+
+
+
+concept_oil_and_grease_contaminants =>
+    n_main_idtf: "жиро- и нефтесодержащие примеси"[*sc_link_content* := 
+        "загрязнители, содержащие масла и нефтепродукты, которые могут попасть в сточные воды в результате производственных процессов, бытовых выбросов или утечек из транспортных средств и оборудования."
+    ];
+
+concept_oil_and_grease_contaminants -> nrel_partition -> {
+    concept_animal_oils_fats => n_main_idtf: "масла и жиры животного происхождения";
+    concept_vegetable_oils_fats => n_main_idtf: "масла и жиры растительного происхождения";
+    concept_petroleum_products => n_main_idtf: "нефтепродукты";
+};
+
+concept_oil_and_grease_contaminants -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление загрязнителей из водоемов и трубопроводных систем)";
+    concept_petroleum_chemical_industry => n_main_idtf: "нефтехимическая промышленность (переработка и очистка нефтепродуктов)";
+    concept_automotive_industry => n_main_idtf: "автомобильная промышленность и сервис (уход за автотранспортом и утечками из техники)";
+};
+
+concept_oil_and_grease_contaminants -> nrel_technical_parameter -> {
+    rrel_oil_and_fat_content => [*sc_link_content* := "содержание масла и жиров в сточных водах (мг/л или г/м³)"];
+    rrel_contaminant_type => [*sc_link_content* := "тип загрязнителя (нефть, растительные масла, животные жиры)"];
+};
+
+concept_oil_and_grease_contaminants -> nrel_operation_principle -> {
+    concept_toxicity => n_main_idtf: "жиро- и нефтесодержащие примеси могут оказывать токсическое воздействие на водные экосистемы";
+    concept_removal_processes => n_main_idtf: "загрязнители удаляются с помощью процессов флотации, абсорбции и фильтрации";
+};
+
+concept_oil_and_grease_contaminants -> nrel_component -> {
+    concept_hydrocarbons => n_main_idtf: "углеводороды (нефть и нефтепродукты)";
+    concept_fatty_acids_derivatives => n_main_idtf: "жирные кислоты и их производные (масла и жиры)";
+};
+
+concept_oil_and_grease_contaminants -> nrel_type -> {
+    concept_petroleum_contaminants => n_main_idtf: "нефтесодержащие примеси";
+    concept_fatty_and_emulsion_contaminants => n_main_idtf: "жиро- и эмульсионные загрязнители";
+};
+
+
+
+concept_organic_compounds_lignin_surfactants =>
+    n_main_idtf: "органические соединения (лигнин, ПАВ)"[*sc_link_content* := 
+        "органические вещества, такие как лигнин и поверхностно-активные вещества (ПАВ), которые могут быть источниками загрязнения в сточных водах, воздействуют на водные экосистемы и могут нарушать работу очистных сооружений."
+    ];
+
+concept_organic_compounds_lignin_surfactants -> nrel_partition -> {
+    concept_lignin => n_main_idtf: "лигнин";
+    concept_surfactants => n_main_idtf: "ПАВ (поверхностно-активные вещества)";
+};
+
+concept_organic_compounds_lignin_surfactants -> nrel_application -> {
+    concept_paper_industry => n_main_idtf: "производство бумаги и картона (лигнин используется в качестве побочного продукта в процессе производства)";
+    concept_chemical_industry => n_main_idtf: "химическая промышленность (ПАВ применяются в моющих средствах, косметике, производстве текстиля)";
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление ПАВ и органических загрязнителей из воды)";
+};
+
+concept_organic_compounds_lignin_surfactants -> nrel_technical_parameter -> {
+    rrel_lignin_surfactant_concentration => [*sc_link_content* := "концентрация лигнина и ПАВ в сточных водах (мг/л или г/м³)"];
+    rrel_toxicity_to_aquatic_organisms => [*sc_link_content* := "токсичность для водных организмов (особенно для ПАВ)"];
+};
+
+concept_organic_compounds_lignin_surfactants -> nrel_operation_principle -> {
+    concept_lignin_degradation => n_main_idtf: "лигнин, как органическое соединение, может разрушаться в природных условиях, но в сточных водах он часто приводит к образованию осадков и помутнению воды";
+    concept_surfactant_impact => n_main_idtf: "ПАВ могут нарушать баланс водных экосистем, снижая растворимость кислорода в воде и влияя на жизнь водных организмов, таких как рыбы и водоросли";
+};
+
+concept_organic_compounds_lignin_surfactants -> nrel_component -> {
+    concept_lignin_component => n_main_idtf: "лигнин (органическое полимерное соединение)";
+    concept_surfactants_component => n_main_idtf: "ПАВ (например, анионные, катионные, неионогенные и амфотерные соединения)";
+};
+
+concept_organic_compounds_lignin_surfactants -> nrel_type -> {
+    concept_lignin_type => n_main_idtf: "лигнин (в основном из древесины)";
+    concept_surfactant_type => n_main_idtf: "ПАВ (моющие средства, эмульгаторы, средства для обработки текстиля)";
+};
+
+
+
+// Относительные понятия
+// Реагенты для очистки
+
+
+
+concept_aluminum_salts_coagulants =>
+    n_main_idtf: "соли алюминия (коагулянты)"[*sc_link_content* := 
+        "соединения алюминия, такие как сульфат алюминия (Al₂(SO₄)₃) и хлорид алюминия (AlCl₃), которые используются для осаждения взвешенных частиц и очистки воды в процессах коагуляции и флокуляции."
+    ];
+
+concept_aluminum_salts_coagulants -> nrel_partition -> {
+    concept_aluminum_sulfate => n_main_idtf: "сульфат алюминия (Al₂(SO₄)₃)";
+    concept_aluminum_chloride => n_main_idtf: "хлорид алюминия (AlCl₃)";
+    concept_aluminum_polycarboxylate => n_main_idtf: "поликарбоксилат алюминия";
+};
+
+concept_aluminum_salts_coagulants -> nrel_application -> {
+    concept_drinking_wastewater_treatment => n_main_idtf: "очистка питьевой воды и сточных вод (коагуляция для удаления взвешенных частиц)";
+    concept_water_treatment_plants => n_main_idtf: "очистка воды на водоочистных станциях";
+    concept_industrial_water_preparation => n_main_idtf: "использование в промышленной водоподготовке и очистке воды в разных отраслях (например, в текстильной промышленности)";
+};
+
+concept_aluminum_salts_coagulants -> nrel_technical_parameter -> {
+    rrel_coagulant_concentration => [*sc_link_content* := "концентрация коагулянта в растворе (мг/л)"];
+    rrel_ph_efficiency => [*sc_link_content* := "pH воды, при котором коагулянт проявляет максимальную эффективность"];
+};
+
+concept_aluminum_salts_coagulants -> nrel_operation_principle -> {
+    concept_coagulation_process => n_main_idtf: "коагулянты, такие как соли алюминия, помогают агрегировать мелкие частицы и взвешенные вещества в воду, образуя флокулы, которые легче удаляются в процессе фильтрации";
+    concept_neutralization => n_main_idtf: "при добавлении в воду соли алюминия взаимодействуют с частицами загрязнителей, нейтрализуя их заряд и способствуя образованию осадков";
+};
+
+concept_aluminum_salts_coagulants -> nrel_component -> {
+    concept_aluminum_sulfate_component => n_main_idtf: "сульфат алюминия (Al₂(SO₄)₃)";
+    concept_aluminum_chloride_component => n_main_idtf: "хлорид алюминия (AlCl₃)";
+    concept_aluminum_polycarboxylate_component => n_main_idtf: "поликарбоксилат алюминия";
+};
+
+concept_aluminum_salts_coagulants -> nrel_type -> {
+    concept_aluminum_sulfate_type => n_main_idtf: "сульфат алюминия (для обычных процессов коагуляции)";
+    concept_aluminum_chloride_type => n_main_idtf: "хлорид алюминия (для воды с низким pH)";
+    concept_organic_coagulants_type => n_main_idtf: "органические коагулянты на основе алюминия (для специализированных условий)";
+};
+
+
+
+concept_iron_salts_coagulants =>
+    n_main_idtf: "соли железа (коагулянты)"[*sc_link_content* := 
+        "соединения железа, такие как сульфат железа (FeSO₄) и хлорид железа (FeCl₃), используемые для коагуляции и флокуляции в процессе очистки воды, эффективны для осаждения взвешенных частиц и других загрязнителей."
+    ];
+
+concept_iron_salts_coagulants -> nrel_partition -> {
+    concept_iron_sulfate => n_main_idtf: "сульфат железа (FeSO₄)";
+    concept_iron_chloride => n_main_idtf: "хлорид железа (FeCl₃)";
+    concept_iron_organic_coagulants => n_main_idtf: "железоорганические коагулянты";
+};
+
+concept_iron_salts_coagulants -> nrel_application -> {
+    concept_drinking_wastewater_treatment => n_main_idtf: "очистка питьевой воды и сточных вод (осаждение загрязнителей и флокуляция)";
+    concept_water_treatment_plants => n_main_idtf: "очистка воды на водоочистных станциях";
+    concept_industrial_water_preparation => n_main_idtf: "водоподготовка в химической и пищевой промышленности";
+};
+
+concept_iron_salts_coagulants -> nrel_technical_parameter -> {
+    rrel_coagulant_concentration => [*sc_link_content* := "концентрация коагулянта в растворе (мг/л)"];
+    rrel_ph_efficiency => [*sc_link_content* := "pH воды, при котором коагулянт наиболее эффективен"];
+    rrel_suspended_particles_turbidity => [*sc_link_content* := "содержание взвешенных частиц и мутности в исходной воде"];
+};
+
+concept_iron_salts_coagulants -> nrel_operation_principle -> {
+    concept_coagulation_process => n_main_idtf: "соли железа при добавлении в воду взаимодействуют с загрязняющими частицами, нейтрализуя их заряд и способствуя их агрегации, что приводит к образованию крупных флокул, которые легко удаляются из воды";
+    concept_phosphate_organic_removal => n_main_idtf: "коагулянты из солей железа могут эффективно осаждать фосфаты, органические вещества и другие загрязнители, улучшая качество воды";
+};
+
+concept_iron_salts_coagulants -> nrel_component -> {
+    concept_iron_sulfate_component => n_main_idtf: "сульфат железа (FeSO₄)";
+    concept_iron_chloride_component => n_main_idtf: "хлорид железа (FeCl₃)";
+    concept_iron_organic_compounds => n_main_idtf: "железоорганические соединения";
+};
+
+concept_iron_salts_coagulants -> nrel_type -> {
+    concept_iron_sulfate_type => n_main_idtf: "сульфат железа (для осаждения взвешенных частиц и фосфатов)";
+    concept_iron_chloride_type => n_main_idtf: "хлорид железа (для воды с низким pH)";
+    concept_organic_iron_coagulants_type => n_main_idtf: "органические коагулянты железа (для специфических условий очистки)";
+};
+
+
+
+concept_lime_CaO =>
+    n_main_idtf: "известь (CaO)"[*sc_link_content* := 
+        "оксид кальция, часто используемый в очистных сооружениях для регулирования pH воды, осаждения загрязнителей и удаления твердых частиц."
+    ];
+
+concept_lime_CaO -> nrel_partition -> {
+    concept_slaked_lime => n_main_idtf: "гашеная известь (Ca(OH)₂)";
+    concept_quicklime => n_main_idtf: "негашеная известь (CaO)";
+};
+
+concept_lime_CaO -> nrel_application -> {
+    concept_drinking_wastewater_treatment => n_main_idtf: "очистка питьевой воды и сточных вод (регулировка pH, осаждение загрязнителей)";
+    concept_water_hardness_control => n_main_idtf: "контроль жесткости воды";
+    concept_agriculture => n_main_idtf: "сельское хозяйство (внесение извести в почву для нейтрализации кислотности)";
+};
+
+concept_lime_CaO -> nrel_technical_parameter -> {
+    rrel_lime_concentration => [*sc_link_content* := "концентрация извести в растворе (мг/л или г/м³)"];
+    rrel_ph_control => [*sc_link_content* := "pH воды (контроль кислотности и щелочности)"];
+};
+
+concept_lime_CaO -> nrel_operation_principle -> {
+    concept_neutralization => n_main_idtf: "известь используется для нейтрализации кислых загрязнителей, регулируя уровень pH воды и создавая условия для осаждения твердых частиц и фосфатов";
+    concept_coagulation_flocculation => n_main_idtf: "известь также способствует разложению органических веществ и удалению загрязнителей из воды в процессе коагуляции и флокуляции";
+};
+
+concept_lime_CaO -> nrel_component -> {
+    concept_calcium_oxide => n_main_idtf: "оксид кальция (CaO)";
+    concept_calcium_hydroxide => n_main_idtf: "гидроксид кальция (Ca(OH)₂)";
+};
+
+concept_lime_CaO -> nrel_type -> {
+    concept_quicklime_type => n_main_idtf: "негашеная известь (CaO)";
+    concept_slaked_lime_type => n_main_idtf: "гашеная известь (Ca(OH)₂)";
+};
+
+
+
+concept_anionic_flocculants =>
+    n_main_idtf: "анионные флокулянты"[*sc_link_content* := 
+        "поверхностно-активные вещества, которые обладают отрицательным зарядом и используются для агрегации частиц и образования флокул в процессе очистки воды и сточных вод."
+    ];
+
+concept_anionic_flocculants -> nrel_partition -> {
+    concept_polymeric_anionic_flocculants => n_main_idtf: "полимерные анионные флокулянты";
+    concept_polyphosphate_anionic_flocculants => n_main_idtf: "полифосфатные анионные флокулянты";
+};
+
+concept_anionic_flocculants -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление взвешенных частиц, органических загрязнителей и осаждение флокул)";
+    concept_water_purification => n_main_idtf: "водоочистка на водоочистных станциях";
+    concept_industrial_water_treatment => n_main_idtf: "промышленная очистка воды (например, в текстильной и химической промышленности)";
+};
+
+concept_anionic_flocculants -> nrel_technical_parameter -> {
+    rrel_flocculant_concentration => [*sc_link_content* := "концентрация флокулянта в растворе (мг/л или г/м³)"];
+    rrel_molecular_weight => [*sc_link_content* := "молекулярная масса флокулянта (определяет эффективность агрегации частиц)"];
+    rrel_ph_effectiveness => [*sc_link_content* := "pH воды, при котором флокулянт наиболее эффективен"];
+};
+
+concept_anionic_flocculants -> nrel_operation_principle -> {
+    concept_particle_interaction => n_main_idtf: "ан ionic flocculants с отрицательным зарядом вступают в реакцию с положительно заряженными частицами в воде, нейтрализуют их заряд и способствуют образованию флокул, которые легко удаляются фильтрацией или осаждением";
+    concept_reducing_solubility => n_main_idtf: "они также могут снижать растворимость загрязнителей в воде, помогая удалить органические и неорганические частицы";
+};
+
+concept_anionic_flocculants -> nrel_component -> {
+    concept_polymeric_flocculants => n_main_idtf: "полимерные флокулянты на основе акриламида или других полимеров";
+    concept_polyphosphate_flocculants => n_main_idtf: "полифосфатные флокулянты";
+};
+
+concept_anionic_flocculants -> nrel_type -> {
+    concept_synthetic_anionic_flocculants => n_main_idtf: "синтетические анионные флокулянты (на основе акриламида, полиакрилата)";
+    concept_natural_anionic_flocculants => n_main_idtf: "натуральные анионные флокулянты (например, крахмал и его производные)";
+};
+
+
+
+concept_cationic_flocculants =>
+    n_main_idtf: "катионные флокулянты"[*sc_link_content* := 
+        "поверхностно-активные вещества с положительным зарядом, используемые для агрегации частиц и образования флокул в процессе очистки воды и сточных вод, обычно для удаления взвешенных частиц и органических загрязнителей."
+    ];
+
+concept_cationic_flocculants -> nrel_partition -> {
+    concept_polymeric_cationic_flocculants => n_main_idtf: "полимерные катионные флокулянты";
+    concept_polyelectrolytes => n_main_idtf: "полиэлектролиты";
+};
+
+concept_cationic_flocculants -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление взвешенных частиц и органических загрязнителей)";
+    concept_water_purification => n_main_idtf: "водоочистка на водоочистных станциях";
+    concept_industrial_processes => n_main_idtf: "промышленные процессы (например, в текстильной, пищевой и нефтехимической промышленности)";
+};
+
+concept_cationic_flocculants -> nrel_technical_parameter -> {
+    rrel_flocculant_concentration => [*sc_link_content* := "концентрация флокулянта в растворе (мг/л или г/м³)"];
+    rrel_molecular_weight => [*sc_link_content* := "молекулярная масса флокулянта (определяет эффективность агрегации)"];
+    rrel_ph_effectiveness => [*sc_link_content* := "pH воды, при котором флокулянт наиболее эффективен"];
+};
+
+concept_cationic_flocculants -> nrel_operation_principle -> {
+    concept_particle_interaction => n_main_idtf: "катионные флокулянты с положительным зарядом вступают в реакцию с отрицательно заряженными частицами в воде, нейтрализуют их заряд и способствуют их агрегации, образуя флокулы, которые затем удаляются фильтрацией или осаждением";
+    concept_organic_contaminant_removal => n_main_idtf: "они эффективно удаляют органические загрязнители и взвешенные вещества, улучшая качество воды";
+};
+
+concept_cationic_flocculants -> nrel_component -> {
+    concept_polymeric_flocculants_ammonium_based => n_main_idtf: "полимерные флокулянты на основе аммониевых соединений или полиакриламида";
+    concept_polymeric_flocculants_natural_based => n_main_idtf: "полимерные флокулянты на основе естественных полимеров, например, катионные крахмалы";
+};
+
+concept_cationic_flocculants -> nrel_type -> {
+    concept_synthetic_cationic_flocculants => n_main_idtf: "синтетические катионные флокулянты (на основе полиакриламида и других синтетических полимеров)";
+    concept_natural_cationic_flocculants => n_main_idtf: "натуральные катионные флокулянты (например, катионные производные крахмала)";
+};
+
+
+
+// Сорбенты и фильтрующие материалы
+
+concept_activated_carbon =>
+    n_main_idtf: "активированный уголь"[*sc_link_content* := 
+        "материал с высокой пористостью, используемый для удаления органических и неорганических загрязнителей из воды, воздуха и других жидкостей. Он обладает отличной адсорбционной способностью и широко применяется в очистке сточных вод."
+    ];
+
+concept_activated_carbon -> nrel_partition -> {
+    concept_powdered_activated_carbon => n_main_idtf: "порошковый активированный уголь";
+    concept_granular_activated_carbon => n_main_idtf: "гранулированный активированный уголь";
+    concept_coconut_shell_activated_carbon => n_main_idtf: "активированный уголь на основе кокосовой скорлупы";
+    concept_wood_activated_carbon => n_main_idtf: "активированный уголь на основе древесного угля";
+};
+
+concept_activated_carbon -> nrel_application -> {
+    concept_drinking_and_wastewater_treatment => n_main_idtf: "очистка питьевой воды и сточных вод (удаление органических загрязнителей, хлора, запахов)";
+    concept_water_purification => n_main_idtf: "водоочистка на водоочистных станциях";
+    concept_air_filtration => n_main_idtf: "фильтрация воздуха (очистка от запахов, газов, паров)";
+    concept_chemical_industry => n_main_idtf: "химическая промышленность (адсорбция химических веществ)";
+};
+
+concept_activated_carbon -> nrel_technical_parameter -> {
+    rrel_adsorption_capacity => [*sc_link_content* := "степень адсорбции (мг загрязнителя на грамм угля)"];
+    rrel_pore_size => [*sc_link_content* := "размер пор активированного угля"];
+    rrel_flow_rate => [*sc_link_content* := "скорость потока воды или воздуха через фильтры с активированным углем"];
+};
+
+concept_activated_carbon -> nrel_operation_principle -> {
+    concept_adsorption_process => n_main_idtf: "активированный уголь удаляет загрязнители из воды или воздуха за счет адсорбции — процесса, при котором молекулы загрязнителя прилипают к поверхности угля благодаря его высокой пористости и большому количеству микропор";
+    concept_catalytic_reactions => n_main_idtf: "уголь также может разрушать органические молекулы через каталитические реакции, улучшая очистку воды и воздуха";
+};
+
+concept_activated_carbon -> nrel_component -> {
+    concept_carbon => n_main_idtf: "углерод (основной компонент активированного угля)";
+    concept_micro_and_mesopores => n_main_idtf: "микропоры и мезопоры, образующиеся в процессе активации угля";
+};
+
+concept_activated_carbon -> nrel_type -> {
+    concept_powdered_type => n_main_idtf: "порошковый активированный уголь";
+    concept_granular_type => n_main_idtf: "гранулированный активированный уголь";
+    concept_coconut_shell_type => n_main_idtf: "уголь на основе кокосовой скорлупы";
+    concept_wood_type => n_main_idtf: "уголь на основе древесины";
+};
+
+
+
+concept_zeolites =>
+    n_main_idtf: "цеолиты"[*sc_link_content* := 
+        "минеральные соединения, обладающие пористой структурой, используемые для очистки воды, адсорбции и обмена ионами. Цеолиты широко применяются в очистных сооружениях для удаления аммония, тяжелых металлов и других загрязнителей."
+    ];
+
+concept_zeolites -> nrel_partition -> {
+    concept_sodium_zeolites => n_main_idtf: "натриевые цеолиты";
+    concept_potassium_zeolites => n_main_idtf: "калиевые цеолиты";
+    concept_synthetic_zeolites => n_main_idtf: "синтетические цеолиты";
+};
+
+concept_zeolites -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "очистка сточных вод (удаление аммония, тяжелых металлов и других загрязнителей)";
+    concept_water_purification => n_main_idtf: "водоочистка на водоочистных станциях";
+    concept_agriculture => n_main_idtf: "сельское хозяйство (для улучшения качества почвы и водообмена)";
+    concept_air_and_gas_purification => n_main_idtf: "очистка газов и воздуха";
+};
+
+concept_zeolites -> nrel_technical_parameter -> {
+    rrel_ion_exchange_capacity => [*sc_link_content* := "ионная обменная способность цеолита (мг-экв/г)"];
+    rrel_porous_structure => [*sc_link_content* := "пористость цеолита и его удельная поверхность"];
+    rrel_adsorption_efficiency => [*sc_link_content* := "эффективность адсорбции для различных загрязнителей"];
+};
+
+concept_zeolites -> nrel_operation_principle -> {
+    concept_ion_exchange => n_main_idtf: "цеолиты работают путем обмена ионами — ионы загрязнителей, такие как аммоний, могут заменяться на безопасные ионы (например, натрий или калий)";
+    concept_adsorption_process => n_main_idtf: "они также обладают способностью адсорбировать органические и неорганические вещества благодаря своей пористой структуре, что помогает очищать воду и воздух";
+};
+
+concept_zeolites -> nrel_component -> {
+    concept_natural_zeolites => n_main_idtf: "природные цеолиты (например, клиноптилолит)";
+    concept_synthetic_zeolites => n_main_idtf: "синтетические цеолиты (например, фаунапоатит, офтальмоклацит)";
+};
+
+concept_zeolites -> nrel_type -> {
+    concept_sodium_type => n_main_idtf: "натриевые цеолиты";
+    concept_potassium_type => n_main_idtf: "калиевые цеолиты";
+    concept_synthetic_type => n_main_idtf: "синтетические цеолиты (например, для специализированных очистных процессов)";
+};

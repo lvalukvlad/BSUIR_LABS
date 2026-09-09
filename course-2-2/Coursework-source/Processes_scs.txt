@@ -1,0 +1,919 @@
+// ========== Абсолютные понятия ==========
+
+1.
+// ========== Базовое определение ==========
+concept_biodegradable_removal_process => 
+    n_main_idtf: "Полная или частичная очистка от веществ, подверженных биохимическому разложению"[*sc_link_content* := 
+        "Процесс удаления органических веществ, подверженных биохимическому разложению, из сточных вод."
+    ];
+
+// ========== Разбиение ==========
+concept_biodegradable_removal_process -> nrel_system_composition -> {
+    concept_complete_removal => n_main_idtf: "Полная очистка";
+    concept_partial_removal => n_main_idtf: "Частичная очистка";
+};
+
+// ========== Области применения ==========
+concept_biodegradable_removal_process -> nrel_application_area -> {
+    concept_treatment_facility => n_main_idtf: "Очистные сооружения";
+    concept_industrial_enterprise => n_main_idtf: "Промышленные предприятия";
+};
+
+// ========== Параметры ==========
+concept_biodegradable_removal_process -> nrel_parameter -> {
+    rrel_BOD5 => [*sc_link_content* := "БПК5 (мг/л)"];
+    rrel_COD => [*sc_link_content* := "ХПК (мг/л)"];
+};
+
+// ========== Принцип действия ==========
+concept_biodegradable_removal_process -> nrel_operating_principle -> {
+    concept_biological_treatment => n_main_idtf: "Биологическая очистка";
+    concept_chemical_treatment => n_main_idtf: "Химическая очистка";
+};
+
+2.
+// ========== Базовое определение ==========
+concept_nitrification => 
+    n_main_idtf: "Нитрификация"[*sc_link_content* := 
+        "Процесс биологического окисления аммония до нитратов при участии нитрифицирующих бактерий."
+    ];
+
+// ========== Разбиение ==========
+concept_nitrification -> nrel_system_composition -> {
+    concept_single_stage_nitrification => n_main_idtf: "Одностадийная нитрификация";
+    concept_two_stage_nitrification => n_main_idtf: "Двухстадийная нитрификация";
+};
+
+// ========== Области применения ==========
+concept_nitrification -> nrel_application_area -> {
+    concept_wastewater_treatment => n_main_idtf: "Очистка сточных вод";
+    concept_ecosystem_restoration => n_main_idtf: "Восстановление экосистем";
+};
+
+// ========== Параметры ==========
+concept_nitrification -> nrel_parameter -> {
+    rrel_ammonium_concentration => [*sc_link_content* := "Концентрация аммонийного азота (мг/л)"];
+    rrel_dissolved_oxygen => [*sc_link_content* := "Содержание растворенного кислорода (мг/л)"];
+};
+
+// ========== Принцип действия ==========
+concept_nitrification -> nrel_operating_principle -> {
+    concept_ammonium_oxidation => n_main_idtf: "Окисление аммония до нитритов";
+    concept_nitrite_oxidation => n_main_idtf: "Окисление нитритов до нитратов";
+};
+
+3.
+// ========== Базовое определение ==========
+concept_denitrification => 
+    n_main_idtf: "Денитрификация"[*sc_link_content* := 
+        "Процесс восстановления нитратов до молекулярного азота в анаэробных условиях."
+    ];
+
+// ========== Разбиение ==========
+concept_denitrification -> nrel_system_composition -> {
+    concept_heterotrophic_denitrification => n_main_idtf: "Гетеротрофная денитрификация";
+    concept_autotrophic_denitrification => n_main_idtf: "Автотрофная денитрификация";
+};
+
+// ========== Области применения ==========
+concept_denitrification -> nrel_application_area -> {
+    concept_wastewater_treatment => n_main_idtf: "Очистка сточных вод";
+    concept_eutrophication_reduction => n_main_idtf: "Снижение эвтрофикации водоемов";
+};
+
+// ========== Параметры ==========
+concept_denitrification -> nrel_parameter -> {
+    rrel_nitrate_concentration => [*sc_link_content* := "Концентрация нитратов (мг/л)"];
+    rrel_organic_substrate => [*sc_link_content* := "Наличие органического субстрата (мг/л)"];
+};
+
+// ========== Принцип действия ==========
+concept_denitrification -> nrel_operating_principle -> {
+    concept_anaerobic_reduction => n_main_idtf: "Анаэробное восстановление нитратов";
+    concept_gas_form_release => n_main_idtf: "Выделение азота в газообразной форме";
+};
+
+4.
+// ========== Базовое определение ==========
+concept_phosphorus_removal => 
+    n_main_idtf: "Удаление соединений фосфора"[*sc_link_content* := 
+        "Процесс осаждения фосфатов химическими реагентами или биологическое удаление с помощью микроорганизмов."
+    ];
+
+// ========== Разбиение ==========
+concept_phosphorus_removal -> nrel_system_composition -> {
+    concept_chemical_removal => n_main_idtf: "Химическое удаление";
+    concept_biological_removal => n_main_idtf: "Биологическое удаление";
+};
+
+// ========== Области применения ==========
+concept_phosphorus_removal -> nrel_application_area -> {
+    concept_treatment_facility => n_main_idtf: "Очистные сооружения";
+    concept_water_supply => n_main_idtf: "Водоснабжение";
+};
+
+// ========== Параметры ==========
+concept_phosphorus_removal -> nrel_parameter -> {
+    rrel_phosphate_concentration => [*sc_link_content* := "Концентрация фосфатов (мг/л)"];
+    rrel_reagent_dose => [*sc_link_content* := "Доза реагентов (мг/л)"];
+};
+
+// ========== Принцип действия ==========
+concept_phosphorus_removal -> nrel_operating_principle -> {
+    concept_reagent_precipitation => n_main_idtf: "Реагентное осаждение";
+    concept_biological_accumulation => n_main_idtf: "Биологическое накопление фосфора";
+};
+
+5.
+// ========== Базовое определение ==========
+concept_experimental_treatment => 
+    n_main_idtf: "Очистка сточных вод на экспериментальных и опытных установках"[*sc_link_content* := 
+        "Процесс очистки сточных вод в условиях опытных или пилотных установок для исследования новых методов обработки."
+    ];
+
+// ========== Разбиение ==========
+concept_experimental_treatment -> nrel_system_composition -> {
+    concept_laboratory_study => n_main_idtf: "Лабораторные исследования";
+    concept_pilot_testing => n_main_idtf: "Пилотные испытания";
+};
+
+// ========== Области применения ==========
+concept_experimental_treatment -> nrel_application_area -> {
+    concept_technology_development => n_main_idtf: "Разработка новых технологий";
+    concept_equipment_testing => n_main_idtf: "Тестирование оборудования";
+};
+
+// ========== Параметры ==========
+concept_experimental_treatment -> nrel_parameter -> {
+    rrel_productivity => [*sc_link_content* := "Производительность (м³/ч)"];
+    rrel_efficiency => [*sc_link_content* := "Эффективность очистки (%)"];
+};
+
+// ========== Принцип действия ==========
+concept_experimental_treatment -> nrel_operating_principle -> {
+    concept_real_conditions_simulation => n_main_idtf: "Моделирование реальных условий";
+    concept_industrial_scale_adaptation => n_main_idtf: "Адаптация к промышленным масштабам";
+};
+
+6.
+// ========== Базовое определение ==========
+concept_preaerator_biocoagulator_usage => 
+    n_main_idtf: "Применение преаэраторов и биокоагуляторов"[*sc_link_content* := 
+        "Использование специальных устройств для предварительного насыщения воды кислородом и улучшения процессов коагуляции."
+    ];
+
+// ========== Разбиение ==========
+concept_preaerator_biocoagulator_usage -> nrel_system_composition -> {
+    concept_mechanical_aeration => n_main_idtf: "Механическая аэрация";
+    concept_biological_coagulation => n_main_idtf: "Биологическая коагуляция";
+};
+
+// ========== Области применения ==========
+concept_preaerator_biocoagulator_usage -> nrel_application_area -> {
+    concept_industrial_wastewater => n_main_idtf: "Очистка промышленных сточных вод";
+    concept_biological_treatment_preparation => n_main_idtf: "Подготовка воды для биологической очистки";
+};
+
+// ========== Параметры ==========
+concept_preaerator_biocoagulator_usage -> nrel_parameter -> {
+    rrel_oxygen_level => [*sc_link_content* := "Уровень кислорода (мг/л)"];
+    rrel_coagulant_concentration => [*sc_link_content* := "Концентрация коагулянта (мг/л)"];
+};
+
+// ========== Принцип действия ==========
+concept_preaerator_biocoagulator_usage -> nrel_operating_principle -> {
+    concept_oxygen_enrichment => n_main_idtf: "Насыщение кислородом";
+    concept_coagulation_enhancement => n_main_idtf: "Улучшение процессов коагуляции";
+};
+
+7.
+// ========== Базовое определение ==========
+concept_biological_treatment_destabilization => 
+    n_main_idtf: "Дестабилизация биологической очистки на сооружениях"[*sc_link_content* := 
+        "Процесс нарушения нормального функционирования биологических очистных сооружений из-за изменений условий эксплуатации."
+    ];
+
+// ========== Разбиение ==========
+concept_biological_treatment_destabilization -> nrel_system_composition -> {
+    concept_mechanical_destabilization => n_main_idtf: "Механическая дестабилизация";
+    concept_chemical_destabilization => n_main_idtf: "Химическая дестабилизация";
+};
+
+// ========== Области применения ==========
+concept_biological_treatment_destabilization -> nrel_application_area -> {
+    concept_treatment_diagnostics => n_main_idtf: "Диагностика очистных сооружений";
+    concept_treatment_recovery => n_main_idtf: "Восстановление очистных процессов";
+};
+
+// ========== Параметры ==========
+concept_biological_treatment_destabilization -> nrel_parameter -> {
+    rrel_system_load => [*sc_link_content* := "Нагрузка на систему (кг БПК5/м³)"];
+    rrel_microflora_composition => [*sc_link_content* := "Изменение микробного состава"];
+};
+
+// ========== Принцип действия ==========
+concept_biological_treatment_destabilization -> nrel_operating_principle -> {
+    concept_biocenosis_imbalance => n_main_idtf: "Нарушение баланса биоценоза";
+    concept_efficiency_drop => n_main_idtf: "Снижение эффективности очистки";
+};
+
+8.
+// ========== Базовое определение ==========
+concept_aeration_tank_design => 
+    n_main_idtf: "Проектирование аэротенков"[*sc_link_content* := 
+        "Разработка конструктивных решений и технологических схем для аэротенков, используемых в биологической очистке сточных вод."
+    ];
+
+// ========== Типы аэротенков ==========
+concept_aeration_tank_design -> nrel_design_type -> {
+    concept_classical_aeration_tank => n_main_idtf: "Классические аэротенки";
+    concept_membrane_aeration_tank => n_main_idtf: "Аэротенки с мембранной аэрацией";
+};
+
+// ========== Области применения ==========
+concept_aeration_tank_design -> nrel_application -> {
+    concept_wastewater_treatment_plant => n_main_idtf: "Очистные сооружения";
+    concept_industrial_enterprise => n_main_idtf: "Промышленные предприятия";
+};
+
+// ========== Параметры проектирования ==========
+concept_aeration_tank_design -> nrel_technical_parameter -> {
+    rrel_volume => n_main_idtf: "Объем аэротенка (м³)";
+    rrel_retention_time => n_main_idtf: "Время пребывания сточной воды (ч)";
+}В
+
+// ========== Принципы работы ==========
+concept_aeration_tank_design -> nrel_operation_principle -> {
+    concept_oxygen_supply => n_main_idtf: "Подача кислорода";
+    concept_active_sludge => n_main_idtf: "Активный ил";
+};
+
+9.
+// ========== Базовое определение ==========
+concept_activated_sludge_regeneration => 
+    n_main_idtf: "Регенерация активного ила"[*sc_link_content* := 
+        "Процесс восстановления активности активного ила после его эксплуатации."
+    ];
+
+// ========== Методы регенерации ==========
+concept_activated_sludge_regeneration -> nrel_regeneration_method -> {
+    concept_mechanical_regeneration => n_main_idtf: "Физико-химическая регенерация";
+    concept_biological_regeneration => n_main_idtf: "Биологическая регенерация";
+};
+
+// ========== Области применения ==========
+concept_activated_sludge_regeneration -> nrel_application -> {
+    concept_wastewater_treatment_plant => n_main_idtf: "Очистные сооружения";
+    concept_activated_sludge_system => n_main_idtf: "Системы активного ила ";
+};
+
+// ========== Параметры процесса ==========
+concept_activated_sludge_regeneration -> nrel_technical_parameter -> {
+    rrel_sludge_concentration => n_main_idtf: "Концентрация активного ила (г/л)";
+    rrel_aeration_intensity => n_main_idtf: "Интенсивность аэрации (м³/ч)";
+};
+
+// ========== Принципы работы ==========
+concept_activated_sludge_regeneration -> nrel_operation_principle -> {
+    concept_toxic_removal => n_main_idtf: "Удаление токсичных соединений";
+    concept_microbial_reactivation => n_main_idtf: "Восстановление микробной активности";
+};
+
+10.
+// ========== Базовое определение ==========
+concept_industrial_wastewater_treatment => 
+    n_main_idtf: "Очистка производственных сточных вод"[*sc_link_content* := 
+        "Процесс удаления загрязняющих веществ из сточных вод промышленных предприятий."
+    ];
+
+// ========== Методы очистки ==========
+concept_industrial_wastewater_treatment -> nrel_treatment_method -> {
+    concept_physicochemical_treatment => n_main_idtf: "Физико-химическая очистка";
+    concept_biological_treatment => n_main_idtf: "Биологическая очистка";
+    concept_combined_methods => n_main_idtf: "Комбинированные методы";
+};
+
+// ========== Области применения ==========
+concept_industrial_wastewater_treatment -> nrel_application -> {
+    concept_industrial_sector => n_main_idtf: "Промышленность";
+    concept_treatment_plants => n_main_idtf: "Очистные сооружения";
+};
+
+// ========== Ключевые параметры ==========
+concept_industrial_wastewater_treatment -> nrel_technical_parameter -> {
+    rrel_pollutant_concentration => n_main_idtf: "Уровень загрязняющих веществ (мг/л) ";
+    rrel_treatment_efficiency => n_main_idtf: "Эффективность очистки (%)"; 
+};
+
+// ========== Принципы действия ==========
+concept_industrial_wastewater_treatment -> nrel_operation_principle -> {
+    concept_sedimentation => n_main_idtf: "Осаждение";
+    concept_filtration => n_main_idtf: "Фильтрация";
+    concept_biological_degradation => n_main_idtf: "Биологическая деградация";
+};
+
+11.
+// ========== Базовое определение ==========
+concept_biological_filter_design => 
+    n_main_idtf: "Проектирование биологических фильтров"[*sc_link_content* := 
+        "Разработка конструктивных решений и технологических схем для биофильтров, используемых в очистке сточных вод."
+    ];
+
+// ========== Типы биофильтров ==========
+concept_biological_filter_design -> nrel_filter_type -> {
+    concept_trickling_filter => n_main_idtf: "Капельные биофильтры";
+    concept_submerged_filter => n_main_idtf: "Погружные биофильтры";
+};
+
+// ========== Области применения ==========
+concept_biological_filter_design -> nrel_application -> {
+    concept_wastewater_treatment_plant => n_main_idtf: "Очистные сооружения";
+    concept_water_treatment_station => n_main_idtf: "Водоочистные станции";
+};
+
+// ========== Параметры проектирования ==========
+concept_biological_filter_design -> nrel_technical_parameter -> {
+    rrel_surface_area => n_main_idtf: "Площадь фильтрующей поверхности (м²)";
+    rrel_loading_rate => n_main_idtf: "Нагрузка на фильтр (кг БПК/м³) ";
+};
+
+// ========== Принципы работы ==========
+concept_biological_filter_design -> nrel_operation_principle -> {
+    concept_adsorption => n_main_idtf: "Адсорбция загрязняющих веществ";
+    concept_biological_degradation => n_main_idtf: "Биологическое разложение";
+};
+
+12.
+// ========== Базовое определение ==========
+concept_natural_aeration => 
+    n_main_idtf: "Естественная аэрация"[*sc_link_content* := 
+        "Процесс насыщения воды кислородом за счет естественного перемешивания с воздухом."
+    ];
+
+// ========== Типы аэрации ==========
+concept_natural_aeration -> nrel_aeration_type -> {
+    concept_surface_aeration => n_main_idtf: "Поверхностная аэрация";
+    concept_diffusion_aeration => n_main_idtf: "Диффузионная аэрация";
+};
+
+// ========== Области применения ==========
+concept_natural_aeration -> nrel_application -> {
+    concept_natural_water_body => n_main_idtf: "Природные водоемы";
+    concept_wastewater_treatment_plant => n_main_idtf: "Очистные сооружения";
+};
+
+// ========== Параметры процесса ==========
+concept_natural_aeration -> nrel_technical_parameter -> {
+    rrel_oxygen_concentration => n_main_idtf: "Концентрация растворенного кислорода (мг/л) ";
+    rrel_saturation_rate => n_main_idtf: "Скорость насыщения кислородом (мг/ч)"; 	
+};
+
+// ========== Принципы работы ==========
+concept_natural_aeration -> nrel_operation_principle -> {
+    concept_air_contact => n_main_idtf: "Контакт с атмосферным воздухом";
+    concept_mechanical_mixing => n_main_idtf: "Механическое перемешивание";
+};
+
+13.
+// ========== Базовое определение ==========
+concept_artificial_aeration => 
+    n_main_idtf: "Искусственная аэрация"[*sc_link_content* := 
+        "Процесс насыщения воды кислородом с использованием технических средств."
+    ];
+
+// ========== Типы аэрации ==========
+concept_artificial_aeration -> nrel_aeration_type -> {
+    concept_mechanical_aeration => n_main_idtf: "Механическая аэрация";
+    concept_pneumatic_aeration => n_main_idtf: "Пневматическая аэрация";
+};
+
+// ========== Области применения ==========
+concept_artificial_aeration -> nrel_application -> {
+    concept_wastewater_treatment => n_main_idtf: "Биологическая очистка сточных вод";
+    concept_water_treatment_plant => n_main_idtf: "Водоочистные сооружения";
+};
+
+// ========== Параметры процесса ==========
+concept_artificial_aeration -> nrel_technical_parameter -> {
+    rrel_air_flow => n_main_idtf: "Расход воздуха (м³/ч) ";
+    rrel_oxygen_concentration => n_main_idtf: "Концентрация кислорода (мг/л) ";
+};
+
+// ========== Принципы работы ==========
+concept_artificial_aeration -> nrel_operation_principle -> {
+    concept_air_supply => n_main_idtf: "Подача воздуха через аэраторы";
+    concept_water_mixing => n_main_idtf: "Перемешивание воды";
+};
+
+14.
+// ========== Базовое определение ==========
+concept_secondary_settlers_operation => 
+    n_main_idtf: "Работы вторичных отстойников"[*sc_link_content* := 
+        "Процесс эксплуатации вторичных отстойников для отделения активного ила от очищенной воды."
+    ];
+
+// ========== Типы процессов ==========
+concept_secondary_settlers_operation -> nrel_process_type -> {
+    concept_gravitational_settling => n_main_idtf: "Гравитационное осаждение";
+    concept_sludge_circulation => n_main_idtf: "Циркуляция ила";
+};
+
+// ========== Области применения ==========
+concept_secondary_settlers_operation -> nrel_application -> {
+    concept_wastewater_treatment_plant => n_main_idtf: "Станции очистки сточных вод";
+    concept_biological_treatment => n_main_idtf: "Биологическая очистка";
+};
+
+// ========== Технические параметры ==========
+concept_secondary_settlers_operation -> nrel_technical_parameter -> {
+    rrel_settling_velocity => n_main_idtf: "Скорость осаждения (мм/с)";
+    rrel_sludge_concentration => n_main_idtf: "Концентрация ила (г/л)";
+};
+
+// ========== Принципы работы ==========
+concept_secondary_settlers_operation -> nrel_operation_principle -> {
+    concept_phase_separation => n_main_idtf: "Разделение фаз по плотности";
+    concept_sludge_return => n_main_idtf: "Возврат активного ила";
+};
+
+15.
+// ========== Базовое определение ==========
+concept_treatment_without_nitrification => 
+    n_main_idtf: "Очистка без нитрификации"[*sc_link_content* := 
+        "Процесс очистки сточных вод без окисления аммонийного азота до нитратов"
+    ];
+
+// ========== Методы очистки ==========
+concept_treatment_without_nitrification -> nrel_treatment_method -> {
+    concept_mechanical_treatment => n_main_idtf: "Механическая очистка";
+    concept_biological_treatment => n_main_idtf: "Биологическая очистка без нитрификации";
+};
+
+// ========== Области применения ==========
+concept_treatment_without_nitrification -> nrel_application -> {
+    concept_treatment_plants => n_main_idtf: "Очистные сооружения";
+    concept_water_treatment_systems => n_main_idtf: "Водоочистные системы";
+};
+
+// ========== Параметры процесса ==========
+concept_treatment_without_nitrification -> nrel_technical_parameter -> {
+    rrel_ammonium_concentration => n_main_idtf: "Концентрация аммония (мг/л)";
+    rrel_pollution_level => n_main_idtf: "Уровень загрязнений (мг/л) ";
+};
+
+// ========== Принцип действия ==========
+concept_treatment_without_nitrification -> nrel_operation_principle -> {
+    concept_suspended_solids_removal => n_main_idtf: "Удаление взвешенных веществ";
+    concept_adsorption_process => n_main_idtf: "Адсорбция и осаждение";
+};
+туть
+16.
+// ========== Базовое определение ==========
+concept_nitrification_denitrification_treatment => 
+    n_main_idtf: "Очистка с нитрификацией и денитрификацией"[*sc_link_content* := 
+        "Процесс биологической очистки, включающий окисление аммония до нитратов и последующее восстановление нитратов до азота"
+    ];
+
+// ========== Схемы очистки ==========
+concept_nitrification_denitrification_treatment -> nrel_treatment_scheme -> {
+    concept_single_stage => n_main_idtf: "Одностадийная схема";
+    concept_two_stage => n_main_idtf: "Двухстадийная схема";
+};
+
+// ========== Технические параметры ==========
+concept_nitrification_denitrification_treatment -> nrel_technical_parameter -> {
+    rrel_nitrate_concentration => [*sc_link_content* := "1-30 мг/л"];
+    rrel_nitrogen_removal_efficiency => [*sc_link_content* := "70-95%"];
+};
+
+17.
+// ========== Базовое определение ==========
+concept_phosphorus_removal => 
+    n_main_idtf: "Удаление фосфора с осаждением реагентами"[*sc_link_content* := 
+        "Процесс химического осаждения фосфатов путем добавления реагентов"
+    ];
+
+// ========== Методы осаждения ==========
+concept_phosphorus_removal -> nrel_precipitation_method -> {
+    concept_coagulation => n_main_idtf: "Коагуляция";
+    concept_flocculation => n_main_idtf: "Флокуляция";
+};
+
+// ========== Используемые реагенты ==========
+concept_phosphorus_removal -> nrel_chemical_reagent -> {
+    concept_iron_chloride => n_main_idtf: "Хлорид железа";
+    concept_alum => n_main_idtf: "Сульфат алюминия";
+    concept_lime => n_main_idtf: "Известь";
+};
+
+18.
+// ========== Базовое определение ==========
+concept_activated_sludge_systems => 
+    n_main_idtf: "Очистка сточных вод в системах с активным илом"[*sc_link_content* := 
+        "Процесс биологической очистки сточных вод с использованием активного ила"
+    ];
+
+// ========== Типы систем ==========
+concept_activated_sludge_systems -> nrel_system_type -> {
+    concept_conventional_system => n_main_idtf: "Классическая схема";
+    concept_modified_system => n_main_idtf: "Модернизированные системы";
+};
+
+// ========== Технические параметры ==========
+concept_activated_sludge_systems -> nrel_technical_parameter -> {
+    rrel_sludge_concentration => [*sc_link_content* := "2-6 г/л"];
+    rrel_aeration_time => [*sc_link_content* := "4-24 ч"];
+};
+
+// ========== Базовое определение ==========
+concept_activated_sludge_regeneration => 
+    n_main_idtf: "Регенерация активного ила"[*sc_link_content* := 
+        "Процесс восстановления активности активного ила после его эксплуатации в очистных сооружениях"
+    ];
+
+// ========== Типы регенерации ==========
+concept_activated_sludge_regeneration -> nrel_regeneration_type -> {
+    concept_aerobic_regeneration => n_main_idtf: "Аэробная регенерация";
+    concept_anaerobic_regeneration => n_main_idtf: "Анаэробная регенерация";
+    concept_physicochemical_regeneration => n_main_idtf: "Физико-химическая регенерация";
+};
+
+// ========== Технологические параметры ==========
+concept_activated_sludge_regeneration -> nrel_technical_parameter -> {
+    rreg_sludge_age => [*sc_link_content* := "5-15 суток"];
+    rrel_oxygen_level => [*sc_link_content* := "2-4 мг/л"];
+    rrel_regeneration_time => [*sc_link_content* := "4-12 часов"];
+};
+
+// ========== Оборудование для регенерации ==========
+concept_activated_sludge_regeneration -> nrel_equipment -> {
+    concept_regeneration_tank => n_main_idtf: "Регенерационный резервуар";
+    concept_aeration_system => n_main_idtf: "Система аэрации";
+    concept_mixing_device => n_main_idtf: "Устройство перемешивания";
+};
+
+// ========== Показатели эффективности ==========
+concept_activated_sludge_regeneration -> nrel_performance_indicator -> {
+    concept_sludge_index => [*sc_link_content* := "50-150 мл/г"];
+    concept_organic_removal => [*sc_link_content* := "85-95%"];
+};
+
+// ========== Связь с другими процессами ==========
+concept_activated_sludge_regeneration -> nrel_related_process -> {
+    concept_wastewater_treatment => n_main_idtf: "Очистка сточных вод";
+    concept_sludge_dewatering => n_main_idtf: "Обезвоживание ила";
+};
+
+// ========== Режимы работы ==========
+concept_activated_sludge_regeneration -> nrel_operation_mode -> {
+    concept_continuous_regeneration => n_main_idtf: "Непрерывная регенерация";
+    concept_batch_regeneration => n_main_idtf: "Периодическая регенерация";
+};
+
+// ========== Факторы влияния ==========
+concept_activated_sludge_regeneration -> nrel_influence_factor -> {
+    concept_temperature => [*sc_link_content* := "15-30°C"];
+    concept_ph_level => [*sc_link_content* := "6.5-8.5"];
+    concept_toxic_substances => n_main_idtf: "Наличие токсичных веществ";
+};
+
+20.
+// ========== Базовое определение ==========
+concept_chemical_precipitation => 
+    n_main_idtf: "Химическое осаждение"[*sc_link_content* := 
+        "Процесс удаления загрязняющих веществ путем химической реакции с образованием нерастворимого осадка"
+    ];
+
+// ========== Методы осаждения ==========
+concept_chemical_precipitation -> nrel_precipitation_type -> {
+    concept_reagent_precipitation => n_main_idtf: "Реагентное осаждение";
+    concept_sorption_precipitation => n_main_idtf: "Сорбционное осаждение";
+};
+
+21.
+// ========== Базовое определение ==========
+concept_organic_matter_destruction => 
+    n_main_idtf: "Обработка сточной воды с целью деструкции органических веществ"[*sc_link_content* := 
+        "Процесс разложения органических соединений в сточных водах"
+    ];
+
+// ========== Методы деструкции ==========
+concept_organic_matter_destruction -> nrel_destruction_method -> {
+    concept_biological_destruction => n_main_idtf: "Биологическая деструкция";
+    concept_chemical_destruction => n_main_idtf: "Химическая деструкция";
+};
+
+22.
+// ========== Базовое определение ==========
+concept_incomplete_biological_treatment => 
+    n_main_idtf: "Неполная биологическая очистка"[*sc_link_content* := 
+        "Процесс частичного удаления органических загрязняющих веществ без полной минерализации"
+    ];
+
+23.
+// ========== Базовое определение ==========
+concept_complete_biological_treatment => 
+    n_main_idtf: "Полная биологическая очистка без нитрификации"[*sc_link_content* := 
+        "Процесс полной очистки сточных вод биологическими методами без стадии нитрификации"
+    ];
+
+24.
+// ========== Базовое определение ==========
+concept_biological_treatment_with_regeneration => 
+    n_main_idtf: "Биологическая очистка с регенерацией ила"[*sc_link_content* := 
+        "Процесс биологической очистки сточных вод с возможностью восстановления активного ила"
+    ];
+
+// ========== Типы регенерационных систем ==========
+concept_biological_treatment_with_regeneration -> nrel_system_type -> {
+    concept_aerobic_regeneration_system => n_main_idtf: "Аэробная регенерация";
+    concept_anaerobic_regeneration_system => n_main_idtf: "Анаэробная регенерация";
+};
+
+// ========== Технические параметры ==========
+concept_biological_treatment_with_regeneration -> nrel_technical_parameter -> {
+    rrel_sludge_concentration => [*sc_link_content* := "3-8 г/л"];
+    rrel_aeration_intensity => [*sc_link_content* := "2-10 м³/ч"];
+    rreg_regeneration_ratio => [*sc_link_content* := "0.25-0.75"];
+};
+
+// ========== Компоненты системы ==========
+concept_biological_treatment_with_regeneration -> nrel_system_component -> {
+    concept_aeration_tank => n_main_idtf: "Аэротенк";
+    concept_regeneration_zone => n_main_idtf: "Зона регенерации";
+    concept_settler => n_main_idtf: "Отстойник";
+};
+
+25.
+// ========== Базовое определение ==========
+concept_pneumatic_aeration => 
+    n_main_idtf: "Пневматическая аэрация"[*sc_link_content* := 
+        "Процесс насыщения сточных вод кислородом с использованием воздушных потоков"
+    ];
+
+// ========== Типы аэраторов ==========
+concept_pneumatic_aeration -> nrel_aerator_type -> {
+    concept_fine_bubble => n_main_idtf: "Мелкопузырчатые аэраторы";
+    concept_coarse_bubble => n_main_idtf: "Крупнопузырчатые аэраторы";
+    concept_jet_aerator => n_main_idtf: "Струйные аэраторы";
+};
+
+// ========== Параметры аэрации ==========
+concept_pneumatic_aeration -> nrel_technical_parameter -> {
+    rrel_air_flow => [*sc_link_content* := "5-100 м³/ч"];
+    rrel_oxygen_transfer => [*sc_link_content* := "1.5-3.5 кгO₂/кВт·ч"];
+};
+
+26.
+// ========== Базовое определение ==========
+concept_water_chlorination_process => 
+    n_main_idtf: "Хлорирование воды"[*sc_link_content* := 
+        "Процесс обеззараживания воды с применением соединений хлора"
+    ];
+
+// ========== Методы хлорирования ==========
+concept_water_chlorination_process -> nrel_chlorination_method -> {
+    concept_postchlorination => n_main_idtf: "Постхлорирование";
+    concept_prechlorination => n_main_idtf: "Предхлорирование";
+    concept_breakpoint => n_main_idtf: "Хлорирование до точки излома";
+};
+
+// ========== Оборудование ==========
+concept_water_chlorination_process -> nrel_equipment -> {
+    concept_chlorinator => n_main_idtf: "Хлоратор";
+    concept_contact_tank => n_main_idtf: "Контактный резервуар";
+    concept_control_system => n_main_idtf: "Система дозирования";
+};
+
+// ========== Типы хлорирования ==========
+concept_water_chlorination -> nrel_chlorination_type -> {
+    concept_dosed_chlorination => n_main_idtf: "Дозированное хлорирование";
+    concept_shock_chlorination => n_main_idtf: "Ударное хлорирование";
+};
+
+
+
+// ========== Относительные понятия ==========
+
+1.
+// ========== Базовое определение ==========
+concept_specific_impurities_removal => 
+    n_main_idtf: "Очистка от специфических примесей"[*sc_link_content* := 
+        "Процесс удаления определённых загрязняющих веществ из сточных вод"
+    ];
+
+// ========== Методы очистки ==========
+concept_specific_impurities_removal -> nrel_treatment_method -> {
+    concept_membrane_filtration => n_main_idtf: "Мембранная фильтрация";
+    concept_ion_exchange => n_main_idtf: "Ионный обмен";
+    concept_advanced_oxidation => n_main_idtf: "Методы окисления";
+};
+
+2.
+// ========== Базовое определение ==========
+concept_treatment_facilities_calculation => 
+    n_main_idtf: "Расчёт сооружений для очистки сточных вод"[*sc_link_content* := 
+        "Процесс определения параметров очистных сооружений"
+    ];
+
+// ========== Типы расчетов ==========
+concept_treatment_facilities_calculation -> nrel_calculation_type -> {
+    concept_hydraulic_calculation => n_main_idtf: "Гидравлический расчёт";
+    concept_technological_calculation => n_main_idtf: "Технологический расчёт";
+};
+
+3.
+// ========== Базовое определение ==========
+concept_biofilter_network_calculation => 
+    n_main_idtf: "Расчёт распределительной и отводящей сетей биофильтров"[*sc_link_content* := 
+        "Процесс проектирования сетей подачи и отвода сточных вод в биофильтрах"
+    ];
+
+// ========== Параметры расчета ==========
+concept_biofilter_network_calculation -> nrel_calculation_parameter -> {
+    rrel_filtration_rate => [*sc_link_content* := "1-10 м³/м²·сут"];
+    rrel_distribution_uniformity => [*sc_link_content* := "85-95%"];
+};
+
+4.
+// ========== Базовое определение ==========
+concept_aeration_equipment_placement =>
+    n_main_idtf: "Оборудование для аэрации (размещение мешалок и аэраторов и т.д.)"[*sc_link_content* :=
+        "Процесс определения оптимального расположения аэрационного оборудования в очистных сооружениях"
+    ];
+
+// ========== Типы оборудования ==========
+concept_aeration_equipment_placement -> nrel_equipment_type -> {
+    concept_mechanical_mixer => n_main_idtf: "Механические мешалки";
+    concept_diffuser_aerator => n_main_idtf: "Диффузорные аэраторы";
+    concept_surface_aerator => n_main_idtf: "Поверхностные аэраторы";
+};
+
+// ========== Параметры размещения ==========
+concept_aeration_equipment_placement -> nrel_placement_parameter -> {
+    rrel_mixing_power => [*sc_link_content* := "0.5-5 кВт"];
+    rrel_spacing => [*sc_link_content* := "0.5-2 м между аэраторами"];
+};
+
+5.
+// ========== Базовое определение ==========
+concept_aerofilter_calculation =>
+    n_main_idtf: "Расчёт аэрофильтров"[*sc_link_content* :=
+        "Определение параметров аэрофильтров для биологической очистки сточных вод"
+    ];
+
+// ========== Расчетные параметры ==========
+concept_aerofilter_calculation -> nrel_calculation_parameter -> {
+    rrel_filter_area => [*sc_link_content* := "50-5000 м²"];
+    rrel_loading_thickness => [*sc_link_content* := "1.5-4 м"];
+};
+
+6.
+// ========== Базовое определение ==========
+concept_recirculation_treatment =>
+    n_main_idtf: "Очистка сточных вод с рециркуляцией"[*sc_link_content* :=
+        "Процесс очистки с повторным использованием части очищенной воды"
+    ];
+
+// ========== Типы рециркуляции ==========
+concept_recirculation_treatment -> nrel_recirculation_type -> {
+    concept_internal_recirculation => n_main_idtf: "Внутренняя рециркуляция";
+    concept_external_recirculation => n_main_idtf: "Внешняя рециркуляция";
+};
+
+7.
+// ========== Базовое определение ==========
+concept_wastewater_inflow_cessation =>
+    n_main_idtf: "Прекращение притока сточных вод"[*sc_link_content* :=
+        "Временное или постоянное прекращение поступления сточных вод в очистные сооружения"
+    ];
+
+// ========== Типы прекращения ==========
+concept_wastewater_inflow_cessation -> nrel_cessation_type -> {
+    concept_emergency_cessation => n_main_idtf: "Аварийное прекращение";
+    concept_planned_cessation => n_main_idtf: "Плановое прекращение";
+};
+
+8.
+// ========== Базовое определение ==========
+concept_biofilter_parameter_adjustment =>
+    n_main_idtf: "Корректировка параметров биофильтров"[*sc_link_content* :=
+        "Изменение эксплуатационных характеристик биофильтров для повышения эффективности"
+    ];
+
+// ========== Параметры корректировки ==========
+concept_biofilter_parameter_adjustment -> nrel_adjustment_parameter -> {
+    concept_flow_rate => [*sc_link_content* := "1-10 м³/м²·ч"];
+    concept_oxygen_supply => [*sc_link_content* := "2-8 мг/л"];
+};
+
+9.
+// ========== Базовое определение ==========
+concept_sprinkler_design =>
+    n_main_idtf: "Проектирование разбрызгивателей"[*sc_link_content* :=
+        "Разработка конструкций и схем размещения разбрызгивающих устройств"
+    ];
+
+// ========== Типы разбрызгивателей ==========
+concept_sprinkler_design -> nrel_sprinkler_type -> {
+    concept_rotary_sprinkler => n_main_idtf: "Роторные разбрызгиватели";
+    concept_nozzle_sprinkler => n_main_idtf: "Сопловые разбрызгиватели";
+};
+
+10.
+// ========== Базовое определение ==========
+concept_sedimentation_tank_area =>
+    n_main_idtf: "Определение площадей отстойников"[*sc_link_content* :=
+        "Расчет необходимой площади отстойников для эффективного осаждения взвешенных веществ"
+    ];
+
+// ========== Типы отстойников ==========
+concept_sedimentation_tank_area -> nrel_sedimentation_type -> {
+    concept_primary_settler => n_main_idtf: "Первичные отстойники";
+    concept_secondary_settler => n_main_idtf: "Вторичные отстойники";
+};
+
+// ========== Расчетные параметры ==========
+concept_sedimentation_tank_area -> nrel_calculation_parameter -> {
+    rrel_settling_velocity => [*sc_link_content* := "0.3-1.2 мм/с"];
+    rrel_depth => [*sc_link_content* := "3-5 м"];
+    rrel_surface_load => [*sc_link_content* := "1-3 м³/м²·ч"];
+};
+
+11.
+// ========== Базовое определение ==========
+concept_filtration_field_design =>
+    n_main_idtf: "Определение размеров карт полей фильтрации"[*sc_link_content* :=
+        "Расчет размеров участков для фильтрационной очистки сточных вод"
+    ];
+
+// ========== Типы полей ==========
+concept_filtration_field_design -> nrel_field_type -> {
+    concept_sand_filtration => n_main_idtf: "Песчаные фильтрационные поля";
+    concept_gravel_filtration => n_main_idtf: "Гравийные фильтрационные поля";
+};
+
+12.
+// ========== Базовое определение ==========
+concept_treatment_plant_operation =>
+    n_main_idtf: "Эксплуатация очистных сооружений"[*sc_link_content* :=
+        "Процесс поддержания работоспособности очистных сооружений"
+    ];
+
+// ========== Режимы эксплуатации ==========
+concept_treatment_plant_operation -> nrel_operation_mode -> {
+    concept_preventive_maintenance => n_main_idtf: "Профилактическое обслуживание";
+    concept_emergency_maintenance => n_main_idtf: "Аварийное обслуживание";
+};
+
+13.
+// ========== Базовое определение ==========
+concept_subsurface_filtration_design =>
+    n_main_idtf: "Проектирование полей подземной фильтрации, фильтрующих колодцев и траншей"[*sc_link_content* :=
+        "Разработка подземных систем фильтрации сточных вод"
+    ];
+
+// ========== Компоненты системы ==========
+concept_subsurface_filtration_design -> nrel_system_component -> {
+    concept_filtration_trench => n_main_idtf: "Фильтрующие траншеи";
+    concept_filter_well => n_main_idtf: "Фильтрующие колодцы";
+};
+
+14.
+// ========== Базовое определение ==========
+concept_irrigation_field_design =>
+    n_main_idtf: "Проектирование полей орошения"[*sc_link_content* :=
+        "Разработка полей орошения для распределения сточных вод"
+    ];
+
+// ========== Типы орошения ==========
+concept_irrigation_field_design -> nrel_irrigation_type -> {
+    concept_surface_irrigation => n_main_idtf: "Поверхностное орошение";
+    concept_drip_irrigation => n_main_idtf: "Капельное орошение";
+};
+
+15.
+// ========== Базовое определение ==========
+concept_spillway_aerator_design =>
+    n_main_idtf: "Проектирование водосливов-аэраторов"[*sc_link_content* :=
+        "Разработка водосливов для насыщения воды кислородом"
+    ];
+
+// ========== Типы водосливов ==========
+concept_spillway_aerator_design -> nrel_spillway_type -> {
+    concept_cascade_spillway => n_main_idtf: "Каскадные водосливы";
+    concept_stepped_spillway => n_main_idtf: "Ступенчатые водосливы";
+};
+
+16.
+// ========== Базовое определение ==========
+concept_airlift_structure_design =>
+    n_main_idtf: "Проектирование барботажных сооружений"[*sc_link_content* :=
+        "Разработка сооружений для перемешивания воды пузырьками воздуха"
+    ];
+
+// ========== Режимы работы ==========
+concept_airlift_structure_design -> nrel_operation_mode -> {
+    concept_intermittent_airlift => n_main_idtf: "Периодический барботаж";
+    concept_continuous_airlift => n_main_idtf: "Непрерывный барботаж";
+};
