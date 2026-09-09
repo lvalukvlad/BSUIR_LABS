@@ -1,0 +1,1511 @@
+[
+  {
+    "ru": "я тебя люблю",
+    "en": "i love you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я тебя люблю",
+    "en": "i respect you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "i like you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "i appreciate you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я уважаю тебя",
+    "en": "i respect you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты замечательный",
+    "en": "you are wonderful",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты замечательный",
+    "en": "you are great",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я работаю",
+    "en": "i work",
+    "contexts": [{"domain": "job"}]
+  },
+  {
+    "ru": "я работаю",
+    "en": "i am working",
+    "contexts": [{"domain": "effort"}]
+  },
+  {
+    "ru": "я устал",
+    "en": "i am tired",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я устал",
+    "en": "i am exhausted",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "пока",
+    "en": "bye",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "пока",
+    "en": "goodbye",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "спасибо",
+    "en": "thank you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "спасибо",
+    "en": "thanks",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "привет",
+    "en": "hello",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "привет",
+    "en": "hi",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "здравствуйте",
+    "en": "good morning",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "как дела",
+    "en": "how are you",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "как дела",
+    "en": "how do you do",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "мне нравится",
+    "en": "i like it",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "мне нравится",
+    "en": "i appreciate it",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я согласен",
+    "en": "i agree",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я согласен",
+    "en": "i concur",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "прости",
+    "en": "sorry",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "простите",
+    "en": "excuse me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "пожалуйста",
+    "en": "you're welcome",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "пожалуйста",
+    "en": "no problem",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я думаю",
+    "en": "i think",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я думаю",
+    "en": "in my opinion",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "всё хорошо",
+    "en": "everything is fine",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "всё хорошо",
+    "en": "all is well",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я понимаю",
+    "en": "i understand",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я понимаю",
+    "en": "i comprehend",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я не понимаю",
+    "en": "i don't understand",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я не понимаю",
+    "en": "i fail to comprehend",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "давай",
+    "en": "let's go",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "давайте",
+    "en": "let us",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "пойдём",
+    "en": "let's go",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "пойдемте",
+    "en": "let's go",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты прав",
+    "en": "you are right",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "вы правы",
+    "en": "you are correct",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я рад",
+    "en": "i am happy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я рад",
+    "en": "i am delighted",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я голоден",
+    "en": "i am hungry",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я испытываю голод",
+    "en": "i am famished",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я ухожу",
+    "en": "i am leaving",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я ухожу",
+    "en": "i take my leave",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты красив",
+    "en": "you are beautiful",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты красив",
+    "en": "you look good",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты умен",
+    "en": "you are smart",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты умен",
+    "en": "you are intelligent",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты глуп",
+    "en": "you are silly",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты глуп",
+    "en": "you are foolish",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я устал",
+    "en": "i am worn out",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я устал",
+    "en": "i am weary",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты занят",
+    "en": "you are busy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы заняты",
+    "en": "you are occupied",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты свободен",
+    "en": "you are free",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы свободны",
+    "en": "you are at liberty",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты готов",
+    "en": "you are ready",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы готовы",
+    "en": "are you prepared",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я готов",
+    "en": "i am ready",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я готов",
+    "en": "i am prepared",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты опоздал",
+    "en": "you are late",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы опоздали",
+    "en": "you are tardy",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я опоздал",
+    "en": "i am late",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я опоздал",
+    "en": "i am tardy",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты пришёл",
+    "en": "you came",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы пришли",
+    "en": "you have arrived",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я пришёл",
+    "en": "i came",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я пришёл",
+    "en": "i have arrived",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты ушёл",
+    "en": "you left",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы ушли",
+    "en": "you have departed",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я ушёл",
+    "en": "i left",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я ушёл",
+    "en": "i have departed",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты болен",
+    "en": "you are sick",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы больны",
+    "en": "you are unwell",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я болен",
+    "en": "i am sick",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я болен",
+    "en": "i am unwell",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты смеёшься",
+    "en": "you are laughing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы смеётесь",
+    "en": "you are amused",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я смеюсь",
+    "en": "i am laughing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я смеюсь",
+    "en": "i am amused",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты плачешь",
+    "en": "you are crying",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы плачете",
+    "en": "you are weeping",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я плачу",
+    "en": "i am crying",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я плачу",
+    "en": "i am weeping",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты ешь",
+    "en": "you are eating",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы едите",
+    "en": "you are dining",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я ем",
+    "en": "i am eating",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я ем",
+    "en": "i am dining",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты спишь",
+    "en": "you are sleeping",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы спите",
+    "en": "you are resting",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я сплю",
+    "en": "i am sleeping",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я сплю",
+    "en": "i am resting",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты идёшь",
+    "en": "you are walking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы идёте",
+    "en": "you are proceeding",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я иду",
+    "en": "i am walking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я иду",
+    "en": "i am proceeding",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты бежишь",
+    "en": "you are running",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы бежите",
+    "en": "you are jogging",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я бегу",
+    "en": "i am running",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я бегу",
+    "en": "i am jogging",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты сидишь",
+    "en": "you are sitting",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы сидите",
+    "en": "you are seated",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я сижу",
+    "en": "i am sitting",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я сижу",
+    "en": "i am seated",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты стоишь",
+    "en": "you are standing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы стоите",
+    "en": "you are standing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я стою",
+    "en": "i am standing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я стою",
+    "en": "i am standing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты лежишь",
+    "en": "you are lying",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы лежите",
+    "en": "you are reclining",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я лежу",
+    "en": "i am lying",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я лежу",
+    "en": "i am reclining",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты смотришь",
+    "en": "you are watching",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы смотрите",
+    "en": "you are observing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я смотрю",
+    "en": "i am watching",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я смотрю",
+    "en": "i am observing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты слышишь",
+    "en": "you are hearing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы слышите",
+    "en": "you are listening",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я слышу",
+    "en": "i am hearing",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я слышу",
+    "en": "i am listening",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты говоришь",
+    "en": "you are speaking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы говорите",
+    "en": "you are conversing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я говорю",
+    "en": "i am speaking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я говорю",
+    "en": "i am conversing",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты молчишь",
+    "en": "you are silent",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы молчите",
+    "en": "you are quiet",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я молчу",
+    "en": "i am silent",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я молчу",
+    "en": "i am quiet",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты думаешь",
+    "en": "you are thinking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы думаете",
+    "en": "you are considering",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я думаю",
+    "en": "i am thinking",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я думаю",
+    "en": "i am considering",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты знаешь",
+    "en": "you know",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы знаете",
+    "en": "you are aware",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я знаю",
+    "en": "i know",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я знаю",
+    "en": "i am aware",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты любишь",
+    "en": "you love",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы любите",
+    "en": "you cherish",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я люблю",
+    "en": "i love",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я люблю",
+    "en": "i cherish",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты ненавидишь",
+    "en": "you hate",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы ненавидите",
+    "en": "you detest",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я ненавижу",
+    "en": "i hate",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я ненавижу",
+    "en": "i detest",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты хочешь",
+    "en": "you want",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы хотите",
+    "en": "you desire",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я хочу",
+    "en": "i want",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я хочу",
+    "en": "i desire",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты можешь",
+    "en": "you can",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы можете",
+    "en": "you are able",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я могу",
+    "en": "i can",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я могу",
+    "en": "i am able",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты должен",
+    "en": "you should",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы должны",
+    "en": "you ought to",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я должен",
+    "en": "i should",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я должен",
+    "en": "i ought to",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты хочешь",
+    "en": "you wish",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "вы хотите",
+    "en": "you wish",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я хочу",
+    "en": "i wish",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you mean a lot to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you are special to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я скучаю по тебе",
+    "en": "i miss you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я скучаю по тебе",
+    "en": "i long for you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мой друг",
+    "en": "you are my friend",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мой друг",
+    "en": "you are my companion",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мой друг",
+    "en": "you are my dear friend",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я в порядке",
+    "en": "i am fine",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я в порядке",
+    "en": "i am well",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я в порядке",
+    "en": "i am doing well",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты в порядке",
+    "en": "are you fine",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы в порядке",
+    "en": "are you well",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты в порядке",
+    "en": "how are you doing",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "ты умница",
+    "en": "you are smart",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты умница",
+    "en": "you are brilliant",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты умница",
+    "en": "you are clever",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты умница",
+    "en": "you are wise",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты красивая",
+    "en": "you are beautiful",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты красивая",
+    "en": "you are pretty",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты красивая",
+    "en": "you are gorgeous",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты красивая",
+    "en": "you are lovely",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты устал",
+    "en": "you are tired",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты устал",
+    "en": "you look tired",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты устал",
+    "en": "you seem exhausted",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты устала",
+    "en": "you are tired",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты устала",
+    "en": "you look tired",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты устала",
+    "en": "you seem exhausted",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты занят",
+    "en": "you are busy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты занят",
+    "en": "you seem busy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты занят",
+    "en": "you appear occupied",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты занята",
+    "en": "you are busy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты занята",
+    "en": "you seem busy",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты занята",
+    "en": "you appear occupied",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты дома",
+    "en": "are you home",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы дома",
+    "en": "are you at home",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты дома",
+    "en": "are you in",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты дома",
+    "en": "are you at your place",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты где",
+    "en": "where are you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы где",
+    "en": "where are you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты где сейчас",
+    "en": "where are you now",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы где сейчас",
+    "en": "where are you at present",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты со мной",
+    "en": "are you with me",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы со мной",
+    "en": "are you with me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты со мной",
+    "en": "are you by my side",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты со мной",
+    "en": "are you beside me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помогаешь",
+    "en": "you are helping me",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "вы мне помогаете",
+    "en": "you are assisting me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помогаешь",
+    "en": "you are supporting me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помогаешь",
+    "en": "you are there for me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помогаешь",
+    "en": "you are my support",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "i need you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "i require you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "i depend on you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "i need you",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "i require you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "i depend on you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "you are important to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "you are important to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "you matter to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "you matter to me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужен",
+    "en": "i can't do without you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нужна",
+    "en": "i can't do without you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you are on my mind",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you are in my thoughts",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you are in my heart",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you have my attention",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you catch my eye",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне нравишься",
+    "en": "you strike me as",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i respect you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i admire you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i look up to you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i hold you in high regard",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i think highly of you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "я тебя уважаю",
+    "en": "i appreciate you",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you helped me",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you assisted me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you were a great help",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you saved me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you came to my rescue",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you were there for me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you had my back",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you supported me",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you stood by me",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you were my rock",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you were my anchor",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you were my strength",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you gave me strength",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you lifted me up",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you pulled me through",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you got me through it",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you made it possible",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you made it happen",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you made a difference",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you changed my life",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you changed everything",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you saved my day",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you saved the day",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you came through for me",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you came through",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered for me",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered the goods",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered on your promise",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered as promised",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when it mattered",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i needed you",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered in the clutch",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when the pressure was on",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered under pressure",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when the stakes were high",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when the chips were down",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when it counted",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when it mattered most",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was down",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was out",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was in trouble",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was in a bind",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+  "ru": "ты мне помог",
+  "en": "you helped me",
+  "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "я",
+    "en": "i",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "тебя",
+    "en": "you",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "я тебя люблю",
+    "en": "i love you",
+    "contexts": [{"style": "neutral"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was stuck",
+    "contexts": [{"style": "casual"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was lost",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was confused",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was overwhelmed",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was struggling",
+    "contexts": [{"style": "formal"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was breaking",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was cracking",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was crumbling",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling to pieces",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart at the seams",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart completely",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart entirely",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart utterly",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "ты мне помог",
+    "en": "you delivered when i was falling apart completely and utterly",
+    "contexts": [{"style": "poetic"}]
+  },
+  {
+    "ru": "я тебя люблю",
+    "en": "i love you",
+    "contexts": [
+      {
+        "style": "casual"
+      }
+    ]
+  }
+]

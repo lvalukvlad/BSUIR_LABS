@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Система машинного перевода</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Система машинного перевода с контекстным пониманием</h1>
+    <form id="translate-form">
+      <label>Введите текст:</label>
+      <textarea id="content" placeholder="Например: Я тебя люблю" rows="5"></textarea><br>
+
+      <label>Исходный язык:</label>
+      <input type="text" id="source_lang" value="ru"><br>
+
+      <label>Целевой язык:</label>
+      <input type="text" id="target_lang" value="en"><br>
+
+      <label>Стиль перевода:</label>
+      <select id="style">
+        <option value="formal">Формальный</option>
+        <option value="casual">Неформальный</option>
+        <option value="poetic">Поэтичный</option>
+      </select><br>
+
+      <label>Диалект:</label>
+      <select id="dialect">
+        <option value="">Стандартный</option>
+        <option value="en-US">Американский</option>
+        <option value="en-GB">Британский</option>
+      </select><br>
+
+      <button type="submit">🚀 Перевести</button>
+    </form>
+
+    <div id="result" class="result" style="display:none;"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

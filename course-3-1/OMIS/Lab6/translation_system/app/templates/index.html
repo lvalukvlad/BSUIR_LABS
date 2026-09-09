@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Главная</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Добро пожаловать в систему машинного перевода!</h1>
+    {% if session.get('user') %}
+      <p>Вы вошли как: <strong>{{ session.get('user') }}</strong> ({{ session.get('role') }})</p>
+      <p><a href="/dashboard">Перейти к панели управления</a> | <a href="/translate">Создать новый перевод</a> | <a href="/logout">Выйти</a></p>
+      
+      <h2>Ваши последние переводы:</h2>
+      {% if translations %}
+        <table border="1" style="width: 100%; margin-top: 20px;">
+          <tr>
+            <th>Оригинал</th>
+            <th>Черновик</th>
+            <th>Статус</th>
+            <th>Действия</th>
+          </tr>
+          {% for trans in translations %}
+          <tr>
+            <td>{{ trans.content[:50] }}{% if trans.content|length > 50 %}...{% endif %}</td>
+            <td>{{ trans.draft[:50] }}{% if trans.draft|length > 50 %}...{% endif %}</td>
+            <td>{{ trans.status }}</td>
+            <td>
+              {% if trans.status == 'draft' %}
+                <a href="/edit-draft/{{ trans.trans_id }}">Редактировать</a>
+              {% elif trans.status == 'localized' %}
+                <a href="/final/{{ trans.trans_id }}">Просмотреть</a>
+              {% elif trans.status == 'approved' %}
+                <a href="/final/{{ trans.trans_id }}">Просмотреть</a>
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </table>
+        <p style="margin-top: 15px;"><a href="/dashboard">Показать все переводы →</a></p>
+      {% else %}
+        <p>У вас пока нет сохранённых переводов. <a href="/translate">Создайте первый перевод</a></p>
+      {% endif %}
+    {% else %}
+      <p>Пожалуйста, войдите в систему для доступа к функциям перевода.</p>
+      <a href="/login" style="display: inline-block; padding: 10px 20px; background: #667eea; color: white; text-decoration: none; border-radius: 5px; margin-top: 20px;">Войти</a>
+    {% endif %}
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Админ-отчёт</title>
+  <link rel="icon" href=",">
+</head>
+<body>
+  <h2>Статистика системы</h2>
+  <p>Всего переводов: {{ stats.total_translations }}</p>
+  <p>Утверждено: {{ stats.approved }}</p>
+  <p>Среднее качество: {{ stats.avg_quality }}</p>
+  <p><strong>Корректировок (обратная связь): {{ stats.total_feedback }}</strong></p>
+  <p><strong>Обучено правил: {{ stats.learned_rules_count }}</strong></p>
+
+  <h3>Частые изменения (из черновика в финал):</h3>
+  <ul>
+  {% for change in stats.top_changes %}
+    <li>{{ change.from }} → {{ change.to }} ({{ change.count }} раз)</li>
+  {% endfor %}
+  </ul>
+
+  <a href="/dashboard">← Назад</a>
+</body>
+</html>

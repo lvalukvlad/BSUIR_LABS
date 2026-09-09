@@ -1,0 +1,291 @@
+[
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "ты мне нравишься",
+    "target_text": "tu me plais",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "ты мне нравишься",
+    "target_text": "je vous apprécie",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "ты мне нравишься",
+    "target_text": "tu m'enchantés",
+    "contexts": [{"style": "poetic"}],
+    "weight": 0.9
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я тебя люблю",
+    "target_text": "je t'aime",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я тебя люблю",
+    "target_text": "je vous aime",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я тебя люблю",
+    "target_text": "je t'adore",
+    "contexts": [{"style": "poetic"}],
+    "weight": 0.9
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я работаю",
+    "target_text": "je travaille",
+    "contexts": [{"domain": "job", "style": "neutral"}],
+    "weight": 0.9
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я работаю",
+    "target_text": "j'exerce ma profession",
+    "contexts": [{"domain": "job", "style": "formal"}],
+    "weight": 0.85
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "ты мне нравишься",
+    "target_text": "du gefällst mir",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "ты мне нравишься",
+    "target_text": "sie gefallen mir",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "я тебя люблю",
+    "target_text": "ich liebe dich",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "я тебя люблю",
+    "target_text": "ich liebe sie",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "ты мне нравишься",
+    "target_text": "me gustas",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "ты мне нравишься",
+    "target_text": "me agrada usted",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "я тебя люблю",
+    "target_text": "te quiero",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "я тебя люблю",
+    "target_text": "le quiero",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "я тебя люблю",
+    "target_text": "ti amo",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "я тебя люблю",
+    "target_text": "ti voglio bene",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "ты мне нравишься",
+    "target_text": "mi piaci",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "ты мне нравишься",
+    "target_text": "lei mi piace",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "i like you",
+    "target_text": "ты мне нравишься",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "i like you",
+    "target_text": "вы мне нравитесь",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "hello",
+    "target_text": "привет",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "hello",
+    "target_text": "здравствуйте",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "i love you",
+    "target_text": "я тебя люблю",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "ru",
+    "source_text": "i love you",
+    "target_text": "я вас люблю",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "tu me plais",
+    "target_text": "ты мне нравишься",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "je vous apprécie",
+    "target_text": "вы мне нравитесь",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "je t'aime",
+    "target_text": "я тебя люблю",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "je vous aime",
+    "target_text": "я вас люблю",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "я работаю",
+    "target_text": "i work",
+    "contexts": [{"domain": "job", "style": "neutral"}],
+    "weight": 0.9
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "я работаю",
+    "target_text": "i am employed",
+    "contexts": [{"domain": "job", "style": "formal"}],
+    "weight": 0.85
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "я работаю",
+    "target_text": "i'm working",
+    "contexts": [{"domain": "job", "style": "casual"}],
+    "weight": 0.9
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "спасибо",
+    "target_text": "thank you",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "спасибо",
+    "target_text": "thanks",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "en",
+    "source_text": "спасибо",
+    "target_text": "i am grateful",
+    "contexts": [{"style": "poetic"}],
+    "weight": 0.85
+  }
+]
+

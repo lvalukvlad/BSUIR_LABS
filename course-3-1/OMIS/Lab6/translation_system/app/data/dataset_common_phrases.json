@@ -1,0 +1,1379 @@
+[
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "привет",
+    "target_text": "hallo",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "привет",
+    "target_text": "guten tag",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "здравствуйте",
+    "target_text": "guten tag",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "пока",
+    "target_text": "tschüss",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "пока",
+    "target_text": "auf wiedersehen",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "до свидания",
+    "target_text": "auf wiedersehen",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "спасибо",
+    "target_text": "danke",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "спасибо",
+    "target_text": "vielen dank",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "пожалуйста",
+    "target_text": "bitte",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "да",
+    "target_text": "ja",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "нет",
+    "target_text": "nein",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "как дела",
+    "target_text": "wie geht es dir",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "как дела",
+    "target_text": "wie geht es ihnen",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "привет",
+    "target_text": "salut",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "привет",
+    "target_text": "bonjour",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "здравствуйте",
+    "target_text": "bonjour",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "пока",
+    "target_text": "salut",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "пока",
+    "target_text": "au revoir",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "до свидания",
+    "target_text": "au revoir",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "спасибо",
+    "target_text": "merci",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "спасибо",
+    "target_text": "je vous remercie",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "пожалуйста",
+    "target_text": "s'il vous plaît",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "пожалуйста",
+    "target_text": "de rien",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "да",
+    "target_text": "oui",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "нет",
+    "target_text": "non",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "привет",
+    "target_text": "hola",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "привет",
+    "target_text": "buenos días",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "здравствуйте",
+    "target_text": "buenos días",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "пока",
+    "target_text": "adiós",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "до свидания",
+    "target_text": "hasta luego",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "спасибо",
+    "target_text": "gracias",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "спасибо",
+    "target_text": "muchas gracias",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "пожалуйста",
+    "target_text": "por favor",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "да",
+    "target_text": "sí",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "нет",
+    "target_text": "no",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "привет",
+    "target_text": "ciao",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "привет",
+    "target_text": "buongiorno",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "здравствуйте",
+    "target_text": "buongiorno",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "пока",
+    "target_text": "ciao",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "до свидания",
+    "target_text": "arrivederci",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "спасибо",
+    "target_text": "grazie",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "спасибо",
+    "target_text": "molte grazie",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "пожалуйста",
+    "target_text": "per favore",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "zh",
+    "source_text": "привет",
+    "target_text": "你好",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "zh",
+    "source_text": "здравствуйте",
+    "target_text": "您好",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "zh",
+    "source_text": "спасибо",
+    "target_text": "谢谢",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "zh",
+    "source_text": "пожалуйста",
+    "target_text": "请",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "ja",
+    "source_text": "привет",
+    "target_text": "こんにちは",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "ja",
+    "source_text": "здравствуйте",
+    "target_text": "こんにちは",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "ja",
+    "source_text": "спасибо",
+    "target_text": "ありがとう",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "ja",
+    "source_text": "спасибо",
+    "target_text": "ありがとうございます",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "de",
+    "target": "ru",
+    "source_text": "hallo",
+    "target_text": "привет",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "ru",
+    "source_text": "guten tag",
+    "target_text": "здравствуйте",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "ru",
+    "source_text": "tschüss",
+    "target_text": "пока",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "ru",
+    "source_text": "danke",
+    "target_text": "спасибо",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "salut",
+    "target_text": "привет",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "bonjour",
+    "target_text": "здравствуйте",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "fr",
+    "target": "ru",
+    "source_text": "merci",
+    "target_text": "спасибо",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "es",
+    "target": "ru",
+    "source_text": "hola",
+    "target_text": "привет",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "es",
+    "target": "ru",
+    "source_text": "gracias",
+    "target_text": "спасибо",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "it",
+    "target": "ru",
+    "source_text": "ciao",
+    "target_text": "привет",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "it",
+    "target": "ru",
+    "source_text": "grazie",
+    "target_text": "спасибо",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "de",
+    "source_text": "hello",
+    "target_text": "hallo",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "de",
+    "source_text": "hello",
+    "target_text": "guten tag",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "de",
+    "source_text": "thank you",
+    "target_text": "danke",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "fr",
+    "source_text": "hello",
+    "target_text": "bonjour",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "fr",
+    "source_text": "hello",
+    "target_text": "salut",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "en",
+    "target": "es",
+    "source_text": "hello",
+    "target_text": "hola",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "en",
+    "target": "it",
+    "source_text": "hello",
+    "target_text": "ciao",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "en",
+    "source_text": "hallo",
+    "target_text": "hello",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "fr",
+    "source_text": "hallo",
+    "target_text": "bonjour",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "de",
+    "target": "es",
+    "source_text": "hallo",
+    "target_text": "hola",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "fr",
+    "target": "en",
+    "source_text": "bonjour",
+    "target_text": "hello",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "fr",
+    "target": "de",
+    "source_text": "bonjour",
+    "target_text": "guten tag",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "es",
+    "target": "en",
+    "source_text": "hola",
+    "target_text": "hello",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "es",
+    "target": "de",
+    "source_text": "hola",
+    "target_text": "hallo",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "it",
+    "target": "en",
+    "source_text": "ciao",
+    "target_text": "hello",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "как дела",
+    "target_text": "wie geht's",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "хорошо",
+    "target_text": "gut",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "плохо",
+    "target_text": "schlecht",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "извините",
+    "target_text": "entschuldigung",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "извини",
+    "target_text": "sorry",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "как дела",
+    "target_text": "comment ça va",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "хорошо",
+    "target_text": "bien",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "плохо",
+    "target_text": "mal",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "извините",
+    "target_text": "excusez-moi",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "извини",
+    "target_text": "désolé",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "как дела",
+    "target_text": "¿cómo estás",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "хорошо",
+    "target_text": "bien",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "плохо",
+    "target_text": "mal",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "извините",
+    "target_text": "perdón",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "извини",
+    "target_text": "lo siento",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "как дела",
+    "target_text": "come stai",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "хорошо",
+    "target_text": "bene",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "плохо",
+    "target_text": "male",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "извините",
+    "target_text": "scusi",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "извини",
+    "target_text": "scusa",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "я не понимаю",
+    "target_text": "ich verstehe nicht",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "я не понимаю",
+    "target_text": "ich verstehe es nicht",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "я не понимаю",
+    "target_text": "je ne comprends pas",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "я не понимаю",
+    "target_text": "no entiendo",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "я не понимаю",
+    "target_text": "non capisco",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "помогите",
+    "target_text": "hilfe",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "помогите",
+    "target_text": "können sie mir helfen",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "помогите",
+    "target_text": "aidez-moi",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "помогите",
+    "target_text": "pouvez-vous m'aider",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "помогите",
+    "target_text": "ayuda",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "помогите",
+    "target_text": "¿puede ayudarme",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "помогите",
+    "target_text": "aiuto",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "помогите",
+    "target_text": "può aiutarmi",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "где",
+    "target_text": "wo",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "где",
+    "target_text": "où",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "где",
+    "target_text": "dónde",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "где",
+    "target_text": "dove",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "когда",
+    "target_text": "wann",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "когда",
+    "target_text": "quand",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "когда",
+    "target_text": "cuándo",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "когда",
+    "target_text": "quando",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "что",
+    "target_text": "was",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "что",
+    "target_text": "quoi",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "что",
+    "target_text": "qué",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "что",
+    "target_text": "cosa",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "кто",
+    "target_text": "wer",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "кто",
+    "target_text": "qui",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "кто",
+    "target_text": "quién",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "кто",
+    "target_text": "chi",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "почему",
+    "target_text": "warum",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "почему",
+    "target_text": "pourquoi",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "почему",
+    "target_text": "por qué",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "почему",
+    "target_text": "perché",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "сколько",
+    "target_text": "wie viel",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "сколько",
+    "target_text": "combien",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "сколько",
+    "target_text": "cuánto",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "сколько",
+    "target_text": "quanto",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "доброе утро",
+    "target_text": "guten morgen",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "добрый вечер",
+    "target_text": "guten abend",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "доброй ночи",
+    "target_text": "gute nacht",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "доброе утро",
+    "target_text": "bonjour",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "добрый вечер",
+    "target_text": "bonsoir",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "доброй ночи",
+    "target_text": "bonne nuit",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "доброе утро",
+    "target_text": "buenos días",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "добрый вечер",
+    "target_text": "buenas tardes",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "доброй ночи",
+    "target_text": "buenas noches",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "доброе утро",
+    "target_text": "buongiorno",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "добрый вечер",
+    "target_text": "buonasera",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "доброй ночи",
+    "target_text": "buona notte",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "пожалуйста",
+    "target_text": "bitte",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "не за что",
+    "target_text": "bitte schön",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "не за что",
+    "target_text": "de rien",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "не за что",
+    "target_text": "de nada",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "не за что",
+    "target_text": "prego",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "извините",
+    "target_text": "entschuldigung",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "простите",
+    "target_text": "verzeihung",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "простите",
+    "target_text": "pardon",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "простите",
+    "target_text": "perdón",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "простите",
+    "target_text": "scusa",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "до встречи",
+    "target_text": "bis bald",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "до встречи",
+    "target_text": "à bientôt",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "до встречи",
+    "target_text": "hasta pronto",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "до встречи",
+    "target_text": "a presto",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "удачи",
+    "target_text": "viel glück",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "удачи",
+    "target_text": "bonne chance",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "удачи",
+    "target_text": "buena suerte",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "удачи",
+    "target_text": "buona fortuna",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "пожалуйста",
+    "target_text": "bitte",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "можно",
+    "target_text": "s'il vous plaît",
+    "contexts": [{"style": "formal"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "можно",
+    "target_text": "por favor",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "можно",
+    "target_text": "per favore",
+    "contexts": [{"style": "neutral"}],
+    "weight": 0.98
+  },
+  {
+    "source": "ru",
+    "target": "de",
+    "source_text": "хорошего дня",
+    "target_text": "schönen tag",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "fr",
+    "source_text": "хорошего дня",
+    "target_text": "bonne journée",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "es",
+    "source_text": "хорошего дня",
+    "target_text": "que tengas un buen día",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  },
+  {
+    "source": "ru",
+    "target": "it",
+    "source_text": "хорошего дня",
+    "target_text": "buona giornata",
+    "contexts": [{"style": "casual"}],
+    "weight": 0.95
+  }
+]
+

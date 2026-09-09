@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Локализация - Комбинация вариантов</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Локализация перевода</h1>
+    <p><strong>Исходный черновик:</strong> {{ translation.draft }}</p>
+    
+    <h2>Варианты перевода:</h2>
+    <form method="POST" id="combine-form">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
+        {% for variant in variants %}
+        <div style="border: 2px solid #667eea; border-radius: 10px; padding: 15px; background: #f8f9fa;">
+          <label style="display: block; cursor: pointer;">
+            <input type="checkbox" name="selected_variants" value="{{ variant }}" style="margin-right: 10px;">
+            <strong>{{ variant }}</strong>
+          </label>
+          <textarea name="variant_text_{{ loop.index0 }}" rows="3" style="width: 100%; margin-top: 10px; padding: 8px; border: 1px solid #ddd; border-radius: 5px;">{{ variant.split('] ', 1)[1] if '] ' in variant else variant }}</textarea>
+        </div>
+        {% endfor %}
+      </div>
+      
+      <div style="margin: 20px 0;">
+        <label><strong>Или выберите один вариант:</strong></label>
+        {% for variant in variants %}
+        <label style="display: block; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;">
+          <input type="radio" name="chosen_variant" value="{{ variant }}" style="margin-right: 10px;">
+          {{ variant }}
+        </label>
+        {% endfor %}
+      </div>
+      
+      <div style="margin: 20px 0;">
+        <label><strong>Или создайте комбинированный вариант вручную:</strong></label>
+        <textarea name="custom_variant" rows="5" style="width: 100%; padding: 10px; border: 2px solid #667eea; border-radius: 5px;" placeholder="Введите свой вариант перевода..."></textarea>
+      </div>
+      
+      <button type="submit">Утвердить выбранный вариант</button>
+    </form>
+    
+    <a href="/dashboard">← Назад к панели управления</a>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

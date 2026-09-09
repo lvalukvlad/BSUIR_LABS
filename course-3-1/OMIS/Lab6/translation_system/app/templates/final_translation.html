@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Финальная версия перевода</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+    .translation-card {
+      background: white;
+      border: 2px solid #667eea;
+      border-radius: 10px;
+      padding: 25px;
+      margin: 20px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .translation-section {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 5px;
+    }
+    .translation-section h3 {
+      margin-top: 0;
+      color: #667eea;
+    }
+    .translation-text {
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 10px;
+      background: white;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .status-draft { background: #ffc107; color: #000; }
+    .status-localized { background: #17a2b8; color: white; }
+    .status-approved { background: #28a745; color: white; }
+    .action-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .btn-approve {
+      background: #28a745;
+      color: white;
+    }
+    .btn-approve:hover {
+      background: #218838;
+    }
+    .btn-reject {
+      background: #dc3545;
+      color: white;
+    }
+    .btn-reject:hover {
+      background: #c82333;
+    }
+    .btn-edit {
+      background: #667eea;
+      color: white;
+    }
+    .btn-edit:hover {
+      background: #5568d3;
+    }
+    .btn-secondary {
+      background: #6c757d;
+      color: white;
+    }
+    .btn-secondary:hover {
+      background: #5a6268;
+    }
+    textarea {
+      width: 100%;
+      min-height: 100px;
+      padding: 10px;
+      border: 2px solid #667eea;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Финальная версия перевода</h1>
+    
+    <div class="translation-card">
+      <span class="status-badge status-{{ translation.status }}">{{ translation.status }}</span>
+      
+      <div class="translation-section">
+        <h3>Оригинальный текст:</h3>
+        <div class="translation-text">{{ translation.content }}</div>
+      </div>
+      
+      <div class="translation-section">
+        <h3>Черновик перевода:</h3>
+        <div class="translation-text">{{ translation.draft }}</div>
+      </div>
+      
+      {% if translation.final_version %}
+      <div class="translation-section">
+        <h3>Финальная версия:</h3>
+        <div class="translation-text">{{ translation.final_version }}</div>
+      </div>
+      {% endif %}
+      
+      {% if translation.status == 'localized' %}
+      <form method="POST">
+        <div class="translation-section">
+          <h3>Редактировать финальную версию:</h3>
+          <textarea name="final_version" placeholder="Введите финальную версию перевода...">{{ translation.final_version or translation.draft }}</textarea>
+        </div>
+        
+        <div class="action-buttons">
+          <button type="submit" name="action" value="edit_final" class="btn btn-edit">Сохранить изменения</button>
+          <button type="submit" name="action" value="approve" class="btn btn-approve">Утвердить перевод</button>
+          <button type="submit" name="action" value="reject" class="btn btn-reject">Отклонить и вернуть в черновик</button>
+        </div>
+      </form>
+      {% elif translation.status == 'approved' %}
+      <div class="action-buttons">
+        <p style="color: #28a745; font-weight: bold;">✓ Перевод утверждён</p>
+      </div>
+      {% endif %}
+    </div>
+    
+    <a href="/dashboard" class="btn btn-secondary">← Назад к панели управления</a>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Панель управления</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Панель управления переводами</h1>
+    {% if username %}
+    <p>Вы вошли как: <strong>{{ username }}</strong> | <a href="/logout">Выйти</a></p>
+    {% endif %}
+    <a href="/translate">Создать перевод</a> | <a href="/admin/report">Отчёт</a> | <a href="/graph">Граф знаний</a>
+
+    <h2>Ваши переводы:</h2>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>Оригинал</th>
+        <th>Черновик</th>
+        <th>Финальная версия</th>
+        <th>Статус</th>
+        <th>Действия</th>
+      </tr>
+      {% for trans in translations %}
+      <tr>
+        <td>{{ trans.trans_id }}</td>
+        <td>{{ trans.content }}</td>
+        <td>{{ trans.draft }}</td>
+        <td>{{ trans.final_version or '---' }}</td>
+        <td>{{ trans.status }}</td>
+        <td>
+          {% if trans.status == 'draft' %}
+            <a href="/edit-draft/{{ trans.trans_id }}">Редактировать</a> |
+            <a href="/localize/{{ trans.trans_id }}">Локализовать</a>
+          {% elif trans.status == 'localized' %}
+            <a href="/final/{{ trans.trans_id }}">Просмотреть финальную версию</a> |
+            <a href="/edit-draft/{{ trans.trans_id }}">Изменить</a>
+          {% elif trans.status == 'approved' %}
+            <a href="/final/{{ trans.trans_id }}">Просмотреть</a>
+          {% else %}
+            ---
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <a href="/logout">← Выйти</a>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

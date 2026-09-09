@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Создать перевод</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Создать перевод</h1>
+    <form method="POST" action="/translate" enctype="multipart/form-data">
+      <label>Введите текст:</label>
+      <textarea name="content" id="content" rows="5" placeholder="Например: Я тебя люблю">{% if form_data and form_data.get('content') %}{{ form_data.get('content') }}{% endif %}</textarea><br>
+
+      <label>Или загрузите файл (.txt):</label>
+      <input type="file" name="file" id="file_input" accept=".txt" onchange="previewFile()"><br>
+      <div id="file_preview" style="display: none; margin-top: 10px; padding: 10px; background: #f0f0f0; border-radius: 5px; border: 1px solid #ddd;">
+        <strong>Предпросмотр файла:</strong>
+        <pre id="preview_content" style="white-space: pre-wrap; word-wrap: break-word; max-height: 200px; overflow-y: auto; margin-top: 10px;"></pre>
+        <button type="button" onclick="clearPreview()" style="margin-top: 10px; padding: 5px 15px; background: #dc3545; color: white; border: none; border-radius: 3px; cursor: pointer;">Очистить</button>
+      </div>
+
+      <label>Исходный язык:</label>
+      <select name="source_lang" id="source_lang" required>
+        <option value="auto" {% if form_data and form_data.get('source_lang') == 'auto' %}selected{% endif %}>Автоопределение</option>
+        <option value="ru" {% if form_data and form_data.get('source_lang') == 'ru' %}selected{% endif %}>Русский (ru)</option>
+        <option value="en" {% if form_data and form_data.get('source_lang') == 'en' %}selected{% endif %}>Английский (en)</option>
+        <option value="fr" {% if form_data and form_data.get('source_lang') == 'fr' %}selected{% endif %}>Французский (fr)</option>
+        <option value="de" {% if form_data and form_data.get('source_lang') == 'de' %}selected{% endif %}>Немецкий (de)</option>
+        <option value="es" {% if form_data and form_data.get('source_lang') == 'es' %}selected{% endif %}>Испанский (es)</option>
+        <option value="it" {% if form_data and form_data.get('source_lang') == 'it' %}selected{% endif %}>Итальянский (it)</option>
+        <option value="zh" {% if form_data and form_data.get('source_lang') == 'zh' %}selected{% endif %}>Китайский (zh)</option>
+        <option value="ja" {% if form_data and form_data.get('source_lang') == 'ja' %}selected{% endif %}>Японский (ja)</option>
+      </select><br>
+
+      <label>Целевой язык:</label>
+      <select name="target_lang" id="target_lang" required>
+        <option value="ru" {% if form_data and form_data.get('target_lang') == 'ru' %}selected{% endif %}>Русский (ru)</option>
+        <option value="en" {% if form_data and form_data.get('target_lang') == 'en' %}selected{% endif %}>Английский (en)</option>
+        <option value="fr" {% if form_data and form_data.get('target_lang') == 'fr' %}selected{% endif %}>Французский (fr)</option>
+        <option value="de" {% if form_data and form_data.get('target_lang') == 'de' %}selected{% endif %}>Немецкий (de)</option>
+        <option value="es" {% if form_data and form_data.get('target_lang') == 'es' %}selected{% endif %}>Испанский (es)</option>
+        <option value="it" {% if form_data and form_data.get('target_lang') == 'it' %}selected{% endif %}>Итальянский (it)</option>
+        <option value="zh" {% if form_data and form_data.get('target_lang') == 'zh' %}selected{% endif %}>Китайский (zh)</option>
+        <option value="ja" {% if form_data and form_data.get('target_lang') == 'ja' %}selected{% endif %}>Японский (ja)</option>
+      </select><br>
+
+      <label>Стиль перевода:</label>
+      <select name="style" id="style">
+        <option value="neutral" {% if form_data and form_data.get('style') == 'neutral' %}selected{% endif %}>Нейтральный (адаптированный)</option>
+        <option value="formal" {% if form_data and form_data.get('style') == 'formal' %}selected{% endif %}>Формальный</option>
+        <option value="casual" {% if form_data and form_data.get('style') == 'casual' %}selected{% endif %}>Неформальный</option>
+        <option value="poetic" {% if form_data and form_data.get('style') == 'poetic' %}selected{% endif %}>Поэтичный (креативный)</option>
+        <option value="literal" {% if form_data and form_data.get('style') == 'literal' %}selected{% endif %}>Буквальный</option>
+      </select>
+      <small style="color: #666; display: block; margin-top: -8px; margin-bottom: 10px;">Стиль и способ перевода: формальность тона и степень адаптации</small>
+
+      <button type="submit">Создать перевод</button>
+    </form>
+
+    {% if result %}
+      <div id="result">
+        <h3>Результат перевода:</h3>
+        <p><strong>{{ result }}</strong></p>
+      </div>
+    {% endif %}
+
+    <a href="/dashboard">← Назад</a>  <!-- ← Изменено -->
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+    function previewFile() {
+      const fileInput = document.getElementById('file_input');
+      const previewDiv = document.getElementById('file_preview');
+      const previewContent = document.getElementById('preview_content');
+      const contentTextarea = document.getElementById('content');
+      
+      if (fileInput.files && fileInput.files[0]) {
+        const file = fileInput.files[0];
+        if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const content = e.target.result;
+            previewContent.textContent = content;
+            previewDiv.style.display = 'block';
+            // Автоматически заполняем textarea содержимым файла
+            contentTextarea.value = content;
+          };
+          reader.readAsText(file);
+        } else {
+          alert('Пожалуйста, выберите текстовый файл (.txt)');
+          fileInput.value = '';
+        }
+      }
+    }
+    
+    function clearPreview() {
+      document.getElementById('file_input').value = '';
+      document.getElementById('file_preview').style.display = 'none';
+      document.getElementById('preview_content').textContent = '';
+      document.getElementById('content').value = '';
+    }
+  </script>
+</body>
+</html>

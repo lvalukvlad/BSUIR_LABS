@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Редактировать черновик</title>
+  <link rel="icon" href=",">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Редактировать черновик</h1>
+    <form method="POST">
+      <label>Черновик:</label>
+      <textarea name="draft" rows="5">{{ translation.draft }}</textarea><br>
+      <button type="submit">Сохранить черновик</button>
+    </form>
+
+    <a href="/dashboard">← Назад</a>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
