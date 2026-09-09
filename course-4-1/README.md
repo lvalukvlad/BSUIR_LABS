@@ -10,4 +10,4 @@
 | [PZIIS_2](PZIIS_2/) | ПЗИИС |
 | [TiISPIS](TiISPIS/) | ТиИСПИС |
 | [Corruption](Corruption/) | Corruption *(пока пусто)* |
-| [YaPIS](YaPIS/) | ЯПИС *(пока пусто)* |
+| [YaPIS](YaPIS/) | ЯПИС |
