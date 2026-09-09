@@ -1,0 +1,187 @@
+@startuml
+!define TABLE(x) class x << (T,#FFAAAA) >>
+!define PRIMARY_KEY(x) <b><color:red>PK</color> x</b>
+!define FOREIGN_KEY(x) <color:blue>FK</color> x
+
+skinparam linetype ortho
+left to right direction
+
+' --- ОСНОВНЫЕ СУЩНОСТИ ---
+
+TABLE(Company) {
+  PRIMARY_KEY(ID) : INT
+  --
+  Name : VARCHAR(100) NOT NULL UNIQUE
+  LegalAddress : VARCHAR(200) NOT NULL
+}
+
+TABLE(Department) {
+  PRIMARY_KEY(ID) : INT
+  --
+  Name : VARCHAR(100) NOT NULL
+  HierarchyLevel : INT NOT NULL
+  ParentDepartmentID : INT NULL
+}
+
+TABLE(Correspondent) {
+  PRIMARY_KEY(ID) : INT
+  --
+  FullName : VARCHAR(100) NOT NULL
+  Position : VARCHAR(100) NOT NULL
+}
+
+TABLE(Employee) {
+  PRIMARY_KEY(ID) : INT
+  --
+  FullName : VARCHAR(100) NOT NULL
+  Position : VARCHAR(100) NOT NULL
+}
+
+' --- ИЗМЕНЕНО: Добавлена DocumentType ---
+TABLE(DocumentType) {
+  PRIMARY_KEY(ID) : INT
+  --
+  TypeName : VARCHAR(50) UNIQUE NOT NULL
+}
+
+TABLE(Document) {
+  PRIMARY_KEY(ID) : INT
+  --
+  Number : VARCHAR(50) NOT NULL UNIQUE
+  CreationDate : DATE NOT NULL
+  ReleaseDate : DATE NOT NULL
+  Content : TEXT NOT NULL
+  DocumentTypeID : INT NOT NULL  ' ИЗМЕНЕНО: Ссылка на DocumentType
+  SignerPosition : VARCHAR(100) NOT NULL
+  SignerFullName : VARCHAR(100) NOT NULL
+  ' FOREIGN_KEY(DocumentTypeID) : INT -> DocumentType.ID
+}
+
+TABLE(Event) {
+  PRIMARY_KEY(ID) : INT
+  --
+  Name : VARCHAR(200) NOT NULL
+  Deadline : DATE NOT NULL
+  CompletionDate : DATE NULL
+  IsCompleted : BOOLEAN NOT NULL DEFAULT FALSE  ' ИЗМЕНЕНО: Добавлен DEFAULT
+}
+
+' --- СВЯЗУЮЩИЕ ТАБЛИЦЫ ---
+
+TABLE(DocumentCorrespondent) {
+  PRIMARY_KEY(CorrespondentID) : INT
+  PRIMARY_KEY(DocumentID) : INT
+  --
+  AuthorAssignmentDate : DATE NOT NULL
+}
+
+TABLE(DocumentEvent) {
+  PRIMARY_KEY(DocumentID) : INT
+  PRIMARY_KEY(EventID) : INT
+  --
+  SequenceNumber : INT NOT NULL
+}
+
+TABLE(EventAssignment) {
+  PRIMARY_KEY(EventID) : INT
+  PRIMARY_KEY(EmployeeID) : INT
+  --
+  AssignmentDate : DATE NOT NULL
+  Priority : VARCHAR(50) NOT NULL
+}
+
+' Устаревшая таблица, но оставим
+TABLE(DocumentSigning) {
+  PRIMARY_KEY(EmployeeID) : INT
+  PRIMARY_KEY(DocumentID) : INT
+  --
+  SigningDate : DATE NOT NULL
+  SignStatus : VARCHAR(50) NOT NULL
+}
+
+TABLE(CorrespondentDepartment) {
+  PRIMARY_KEY(CorrespondentID) : INT
+  PRIMARY_KEY(DepartmentID) : INT
+  --
+  StartDate : DATE NOT NULL
+  EndDate : DATE NULL
+  Status : VARCHAR(50) NOT NULL
+}
+
+TABLE(EmployeeDepartment) {
+  PRIMARY_KEY(EmployeeID) : INT
+  PRIMARY_KEY(DepartmentID) : INT
+  --
+  StartDate : DATE NOT NULL
+  EndDate : DATE NULL
+  Status : VARCHAR(50) NOT NULL
+}
+
+TABLE(DepartmentCompany) {
+  PRIMARY_KEY(DepartmentID) : INT
+  PRIMARY_KEY(CompanyID) : INT
+  --
+  InclusionDate : DATE NOT NULL
+}
+
+TABLE(DepartmentEvent) {
+  PRIMARY_KEY(DepartmentID) : INT
+  PRIMARY_KEY(EventID) : INT
+  --
+  AssignmentDate : DATE NOT NULL
+  ResponsibilityLevel : VARCHAR(50) NOT NULL
+}
+
+TABLE(EventControl) {
+  PRIMARY_KEY(EmployeeID) : INT
+  PRIMARY_KEY(EventID) : INT
+  --
+  ControlStartDate : DATE NOT NULL
+  Frequency : VARCHAR(50) NOT NULL
+}
+
+' --- СВЯЗИ ---
+
+' DocumentType -> Document
+DocumentType ||--o{ Document : "TypeID -> DocumentTypeID"
+
+' Company -> DepartmentCompany -> Department
+Company ||--o{ DepartmentCompany : "ID -> CompanyID"
+DepartmentCompany ||--|| Department : "DepartmentID -> ID"
+
+' Department -> SubDepartment
+Department ||--o| Department : "ParentDepartmentID -> ID"
+
+' Department -> CorrespondentDepartment -> Correspondent
+Department ||--o{ CorrespondentDepartment : "ID -> DepartmentID"
+CorrespondentDepartment ||--|| Correspondent : "CorrespondentID -> ID"
+
+' Department -> EmployeeDepartment -> Employee
+Department ||--o{ EmployeeDepartment : "ID -> DepartmentID"
+EmployeeDepartment ||--|| Employee : "EmployeeID -> ID"
+
+' Document -> DocumentCorrespondent -> Correspondent
+Document ||--o{ DocumentCorrespondent : "ID -> DocumentID"
+DocumentCorrespondent ||--|| Correspondent : "CorrespondentID -> ID"
+
+' Document -> DocumentEvent -> Event
+Document ||--o{ DocumentEvent : "ID -> DocumentID"
+DocumentEvent ||--|| Event : "EventID -> ID"
+
+' Event -> EventAssignment -> Employee
+Event ||--o{ EventAssignment : "ID -> EventID"
+EventAssignment ||--|| Employee : "EmployeeID -> ID"
+
+' Event -> DepartmentEvent -> Department
+Event ||--o{ DepartmentEvent : "ID -> EventID"
+DepartmentEvent ||--|| Department : "DepartmentID -> ID"
+
+' Event -> EventControl -> Employee
+Event ||--o{ EventControl : "ID -> EventID"
+EventControl ||--|| Employee : "EmployeeID -> ID"
+
+' Document -> DocumentSigning -> Employee
+Document ||--o{ DocumentSigning : "ID -> DocumentID"
+DocumentSigning ||--|| Employee : "EmployeeID -> ID"
+
+@enduml

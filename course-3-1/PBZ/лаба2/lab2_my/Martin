@@ -1,0 +1,170 @@
+@startuml
+!define PRIMARY_KEY(x) <b><color:red>PK</color> x</b>
+!define FOREIGN_KEY(x) <b><color:blue>FK</color> x</b>
+!define PRIMARY_FOREIGN_KEY(x) <b><color:green>PK,FK</color> x</b>
+
+skinparam linetype ortho
+top to bottom direction
+
+' --- Основные сущности ---
+
+entity Company {
+  PRIMARY_KEY(ID)
+  Name
+  LegalAddress
+}
+
+entity Department {
+  PRIMARY_KEY(ID)
+  Name
+  HierarchyLevel
+  FOREIGN_KEY(ParentDepartmentID)
+}
+
+entity Correspondent {
+  PRIMARY_KEY(ID)
+  FullName
+  Position
+}
+
+entity Employee {
+  PRIMARY_KEY(ID)
+  FullName
+  Position
+}
+
+' --- НОВОЕ: Справочник типов документов ---
+entity DocumentType {
+  PRIMARY_KEY(ID)
+  TypeName
+}
+
+entity Document {
+  PRIMARY_KEY(ID)
+  Number
+  CreationDate
+  ReleaseDate
+  Content
+  FOREIGN_KEY(DocumentTypeID) 
+  SignerPosition
+  SignerFullName
+}
+
+entity Event {
+  PRIMARY_KEY(ID)
+  Name
+  Deadline
+  CompletionDate
+  IsCompleted
+}
+
+' --- Связующие таблицы ---
+
+entity DocumentCorrespondent {
+  PRIMARY_FOREIGN_KEY(CorrespondentID)
+  PRIMARY_FOREIGN_KEY(DocumentID)
+  AuthorAssignmentDate
+}
+
+entity DocumentEvent {
+  PRIMARY_FOREIGN_KEY(DocumentID)
+  PRIMARY_FOREIGN_KEY(EventID)
+  SequenceNumber
+}
+
+entity EventAssignment {
+  PRIMARY_FOREIGN_KEY(EventID)
+  PRIMARY_FOREIGN_KEY(EmployeeID)
+  AssignmentDate
+  Priority
+}
+
+entity EmployeeDepartment {
+  PRIMARY_FOREIGN_KEY(EmployeeID)
+  PRIMARY_FOREIGN_KEY(DepartmentID)
+  StartDate
+  EndDate
+  Status
+}
+
+entity CorrespondentDepartment {
+  PRIMARY_FOREIGN_KEY(CorrespondentID)
+  PRIMARY_FOREIGN_KEY(DepartmentID)
+  StartDate
+  EndDate
+  Status
+}
+
+entity DepartmentCompany {
+  PRIMARY_FOREIGN_KEY(DepartmentID)
+  PRIMARY_FOREIGN_KEY(CompanyID)
+  InclusionDate
+}
+
+entity DepartmentEvent {
+  PRIMARY_FOREIGN_KEY(DepartmentID)
+  PRIMARY_FOREIGN_KEY(EventID)
+  AssignmentDate
+  ResponsibilityLevel
+}
+
+entity EventControl {
+  PRIMARY_FOREIGN_KEY(EmployeeID)
+  PRIMARY_FOREIGN_KEY(EventID)
+  ControlStartDate
+  Frequency
+}
+
+' --- Устаревшая таблица, но включим, если используется ---
+entity DocumentSigning {
+  PRIMARY_FOREIGN_KEY(EmployeeID)
+  PRIMARY_FOREIGN_KEY(DocumentID)
+  SigningDate
+  SignStatus
+}
+
+' --- СВЯЗИ ---
+
+' DocumentType -> Document
+DocumentType ||--o{ Document : "has"
+
+' Department -> Department (иерархия)
+Department ||--o| Department : "parent"
+
+' Department -> Company
+Department ||--o{ DepartmentCompany : "belongs to"
+Company ||--o{ DepartmentCompany : "contains"
+
+' Department -> Correspondent
+Department ||--o{ CorrespondentDepartment : "employs"
+Correspondent ||--o{ CorrespondentDepartment : "works in"
+
+' Department -> Employee
+Department ||--o{ EmployeeDepartment : "employs"
+Employee ||--o{ EmployeeDepartment : "works in"
+
+' Document -> Correspondent
+Document ||--o{ DocumentCorrespondent : "authored by"
+Correspondent ||--o{ DocumentCorrespondent : "authors"
+
+' Document -> Event
+Document ||--o{ DocumentEvent : "contains"
+Event ||--o{ DocumentEvent : "described in"
+
+' Event -> Employee
+Event ||--o{ EventAssignment : "assigned to"
+Employee ||--o{ EventAssignment : "executes"
+
+' Event -> Department
+Event ||--o{ DepartmentEvent : "assigned to dept"
+Department ||--o{ DepartmentEvent : "responsible for"
+
+' Event -> Employee (Control)
+Event ||--o{ EventControl : "controlled by"
+Employee ||--o{ EventControl : "controls"
+
+' Document -> Employee (Signing - устаревшее?)
+Document ||--o{ DocumentSigning : "signed by"
+Employee ||--o{ DocumentSigning : "signs"
+
+@enduml

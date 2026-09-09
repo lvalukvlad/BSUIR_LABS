@@ -1,0 +1,81 @@
+@startchen
+top to bottom direction
+
+' --- Основные сущности ---
+entity "Документ" as Doc {
+  ID <<key>>
+  Номер
+  ДатаСоздания
+  ДатаВыхода
+  Содержание
+  Тип
+  ПодписавшийФИО
+  ПодписавшийДолжность
+}
+
+entity "Мероприятие" as Ev {
+  ID <<key>>
+  Название
+  Дедлайн
+  Выполнено <<BOOLEAN>>
+  ДатаВыполнения
+}
+
+entity "Корреспондент" as Corr {
+  ID <<key>>
+  ФИО
+  Должность
+}
+
+entity "Сотрудник" as Emp {
+  ID <<key>>
+  ФИО
+  Должность
+}
+
+entity "Подразделение" as Dept {
+  ID <<key>>
+  Название
+  РодительID
+}
+
+' --- Основные связи ---
+relationship "Автор документа" as Rel1 {
+  ДатаНазначения
+}
+Rel1 -0- Corr
+Rel1 -N- Doc
+
+relationship "Содержит" as Rel2 {
+  ПорядковыйНомер
+}
+Rel2 -1- Doc
+Rel2 -N- Ev
+
+relationship "Назначен на" as Rel3 {
+  ДатаНазначения
+  Приоритет
+}
+Rel3 -1- Ev
+Rel3 -N- Emp
+
+relationship "Принадлежит" as Rel4 {
+  ДатаНачала
+  Статус
+}
+Rel4 -N- Emp
+Rel4 -1- Dept
+
+relationship "Принадлежит" as Rel5 {
+  ДатаНачала
+  Статус
+}
+Rel5 -N- Corr
+Rel5 -1- Dept
+
+relationship "Подчиняется" as Rel6 {
+}
+Rel6 -1- Dept
+Rel6 -N- Dept
+
+@endchen
