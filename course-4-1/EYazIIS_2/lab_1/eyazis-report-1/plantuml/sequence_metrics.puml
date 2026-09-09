@@ -1,0 +1,51 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor Пользователь as User
+participant "React SPA\n(Оценка качества)" as UI
+participant "FastAPI\n/api/metrics" as API
+participant "evaluator" as Eval
+participant "search_service" as Search
+database "PostgreSQL" as DB
+participant "matplotlib" as Plot
+
+User -> UI : выбор глубины выдачи k
+UI -> API : GET /api/metrics?top_k=k
+activate API
+
+API -> Eval : compare_models(k)
+activate Eval
+Eval -> DB : эталонные запросы и qrels
+DB --> Eval : запросы с релевантными документами
+
+loop по каждой модели ранжирования
+  loop по каждому эталонному запросу
+    Eval -> Search : retrieve_ids(запрос, k, модель)
+    Search --> Eval : выдача системы
+    Eval -> Eval : P, R, F-меры, P@k,\nR-Precision, AP, nDCG
+    Eval -> Eval : интерполированная\nкривая полноты-точности
+  end
+  Eval -> DB : INSERT INTO eval_runs
+end
+
+Eval --> API : метрики по запросам и средние
+deactivate Eval
+
+API -> Plot : построение графиков
+activate Plot
+Plot --> API : PNG в base64
+deactivate Plot
+
+API --> UI : таблицы и графики
+deactivate API
+UI --> User : результаты оценки качества
+
+note right of UI
+  Кнопка «Выгрузить графики в отчёт»
+  вызывает POST /api/metrics/export,
+  который сохраняет PNG в каталог
+  отчёта через смонтированный том
+end note
+
+@enduml

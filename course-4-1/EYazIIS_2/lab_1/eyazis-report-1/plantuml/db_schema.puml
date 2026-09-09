@@ -1,0 +1,77 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+hide circle
+skinparam linetype ortho
+
+entity "documents" as documents {
+  * id : SERIAL <<PK>>
+  --
+  * title : TEXT
+  * body : TEXT
+  summary : TEXT
+  source_file : TEXT <<UQ>>
+  * doc_len : INTEGER
+  * created_at : TIMESTAMP
+}
+
+entity "terms" as terms {
+  * id : SERIAL <<PK>>
+  --
+  * term : TEXT <<UQ>>
+  * df : INTEGER
+}
+
+entity "postings" as postings {
+  * term_id : INTEGER <<PK,FK>>
+  * doc_id : INTEGER <<PK,FK>>
+  --
+  * tf : INTEGER
+}
+
+entity "search_logs" as logs {
+  * id : SERIAL <<PK>>
+  --
+  * query : TEXT
+  normalized : TEXT
+  results_count : INTEGER
+  elapsed_ms : INTEGER
+  * created_at : TIMESTAMP
+}
+
+entity "eval_queries" as equeries {
+  * id : SERIAL <<PK>>
+  --
+  * code : TEXT <<UQ>>
+  * query : TEXT
+  comment : TEXT
+}
+
+entity "eval_qrels" as qrels {
+  * query_id : INTEGER <<PK,FK>>
+  * source_file : TEXT <<PK>>
+  --
+  * relevance : INTEGER
+}
+
+entity "eval_runs" as runs {
+  * id : SERIAL <<PK>>
+  --
+  * model : TEXT
+  * top_k : INTEGER
+  * summary : JSONB
+  * created_at : TIMESTAMP
+}
+
+entity "schema_migrations" as migrations {
+  * version : TEXT <<PK>>
+  --
+  * applied_at : TIMESTAMP
+}
+
+terms ||--o{ postings
+documents ||--o{ postings
+equeries ||--o{ qrels
+documents ||..o{ qrels : "по source_file"
+
+@enduml

@@ -1,0 +1,54 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+actor "Пользователь\nв ЛВС" as User
+
+node "Клиентский уровень" {
+  component "React SPA\n(Vite, react-router)" as SPA
+  component "nginx\n(раздача статики, прокси /api)" as Nginx
+}
+
+node "Серверный уровень" {
+  component "FastAPI\n(REST API)" as API
+  component "query_assistant\nподсказки, опечатки, синонимы" as Assist
+  component "text_processing\nтокенизация, лемматизация" as NLP
+  component "indexer\nинвертированный индекс" as Indexer
+  component "probabilistic\nRSJ-веса, BM25, PRF" as Rank
+  component "search_service\nсниппеты, подсветка" as Search
+  component "evaluator\nметрики, matplotlib" as Eval
+  component "document_loader\nизвлечение текста" as Loader
+  component "migrate\nSQL-миграции" as Migrate
+}
+
+database "PostgreSQL 16" as DB {
+  component "documents" as TDoc
+  component "terms / postings" as TIndex
+  component "eval_queries / eval_qrels" as TEval
+  component "search_logs / eval_runs" as TLog
+}
+
+folder "Отчёт" as Report {
+  artifact "png/*.png" as Png
+}
+
+User --> SPA : HTTP
+SPA --> Nginx
+Nginx --> API : /api/*
+API --> Assist
+API --> Search
+API --> Indexer
+API --> Eval
+API --> Loader
+Assist --> NLP
+Indexer --> NLP
+Search --> Rank
+Search --> Assist
+Rank --> DB
+Indexer --> DB
+Eval --> Search
+Eval --> Png : экспорт графиков
+Migrate --> DB
+
+@enduml

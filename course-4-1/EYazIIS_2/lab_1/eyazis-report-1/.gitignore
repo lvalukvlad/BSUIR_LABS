@@ -1,0 +1,13 @@
+# Отчёт
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# PlantUML (скачивается скриптом)
+eyazis-report-1/scripts/plantuml.jar

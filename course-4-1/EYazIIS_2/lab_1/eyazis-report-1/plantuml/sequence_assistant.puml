@@ -1,0 +1,41 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor Пользователь as User
+participant "React SPA\n(строка поиска)" as UI
+participant "FastAPI\n/api/suggest" as API
+participant "query_assistant" as Assist
+database "PostgreSQL" as DB
+
+== Автодополнение при вводе ==
+User -> UI : набирает "нейр"
+UI -> UI : задержка 220 мс (debounce)
+UI -> API : GET /api/suggest?prefix=нейр
+API -> Assist : suggest(префикс)
+Assist -> DB : SELECT term FROM terms\nWHERE term LIKE 'нейр%'\nORDER BY df DESC
+DB --> Assist : термины словаря
+Assist --> API : список подсказок
+API --> UI : подсказки
+UI --> User : выпадающий список
+
+== Исправление опечатки при поиске ==
+User -> UI : отправляет "нейроные сети"
+UI -> API : POST /api/search
+API -> Assist : correct_query(запрос)
+activate Assist
+Assist -> DB : словарь терминов
+loop по словам запроса
+  alt слово есть в словаре,\nв списке аббревиатур\nили в тезаурусе
+    Assist -> Assist : оставить без изменений
+  else слово неизвестно
+    Assist -> Assist : поиск ближайшего термина\nпо расстоянию Дамерау -- Левенштейна
+    Assist -> Assist : замена при расстоянии <= 2
+  end
+end
+Assist --> API : исправленный запрос\nи список замен
+deactivate Assist
+API --> UI : выдача + подсказка\n«возможно, вы имели в виду»
+UI --> User : результаты и уведомление
+
+@enduml

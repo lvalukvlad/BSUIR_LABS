@@ -1,0 +1,47 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: ips_db
+    environment:
+      POSTGRES_DB: ips
+      POSTGRES_USER: ips
+      POSTGRES_PASSWORD: ips
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ips -d ips"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    restart: unless-stopped
+
+  backend:
+    build: ./backend
+    container_name: ips_backend
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ips
+      DB_USER: ips
+      DB_PASSWORD: ips
+      EXPORT_DIR: /out/png
+    volumes:
+      - ../eyazis-report-1/png:/out/png
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: ips_frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+volumes:
+  db_data:

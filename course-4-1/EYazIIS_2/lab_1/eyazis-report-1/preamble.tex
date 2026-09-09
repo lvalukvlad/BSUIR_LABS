@@ -1,0 +1,429 @@
+\documentclass[a4paper,14pt,oneside,final]{report}
+% \usepackage{anyfontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+% \usepackage{anyfontsize}
+\usepackage{graphicx}
+\usepackage{float}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg}
+\graphicspath{{png/}}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\normalfont\Large\bfseries\centering}
+\renewcommand{\contentsname}{\MakeUppercase{Содержание}}
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{1em}
+%\usepackage{pscyr}
+%\renewcommand{\rmdefault}{cmr}
+\usepackage[final,hidelinks]{hyperref}
+\usepackage[numbers,square,sort&compress]{natbib}
+%\usepackage{times}
+%\usefont{T2A}{ftm}{m}{sl}
+\setlength{\bibsep}{0em}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{pgf}
+\usepackage{enumitem} % подключи в преамбуле
+\usepackage{tikz}
+\usetikzlibrary{positioning, fit, shapes.geometric, shapes.symbols, shadows, arrows.meta}
+\usepackage{float}
+\usepackage{listings} % Для листингов кода
+\usepackage{xcolor}
+\usepackage{hyphenat}
+\lstset{
+	language=Python, % Указываем язык Python
+	basicstyle=\small\ttfamily, % Шрифт для кода
+	keywordstyle=\color{blue}\bfseries, % Стиль ключевых слов
+	stringstyle=\color{red}, % Стиль строк
+	commentstyle=\color{green!50!black}\itshape, % Стиль комментариев
+	numbers=left, % Номера строк слева
+	numberstyle=\tiny, % Размер шрифта для номеров строк
+	stepnumber=1, % Шаг нумерации строк
+	numbersep=5pt, % Отступ номеров строк
+	showspaces=false, % Не показывать пробелы
+	showstringspaces=false, % Не показывать пробелы в строках
+	frame=single, % Рамка вокруг кода
+	breaklines=true, % Перенос длинных строк
+	breakatwhitespace=true, % Перенос только на пробелах
+	tabsize=4, % Размер табуляции
+	literate={á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+	{А}{{\cyrchar\CYRA}}1 {Б}{{\cyrchar\CYRB}}1 {В}{{\cyrchar\CYRV}}1
+	{Г}{{\cyrchar\CYRG}}1 {Д}{{\cyrchar\CYRD}}1 {Е}{{\cyrchar\CYRE}}1
+	{Ё}{{\cyrchar\CYRYO}}1 {Ж}{{\cyrchar\CYRZH}}1 {З}{{\cyrchar\CYRZ}}1
+	{И}{{\cyrchar\CYRI}}1 {Й}{{\cyrchar\CYRISHRT}}1 {К}{{\cyrchar\CYRK}}1
+	{Л}{{\cyrchar\CYRL}}1 {М}{{\cyrchar\CYRM}}1 {Н}{{\cyrchar\CYRN}}1
+	{О}{{\cyrchar\CYRO}}1 {П}{{\cyrchar\CYRP}}1 {Р}{{\cyrchar\CYRR}}1
+	{С}{{\cyrchar\CYRS}}1 {Т}{{\cyrchar\CYRT}}1 {У}{{\cyrchar\CYRU}}1
+	{Ф}{{\cyrchar\CYRF}}1 {Х}{{\cyrchar\CYRH}}1 {Ц}{{\cyrchar\CYRC}}1
+	{Ч}{{\cyrchar\CYRCH}}1 {Ш}{{\cyrchar\CYRSH}}1 {Щ}{{\cyrchar\CYRSHCH}}1
+	{Ъ}{{\cyrchar\CYRHRDSN}}1 {Ы}{{\cyrchar\CYRY}}1 {Ь}{{\cyrchar\CYRSFTSN}}1
+	{Э}{{\cyrchar\CYRE}}1 {Ю}{{\cyrchar\CYRYU}}1 {Я}{{\cyrchar\CYRYA}}1
+	{а}{{\cyrchar\cyra}}1 {б}{{\cyrchar\cyrb}}1 {в}{{\cyrchar\cyrv}}1
+	{г}{{\cyrchar\cyrg}}1 {д}{{\cyrchar\cyrd}}1 {е}{{\cyrchar\cyre}}1
+	{ё}{{\cyrchar\cyryo}}1 {ж}{{\cyrchar\cyrzh}}1 {з}{{\cyrchar\cyrz}}1
+	{и}{{\cyrchar\cyri}}1 {й}{{\cyrchar\cyrishrt}}1 {к}{{\cyrchar\cyrk}}1
+	{л}{{\cyrchar\cyrl}}1 {м}{{\cyrchar\cyrm}}1 {н}{{\cyrchar\cyrn}}1
+	{о}{{\cyrchar\cyro}}1 {п}{{\cyrchar\cyrp}}1 {р}{{\cyrchar\cyrr}}1
+	{с}{{\cyrchar\cyrs}}1 {т}{{\cyrchar\cyrt}}1 {у}{{\cyrchar\cyru}}1
+	{ф}{{\cyrchar\cyrf}}1 {х}{{\cyrchar\cyrh}}1 {ц}{{\cyrchar\cyrc}}1
+	{ч}{{\cyrchar\cyrch}}1 {ш}{{\cyrchar\cyrsh}}1 {щ}{{\cyrchar\cyrshch}}1
+	{ъ}{{\cyrchar\cyrhrdsn}}1 {ы}{{\cyrchar\cyry}}1 {ь}{{\cyrchar\cyrsftsn}}1
+	{э}{{\cyrchar\cyre}}1 {ю}{{\cyrchar\cyryu}}1 {я}{{\cyrchar\cyrya}}1
+}
+\usepackage{tocloft}
+% Настройка отступов и переносов в оглавлении
+\setlength{\cftsecindent}{1.5em} % Отступ для разделов
+\setlength{\cftsubsecindent}{3.0em} % Отступ для подразделов
+\setlength{\cftsecnumwidth}{2.5em} % Ширина номера раздела
+\setlength{\cftsubsecnumwidth}{3.5em} % Ширина номера подраздела
+% Разрешить перенос строк в оглавлении
+\renewcommand{\cftsecfont}{\normalfont} % Обычный шрифт для заголовков
+\renewcommand{\cftsubsecfont}{\normalfont}
+\addto\extrasrussian{%
+	\def\equationautorefname{формула}%
+	\def\figureautorefname{рисунок}%
+	\def\listingautorefname{листинг}%
+	\def\tableautorefname{таблица}%
+}
+
+\addto\captionsrussian{
+	\renewcommand\contentsname{\centerline{\bfseries\large{\MakeUppercase{Содержание}}}}
+	\renewcommand{\bibsection}{\sectioncentered*{Cписок использованных источников}}
+	\renewcommand{\lstlistingname}{Листинг}
+}
+
+% Список источников добавляется окружением thebibliography.
+\usepackage{extsizes}
+
+
+\sloppy
+
+\usepackage[expansion=false]{microtype}
+\newlength{\fivecharsapprox}
+\setlength{\fivecharsapprox}{6ex}
+
+
+\usepackage{indentfirst}
+\setlength{\parindent}{\fivecharsapprox} 
+
+\usepackage{lscape}
+\usepackage[left=3cm,top=2.0cm,right=1.5cm,bottom=2.7cm]{geometry}
+
+\frenchspacing
+
+\usepackage{perpage}
+\MakePerPage{footnote}
+
+\makeatletter 
+\def\@makefnmark{\hbox{\@textsuperscript{\normalfont\@thefnmark)}}}
+\makeatother
+
+\usepackage[bottom]{footmisc}
+
+\makeatletter
+\renewcommand{\thesection}{\arabic{section}}
+\makeatother
+
+\setcounter{secnumdepth}{3}
+
+% Зачем: Настраивает отступ между таблицей с содержанимем и словом СОДЕРЖАНИЕ
+\usepackage{tocloft}
+\setlength{\cftbeforetoctitleskip}{-1em}
+\setlength{\cftaftertoctitleskip}{1em}
+
+
+% Зачем: Определяет отступы слева для записей в таблице содержания.
+\makeatletter
+\renewcommand{\l@section}{\@dottedtocline{1}{0.5em}{1.2em}}
+\renewcommand{\l@subsection}{\@dottedtocline{2}{1.7em}{2.5em}}
+\renewcommand{\l@subsubsection}{\@dottedtocline{3}{3.7em}{3.0em}}
+\makeatother
+
+
+
+% Зачем: Работа с колонтитулами
+\usepackage{fancyhdr} 
+\pagestyle{fancy}
+
+
+\fancyhf{} 
+\fancyfoot[R]{\thepage}
+\renewcommand{\footrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{ 
+	\fancyhf{}
+	\rfoot{\thepage}}
+
+
+% Зачем: Задает стиль заголовков раздела жирным шрифтом, прописными буквами, без точки в конце
+\makeatletter
+\renewcommand\section{%
+	\clearpage\@startsection {section}{1}%
+	{\fivecharsapprox}%
+	{-1em \@plus -1ex \@minus -.2ex}%
+	{1em \@plus .2ex}%
+	{\raggedright\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}}
+\makeatother
+
+
+% Зачем: Задает стиль заголовков подразделов
+
+\makeatletter
+\renewcommand\subsection{
+	\@startsection{subsection}{2}
+	{\fivecharsapprox}
+	{-1em \@plus -1ex \@minus -.2ex}
+	{1em \@plus .2ex}
+	{\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
+\makeatother
+
+
+% Зачем: Задает стиль заголовков пунктов
+\makeatletter
+\renewcommand\subsubsection{
+	\@startsection{subsubsection}{3}%
+	{\fivecharsapprox}%
+	{-1em \@plus -1ex \@minus -.2ex}%
+	{1em \@plus .2ex}
+	{\raggedright\hyphenpenalty=10000\normalfont\normalsize\bfseries}}
+\makeatother
+
+% Зачем: для оформления введения и заключения, они должны быть выровнены по центру.
+\makeatletter
+\newcommand\sectioncentered{%
+	\clearpage\@startsection {section}{1}%
+	{\z@}%
+	{-1em \@plus -1ex \@minus -.2ex}%
+	{1em \@plus .2ex}%
+	{\centering\hyphenpenalty=10000\normalfont\large\bfseries\MakeUppercase}%
+}
+\makeatother
+
+
+
+% Зачем: Задает стиль библиографии
+%\bibliographystyle{belarus-specific-utf8gost780u}
+%\usepackage[final]{graphicx}
+%\DeclareGraphicsExtensions{.png,.jpg}
+
+% Зачем: Добавление подписей к рисункам
+\usepackage{caption}
+\usepackage{subcaption}
+
+% Зачем: поворот ячеек таблиц на 90 градусов
+\usepackage{rotating}
+\DeclareRobustCommand{\povernut}[1]{\begin{sideways}{#1}\end{sideways}}
+
+\DeclareRobustCommand{\x}[1]{\text{#1}}
+
+% Зачем: Задание подписей, разделителя и нумерации частей рисунков
+% сказали что надо без курсива
+% \DeclareCaptionLabelFormat{stbfigure}{Рисунок \emph{#2}}
+% \DeclareCaptionLabelFormat{stbtable}{Таблица \emph{#2}}
+% \DeclareCaptionLabelFormat{stblisting}{Листинг \emph{#2}}
+\DeclareCaptionLabelFormat{stbfigure}{Рисунок #2}
+\DeclareCaptionLabelFormat{stbtable}{Таблица #2}
+\DeclareCaptionLabelFormat{stblisting}{Листинг #2}
+\DeclareCaptionLabelSeparator{stb}{~--~}
+\captionsetup{labelsep=stb}
+\captionsetup[figure]{labelformat=stbfigure, justification=centering, font={small}}
+\captionsetup[lstlisting]{labelformat=stblisting,justification=centering, font={small}}
+% сказали что надо слева
+% \captionsetup[table]{labelformat=stbtable, justification=centering, font={small}}
+\captionsetup[table]{labelformat=stbtable, justification=raggedright,singlelinecheck=false, font={small}}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+
+% Зачем: Окружения для оформления формул
+\usepackage{calc}
+\newlength{\lengthWordWhere}
+\settowidth{\lengthWordWhere}{где}
+\newenvironment{explanation}
+{
+	\begin{itemize}[leftmargin=0cm, itemindent=\lengthWordWhere + \labelsep , labelsep=\labelsep]
+		
+		\renewcommand\labelitemi{}
+	}
+	{
+		\\[\parsep]
+	\end{itemize}
+}
+
+
+\usepackage{tabularx}
+
+\newenvironment{explanationx}
+{
+	\noindent 
+	\tabularx{\textwidth}{@{}ll@{ --- } X }
+}
+{ 
+	\\[\parsep]
+	\endtabularx
+}
+
+\usepackage{amsmath}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{calc}
+\usepackage{fp}
+\usepackage{enumitem}
+
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\@asbuk}{щ)}
+\makeatother
+
+
+\setlist{nolistsep}
+\renewcommand{\labelenumi}{\asbuk{enumi})}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+
+
+\setlist[itemize,0]{itemindent=\parindent + 2.2ex,leftmargin=0ex,label=--}
+\setlist[enumerate,1]{itemindent=\parindent + 2.7ex,leftmargin=0ex}
+\setlist[enumerate,2]{itemindent=\parindent + \parindent - 2.7ex}
+
+% Зачем: Включение номера раздела в номер формулы. Нумерация формул внутри раздела.
+\AtBeginDocument{\numberwithin{equation}{section}}
+
+% Зачем: Включение номера раздела в номер таблицы. Нумерация таблиц внутри раздела.
+\AtBeginDocument{\numberwithin{table}{section}}
+
+% Зачем: Включение номера раздела в номер рисунка. Нумерация рисунков внутри раздела.
+\AtBeginDocument{\numberwithin{figure}{section}}
+
+% Зачем: Включение номера раздела в номер листинга. Нумерация листингов внутри раздела.
+\AtBeginDocument{\numberwithin{lstlisting}{section}}
+
+
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{array}
+
+
+\usepackage{textcomp}
+
+\usepackage{siunitx}
+\sisetup{
+	binary-units = true,
+	output-decimal-marker = {,},
+	per-mode = symbol,
+	range-phrase = --,
+}
+\DeclareSIUnit{\sample}{S}
+
+
+%\newcommand{\ignore}[2e]%{\hspace{0in}#2}
+
+
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+%\AtBeginDocument{\numberwithin{lstlisting}{section}}
+
+\usepackage[normalem]{ulem}
+
+\renewcommand{\UrlFont}{\small\rmfamily\tt}
+
+% Магия для подсчета разнообразных объектов в документе
+\usepackage{lastpage}
+\usepackage{totcount}
+\regtotcounter{section}
+
+\usepackage{etoolbox}
+
+\newcounter{totfigures}
+\newcounter{tottables}
+\newcounter{totreferences}
+\newcounter{totequation}
+
+\providecommand\totfig{} 
+\providecommand\tottab{}
+\providecommand\totref{}
+\providecommand\toteq{}
+
+\makeatletter
+\AtEndDocument{%
+	\addtocounter{totfigures}{\value{figure}}%
+	\addtocounter{tottables}{\value{table}}%
+	\addtocounter{totequation}{\value{equation}}
+	\immediate\write\@mainaux{%
+		\string\gdef\string\totfig{\number\value{totfigures}}%
+		\string\gdef\string\tottab{\number\value{tottables}}%
+		\string\gdef\string\totref{\number\value{totreferences}}%
+		\string\gdef\string\toteq{\number\value{totequation}}%
+	}%
+}
+\makeatother
+
+\pretocmd{\section}{\addtocounter{totfigures}{\value{figure}}\setcounter{figure}{0}}{}{}
+\pretocmd{\section}{\addtocounter{tottables}{\value{table}}\setcounter{table}{0}}{}{}
+\pretocmd{\section}{\addtocounter{totequation}{\value{equation}}\setcounter{equation}{0}}{}{}
+\pretocmd{\bibitem}{\addtocounter{totreferences}{1}}{}{}
+
+
+
+% Для оформления таблиц не влязящих на 1 страницу
+\usepackage{longtable}
+
+\usepackage{gensymb}
+
+% Зачем: преобразовывать текст в верхний регистр командой MakeTextUppercase
+\usepackage{textcase}
+
+%  Переносы в словах с тире \hyph.
+
+\def\hyph{-\penalty0\hskip0pt\relax}
+
+% Добавляем левый отступ для библиографии
+
+\makeatletter
+\renewenvironment{thebibliography}[1]
+{\sectioncentered*{Cписок использованных источников}
+	\@mkboth{\MakeUppercase\refname}{\MakeUppercase\refname}%
+	\list{\@biblabel{\@arabic\c@enumiv}}%
+	{\settowidth\labelwidth{\@biblabel{#1}}%
+		\setlength{\itemindent}{\dimexpr\labelwidth+\labelsep+1em}
+		\leftmargin\z@
+		\@openbib@code
+		\usecounter{enumiv}%
+		\let\p@enumiv\@empty
+		\renewcommand\theenumiv{\@arabic\c@enumiv}}%
+	\sloppy
+	\clubpenalty4000
+	\@clubpenalty \clubpenalty
+	\widowpenalty4000%
+	\sfcode`\.\@m}
+{\def\@noitemerr
+	{\@latex@warning{Empty `thebibliography' environment}}%
+	\endlist}
+\makeatother
+
+\newcommand{\intro}[3]{
+	\stepcounter{section}
+	\sectioncentered*{ПРИЛОЖЕНИЕ \MakeUppercase{#1}}
+	\begin{center} 
+		\bf{(#2)}\\
+		\bf{#3}
+	\end{center}
+	\markboth{\MakeUppercase{#1}}{}
+	\addcontentsline{toc}{section}{Приложение \MakeUppercase{#1} (#2) #3}
+}
+\usepackage{enumitem}
+\usepackage{url} 
+
+\usepackage{float}
+\usepackage{amsmath}
+
+\newcommand{\bnfterm}[1]{\langle\text{#1}\rangle}
+\newcommand{\bnfdef}{::=}
+\newcommand{\bnfor}{\mid}
+
+% Для длинных определений
+\newenvironment{longbnf}
+{\begin{tabular}{@{}l@{}}}
+	{\end{tabular}}
+\usepackage{tabularx} % в преамбулу
+
+\setcounter{tocdepth}{3}  % Включает в оглавление section и subsection
+% В preamble.tex найдите место, где подключаете пакеты

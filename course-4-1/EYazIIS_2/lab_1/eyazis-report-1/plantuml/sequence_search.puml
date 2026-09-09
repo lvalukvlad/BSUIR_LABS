@@ -1,0 +1,53 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor Пользователь as User
+participant "React SPA" as UI
+participant "FastAPI\n/api/search" as API
+participant "query_assistant" as Assist
+participant "text_processing" as NLP
+participant "probabilistic" as Rank
+database "PostgreSQL" as DB
+
+User -> UI : ввод запроса
+UI -> API : POST /api/search
+activate API
+
+API -> Assist : analyze_query(запрос)
+activate Assist
+Assist -> DB : словарь терминов
+Assist -> Assist : исправление опечаток\n(Дамерау -- Левенштейн)
+Assist -> NLP : нормализация и лемматизация
+NLP --> Assist : список лемм
+Assist -> Assist : расширение синонимами
+Assist --> API : поисковый образ запроса
+deactivate Assist
+
+API -> Rank : search(леммы, k)
+activate Rank
+Rank -> DB : SELECT id, df FROM terms
+DB --> Rank : статистика терминов
+Rank -> Rank : веса Робертсона -- Спарк Джонс
+Rank -> DB : расчёт RSV по BM25\n(SUM по postings)
+DB --> Rank : ранжированный список
+alt включена обратная связь
+  Rank -> DB : термины топ-R документов
+  Rank -> Rank : пересчёт весов по\nпсевдорелевантному множеству
+  Rank -> DB : повторный расчёт RSV
+  DB --> Rank : уточнённый список
+end
+Rank --> API : документы с оценками
+deactivate Rank
+
+API -> API : отсечение по порогу релевантности
+API -> DB : тексты найденных документов
+API -> Assist : build_snippet(текст, леммы)
+Assist --> API : сниппет с подсветкой\nи список найденных слов
+API -> DB : запись в search_logs
+API --> UI : JSON с выдачей
+deactivate API
+
+UI --> User : ранжированный список\nсо ссылками и сниппетами
+
+@enduml

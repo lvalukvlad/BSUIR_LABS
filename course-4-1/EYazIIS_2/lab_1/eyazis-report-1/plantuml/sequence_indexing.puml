@@ -1,0 +1,45 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor Пользователь as User
+participant "React SPA\n(Загрузка)" as UI
+participant "FastAPI\n/api/documents/upload" as API
+participant "document_loader" as Loader
+participant "indexer" as Indexer
+participant "text_processing" as NLP
+database "PostgreSQL" as DB
+
+User -> UI : выбор файла
+UI -> API : POST multipart/form-data
+activate API
+
+API -> Loader : extract_text(имя, байты)
+activate Loader
+alt поддерживаемый формат
+  Loader -> Loader : разбор по расширению\n(txt, pdf, docx, html, rtf)
+  Loader --> API : текст документа
+else неподдерживаемый формат
+  Loader --> API : UnsupportedFormatError
+  API --> UI : HTTP 400 с пояснением
+end
+deactivate Loader
+
+API -> Indexer : index_document(заголовок, текст, файл)
+activate Indexer
+Indexer -> NLP : normalize(текст)
+NLP --> Indexer : список лемм
+Indexer -> Indexer : подсчёт частот терминов
+Indexer -> DB : INSERT INTO documents (ON CONFLICT UPDATE)
+DB --> Indexer : идентификатор документа
+Indexer -> DB : DELETE старых постингов
+Indexer -> DB : INSERT новых терминов и постингов
+Indexer -> DB : пересчёт df и удаление\nосиротевших терминов
+Indexer --> API : идентификатор документа
+deactivate Indexer
+
+API --> UI : результат индексации
+deactivate API
+UI --> User : сообщение об успехе
+
+@enduml

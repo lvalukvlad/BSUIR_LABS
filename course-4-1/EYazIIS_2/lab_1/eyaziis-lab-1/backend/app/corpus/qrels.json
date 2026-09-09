@@ -1,0 +1,113 @@
+{
+  "description": "Эталонные запросы и разметка релевантности тестовой коллекции",
+  "queries": [
+    {
+      "code": "q01",
+      "query": "исследование космоса и планет",
+      "comment": "тематический запрос, два релевантных документа",
+      "relevant": ["kosmos_issledovaniya.txt", "chernye_dyry.txt"]
+    },
+    {
+      "code": "q02",
+      "query": "чёрные дыры и гравитационные волны",
+      "comment": "запрос с редкими терминами",
+      "relevant": ["chernye_dyry.txt"]
+    },
+    {
+      "code": "q03",
+      "query": "вакцинация и иммунитет человека",
+      "comment": "медицинская тематика",
+      "relevant": ["vakciny_immunitet.txt"]
+    },
+    {
+      "code": "q04",
+      "query": "наследственность гены и днк",
+      "comment": "запрос с аббревиатурой",
+      "relevant": ["genetika_dnk.txt"]
+    },
+    {
+      "code": "q05",
+      "query": "вторая мировая война",
+      "comment": "устойчивое словосочетание",
+      "relevant": ["vtoraya_mirovaya.txt"]
+    },
+    {
+      "code": "q06",
+      "query": "древний рим и римское право",
+      "comment": "исторический запрос",
+      "relevant": ["drevniy_rim.txt"]
+    },
+    {
+      "code": "q07",
+      "query": "великое княжество литовское",
+      "comment": "имя собственное из нескольких слов",
+      "relevant": ["velikoe_knyazhestvo.txt"]
+    },
+    {
+      "code": "q08",
+      "query": "олимпийские игры",
+      "comment": "короткий запрос",
+      "relevant": ["olimpiyskie_igry.txt"]
+    },
+    {
+      "code": "q09",
+      "query": "футбол правила игры",
+      "comment": "запрос с общеупотребительным словом",
+      "relevant": ["futbol.txt"]
+    },
+    {
+      "code": "q10",
+      "query": "хоккей с шайбой",
+      "comment": "запрос со стоп-словом",
+      "relevant": ["hokkey.txt"]
+    },
+    {
+      "code": "q11",
+      "query": "электромобиль и тяговый аккумулятор",
+      "comment": "техническая тематика",
+      "relevant": ["elektromobili.txt"]
+    },
+    {
+      "code": "q12",
+      "query": "подъёмная сила крыла самолёта",
+      "comment": "многословный специализированный запрос",
+      "relevant": ["aviaciya.txt"]
+    },
+    {
+      "code": "q13",
+      "query": "промышленный робот манипулятор",
+      "comment": "техническая тематика",
+      "relevant": ["robototehnika.txt"]
+    },
+    {
+      "code": "q14",
+      "query": "нейронные сети и машинное обучение",
+      "comment": "два тематически связанных документа",
+      "relevant": ["neyronnye_seti.txt", "iskusstvennyy_intellekt.txt"]
+    },
+    {
+      "code": "q15",
+      "query": "реляционная база данных и sql",
+      "comment": "запрос с латиницей",
+      "relevant": ["bazy_dannyh.txt"]
+    },
+    {
+      "code": "q16",
+      "query": "локальная вычислительная сеть",
+      "comment": "сфера применения по варианту задания",
+      "relevant": ["lokalnye_seti.txt"]
+    },
+    {
+      "code": "q17",
+      "query": "операционная система и ядро",
+      "comment": "запрос с многозначным словом",
+      "relevant": ["operacionnye_sistemy.txt"]
+    },
+    {
+      "code": "q18",
+      "query": "спортивные соревнования",
+      "comment": "широкий запрос, три релевантных документа",
+      "relevant": ["futbol.txt", "olimpiyskie_igry.txt", "hokkey.txt"]
+    }
+  ]
+}

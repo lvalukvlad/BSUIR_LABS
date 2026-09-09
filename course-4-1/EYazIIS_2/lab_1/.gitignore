@@ -1,0 +1,49 @@
+# Пример чужой работы — локально можно держать, в git не нужен
+archive/
+
+# Методичка (большая PDF, в репозиторий не кладём)
+*.pdf
+!eyazis-report-1/course_report.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node / Vite (сборка идёт внутри Docker)
+node_modules/
+dist/
+.vite/
+
+# Docker / локальные логи прогонов
+*.log
+build.log
+metrics_run.txt
+scenarios_run.txt
+prf_*.txt
+
+# LaTeX
+*.aux
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+
+# PlantUML: jar качается скриптом при первом запуске
+eyazis-report-1/scripts/plantuml.jar
+
+# Редакторы и ОС
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+Desktop.ini
+.DS_Store
