@@ -1,0 +1,5002 @@
+[
+  {
+    "id": 1,
+    "name_en": "augmentin 625 duo tablet",
+    "name_ru": "Аугментин 625 дуо таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 2,
+    "name_en": "azithral 500 tablet",
+    "name_ru": "Азитрал 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 3,
+    "name_en": "ascoril ls syrup",
+    "name_ru": "Аскорил ls сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 4,
+    "name_en": "allegra 120mg tablet",
+    "name_ru": "Allegra 120мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 5,
+    "name_en": "avil 25 tablet",
+    "name_ru": "Avil 25 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 6,
+    "name_en": "allegra-m tablet",
+    "name_ru": "Allegra-m таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 7,
+    "name_en": "amoxyclav 625 tablet",
+    "name_ru": "Amoxyclav 625 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 8,
+    "name_en": "azee 500 tablet",
+    "name_ru": "Azee 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 9,
+    "name_en": "atarax 25mg tablet",
+    "name_ru": "Atarax 25мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 10,
+    "name_en": "ascoril d plus syrup sugar free",
+    "name_ru": "Аскорил d plus сироп sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 11,
+    "name_en": "aciloc 150 tablet",
+    "name_ru": "Aciloc 150 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 12,
+    "name_en": "alex syrup",
+    "name_ru": "Alex сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 13,
+    "name_en": "anovate cream",
+    "name_ru": "Anovate cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 14,
+    "name_en": "augmentin duo oral suspension",
+    "name_ru": "Аугментин дуо oral suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 15,
+    "name_en": "ambrodil-s syrup",
+    "name_ru": "Ambrodil-s сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 16,
+    "name_en": "arkamin tablet",
+    "name_ru": "Arkamin таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 17,
+    "name_en": "avomine tablet",
+    "name_ru": "Avomine таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 18,
+    "name_en": "asthakind-dx syrup sugar free",
+    "name_ru": "Asthakind-dx сироп sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 19,
+    "name_en": "allegra 180mg tablet",
+    "name_ru": "Allegra 180мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 20,
+    "name_en": "albendazole 400mg tablet",
+    "name_ru": "Albendazole 400мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 21,
+    "name_en": "asthalin syrup",
+    "name_ru": "Asthalin сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 22,
+    "name_en": "alprax 0.25 tablet",
+    "name_ru": "Alprax 0.25 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 23,
+    "name_en": "altraday capsule sr",
+    "name_ru": "Altraday капсулы sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 24,
+    "name_en": "ativan 2mg tablet",
+    "name_ru": "Ativan 2мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 25,
+    "name_en": "ascoril ls junior syrup",
+    "name_ru": "Аскорил ls junior сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 26,
+    "name_en": "asthalin 100mcg inhaler",
+    "name_ru": "Asthalin 100mcg inhaler",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 27,
+    "name_en": "almox 500 capsule",
+    "name_ru": "Almox 500 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 28,
+    "name_en": "atarax 10mg tablet",
+    "name_ru": "Atarax 10мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 29,
+    "name_en": "aciloc rd 20 tablet",
+    "name_ru": "Aciloc rd 20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 30,
+    "name_en": "aldactone tablet",
+    "name_ru": "Aldactone таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 31,
+    "name_en": "allegra suspension raspberry & vanilla",
+    "name_ru": "Allegra suspension raspberry & vanilla",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 32,
+    "name_en": "atarax syrup",
+    "name_ru": "Atarax сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 33,
+    "name_en": "amlokind-at tablet",
+    "name_ru": "Amlokind-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 34,
+    "name_en": "axcer  90mg tablet",
+    "name_ru": "Axcer  90мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "BLOOD RELATED",
+    "form": "таблетки"
+  },
+  {
+    "id": 35,
+    "name_en": "ativan 1mg tablet",
+    "name_ru": "Ativan 1мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 36,
+    "name_en": "alkasol oral solution",
+    "name_ru": "Alkasol oral solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 37,
+    "name_en": "aldigesic p 100mg/325mg tablet",
+    "name_ru": "Aldigesic p 100мг/325мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 38,
+    "name_en": "alfoo 10mg tablet pr",
+    "name_ru": "Alfoo 10мг таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "таблетки"
+  },
+  {
+    "id": 39,
+    "name_en": "alprax 0.5mg tablet",
+    "name_ru": "Alprax 0.5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 40,
+    "name_en": "arachitol 6l injection",
+    "name_ru": "Arachitol 6l injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 41,
+    "name_en": "anafortan 25 mg/300 mg tablet",
+    "name_ru": "Anafortan 25 мг/300 мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 42,
+    "name_en": "alex junior syrup",
+    "name_ru": "Alex junior сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 43,
+    "name_en": "azithral 200 liquid",
+    "name_ru": "Азитрал 200 liquid",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 44,
+    "name_en": "ab phylline capsule",
+    "name_ru": "Ab phylline капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 45,
+    "name_en": "althrocin 500 tablet",
+    "name_ru": "Althrocin 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 46,
+    "name_en": "augmentin dds suspension",
+    "name_ru": "Аугментин dds suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 47,
+    "name_en": "azicip 500 tablet",
+    "name_ru": "Azicip 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 48,
+    "name_en": "aldigesic-sp tablet",
+    "name_ru": "Aldigesic-sp таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 49,
+    "name_en": "amoxycillin 500mg capsule",
+    "name_ru": "Amoxycillin 500мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 50,
+    "name_en": "asthakind expectorant sugar free",
+    "name_ru": "Asthakind expectorant sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 51,
+    "name_en": "acemiz plus tablet",
+    "name_ru": "Acemiz plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 52,
+    "name_en": "aceclo plus tablet",
+    "name_ru": "Aceclo plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 53,
+    "name_en": "anobliss cream",
+    "name_ru": "Anobliss cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 54,
+    "name_en": "alex cough lozenges lemon ginger",
+    "name_ru": "Alex cough lozenges lemon ginger",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 55,
+    "name_en": "asthalin respules",
+    "name_ru": "Asthalin respules",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 56,
+    "name_en": "avil injection",
+    "name_ru": "Avil injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 57,
+    "name_en": "azee 200mg dry syrup",
+    "name_ru": "Azee 200мг dry сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 58,
+    "name_en": "atorva tablet",
+    "name_ru": "Atorva таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 59,
+    "name_en": "asthakind-ls expectorant cola sugar free",
+    "name_ru": "Asthakind-ls expectorant cola sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 60,
+    "name_en": "ascoril ls drops",
+    "name_ru": "Аскорил ls drops",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 61,
+    "name_en": "azmarda 50mg tablet",
+    "name_ru": "Azmarda 50мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 62,
+    "name_en": "amixide-h tablet",
+    "name_ru": "Amixide-h таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 63,
+    "name_en": "ab-flo-n tablet",
+    "name_ru": "Ab-flo-n таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 64,
+    "name_en": "af kit tablet",
+    "name_ru": "Af kit таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GYNAECOLOGICAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 65,
+    "name_en": "amlokind 5 tablet",
+    "name_ru": "Amlokind 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 66,
+    "name_en": "amlong tablet",
+    "name_ru": "Amlong таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 67,
+    "name_en": "akt 4 kit",
+    "name_ru": "Akt 4 kit",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 68,
+    "name_en": "ascoril d junior cough syrup",
+    "name_ru": "Аскорил d junior cough сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 69,
+    "name_en": "amitone 10mg tablet",
+    "name_ru": "Amitone 10мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 70,
+    "name_en": "aulin 100mg tablet",
+    "name_ru": "Aulin 100мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 71,
+    "name_en": "amikacin sulphate 500mg injection",
+    "name_ru": "Amikacin sulphate 500мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 72,
+    "name_en": "ambrodil-lx syrup",
+    "name_ru": "Ambrodil-lx сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 73,
+    "name_en": "aquasol a capsule",
+    "name_ru": "Aquasol a капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 74,
+    "name_en": "ab phylline sr 200 tablet",
+    "name_ru": "Ab phylline sr 200 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 75,
+    "name_en": "azoran tablet",
+    "name_ru": "Azoran таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI NEOPLASTICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 76,
+    "name_en": "aztor 10 tablet",
+    "name_ru": "Aztor 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 77,
+    "name_en": "atorva 40 tablet",
+    "name_ru": "Atorva 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 78,
+    "name_en": "azax 500 tablet",
+    "name_ru": "Azax 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 79,
+    "name_en": "alex syrup sugar free",
+    "name_ru": "Alex сироп sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 80,
+    "name_en": "anxit 0.5 tablet",
+    "name_ru": "Anxit 0.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 81,
+    "name_en": "anxit 0.25mg tablet",
+    "name_ru": "Anxit 0.25мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 82,
+    "name_en": "acitrom 2 tablet",
+    "name_ru": "Acitrom 2 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 83,
+    "name_en": "angispan - tr 2.5mg capsule",
+    "name_ru": "Angispan - tr 2.5мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 84,
+    "name_en": "azeflo nasal spray",
+    "name_ru": "Azeflo nasal spray",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 85,
+    "name_en": "acemiz -mr tablet",
+    "name_ru": "Acemiz -mr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 86,
+    "name_en": "akurit 4 tablet",
+    "name_ru": "Akurit 4 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 87,
+    "name_en": "aerocort inhaler",
+    "name_ru": "Aerocort inhaler",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 88,
+    "name_en": "adaferin gel",
+    "name_ru": "Adaferin gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 89,
+    "name_en": "acivir 400 dt tablet",
+    "name_ru": "Acivir 400 dt таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 90,
+    "name_en": "aptimust syrup",
+    "name_ru": "Aptimust сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "сироп"
+  },
+  {
+    "id": 91,
+    "name_en": "augmentin 1000 duo tablet",
+    "name_ru": "Аугментин 1000 дуо таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 92,
+    "name_en": "ambrodil syrup",
+    "name_ru": "Ambrodil сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 93,
+    "name_en": "acogut tablet",
+    "name_ru": "Acogut таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 94,
+    "name_en": "atarax drops",
+    "name_ru": "Atarax drops",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 95,
+    "name_en": "amlip 5 tablet",
+    "name_ru": "Amlip 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 96,
+    "name_en": "antid 300mcg/ml injection",
+    "name_ru": "Antid 300mcg/ml injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VACCINES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 97,
+    "name_en": "alerid syrup",
+    "name_ru": "Alerid сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 98,
+    "name_en": "aldactone 50 tablet",
+    "name_ru": "Aldactone 50 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 99,
+    "name_en": "ampoxin 500 capsule",
+    "name_ru": "Ampoxin 500 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 100,
+    "name_en": "azee 250 tablet",
+    "name_ru": "Azee 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 101,
+    "name_en": "alerid tablet",
+    "name_ru": "Alerid таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 102,
+    "name_en": "augmentin 375 tablet",
+    "name_ru": "Аугментин 375 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 103,
+    "name_en": "acenac-p  tablet",
+    "name_ru": "Acenac-p  таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 104,
+    "name_en": "acivir cream",
+    "name_ru": "Acivir cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 105,
+    "name_en": "ab-flo capsule",
+    "name_ru": "Ab-flo капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 106,
+    "name_en": "ab phylline n tablet",
+    "name_ru": "Ab phylline n таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 107,
+    "name_en": "amifru 40 tablet",
+    "name_ru": "Amifru 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 108,
+    "name_en": "avamys nasal spray",
+    "name_ru": "Avamys nasal spray",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 109,
+    "name_en": "alkasol oral solution sugar free",
+    "name_ru": "Alkasol oral solution sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 110,
+    "name_en": "aciloc 300 tablet",
+    "name_ru": "Aciloc 300 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 111,
+    "name_en": "aziderm 20% cream",
+    "name_ru": "Aziderm 20% cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 112,
+    "name_en": "ace proxyvon tablet",
+    "name_ru": "Ace proxyvon таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 113,
+    "name_en": "avil injection",
+    "name_ru": "Avil injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 114,
+    "name_en": "ano metrogyl cream",
+    "name_ru": "Ano metrogyl cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 115,
+    "name_en": "admenta 5 tablet",
+    "name_ru": "Admenta 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 116,
+    "name_en": "aceclo-mr tablet",
+    "name_ru": "Aceclo-mr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 117,
+    "name_en": "alerid-d tablet",
+    "name_ru": "Alerid-d таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 118,
+    "name_en": "acemiz-s tablet",
+    "name_ru": "Acemiz-s таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 119,
+    "name_en": "allercet-dc tablet",
+    "name_ru": "Allercet-dc таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 120,
+    "name_en": "aztolet  10 tablet",
+    "name_ru": "Aztolet  10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 121,
+    "name_en": "augmentin 1.2gm injection",
+    "name_ru": "Аугментин 1.2gm injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 122,
+    "name_en": "ambrodil-plus rf syrup",
+    "name_ru": "Ambrodil-plus rf сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 123,
+    "name_en": "amlopres-at tablet",
+    "name_ru": "Amlopres-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 124,
+    "name_en": "ajaduo 25mg/5mg tablet",
+    "name_ru": "Ajaдуо 25мг/5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 125,
+    "name_en": "avanair 100 tablet",
+    "name_ru": "Avanair 100 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "таблетки"
+  },
+  {
+    "id": 126,
+    "name_en": "acton-or tablet sr",
+    "name_ru": "Acton-or таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 127,
+    "name_en": "aquazide 12.5 tablet",
+    "name_ru": "Aquazide 12.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 128,
+    "name_en": "alaspan am tablet",
+    "name_ru": "Alaspan am таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 129,
+    "name_en": "althrocin 250 tablet",
+    "name_ru": "Althrocin 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 130,
+    "name_en": "azikem 500mg tablet",
+    "name_ru": "Azikem 500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 131,
+    "name_en": "aldosmin 500mg tablet",
+    "name_ru": "Aldosmin 500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 132,
+    "name_en": "amlovas 5 tablet",
+    "name_ru": "Amlovas 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 133,
+    "name_en": "acitrom 1 tablet",
+    "name_ru": "Acitrom 1 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 134,
+    "name_en": "af 150 tablet dt",
+    "name_ru": "Af 150 таблетки dt",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 135,
+    "name_en": "ascoril sf expectorant",
+    "name_ru": "Аскорил sf expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 136,
+    "name_en": "amaryl m  1mg tablet pr",
+    "name_ru": "Amaryl m  1мг таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 137,
+    "name_en": "azithral xl 200 liquid",
+    "name_ru": "Азитрал xl 200 liquid",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 138,
+    "name_en": "af 400 tablet",
+    "name_ru": "Af 400 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 139,
+    "name_en": "amantrel tablet",
+    "name_ru": "Amantrel таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 140,
+    "name_en": "atorva 20 tablet",
+    "name_ru": "Atorva 20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 141,
+    "name_en": "acenac-mr tablet",
+    "name_ru": "Acenac-mr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 142,
+    "name_en": "ambrolite-s expectorant",
+    "name_ru": "Ambrolite-s expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 143,
+    "name_en": "asthalin 4 tablet",
+    "name_ru": "Asthalin 4 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 144,
+    "name_en": "abiways tablet",
+    "name_ru": "Abiways таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 145,
+    "name_en": "amaryl m  2mg tablet pr",
+    "name_ru": "Amaryl m  2мг таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 146,
+    "name_en": "azoran tablet",
+    "name_ru": "Azoran таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI NEOPLASTICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 147,
+    "name_en": "ampilox capsule",
+    "name_ru": "Ampilox капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 148,
+    "name_en": "adrenaline tartrate injection",
+    "name_ru": "Adrenaline tartrate injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 149,
+    "name_en": "acogut 300 er tablet",
+    "name_ru": "Acogut 300 er таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 150,
+    "name_en": "acuvin tablet",
+    "name_ru": "Acuvin таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 151,
+    "name_en": "ab-flo sr tablet",
+    "name_ru": "Ab-flo sr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 152,
+    "name_en": "air-m tablet",
+    "name_ru": "Air-m таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 153,
+    "name_en": "atorlip-f tablet",
+    "name_ru": "Atorlip-f таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 154,
+    "name_en": "advent forte 457mg syrup tangy orange",
+    "name_ru": "Advent forte 457мг сироп tangy orange",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 155,
+    "name_en": "amlodac 5 tablet",
+    "name_ru": "Amlodac 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 156,
+    "name_en": "aztor 40 tablet",
+    "name_ru": "Aztor 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 157,
+    "name_en": "ascoril plus expectorant",
+    "name_ru": "Аскорил plus expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 158,
+    "name_en": "alupent 10mg tablet",
+    "name_ru": "Alupent 10мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 159,
+    "name_en": "amlip at tablet",
+    "name_ru": "Amlip at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 160,
+    "name_en": "asthakind-p drops",
+    "name_ru": "Asthakind-p drops",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 161,
+    "name_en": "allegra nasal spray",
+    "name_ru": "Allegra nasal spray",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 162,
+    "name_en": "addnok 0.2mg tablet",
+    "name_ru": "Addnok 0.2мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 163,
+    "name_en": "aldosmin 1000mg tablet",
+    "name_ru": "Aldosmin 1000мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 164,
+    "name_en": "andre i-kul eye drop",
+    "name_ru": "Andre i-kul eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 165,
+    "name_en": "antiflu 75mg capsule",
+    "name_ru": "Antiflu 75мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 166,
+    "name_en": "alerfix total tablet sr",
+    "name_ru": "Alerfix total таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 167,
+    "name_en": "alex-l cough syrup mango",
+    "name_ru": "Alex-l cough сироп mango",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 168,
+    "name_en": "atropine sulphate injection",
+    "name_ru": "Atropine sulphate injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 169,
+    "name_en": "aquaviron injection 1ml",
+    "name_ru": "Aquaviron injection 1ml",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 170,
+    "name_en": "aciclovir 400 tablet",
+    "name_ru": "Aciclovir 400 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 171,
+    "name_en": "alkof dx syrup",
+    "name_ru": "Alkof dx сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 172,
+    "name_en": "atm 500 tablet",
+    "name_ru": "Atm 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 173,
+    "name_en": "assurans tablet",
+    "name_ru": "Assurans таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "таблетки"
+  },
+  {
+    "id": 174,
+    "name_en": "ambrolite d syrup",
+    "name_ru": "Ambrolite d сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 175,
+    "name_en": "actrapid hm 100iu/ml penfill",
+    "name_ru": "Actrapid hm 100iu/ml penfill",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 176,
+    "name_en": "aten 50 tablet",
+    "name_ru": "Aten 50 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 177,
+    "name_en": "azmarda 100mg tablet",
+    "name_ru": "Azmarda 100мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 178,
+    "name_en": "asthalin ax syrup",
+    "name_ru": "Asthalin ax сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 179,
+    "name_en": "alzolam 0.5mg tablet",
+    "name_ru": "Alzolam 0.5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 180,
+    "name_en": "a kare combipack",
+    "name_ru": "A kare combipack",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GYNAECOLOGICAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 181,
+    "name_en": "ambulax tablet",
+    "name_ru": "Ambulax таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 182,
+    "name_en": "amlovas-at tablet",
+    "name_ru": "Amlovas-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 183,
+    "name_en": "asthakind-dx junior syrup cherry",
+    "name_ru": "Asthakind-dx junior сироп cherry",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 184,
+    "name_en": "advent 228.5mg dry syrup",
+    "name_ru": "Advent 228.5мг dry сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 185,
+    "name_en": "acivir 800 dt tablet",
+    "name_ru": "Acivir 800 dt таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 186,
+    "name_en": "alfusin tablet pr",
+    "name_ru": "Alfusin таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "таблетки"
+  },
+  {
+    "id": 187,
+    "name_en": "aziwok 500 tablet",
+    "name_ru": "Aziwok 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 188,
+    "name_en": "alkacitral liquid",
+    "name_ru": "Alkacitral liquid",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 189,
+    "name_en": "almox-cv 625 tablet",
+    "name_ru": "Almox-cv 625 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 190,
+    "name_en": "azithral 100 liquid",
+    "name_ru": "Азитрал 100 liquid",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 191,
+    "name_en": "azee 100mg dry syrup peppermint",
+    "name_ru": "Azee 100мг dry сироп peppermint",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 192,
+    "name_en": "ace-proxyvon cr tablet",
+    "name_ru": "Ace-proxyvon cr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 193,
+    "name_en": "ascoril c  syrup",
+    "name_ru": "Аскорил c  сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 194,
+    "name_en": "aprezo 30mg tablet",
+    "name_ru": "Aprezo 30мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 195,
+    "name_en": "apidra 100iu cartridge",
+    "name_ru": "Apidra 100iu cartridge",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 196,
+    "name_en": "amlosafe 3d tablet",
+    "name_ru": "Amlosafe 3d таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 197,
+    "name_en": "andial 2mg tablet",
+    "name_ru": "Andial 2мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 198,
+    "name_en": "acenext p 100mg/325mg tablet",
+    "name_ru": "Acenext p 100мг/325мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 199,
+    "name_en": "acnesol a nano gel",
+    "name_ru": "Acnesol a nano gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 200,
+    "name_en": "ascoril flu syrup",
+    "name_ru": "Аскорил flu сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 201,
+    "name_en": "asomex 2.5 tablet",
+    "name_ru": "Asomex 2.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 202,
+    "name_en": "angiplat 2.5 capsule tr",
+    "name_ru": "Angiplat 2.5 капсулы tr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 203,
+    "name_en": "alkof cofgel  tablet",
+    "name_ru": "Alkof cofgel  таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 204,
+    "name_en": "azithral 250mg dt tablet",
+    "name_ru": "Азитрал 250мг dt таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 205,
+    "name_en": "alzolam 0.25mg tablet",
+    "name_ru": "Alzolam 0.25мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 206,
+    "name_en": "advent 625 tablet",
+    "name_ru": "Advent 625 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 207,
+    "name_en": "alsita m 50mg/500mg tablet",
+    "name_ru": "Alsita m 50мг/500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 208,
+    "name_en": "axogurd-sr tablet",
+    "name_ru": "Axogurd-sr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 209,
+    "name_en": "azoflox uti tablet",
+    "name_ru": "Azoflox uti таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 210,
+    "name_en": "azulix 2 mf tablet pr",
+    "name_ru": "Azulix 2 mf таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 211,
+    "name_en": "amaryl mv 2mg tablet sr",
+    "name_ru": "Amaryl mv 2мг таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 212,
+    "name_en": "azulix 1 mf tablet pr",
+    "name_ru": "Azulix 1 mf таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 213,
+    "name_en": "aten 25 tablet",
+    "name_ru": "Aten 25 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 214,
+    "name_en": "azibact 500 tablet",
+    "name_ru": "Azibact 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 215,
+    "name_en": "amlopres tl tablet",
+    "name_ru": "Amlopres tl таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 216,
+    "name_en": "ambrolite syrup",
+    "name_ru": "Ambrolite сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 217,
+    "name_en": "actapro tablet",
+    "name_ru": "Actapro таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 218,
+    "name_en": "aztor 20 tablet",
+    "name_ru": "Aztor 20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 219,
+    "name_en": "alkof syrup",
+    "name_ru": "Alkof сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 220,
+    "name_en": "atorfit cv 10 capsule",
+    "name_ru": "Atorfit cv 10 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 221,
+    "name_en": "acnesol gel",
+    "name_ru": "Acnesol gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 222,
+    "name_en": "amtas 5 tablet",
+    "name_ru": "Amtas 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 223,
+    "name_en": "alrgee 120mg tablet",
+    "name_ru": "Alrgee 120мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 224,
+    "name_en": "avil 50mg tablet",
+    "name_ru": "Avil 50мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 225,
+    "name_en": "arip mt 5 tablet",
+    "name_ru": "Arip mt 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 226,
+    "name_en": "alivher tablet",
+    "name_ru": "Alivher таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "таблетки"
+  },
+  {
+    "id": 227,
+    "name_en": "apdrops lp  eye drop bak free",
+    "name_ru": "Apdrops lp  eye drop bak free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL OTOLOGICALS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 228,
+    "name_en": "amrox-ls syrup",
+    "name_ru": "Amrox-ls сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 229,
+    "name_en": "altonil 3mg tablet",
+    "name_ru": "Altonil 3мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OTHERS",
+    "form": "таблетки"
+  },
+  {
+    "id": 230,
+    "name_en": "allercet cold tablet",
+    "name_ru": "Allercet cold таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 231,
+    "name_en": "atorlip 10 tablet",
+    "name_ru": "Atorlip 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 232,
+    "name_en": "admenta 10 tablet",
+    "name_ru": "Admenta 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 233,
+    "name_en": "amox 500mg capsule",
+    "name_ru": "Amox 500мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 234,
+    "name_en": "azee 250 tablet",
+    "name_ru": "Azee 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 235,
+    "name_en": "asthalin respirator solution",
+    "name_ru": "Asthalin respirator solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 236,
+    "name_en": "add tears lubricant eye drop",
+    "name_ru": "Add tears lubricant eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 237,
+    "name_en": "almox 250 capsule",
+    "name_ru": "Almox 250 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 238,
+    "name_en": "aztor asp 75 capsule",
+    "name_ru": "Aztor asp 75 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 239,
+    "name_en": "alkacip syrup",
+    "name_ru": "Alkacip сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "сироп"
+  },
+  {
+    "id": 240,
+    "name_en": "arbitel-trio 50 tablet er",
+    "name_ru": "Arbitel-trio 50 таблетки er",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 241,
+    "name_en": "acivir 200 dt tablet",
+    "name_ru": "Acivir 200 dt таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 242,
+    "name_en": "augmentin es oral suspension",
+    "name_ru": "Аугментин es oral suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 243,
+    "name_en": "amrolstar cream",
+    "name_ru": "Amrolstar cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 244,
+    "name_en": "adalene nanogel gel",
+    "name_ru": "Adalene nanogel gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 245,
+    "name_en": "apigat 2.5 tablet",
+    "name_ru": "Apigat 2.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "BLOOD RELATED",
+    "form": "таблетки"
+  },
+  {
+    "id": 246,
+    "name_en": "aeromont-b tablet",
+    "name_ru": "Aeromont-b таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 247,
+    "name_en": "amlopres 5 tablet",
+    "name_ru": "Amlopres 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 248,
+    "name_en": "abevia-n tablet",
+    "name_ru": "Abevia-n таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 249,
+    "name_en": "acamprol tablet",
+    "name_ru": "Acamprol таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 250,
+    "name_en": "ancool  oral suspension sugar free",
+    "name_ru": "Ancool  oral suspension sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 251,
+    "name_en": "atormac cv10 capsule",
+    "name_ru": "Atormac cv10 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 252,
+    "name_en": "apdrops pd eye drop",
+    "name_ru": "Apdrops pd eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 253,
+    "name_en": "amnurite  10 tablet sr",
+    "name_ru": "Amnurite  10 таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 254,
+    "name_en": "atonide gel",
+    "name_ru": "Atonide gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 255,
+    "name_en": "amlong-a tablet",
+    "name_ru": "Amlong-a таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 256,
+    "name_en": "acivir 500 infusion",
+    "name_ru": "Acivir 500 infusion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 257,
+    "name_en": "af-k lotion",
+    "name_ru": "Af-k lotion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 258,
+    "name_en": "amoxyclav 375 tablet",
+    "name_ru": "Amoxyclav 375 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 259,
+    "name_en": "abd 400mg tablet",
+    "name_ru": "Abd 400мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 260,
+    "name_en": "amlong 2.5 tablet",
+    "name_ru": "Amlong 2.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 261,
+    "name_en": "alburel 20gm solution for infusion",
+    "name_ru": "Alburel 20gm solution for infusion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "BLOOD RELATED",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 262,
+    "name_en": "anacin tablet",
+    "name_ru": "Anacin таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 263,
+    "name_en": "azithro 250mg tablet",
+    "name_ru": "Azithro 250мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 264,
+    "name_en": "azimax 500 tablet",
+    "name_ru": "Azimax 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 265,
+    "name_en": "amlosafe-at tablet",
+    "name_ru": "Amlosafe-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 266,
+    "name_en": "air 180 tablet",
+    "name_ru": "Air 180 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 267,
+    "name_en": "adilip 135 tablet dr",
+    "name_ru": "Adilip 135 таблетки dr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 268,
+    "name_en": "apdrops eye drop",
+    "name_ru": "Apdrops eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 269,
+    "name_en": "amlosafe 5 tablet",
+    "name_ru": "Amlosafe 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 270,
+    "name_en": "apigat 5 tablet",
+    "name_ru": "Apigat 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "BLOOD RELATED",
+    "form": "таблетки"
+  },
+  {
+    "id": 271,
+    "name_en": "amlogard 5mg tablet",
+    "name_ru": "Amlogard 5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 272,
+    "name_en": "amaryl mv 1mg tablet sr",
+    "name_ru": "Amaryl mv 1мг таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 273,
+    "name_en": "azee 500 tablet",
+    "name_ru": "Azee 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 274,
+    "name_en": "alergin l tablet",
+    "name_ru": "Alergin l таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 275,
+    "name_en": "aciloc injection",
+    "name_ru": "Aciloc injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 276,
+    "name_en": "alex p syrup",
+    "name_ru": "Alex p сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 277,
+    "name_en": "azr tablet",
+    "name_ru": "Azr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI NEOPLASTICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 278,
+    "name_en": "angicam-beta tablet",
+    "name_ru": "Angicam-beta таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 279,
+    "name_en": "amicobal 10mg/1500mcg tablet",
+    "name_ru": "Amicobal 10мг/1500mcg таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 280,
+    "name_en": "actibile 300 tablet",
+    "name_ru": "Actibile 300 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 281,
+    "name_en": "ambrolite levo syrup",
+    "name_ru": "Ambrolite levo сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 282,
+    "name_en": "amaryl m forte 2mg tablet pr",
+    "name_ru": "Amaryl m forte 2мг таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 283,
+    "name_en": "acivir cream",
+    "name_ru": "Acivir cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 284,
+    "name_en": "azicip 250 tablet",
+    "name_ru": "Azicip 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 285,
+    "name_en": "algesia cr 200mg/20mg capsule",
+    "name_ru": "Algesia cr 200мг/20мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 286,
+    "name_en": "ascoril expectorant",
+    "name_ru": "Аскорил expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 287,
+    "name_en": "atorva 80 tablet",
+    "name_ru": "Atorva 80 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 288,
+    "name_en": "acitrom 4 tablet",
+    "name_ru": "Acitrom 4 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 289,
+    "name_en": "alsita 100mg tablet",
+    "name_ru": "Alsita 100мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 290,
+    "name_en": "amnurite  5 mg/1500 mcg tablet",
+    "name_ru": "Amnurite  5 мг/1500 mcg таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 291,
+    "name_en": "airz capsule",
+    "name_ru": "Airz капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 292,
+    "name_en": "asomex 5 tablet",
+    "name_ru": "Asomex 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 293,
+    "name_en": "axcer  90mg tablet",
+    "name_ru": "Axcer  90мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "BLOOD RELATED",
+    "form": "таблетки"
+  },
+  {
+    "id": 294,
+    "name_en": "anaspas tablet",
+    "name_ru": "Anaspas таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 295,
+    "name_en": "ascabiol emulsion",
+    "name_ru": "Ascabiol emulsion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 296,
+    "name_en": "addwize 10mg tablet",
+    "name_ru": "Addwize 10мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 297,
+    "name_en": "ascoril plus expectorant",
+    "name_ru": "Аскорил plus expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 298,
+    "name_en": "amlong 10 tablet",
+    "name_ru": "Amlong 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 299,
+    "name_en": "abd plus tablet",
+    "name_ru": "Abd plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 300,
+    "name_en": "allercet-m tablet",
+    "name_ru": "Allercet-m таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 301,
+    "name_en": "augpen -ds suspension",
+    "name_ru": "Augpen -ds suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 302,
+    "name_en": "althrocin liquid",
+    "name_ru": "Althrocin liquid",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 303,
+    "name_en": "atocor 10 tablet",
+    "name_ru": "Atocor 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 304,
+    "name_en": "augpen 625 bid tablet",
+    "name_ru": "Augpen 625 bid таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 305,
+    "name_en": "atchol-f tablet",
+    "name_ru": "Atchol-f таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 306,
+    "name_en": "alensol-d tablet",
+    "name_ru": "Alensol-d таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 307,
+    "name_en": "arbitel-trio 25 tablet er",
+    "name_ru": "Arbitel-trio 25 таблетки er",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 308,
+    "name_en": "acivir eye ointment",
+    "name_ru": "Acivir eye ointment",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 309,
+    "name_en": "aceclo tablet",
+    "name_ru": "Aceclo таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 310,
+    "name_en": "actrapid 100 iu/ml flexpen",
+    "name_ru": "Actrapid 100 iu/ml flexpen",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 311,
+    "name_en": "amitone 25mg tablet",
+    "name_ru": "Amitone 25мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 312,
+    "name_en": "anafortan syrup",
+    "name_ru": "Anafortan сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "сироп"
+  },
+  {
+    "id": 313,
+    "name_en": "acera-d capsule sr",
+    "name_ru": "Acera-d капсулы sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 314,
+    "name_en": "aerodil sf expectorant",
+    "name_ru": "Aerodil sf expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 315,
+    "name_en": "aculip h 12.5 mg/5 mg tablet",
+    "name_ru": "Aculip h 12.5 мг/5 мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 316,
+    "name_en": "aztolet  20 tablet",
+    "name_ru": "Aztolet  20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 317,
+    "name_en": "amlopin 5 tablet",
+    "name_ru": "Amlopin 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 318,
+    "name_en": "arimidex 1mg tablet",
+    "name_ru": "Arimidex 1мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI NEOPLASTICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 319,
+    "name_en": "alzil-m 5 tablet",
+    "name_ru": "Alzil-m 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 320,
+    "name_en": "acuvert tablet",
+    "name_ru": "Acuvert таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 321,
+    "name_en": "alciflox 500mg tablet",
+    "name_ru": "Alciflox 500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 322,
+    "name_en": "azax 250 tablet",
+    "name_ru": "Azax 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 323,
+    "name_en": "aceclo spas tablet",
+    "name_ru": "Aceclo spas таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 324,
+    "name_en": "asthakind-ls drop",
+    "name_ru": "Asthakind-ls drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 325,
+    "name_en": "ascabiol emulsion",
+    "name_ru": "Ascabiol emulsion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 326,
+    "name_en": "alphadol 0.25mcg capsule",
+    "name_ru": "Alphadol 0.25mcg капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 327,
+    "name_en": "alex cough lozenges sugar free",
+    "name_ru": "Alex cough lozenges sugar free",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 328,
+    "name_en": "arip mt 10 tablet",
+    "name_ru": "Arip mt 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 329,
+    "name_en": "anabel liquid gel",
+    "name_ru": "Anabel liquid gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "STOMATOLOGICALS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 330,
+    "name_en": "aricep 5 tablet",
+    "name_ru": "Aricep 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 331,
+    "name_en": "amlosafe-at tablet",
+    "name_ru": "Amlosafe-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 332,
+    "name_en": "aceclo sr tablet",
+    "name_ru": "Aceclo sr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 333,
+    "name_en": "azopt opthalmic suspension",
+    "name_ru": "Azopt opthalmic suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 334,
+    "name_en": "amitop 10 tablet",
+    "name_ru": "Amitop 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 335,
+    "name_en": "ambulax m tablet",
+    "name_ru": "Ambulax m таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 336,
+    "name_en": "alcipro 500mg tablet",
+    "name_ru": "Alcipro 500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 337,
+    "name_en": "assurans tablet",
+    "name_ru": "Assurans таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "таблетки"
+  },
+  {
+    "id": 338,
+    "name_en": "augpen lb 625 tablet",
+    "name_ru": "Augpen lb 625 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 339,
+    "name_en": "alkaliser syrup",
+    "name_ru": "Alkaliser сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "сироп"
+  },
+  {
+    "id": 340,
+    "name_en": "aquaviron 40mg capsule",
+    "name_ru": "Aquaviron 40мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 341,
+    "name_en": "angiwell 2.6mg tablet",
+    "name_ru": "Angiwell 2.6мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 342,
+    "name_en": "anaflam th  4  tablet",
+    "name_ru": "Anaflam th  4  таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 343,
+    "name_en": "alzil 5 tablet",
+    "name_ru": "Alzil 5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 344,
+    "name_en": "amlo 5mg tablet",
+    "name_ru": "Amlo 5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 345,
+    "name_en": "asthalin plus expectorant",
+    "name_ru": "Asthalin plus expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 346,
+    "name_en": "ascabiol emulsion",
+    "name_ru": "Ascabiol emulsion",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 347,
+    "name_en": "amitone plus tablet",
+    "name_ru": "Amitone plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 348,
+    "name_en": "akt 2 tablet",
+    "name_ru": "Akt 2 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 349,
+    "name_en": "alex plus paediatric oral drops",
+    "name_ru": "Alex plus paediatric oral drops",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 350,
+    "name_en": "antacid tablet",
+    "name_ru": "Antacid таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 351,
+    "name_en": "apresol tablet",
+    "name_ru": "Apresol таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 352,
+    "name_en": "atchol 40 tablet",
+    "name_ru": "Atchol 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 353,
+    "name_en": "amlong-h tablet",
+    "name_ru": "Amlong-h таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 354,
+    "name_en": "airz-ff capsule",
+    "name_ru": "Airz-ff капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 355,
+    "name_en": "arflur 3d tablet",
+    "name_ru": "Arflur 3d таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 356,
+    "name_en": "azmarda 200mg tablet",
+    "name_ru": "Azmarda 200мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 357,
+    "name_en": "amixide 10mg tablet",
+    "name_ru": "Amixide 10мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 358,
+    "name_en": "avomine 25mg tablet md",
+    "name_ru": "Avomine 25мг таблетки md",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 359,
+    "name_en": "arpizol 2mg tablet",
+    "name_ru": "Arpizol 2мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 360,
+    "name_en": "ascodex cough syrup",
+    "name_ru": "Ascodex cough сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 361,
+    "name_en": "aerocort forte rotacap",
+    "name_ru": "Aerocort forte rotacap",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 362,
+    "name_en": "af 200 tablet",
+    "name_ru": "Af 200 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 363,
+    "name_en": "aquasurge  eye drop",
+    "name_ru": "Aquasurge  eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 364,
+    "name_en": "atorva asp 75 capsule",
+    "name_ru": "Atorva asp 75 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 365,
+    "name_en": "azivent 500 tablet",
+    "name_ru": "Azivent 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 366,
+    "name_en": "azithral eye ointment",
+    "name_ru": "Азитрал eye ointment",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 367,
+    "name_en": "adtrol xt tablet",
+    "name_ru": "Adtrol xt таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "таблетки"
+  },
+  {
+    "id": 368,
+    "name_en": "aqualube eye drop",
+    "name_ru": "Aqualube eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 369,
+    "name_en": "antisnake venom injection",
+    "name_ru": "Antisnake venom injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VACCINES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 370,
+    "name_en": "acrotac 25mg capsule",
+    "name_ru": "Acrotac 25мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 371,
+    "name_en": "azathioprine 50mg tablet",
+    "name_ru": "Azathioprine 50мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI NEOPLASTICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 372,
+    "name_en": "amrolstar nail lacquer",
+    "name_ru": "Amrolstar nail lacquer",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 373,
+    "name_en": "allercet-m syrup",
+    "name_ru": "Allercet-m сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 374,
+    "name_en": "atchol 10 tablet",
+    "name_ru": "Atchol 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 375,
+    "name_en": "alphagan z ophthalmic solution",
+    "name_ru": "Alphagan z ophthalmic solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 376,
+    "name_en": "acutret 10 capsule",
+    "name_ru": "Acutret 10 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 377,
+    "name_en": "acnedap gel",
+    "name_ru": "Acnedap gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 378,
+    "name_en": "amoxycillin 125mg oral suspension",
+    "name_ru": "Amoxycillin 125мг oral suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 379,
+    "name_en": "advanced lcf kid expectorant",
+    "name_ru": "Advanced lcf kid expectorant",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 380,
+    "name_en": "amitryn 10 tablet",
+    "name_ru": "Amitryn 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 381,
+    "name_en": "amtas-at tablet",
+    "name_ru": "Amtas-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 382,
+    "name_en": "accentrix solution for injection",
+    "name_ru": "Accentrix solution for injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 383,
+    "name_en": "arpizol 10 tablet",
+    "name_ru": "Arpizol 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 384,
+    "name_en": "alkasol oral solution",
+    "name_ru": "Alkasol oral solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 385,
+    "name_en": "aldactone 100 tablet",
+    "name_ru": "Aldactone 100 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 386,
+    "name_en": "aztogold 20 capsule",
+    "name_ru": "Aztogold 20 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 387,
+    "name_en": "addna tablet",
+    "name_ru": "Addna таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 388,
+    "name_en": "amtas-m 50 tablet pr",
+    "name_ru": "Amtas-m 50 таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 389,
+    "name_en": "akilos-p tablet",
+    "name_ru": "Akilos-p таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 390,
+    "name_en": "avas cv 10 capsule",
+    "name_ru": "Avas cv 10 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 391,
+    "name_en": "actilyse 50mg injection",
+    "name_ru": "Actilyse 50мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 392,
+    "name_en": "acceclowoc-sp tablet",
+    "name_ru": "Acceclowoc-sp таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 393,
+    "name_en": "amodep at tablet",
+    "name_ru": "Amodep at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 394,
+    "name_en": "amlopres at 25 tablet",
+    "name_ru": "Amlopres at 25 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 395,
+    "name_en": "acular ls ophthalmic solution",
+    "name_ru": "Acular ls ophthalmic solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 396,
+    "name_en": "anxipan capsule",
+    "name_ru": "Anxipan капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 397,
+    "name_en": "advent 91.4mg drops tangy orange",
+    "name_ru": "Advent 91.4мг drops tangy orange",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 398,
+    "name_en": "azee xl 200mg dry syrup peppermint",
+    "name_ru": "Azee xl 200мг dry сироп peppermint",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 399,
+    "name_en": "abevia 100 capsule",
+    "name_ru": "Abevia 100 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 400,
+    "name_en": "alex oral drops orange",
+    "name_ru": "Alex oral drops orange",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 401,
+    "name_en": "amoxyclav ds syrup",
+    "name_ru": "Amoxyclav ds сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "сироп"
+  },
+  {
+    "id": 402,
+    "name_en": "alcoliv tablet",
+    "name_ru": "Alcoliv таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 403,
+    "name_en": "anosum cream",
+    "name_ru": "Anosum cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 404,
+    "name_en": "amlovas-m 5/50 tablet pr",
+    "name_ru": "Amlovas-m 5/50 таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 405,
+    "name_en": "alkamax mb alkamax mb6 oral solution",
+    "name_ru": "Alkamax mb alkamax mb6 oral solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 406,
+    "name_en": "amlosafe tm 40 tablet",
+    "name_ru": "Amlosafe tm 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 407,
+    "name_en": "apetamin syrup",
+    "name_ru": "Apetamin сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "сироп"
+  },
+  {
+    "id": 408,
+    "name_en": "aceflam p 100mg/325mg tablet",
+    "name_ru": "Aceflam p 100мг/325мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 409,
+    "name_en": "ascovent -sr tablet",
+    "name_ru": "Ascovent -sr таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 410,
+    "name_en": "acotrust  tablet",
+    "name_ru": "Acotrust  таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 411,
+    "name_en": "acupat ophthalmic solution",
+    "name_ru": "Acupat ophthalmic solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 412,
+    "name_en": "arcolane 2% scalp solution",
+    "name_ru": "Arcolane 2% scalp solution",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 413,
+    "name_en": "atropine 1% eye drop",
+    "name_ru": "Atropine 1% eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 414,
+    "name_en": "amyclox-lb capsule",
+    "name_ru": "Amyclox-lb капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 415,
+    "name_en": "alamin injection",
+    "name_ru": "Alamin injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "VITAMINS MINERALS NUTRIENTS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 416,
+    "name_en": "aquim pf eye drop",
+    "name_ru": "Aquim pf eye drop",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 417,
+    "name_en": "arbitel-am tablet",
+    "name_ru": "Arbitel-am таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 418,
+    "name_en": "aprecap 125/80 capsule",
+    "name_ru": "Aprecap 125/80 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 419,
+    "name_en": "ab phylline syrup",
+    "name_ru": "Ab phylline сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 420,
+    "name_en": "azeflo ft nasal spray",
+    "name_ru": "Azeflo ft nasal spray",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 421,
+    "name_en": "atorva f tablet",
+    "name_ru": "Atorva f таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 422,
+    "name_en": "amicline plus tablet",
+    "name_ru": "Amicline plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 423,
+    "name_en": "acimol mr 100mg/325mg/250mg tablet",
+    "name_ru": "Acimol mr 100мг/325мг/250мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 424,
+    "name_en": "abiways tablet",
+    "name_ru": "Abiways таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 425,
+    "name_en": "asthakind tablet",
+    "name_ru": "Asthakind таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 426,
+    "name_en": "aprezo 10 tablet",
+    "name_ru": "Aprezo 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 427,
+    "name_en": "air 120 tablet",
+    "name_ru": "Air 120 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 428,
+    "name_en": "amoxycillin  250mg capsule",
+    "name_ru": "Amoxycillin  250мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 429,
+    "name_en": "acenac sp 100mg/325mg/15mg tablet",
+    "name_ru": "Acenac sp 100мг/325мг/15мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 430,
+    "name_en": "aginal-at tablet",
+    "name_ru": "Aginal-at таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 431,
+    "name_en": "allrite dc tablet er",
+    "name_ru": "Allrite dc таблетки er",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 432,
+    "name_en": "asthalin 2 tablet",
+    "name_ru": "Asthalin 2 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 433,
+    "name_en": "arip mt 2 tablet",
+    "name_ru": "Arip mt 2 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 434,
+    "name_en": "alcet 5mg tablet",
+    "name_ru": "Alcet 5мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 435,
+    "name_en": "aplazar tablet",
+    "name_ru": "Aplazar таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "UROLOGY",
+    "form": "таблетки"
+  },
+  {
+    "id": 436,
+    "name_en": "amicon 10 tablet",
+    "name_ru": "Amicon 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 437,
+    "name_en": "amaryl m forte 1mg tablet pr",
+    "name_ru": "Amaryl m forte 1мг таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 438,
+    "name_en": "amicline tablet",
+    "name_ru": "Amicline таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 439,
+    "name_en": "acivir iv injection",
+    "name_ru": "Acivir iv injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 440,
+    "name_en": "atm 200 oral suspension",
+    "name_ru": "Atm 200 oral suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 441,
+    "name_en": "apidra solostar 100iu/ml injection",
+    "name_ru": "Apidra solostar 100iu/ml injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 442,
+    "name_en": "ab2 kit",
+    "name_ru": "Ab2 kit",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GYNAECOLOGICAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 443,
+    "name_en": "amitryn 10 tablet",
+    "name_ru": "Amitryn 10 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 444,
+    "name_en": "atarax 25mg injection",
+    "name_ru": "Atarax 25мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 445,
+    "name_en": "afoglip m  500 tablet er",
+    "name_ru": "Afoglip m  500 таблетки er",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 446,
+    "name_en": "amlozaar tablet",
+    "name_ru": "Amlozaar таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 447,
+    "name_en": "abel 40 tablet",
+    "name_ru": "Abel 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 448,
+    "name_en": "acolate plus tablet",
+    "name_ru": "Acolate plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 449,
+    "name_en": "ampilox ds tablet",
+    "name_ru": "Ampilox ds таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 450,
+    "name_en": "asthalin rotacaps",
+    "name_ru": "Asthalin rotacaps",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 451,
+    "name_en": "asthalin dx syrup",
+    "name_ru": "Asthalin dx сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 452,
+    "name_en": "asthalin rotacaps",
+    "name_ru": "Asthalin rotacaps",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 453,
+    "name_en": "atorlip 20 tablet",
+    "name_ru": "Atorlip 20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 454,
+    "name_en": "altacef 500 tablet",
+    "name_ru": "Altacef 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 455,
+    "name_en": "amlokind 2.5 tablet",
+    "name_ru": "Amlokind 2.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 456,
+    "name_en": "ambistryn-s 0.75gm injection",
+    "name_ru": "Ambistryn-s 0.75gm injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 457,
+    "name_en": "ambulax-et tablet",
+    "name_ru": "Ambulax-et таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 458,
+    "name_en": "acceclowoc-p tablet",
+    "name_ru": "Acceclowoc-p таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 459,
+    "name_en": "alprax forte 0.5 mg/50 mg tablet",
+    "name_ru": "Alprax forte 0.5 мг/50 мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 460,
+    "name_en": "alsita-m 100 tablet er",
+    "name_ru": "Alsita-m 100 таблетки er",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 461,
+    "name_en": "axogurd nt tablet sr",
+    "name_ru": "Axogurd nt таблетки sr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 462,
+    "name_en": "aclind bp 2.5% gel",
+    "name_ru": "Aclind bp 2.5% gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 463,
+    "name_en": "anxiset 0.5 tablet",
+    "name_ru": "Anxiset 0.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 464,
+    "name_en": "atonide-h cream",
+    "name_ru": "Atonide-h cream",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 465,
+    "name_en": "aldonil tablet",
+    "name_ru": "Aldonil таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 466,
+    "name_en": "anticold  tablet",
+    "name_ru": "Anticold  таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 467,
+    "name_en": "alcros 100 capsule",
+    "name_ru": "Alcros 100 капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 468,
+    "name_en": "azibact 200 readymix oral suspension",
+    "name_ru": "Azibact 200 readymix oral suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 469,
+    "name_en": "atchol 20 tablet",
+    "name_ru": "Atchol 20 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 470,
+    "name_en": "azibest 500mg tablet",
+    "name_ru": "Azibest 500мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 471,
+    "name_en": "amoxy 500mg capsule",
+    "name_ru": "Amoxy 500мг капсулы",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 472,
+    "name_en": "a-ret 0.05% gel",
+    "name_ru": "A-ret 0.05% gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 473,
+    "name_en": "adenosine 3mg injection",
+    "name_ru": "Adenosine 3мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 474,
+    "name_en": "ascoril plus tablet",
+    "name_ru": "Аскорил plus таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 475,
+    "name_en": "azulix 2 mf forte tablet pr",
+    "name_ru": "Azulix 2 mf forte таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI DIABETIC",
+    "form": "таблетки"
+  },
+  {
+    "id": 476,
+    "name_en": "amlokind-h tablet",
+    "name_ru": "Amlokind-h таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 477,
+    "name_en": "aziderm 10% gel",
+    "name_ru": "Aziderm 10% gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 478,
+    "name_en": "amlopin-m tablet pr",
+    "name_ru": "Amlopin-m таблетки pr",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 479,
+    "name_en": "ascodex junior syrup",
+    "name_ru": "Ascodex junior сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 480,
+    "name_en": "alevo 500 tablet",
+    "name_ru": "Alevo 500 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 481,
+    "name_en": "avanair 200 tablet",
+    "name_ru": "Avanair 200 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "SEX STIMULANTS REJUVENATORS",
+    "form": "таблетки"
+  },
+  {
+    "id": 482,
+    "name_en": "atorlip 40 tablet",
+    "name_ru": "Atorlip 40 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 483,
+    "name_en": "anafortan-mf 50mg/250mg tablet",
+    "name_ru": "Anafortan-mf 50мг/250мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "таблетки"
+  },
+  {
+    "id": 484,
+    "name_en": "amitriptyline hcl 25mg tablet",
+    "name_ru": "Amitriptyline hcl 25мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "таблетки"
+  },
+  {
+    "id": 485,
+    "name_en": "aqsusten  25 solution for injection",
+    "name_ru": "Aqsusten  25 solution for injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GYNAECOLOGICAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 486,
+    "name_en": "amicet 5 mg/60 mg tablet",
+    "name_ru": "Amicet 5 мг/60 мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "таблетки"
+  },
+  {
+    "id": 487,
+    "name_en": "amrox junior syrup",
+    "name_ru": "Amrox junior сироп",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "RESPIRATORY",
+    "form": "сироп"
+  },
+  {
+    "id": 488,
+    "name_en": "atm 250 tablet",
+    "name_ru": "Atm 250 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 489,
+    "name_en": "anawin heavy 5mg injection",
+    "name_ru": "Anawin heavy 5мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 490,
+    "name_en": "adaple-c gel",
+    "name_ru": "Adaple-c gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 491,
+    "name_en": "aravon injection",
+    "name_ru": "Aravon injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "NEURO CNS",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 492,
+    "name_en": "akilos-sp tablet",
+    "name_ru": "Akilos-sp таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "PAIN ANALGESICS",
+    "form": "таблетки"
+  },
+  {
+    "id": 493,
+    "name_en": "amlozaar-h tablet",
+    "name_ru": "Amlozaar-h таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 494,
+    "name_en": "alight plus gel",
+    "name_ru": "Alight plus gel",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "DERMA",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 495,
+    "name_en": "anaspas 25mg injection",
+    "name_ru": "Anaspas 25мг injection",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "GASTRO INTESTINAL",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 496,
+    "name_en": "azibact lr 100 readymix",
+    "name_ru": "Azibact lr 100 readymix",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "форма выпуска"
+  },
+  {
+    "id": 497,
+    "name_en": "aquazide 25 tablet",
+    "name_ru": "Aquazide 25 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 498,
+    "name_en": "amlodac 2.5 tablet",
+    "name_ru": "Amlodac 2.5 таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "CARDIAC",
+    "form": "таблетки"
+  },
+  {
+    "id": 499,
+    "name_en": "amoxclav 500 mg/125 mg tablet",
+    "name_ru": "Amoxclav 500 мг/125 мг таблетки",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "ANTI INFECTIVES",
+    "form": "таблетки"
+  },
+  {
+    "id": 500,
+    "name_en": "amplinak opthalmic suspension",
+    "name_ru": "Amplinak opthalmic suspension",
+    "uses_ru": [
+      "Лечение заболеваний"
+    ],
+    "therapeutic_class_ru": "OPHTHAL",
+    "form": "форма выпуска"
+  }
+]
