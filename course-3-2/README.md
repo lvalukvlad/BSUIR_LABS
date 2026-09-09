@@ -8,6 +8,7 @@
 | [GIIS](GIIS/) | ГИИС |
 | [IAD](IAD/) | ИАД |
 | [MRZvIS](MRZvIS/) | МРЗвИС |
+| [OBIPvSIIT](OBIPvSIIT/) | ОБиПвСИИТ |
 | [PBZ](PBZ/) | ПБЗ |
 | [PZIIS](PZIIS/) | ПЗИИС |
 | [Kursach](Kursach/) | Курсовой |
