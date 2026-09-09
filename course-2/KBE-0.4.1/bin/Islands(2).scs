@@ -1,0 +1,52 @@
+concept_island
+	-> Canary_islands; Hawaiian_islands;;
+concept_country
+	-> Spain; USA;;
+	Canary_islands => nrel_country_which_it_belongs: Spain;; 
+	Hawaiian_islands => nrel_country_which_it_belongs: USA;; 
+	
+	=> nrel_main_identifer: [остров] (*<- concept_russian_language;; *); [island] (* <- concept_english_language;; *);
+	<= nrel_inclusion: concept_land_mass (* <= nrel_inclusion: concept_land;; *);
+	
+	<= nrel_subdividing: ...   
+		(*
+			<- sc_node_tuple;;
+			-> concept_volcanic_island;;
+			-> concept_artificial_island;;
+			-> concept_mainland_island;;
+			-> concept_coral_island;;
+		*); 
+	<- rrel_sc_key_element: ...
+		(* 
+	 		=> nrel_main_indentifier: [Опр. острова] (*-> concept_russian_language;; *);; 
+	 		<- definition;; 
+	 		=> nrel_constant_used: ... 
+				(* 
+					<- concept_sc_node_tuple;;
+					-> water;; 
+					-> mainland;;
+					-> land;;
+				*);; 
+		
+			=> nrel_translation: ...
+				(*	
+				-> rrel_example: [Участок суши, который полностью окружён водой и не соединён с материком или другими сушами на уровне воды] (* <- concept_russian_language;; *);;
+				*);; 
+		*);
+	<- rrel_sc_key_element: ...
+		(*
+			<- statement;; 
+			<= nrel_translation: ...
+				(* 
+					-> rrel_example: [Острова могут принадлежать различным государствам или территориям] (* <- concept_russian_language;; *);;
+				*);;
+			=> nrel_main_identifier: [Утв. острова] (* <- concept_russian_language;; *);; 
+			
+			<= nrel_constant_used: ...
+				(*
+					<- sc_node_tuple;;
+					-> concept_state;;
+					-> concept_territories;;
+				*);;
+		*);;  
+

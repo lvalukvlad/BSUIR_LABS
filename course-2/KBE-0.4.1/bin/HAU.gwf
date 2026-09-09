@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GWF version="2.0">
+    <staticSector>
+        <node type="node/const/perm/general" idtf="Проектирование снегоплавильных пунктов и сооружений для сброса сточных вод от них в сети канализации" shapeColor="193" id="47164208" parent="0" left="0" top="0" right="644.797" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="477" y="2650" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Размещение сливных станций" shapeColor="0" id="47336016" parent="0" left="0" top="0" right="184" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="471" y="2604" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Прием сточных вод и жидких отходов от неканализованных районов, осадков септиков в сеть централизованной системы канализации" shapeColor="0" id="47213984" parent="0" left="0" top="0" right="803.984" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="478" y="2551" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="прокладывание вентиляции канализационных каналов и коллекторов больших сечений, в том числе горным способом или щитовой проходкой вне застроенных территорий" shapeColor="0" id="38911376" parent="0" left="0" top="0" right="1012.27" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="475" y="2494" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="прокладка трубопроводов вне застроенных территорий" shapeColor="0" id="47033264" parent="0" left="0" top="0" right="334.5" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="480" y="2440" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="защита внутренних поверхностей трубопроводов и коллекторов" shapeColor="0" id="47299152" parent="0" left="0" top="0" right="386.078" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="482" y="2393" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Транспортировка сточных вод" shapeColor="0" id="47309440" parent="0" left="0" top="0" right="187.781" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="482" y="2337" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="укладка трубопроводов в агрессивных средах" shapeColor="0" id="47196592" parent="0" left="0" top="0" right="265.453" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="484" y="2284" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Проектирование трубопроводов из стальных труб с усиленной изоляцией или пластмассовых труб с укладкой их в траншеях" shapeColor="0" id="45359600" parent="0" left="0" top="0" right="741.234" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="485" y="2229" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Установка решёток дождеприемников" shapeColor="0" id="47153344" parent="0" left="0" top="0" right="234.672" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="486" y="2173" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Установка дождеприемников" shapeColor="0" id="47092384" parent="0" left="0" top="0" right="179.547" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="484" y="2119" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Присоединение открытого лотка к закрытой сети дождевой канализации" shapeColor="0" id="47028304" parent="0" left="0" top="0" right="443.703" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="484" y="2066" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="применение дождеприемников с вертикальным отверстием в плоскости бордюрного камня и комбинированного типа с отверстиями в горизонтальной и вертикальной плоскостях" shapeColor="0" id="46716112" parent="0" left="0" top="0" right="1060.31" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="483" y="2013" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="заполнение пространства между трубами и футлярами цементным раствором" shapeColor="0" id="46733280" parent="0" left="0" top="0" right="476.547" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="490" y="1957" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="прокладка труб" shapeColor="0" id="46730992" parent="0" left="0" top="0" right="100.328" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="480" y="1901" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="прокладка самотечного трубопровода в футляре" shapeColor="0" id="45318768" parent="0" left="0" top="0" right="291.406" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="486" y="1851" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Прокладка трубопроводов без футляров" shapeColor="0" id="47076192" parent="0" left="0" top="0" right="240.063" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="487" y="1795" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Проектирование дюкеров" shapeColor="0" id="47022384" parent="0" left="0" top="0" right="155.922" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="487" y="1747" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Расчет перепадного колодца" shapeColor="0" id="44546048" parent="0" left="0" top="0" right="172.344" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="483" y="1690" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="устраивание камеры слияния или распределительной камеры со струенаправляющими устройствами" shapeColor="0" id="44548656" parent="0" left="0" top="0" right="603.609" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="483" y="1632" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Сопряжение труб дождевой канализационной сети" shapeColor="0" id="46905648" parent="0" left="0" top="0" right="309.313" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="479" y="1574" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="исключение превышения максимально допустимой скорости движения сточных вод" shapeColor="0" id="46906080" parent="0" left="0" top="0" right="502.813" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="486" y="1511" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="устройство затопленных выпусков воды в водные объекты" shapeColor="0" id="45444720" parent="0" left="0" top="0" right="351.234" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="476" y="1453" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="присоединение боковых веток к коллекторам или внутриквартальных сетей к уличным трубопроводам" shapeColor="0" id="44548448" parent="0" left="0" top="0" right="610.828" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="478" y="1397" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="установка направляющего колена взамен водобойного приямка" shapeColor="0" id="46712960" parent="0" left="0" top="0" right="371.688" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="473" y="1335" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="установка ходовых скоб или лестниц" shapeColor="0" id="45270144" parent="0" left="0" top="0" right="223.828" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="469" y="1274" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Установка люков" shapeColor="0" id="46717504" parent="0" left="0" top="0" right="108.813" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="471" y="1220" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="защита трубопроводов от механического разрушения в результате воздействия внешних нагрузок" shapeColor="0" id="45378480" parent="0" left="0" top="0" right="581.563" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="471" y="1163" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="предотвращение промерзания труб" shapeColor="0" id="45399936" parent="0" left="0" top="0" right="215.344" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="475" y="1112" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="самотечное присоединение к трубопроводам внутриквартальных сетей и боковых веток" shapeColor="0" id="45299824" parent="0" left="0" top="0" right="525.734" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="469" y="1057" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="механическое разрушение труб под воздействием внешних нагрузок" shapeColor="0" id="45291616" parent="0" left="0" top="0" right="399.75" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="468" y="1001" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="промерзание труб" shapeColor="0" id="45320896" parent="0" left="0" top="0" right="113.391" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="468" y="934" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="укладка сигнальных лент" shapeColor="0" id="45294096" parent="0" left="0" top="0" right="155.969" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="467" y="864" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="проектирование трубопроводов из пластмассовых труб" shapeColor="0" id="45057216" parent="0" left="0" top="0" right="334.656" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="462" y="789" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="замещение грунтов и другие методы искусственного улучшения свойств грунтов" shapeColor="0" id="46755168" parent="0" left="0" top="0" right="478.906" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="455" y="724" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="укладка труб" shapeColor="0" id="46681232" parent="0" left="0" top="0" right="85.875" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="443" y="257" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="мероприятия по предотвращению условий образования агрессивных сред (вентиляция сети, исключение застойных зон)" shapeColor="0" id="46712432" parent="0" left="0" top="0" right="710.328" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="443" y="331" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Наземная и надземная прокладка канализационных трубопроводов" shapeColor="0" id="38403504" parent="0" left="0" top="0" right="395.844" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="458" y="655" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="Проектирование коллекторов глубокого заложения, прокладываемых щитовой проходкой или горным способом" shapeColor="0" id="45996512" parent="0" left="0" top="0" right="655.344" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="459" y="590" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="проектирование канализационных коллекторов, предназначенных для эксплуатации в условиях действия агрессивной среды" shapeColor="0" id="45968944" parent="0" left="0" top="0" right="729.922" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="459" y="514" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+        <node type="node/const/perm/general" idtf="параллельная прокладка безнапорных трубопроводов канализации" shapeColor="0" id="45332064" parent="0" left="0" top="0" right="392.094" bottom="23" textColor="164" text_angle="0" text_font="Times New Roman" font_size="10" x="457" y="417" haveBus="false" idtf_pos="0">
+            <content type="0" mime_type="" content_visibility="false" file_name=""/>
+        </node>
+    </staticSector>
+</GWF>
