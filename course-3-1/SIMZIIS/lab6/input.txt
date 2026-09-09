@@ -1,0 +1,313 @@
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Узнаем наш IP-адрес
+ip addr show
+
+# Проверим текущие правила iptables
+sudo iptables -L -n
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp7s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+    link/ether 08:97:98:c9:e1:04 brd ff:ff:ff:ff:ff:ff
+3: wlp0s20f3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
+    link/ether 34:2e:b7:1e:08:b6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.10.101/24 brd 192.168.10.255 scope global dynamic noprefixroute wlp0s20f3
+       valid_lft 7156sec preferred_lft 7156sec
+    inet6 fe80::6243:6eee:b1bf:a992/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 46:67:d0:75:b8:05 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+5: br-7ff7aa05837a: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether d2:5d:02:32:2c:e5 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-7ff7aa05837a
+       valid_lft forever preferred_lft forever
+6: cali6b3bb243152@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue state UP group default qlen 1000
+    link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netns cni-b9724032-f5a4-96c1-f1bb-16fe1d36dae6
+    inet6 fe80::ecee:eeff:feee:eeee/64 scope link 
+       valid_lft forever preferred_lft forever
+7: cali9b585ebc568@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue state UP group default qlen 1000
+    link/ether ee:ee:ee:ee:ee:ee brd ff:ff:ff:ff:ff:ff link-netns cni-6a28be82-124e-1c6a-d609-c06630050674
+    inet6 fe80::ecee:eeff:feee:eeee/64 scope link 
+       valid_lft forever preferred_lft forever
+10: vxlan.calico: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/ether 66:57:12:66:b6:dc brd ff:ff:ff:ff:ff:ff
+    inet 10.1.112.64/32 scope global vxlan.calico
+       valid_lft forever preferred_lft forever
+    inet6 fe80::6457:12ff:fe66:b6dc/64 scope link 
+       valid_lft forever preferred_lft forever
+[sudo] password for ubuntuuser: 
+# Warning: iptables-legacy tables present, use iptables-legacy to see them
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination         
+DOCKER-USER  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-FORWARD  all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  10.1.0.0/16          0.0.0.0/0            /* generated for MicroK8s pods */
+ACCEPT     all  --  0.0.0.0/0            10.1.0.0/16          /* generated for MicroK8s pods */
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination         
+
+Chain DOCKER (1 references)
+target     prot opt source               destination         
+DROP       all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-BRIDGE (1 references)
+target     prot opt source               destination         
+DOCKER     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-CT (1 references)
+target     prot opt source               destination         
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+
+Chain DOCKER-FORWARD (1 references)
+target     prot opt source               destination         
+DOCKER-CT  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-ISOLATION-STAGE-1  all  --  0.0.0.0/0            0.0.0.0/0           
+DOCKER-BRIDGE  all  --  0.0.0.0/0            0.0.0.0/0           
+ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-ISOLATION-STAGE-1 (1 references)
+target     prot opt source               destination         
+DOCKER-ISOLATION-STAGE-2  all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-ISOLATION-STAGE-2 (1 references)
+target     prot opt source               destination         
+DROP       all  --  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-USER (1 references)
+target     prot opt source               destination         
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Создаем папку
+mkdir ~/shared_folder
+
+# Даем права
+chmod 755 ~/shared_folder
+
+# Создаем тестовый файл
+echo "Это тестовый файл в общей папке" > ~/shared_folder/test.txt
+mkdir: cannot create directory ‘/home/ubuntuuser/shared_folder’: File exists
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Очистка всех правил
+sudo iptables -F
+sudo iptables -X
+
+# Установка политик по умолчанию (временно разрешаем всё)
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Замени 192.168.1.100 на IP-адрес, с которого разрешаем доступ
+sudo iptables -A INPUT -p tcp --dport 22 -s 192.168.1.100 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -j DROP
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Разрешаем HTTP (порт 80)
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+# Разрешаем HTTPS (порт 443)
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Разрешаем FTP (порт 21)
+sudo iptables -A INPUT -p tcp --dport 21 -j ACCEPT
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # HTTP только с определенного IP
+sudo iptables -A INPUT -p tcp --dport 80 -s 192.168.1.100 -j ACCEPT
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Сначала запрещаем весь исходящий трафик
+sudo iptables -P OUTPUT DROP
+
+# Разрешаем DNS запросы (обязательно!)
+sudo iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
+
+# Разрешаем обновления пакетов (HTTP/HTTPS)
+sudo iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
+
+# Разрешаем loopback (важно для работы системы)
+sudo iptables -A OUTPUT -o lo -j ACCEPT
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Разрешаем доступ к example.com на порту 80
+sudo iptables -A OUTPUT -p tcp -d example.com --dport 80 -j ACCEPT
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Блокируем входящие ping-запросы
+sudo iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Разрешаем установленные соединения (чтобы ответы на наши запросы проходили)
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Запрещаем всё остальное
+sudo iptables -P INPUT DROP
+sudo iptables -P FORWARD DROP
+# OUTPUT уже настроен ранее
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$ # Устанавливаем утилиту для сохранения правил
+sudo apt update
+sudo apt install iptables-persistent -y
+
+# Сохраняем текущие правила
+sudo netfilter-persistent save
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy InRelease                      
+Ign:2 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Ign:3 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease   
+Ign:4 http://repo.mysql.com/apt/ubuntu jammy InRelease                         
+Ign:5 http://archive.ubuntu.com/ubuntu jammy InRelease                         
+Ign:6 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 InRelease
+Ign:7 https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease            
+Ign:8 https://repo.protonvpn.com/debian stable InRelease                       
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease                  
+Ign:10 https://download.docker.com/linux/ubuntu jammy InRelease                
+Ign:11 https://releases.warp.dev/linux/deb stable InRelease             
+Ign:12 http://by.archive.ubuntu.com/ubuntu jammy-updates InRelease             
+Ign:13 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease    
+Ign:14 http://archive.ubuntu.com/ubuntu jammy-updates InRelease                
+Ign:2 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Ign:4 http://repo.mysql.com/apt/ubuntu jammy InRelease                         
+Ign:6 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 InRelease
+Ign:7 https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease            
+Ign:8 https://repo.protonvpn.com/debian stable InRelease                       
+Ign:11 https://releases.warp.dev/linux/deb stable InRelease                    
+Ign:10 https://download.docker.com/linux/ubuntu jammy InRelease                
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease            
+Ign:3 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease   
+Ign:15 http://by.archive.ubuntu.com/ubuntu jammy-backports InRelease           
+Ign:16 http://archive.ubuntu.com/ubuntu jammy-security InRelease               
+Ign:4 http://repo.mysql.com/apt/ubuntu jammy InRelease                         
+Ign:7 https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease            
+Ign:2 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Ign:6 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 InRelease
+Ign:11 https://releases.warp.dev/linux/deb stable InRelease                    
+Ign:8 https://repo.protonvpn.com/debian stable InRelease                       
+Ign:10 https://download.docker.com/linux/ubuntu jammy InRelease                
+Ign:9 https://deb.nodesource.com/node_18.x nodistro InRelease            
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy InRelease                      
+Ign:13 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease    
+Ign:5 http://archive.ubuntu.com/ubuntu jammy InRelease                         
+Err:7 https://apt.postgresql.org/pub/repos/apt jammy-pgdg InRelease            
+  Temporary failure resolving 'apt.postgresql.org'
+Err:4 http://repo.mysql.com/apt/ubuntu jammy InRelease                         
+  Temporary failure resolving 'repo.mysql.com'
+Err:6 https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy pgadmin4 InRelease
+Temporary failure resolving 'ftp.postgresql.org'
+Err:11 https://releases.warp.dev/linux/deb stable InRelease                    
+  Temporary failure resolving 'releases.warp.dev'
+Err:2 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+  Temporary failure resolving 'security.ubuntu.com'
+Err:10 https://download.docker.com/linux/ubuntu jammy InRelease                
+  Temporary failure resolving 'download.docker.com'
+Err:8 https://repo.protonvpn.com/debian stable InRelease                       
+  Temporary failure resolving 'repo.protonvpn.com'
+Err:9 https://deb.nodesource.com/node_18.x nodistro InRelease                  
+  Temporary failure resolving 'deb.nodesource.com'
+Ign:12 http://by.archive.ubuntu.com/ubuntu jammy-updates InRelease             
+Ign:3 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease   
+Ign:14 http://archive.ubuntu.com/ubuntu jammy-updates InRelease               
+Ign:15 http://by.archive.ubuntu.com/ubuntu jammy-backports InRelease           
+Ign:13 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease    
+Ign:16 http://archive.ubuntu.com/ubuntu jammy-security InRelease              
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy InRelease                      
+Err:3 https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu jammy InRelease   
+  Temporary failure resolving 'ppa.launchpadcontent.net'
+Ign:5 http://archive.ubuntu.com/ubuntu jammy InRelease                        
+Ign:12 http://by.archive.ubuntu.com/ubuntu jammy-updates InRelease             
+Err:13 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease    
+  Temporary failure resolving 'ppa.launchpadcontent.net'
+Ign:14 http://archive.ubuntu.com/ubuntu jammy-updates InRelease               
+Ign:15 http://by.archive.ubuntu.com/ubuntu jammy-backports InRelease       
+Ign:16 http://archive.ubuntu.com/ubuntu jammy-security InRelease           
+Err:1 http://by.archive.ubuntu.com/ubuntu jammy InRelease                  
+  Temporary failure resolving 'by.archive.ubuntu.com'
+Err:5 http://archive.ubuntu.com/ubuntu jammy InRelease                     
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:12 http://by.archive.ubuntu.com/ubuntu jammy-updates InRelease         
+  Temporary failure resolving 'by.archive.ubuntu.com'
+Err:14 http://archive.ubuntu.com/ubuntu jammy-updates InRelease            
+  Temporary failure resolving 'archive.ubuntu.com'
+Err:15 http://by.archive.ubuntu.com/ubuntu jammy-backports InRelease       
+  Temporary failure resolving 'by.archive.ubuntu.com'
+Err:16 http://archive.ubuntu.com/ubuntu jammy-security InRelease           
+  Temporary failure resolving 'archive.ubuntu.com'
+Reading package lists... Done        
+Building dependency tree... Done
+Reading state information... Done
+42 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: Failed to fetch http://by.archive.ubuntu.com/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'by.archive.ubuntu.com'
+W: Failed to fetch http://by.archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease  Temporary failure resolving 'by.archive.ubuntu.com'
+W: Failed to fetch http://by.archive.ubuntu.com/ubuntu/dists/jammy-backports/InRelease  Temporary failure resolving 'by.archive.ubuntu.com'
+W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/jammy-security/InRelease  Temporary failure resolving 'security.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/jammy-security/InRelease  Temporary failure resolving 'archive.ubuntu.com'
+W: Failed to fetch https://ppa.launchpadcontent.net/deadsnakes/ppa/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'ppa.launchpadcontent.net'
+W: Failed to fetch https://download.docker.com/linux/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'download.docker.com'
+W: Failed to fetch https://ppa.launchpadcontent.net/git-core/ppa/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'ppa.launchpadcontent.net'
+W: Failed to fetch http://repo.mysql.com/apt/ubuntu/dists/jammy/InRelease  Temporary failure resolving 'repo.mysql.com'
+W: Failed to fetch https://deb.nodesource.com/node_18.x/dists/nodistro/InRelease  Temporary failure resolving 'deb.nodesource.com'
+W: Failed to fetch https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/jammy/dists/pgadmin4/InRelease  Temporary failure resolving 'ftp.postgresql.org'
+W: Failed to fetch https://apt.postgresql.org/pub/repos/apt/dists/jammy-pgdg/InRelease  Temporary failure resolving 'apt.postgresql.org'
+W: Failed to fetch https://repo.protonvpn.com/debian/dists/stable/InRelease  Temporary failure resolving 'repo.protonvpn.com'
+W: Failed to fetch https://releases.warp.dev/linux/deb/dists/stable/InRelease  Temporary failure resolving 'releases.warp.dev'
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  gamin gdal-data krita-data krita-gmic kwayland-data kwayland-integration
+  libaec0 libarmadillo10 libarpack2 libblosc1 libbsd0:i386 libcfitsio9
+  libcgi-fast-perl libcgi-pm-perl libcharls2 libdrm2:i386 libevent-core-2.1-7
+  libevent-pthreads-2.1-7 libexpat1:i386 libfcgi-bin libfcgi-perl libfcgi0ldbl
+  libffi8:i386 libfreexl1 libfyba0 libgamin0 libgbm1:i386 libgdal30 libgdcm3.0
+  libgeos-c1v5 libgeos3.10.2 libgeotiff5 libgmic1 libgraphicsmagick++-q16-12
+  libgraphicsmagick-q16-3 libgsl27 libgslcblas0 libhdf4-0-alt libhdf5-103-1
+  libhdf5-hl-100 libhtml-template-perl libio-pty-perl libipc-run-perl
+  libkf5completion-data libkf5completion5 libkf5config-bin libkf5config-data
+  libkf5configcore5 libkf5configgui5 libkf5coreaddons-data libkf5coreaddons5
+  libkf5crash5 libkf5guiaddons-bin libkf5guiaddons-data libkf5guiaddons5
+  libkf5i18n-data libkf5i18n5 libkf5idletime5 libkf5itemviews-data
+  libkf5itemviews5 libkf5waylandclient5 libkf5widgetsaddons-data
+  libkf5widgetsaddons5 libkf5windowsystem-data libkf5windowsystem5 libkmlbase1
+  libkmldom1 libkmlengine1 libmd0:i386 libminizip1 libnetcdf19
+  libnvidia-cfg1-580 libnvidia-common-580 libnvidia-compute-580:i386
+  libnvidia-decode-580 libnvidia-decode-580:i386 libnvidia-egl-wayland1
+  libnvidia-egl-wayland1:i386 libnvidia-encode-580 libnvidia-encode-580:i386
+  libnvidia-extra-580 libnvidia-fbc1-580 libnvidia-fbc1-580:i386
+libnvidia-gl-580 libnvidia-gl-580:i386 libodbc2 libodbcinst2 libogdi4.1
+  libopencolorio1v5 libopencv-core4.5d libopencv-imgcodecs4.5d
+  libopencv-imgproc4.5d libopencv-videoio4.5d libpoppler-qt5-1 libproj22
+  libprotobuf-lite23 libqhull-r8.0 libqt5designer5 libqt5help5
+  libqt5multimedia5 libqt5multimediaquick5 libqt5printsupport5
+  libqt5qmlworkerscript5 libqt5quickwidgets5 libqt5sql5 libqt5sql5-sqlite
+  libqt5test5 libqt5x11extras5 libquazip5-1 librttopo1 libsocket++1
+  libspatialite7 libsuperlu5 libsz2 libtbb2 libtbbmalloc2 libtinyxml2.6.2v5
+  liburiparser1 libwayland-client0:i386 libwayland-server0:i386 libx11-6:i386
+  libx11-xcb1:i386 libxau6:i386 libxcb-dri3-0:i386 libxcb-present0:i386
+  libxcb-randr0:i386 libxcb1:i386 libxdmcp6:i386 libxerces-c3.2 libxext6:i386
+  libxnvctrl0 libyaml-cpp0.7 postgresql-common-dev proj-bin proj-data
+  python3-pyqt5 python3-pyqt5.sip python3-sip qml-module-qtmultimedia
+  qml-module-qtquick2 screen-resolution-extra unixodbc-common
+  xserver-xorg-video-nvidia-580
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+  netfilter-persistent
+The following NEW packages will be installed:
+  iptables-persistent netfilter-persistent
+0 upgraded, 2 newly installed, 0 to remove and 42 not upgraded.
+Need to get 13,9 kB of archives.
+After this operation, 93,2 kB of additional disk space will be used.
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Ign:1 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://by.archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Ign:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+Ign:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+Err:1 http://archive.ubuntu.com/ubuntu jammy/universe amd64 netfilter-persistent all 1.0.16
+  Temporary failure resolving 'by.archive.ubuntu.com'
+Err:2 http://archive.ubuntu.com/ubuntu jammy/universe amd64 iptables-persistent all 1.0.16
+  Temporary failure resolving 'by.archive.ubuntu.com'
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/i/iptables-persistent/netfilter-persistent_1.0.16_all.deb  Temporary failure resolving 'by.archive.ubuntu.com'
+E: Failed to fetch http://archive.ubuntu.com/ubuntu/pool/universe/i/iptables-persistent/iptables-persistent_1.0.16_all.deb  Temporary failure resolving 'by.archive.ubuntu.com'
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+sudo: netfilter-persistent: command not found
+ubuntuuser@ubuntuuser-Predator-PH315-53:~$
