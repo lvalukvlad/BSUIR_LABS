@@ -1,0 +1,153 @@
+ubuntuuser@Predator-PH315-53:~/Desktop/3 course_2/IAD/lab5/lab5_Generative_Image_Models$ python main.py
+======================================================================
+Lab 5: Generative Image Models
+Device: cpu
+======================================================================
+
+
+Neural Style Transfer
+======================================================================
+
+Loading VGG19...
+VGG19 loaded
+
+
+Эксперимент 1. Базовый перенос стиля (β=1e5)
+============================================================
+
+Style Transfer: content.png + style.png
+============================================================
+Optimization (300 steps)...
+Step   0: total=1715.6321, content=16.5042, style=0.0170
+Step  50: total=88.7162, content=21.5331, style=0.0007
+Step 100: total=145.2405, content=23.3728, style=0.0012
+Step 150: total=67.5737, content=21.3373, style=0.0005
+Step 200: total=64.2196, content=21.0587, style=0.0004
+Step 250: total=60.7828, content=20.8345, style=0.0004
+Step 299: total=61.5679, content=20.6109, style=0.0004
+Result saved: results/nst_result_beta1e5.png
+
+
+Эксперимент 2. Слабый стиль (β=1e3)
+============================================================
+
+Style Transfer: content.png + style.png
+============================================================
+Optimization (300 steps)...
+Step   0: total=30.1236, content=5.3710, style=0.0248
+Step  50: total=10.2173, content=5.5369, style=0.0047
+Step 100: total=8.4303, content=4.7377, style=0.0037
+Step 150: total=11.9136, content=6.5695, style=0.0053
+Step 200: total=7.6496, content=4.5690, style=0.0031
+Step 250: total=7.6053, content=4.5605, style=0.0030
+Step 299: total=7.3447, content=4.4574, style=0.0029
+Result saved: results/nst_result_beta1e3.png
+
+
+Эксперимент 3. Сильный стиль (β=1e7)
+============================================================
+
+Style Transfer: content.png + style.png
+============================================================
+Optimization (300 steps)...
+Step   0: total=170195.5000, content=16.4242, style=0.0170
+Step  50: total=7358.7217, content=27.7964, style=0.0007
+Step 100: total=4279.4312, content=27.4481, style=0.0004
+Step 150: total=3792.3313, content=27.7438, style=0.0004
+Step 200: total=3742.4954, content=27.8359, style=0.0004
+Step 250: total=7757.6494, content=28.9982, style=0.0008
+Step 299: total=13514.4531, content=31.5007, style=0.0013
+Result saved: results/nst_result_beta1e7.png
+
+
+Эксперимент 4. Инициализация шумом
+============================================================
+Оптимизация (инициализация шумом, 300 шагов)...
+Step 0: total=1169.2242
+Step 100: total=96.3034
+Step 200: total=nan
+✅ Результат (шум) сохранён: results/nst_result_noise_init.png
+
+
+Часть 1 завершена!
+======================================================================
+
+
+DCGAN (Generative Adversarial Network)
+======================================================================
+
+Loading EMNIST dataset...
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 562M/562M [05:03<00:00, 1.85MB/s]
+Loaded 240000 images
+Batch size: 32
+
+DCGAN architecture created
+Generator params: 1,066,880
+Discriminator params: 661,248
+
+============================================================
+DCGAN TRAINING (15 epochs)
+============================================================
+Epoch [ 1/15] | loss_D=0.3299 | loss_G=3.3870 | D(x)=0.888 | D(G(z))=0.101
+Epoch [ 2/15] | loss_D=0.1734 | loss_G=4.9630 | D(x)=0.948 | D(G(z))=0.048
+Epoch [ 3/15] | loss_D=0.1043 | loss_G=6.0548 | D(x)=0.970 | D(G(z))=0.028
+Epoch [ 4/15] | loss_D=0.1117 | loss_G=6.5187 | D(x)=0.967 | D(G(z))=0.032
+Epoch [ 5/15] | loss_D=0.0898 | loss_G=6.5928 | D(x)=0.974 | D(G(z))=0.025
+Epoch [ 6/15] | loss_D=0.0400 | loss_G=7.8735 | D(x)=0.993 | D(G(z))=0.005
+Epoch [ 7/15] | loss_D=0.1028 | loss_G=5.8002 | D(x)=0.972 | D(G(z))=0.023
+Epoch [ 8/15] | loss_D=0.1164 | loss_G=5.9294 | D(x)=0.971 | D(G(z))=0.025
+Epoch [ 9/15] | loss_D=0.1101 | loss_G=5.9462 | D(x)=0.970 | D(G(z))=0.026
+Epoch [10/15] | loss_D=0.1206 | loss_G=5.9655 | D(x)=0.966 | D(G(z))=0.029
+
+[1]+  Stopped                 python main.py
+ubuntuuser@Predator-PH315-53:~/Desktop/3 course_2/IAD/lab5/lab5_Generative_Image_Models$ Epoch [11/15] | loss_D=0.1041 | loss_G=6.4777 | D(x)=0.971 | D(G(z))=0.026
+Epoch [12/15] | loss_D=0.1270 | loss_G=6.3863 | D(x)=0.963 | D(G(z))=0.033
+Epoch [13/15] | loss_D=0.1121 | loss_G=6.3043 | D(x)=0.968 | D(G(z))=0.030
+ubuntuuser@Predator-PH315-53:~/Desktop/3 course_2/IAD/lab5/lab5_Generative_Image_Models$ Epoch [14/15] | loss_D=0.0877 | loss_G=7.0286 | D(x)=0.977 | D(G(z))=0.020
+ubuntuuser@Predator-PH315-53:~/Desktop/3 course_2/IAD/lab5/lab5_Generative_Image_Models$ Epoch [15/15] | loss_D=0.0830 | loss_G=6.9082 | D(x)=0.976 | D(G(z))=0.022
+
+============================================================
+TRAINING COMPLETE
+============================================================
+
+Plotting training history...
+Training history: results/gan/training_history.png
+
+Generating final grid...
+Final grid: results/gan/final_grid.png (64 images)
+
+Latent space interpolation...
+Interpolation: results/gan/interpolation.png
+
+============================================================
+SAVING MODELS
+============================================================
+Model saved: results/gan/dcgan_emnist.pth
+
+======================================================================
+LAB 5 COMPLETE
+======================================================================
+
++-------------------------------------------------------------------------+
+|  Task 1: Neural Style Transfer                                          |
++-------------------------------------------------------------------------+
+|  results/nst_result_beta1e5.png    -- basic transfer (beta=1e5)        |
+|  results/nst_result_beta1e3.png    -- weak style (beta=1e3)           |
+|  results/nst_result_beta1e7.png    -- strong style (beta=1e7)         |
+|  results/nst_result_noise_init.png -- noise initialization            |
++-------------------------------------------------------------------------+
+
++-------------------------------------------------------------------------+
+|  Task 2: DCGAN on EMNIST                                               |
++-------------------------------------------------------------------------+
+|  results/gan/epoch_*.png           -- progress by epochs               |
+|  results/gan/final_grid.png        -- 64 generated images            |
+|  results/gan/interpolation.png     -- latent space interpolation      |
+|  results/gan/training_history.png  -- training plots                  |
+|  results/gan/dcgan_emnist.pth      -- model weights                  |
++-------------------------------------------------------------------------+
+
+======================================================================
+LAB 5 COMPLETE
+======================================================================
+

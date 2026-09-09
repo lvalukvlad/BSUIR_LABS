@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+
+# Результаты
+results/
+*.pth
+*.pt
+*.png
+*.jpg
+
+# Датасеты
+understanding_cloud_organization/
+*.csv
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
