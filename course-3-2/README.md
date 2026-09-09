@@ -2,10 +2,12 @@
 
 3 курс, 2 семестр.
 
-- EYazIIS
-- GIIS
-- IAD
-- Kursach
-- MRZvIS
-- PBZ
-- PZIIS
+| Папка | Предмет / проект |
+|-------|------------------|
+| [EYazIIS](EYazIIS/) | ЕЯзИИС |
+| [GIIS](GIIS/) | ГИИС |
+| [IAD](IAD/) | ИАД |
+| [MRZvIS](MRZvIS/) | МРЗвИС |
+| [PBZ](PBZ/) | ПБЗ |
+| [PZIIS](PZIIS/) | ПЗИИС |
+| [Kursach](Kursach/) | Курсовой |

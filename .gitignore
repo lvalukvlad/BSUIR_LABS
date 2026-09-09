@@ -36,6 +36,18 @@ venv/
 ~$*
 *.tmp
 
-# Logs
+# Logs / coverage
 *.log
 npm-debug.log*
+.coverage
+coverage_report/
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# ML / local artifacts
+*.joblib
+optbinning_env/
+
+# Office lock leftovers
+~$*
