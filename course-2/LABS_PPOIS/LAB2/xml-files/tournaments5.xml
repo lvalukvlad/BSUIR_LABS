@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+<tournament>
+<name>Кубок мира 2020</name>
+<date>2020-11-15</date>
+<sport>Футбол</sport>
+<winner>Роберт Левандовски</winner>
+<prize_pool>25000000.00</prize_pool>
+<earnings>15000000.00</earnings>
+</tournament>
+<tournament>
+<name>Уимблдон 2021</name>
+<date>2021-06-28</date>
+<sport>Теннис</sport>
+<winner>Эшли Барти</winner>
+<prize_pool>1700000.00</prize_pool>
+<earnings>1020000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по шахматам 2018</name>
+<date>2018-11-09</date>
+<sport>Шахматы</sport>
+<winner>Магнус Карлсен</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>NBA Финал 2019</name>
+<date>2019-05-30</date>
+<sport>Баскетбол</sport>
+<winner>Кавай Леонард</winner>
+<prize_pool>20000000.00</prize_pool>
+<earnings>12000000.00</earnings>
+</tournament>
+<tournament>
+<name>League of Legends Worlds 2019</name>
+<date>2019-11-02</date>
+<sport>Киберспорт</sport>
+<winner>Ким Тэ Сан</winner>
+<prize_pool>2500000.00</prize_pool>
+<earnings>1500000.00</earnings>
+</tournament>
+<tournament>
+<name>Тур де Франс 2020</name>
+<date>2020-08-29</date>
+<sport>Велоспорт</sport>
+<winner>Тадей Погачар</winner>
+<prize_pool>500000.00</prize_pool>
+<earnings>300000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат Европы 2020</name>
+<date>2020-07-12</date>
+<sport>Футбол</sport>
+<winner>Леонардо Бонуччи</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Ролан Гаррос 2019</name>
+<date>2019-05-26</date>
+<sport>Теннис</sport>
+<winner>Рафаэль Надаль</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Мировая серия покера 2020</name>
+<date>2020-12-13</date>
+<sport>Покер</sport>
+<winner>Дамиан Салас</winner>
+<prize_pool>5000000.00</prize_pool>
+<earnings>3000000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Стэнли 2019</name>
+<date>2019-06-12</date>
+<sport>Хоккей</sport>
+<winner>Райан О'Райли</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+</tournaments>

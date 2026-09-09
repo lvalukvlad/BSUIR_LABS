@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<books>
+<book>
+<title>Тень горы</title>
+<author>Грегори Дэвид Робертс</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>5000</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>Над пропастью во ржи</title>
+<author>Джером Сэлинджер</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4500</copies>
+<totalVolumes>4500</totalVolumes>
+</book>
+<book>
+<title>Сто лет одиночества</title>
+<author>Габриэль Гарсиа Маркес</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>6000</copies>
+<totalVolumes>6000</totalVolumes>
+</book>
+<book>
+<title>Любовь во время чумы</title>
+<author>Габриэль Гарсиа Маркес</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3200</copies>
+<totalVolumes>3200</totalVolumes>
+</book>
+<book>
+<title>Вино из одуванчиков</title>
+<author>Рэй Брэдбери</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>5000</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>Марсианские хроники</title>
+<author>Рэй Брэдбери</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>3500</copies>
+<totalVolumes>3500</totalVolumes>
+</book>
+<book>
+<title>Песчаная хроника</title>
+<author>Харуки Мураками</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2800</copies>
+<totalVolumes>2800</totalVolumes>
+</book>
+<book>
+<title>Норвежский лес</title>
+<author>Харуки Мураками</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4600</copies>
+<totalVolumes>4600</totalVolumes>
+</book>
+<book>
+<title>Кафка на пляже</title>
+<author>Харуки Мураками</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>3400</copies>
+<totalVolumes>3400</totalVolumes>
+</book>
+<book>
+<title>Маленький принц</title>
+<author>Антуан де Сент-Экзюпери</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>9000</copies>
+<totalVolumes>9000</totalVolumes>
+</book>
+<book>
+<title>Чапаев и пустота</title>
+<author>Виктор Пелевин</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>3100</copies>
+<totalVolumes>3100</totalVolumes>
+</book>
+<book>
+<title>Generation "П"</title>
+<author>Виктор Пелевин</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>2900</copies>
+<totalVolumes>2900</totalVolumes>
+</book>
+<book>
+<title>О дивный новый мир</title>
+<author>Олдос Хаксли</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3800</copies>
+<totalVolumes>3800</totalVolumes>
+</book>
+<book>
+<title>Жестяной барабан</title>
+<author>Гюнтер Грасс</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>2200</copies>
+<totalVolumes>2200</totalVolumes>
+</book>
+<book>
+<title>Солярис</title>
+<author>Станислав Лем</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>2700</copies>
+<totalVolumes>2700</totalVolumes>
+</book>
+<book>
+<title>Нейромант</title>
+<author>Уильям Гибсон</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2600</copies>
+<totalVolumes>2600</totalVolumes>
+</book>
+<book>
+<title>Затмение</title>
+<author>Стивен Кинг</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>2800</copies>
+<totalVolumes>2800</totalVolumes>
+</book>
+<book>
+<title>Код да Винчи</title>
+<author>Дэн Браун</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>7500</copies>
+<totalVolumes>7500</totalVolumes>
+</book>
+</books>

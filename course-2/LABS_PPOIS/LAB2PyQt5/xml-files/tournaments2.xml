@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+  <tournament>
+    <name>Championship 2025</name>
+    <date>2025-01-23</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>6035744</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-11-23</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 60</winner_name>
+    <prize_fund>3692651</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Championship 2025</name>
+    <date>2025-01-24</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>497214</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2022</name>
+    <date>2022-07-26</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 1</winner_name>
+    <prize_fund>1903983</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2024</name>
+    <date>2024-01-14</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 2</winner_name>
+    <prize_fund>1164004</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Tournament 2023</name>
+    <date>2023-07-13</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Brazil</winner_name>
+    <prize_fund>558753</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Championship 2023</name>
+    <date>2023-12-18</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Djokovic N.</winner_name>
+    <prize_fund>7507493</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2025</name>
+    <date>2025-04-23</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 27</winner_name>
+    <prize_fund>9983799</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-06-14</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 86</winner_name>
+    <prize_fund>9427859</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-12-01</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 39</winner_name>
+    <prize_fund>6636858</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2025</name>
+    <date>2025-02-16</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 50</winner_name>
+    <prize_fund>5996877</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2024</name>
+    <date>2024-12-18</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 79</winner_name>
+    <prize_fund>8824170</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2024</name>
+    <date>2024-05-29</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Djokovic N.</winner_name>
+    <prize_fund>5368884</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2022</name>
+    <date>2022-10-05</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 68</winner_name>
+    <prize_fund>9893123</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2024</name>
+    <date>2024-04-03</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 2</winner_name>
+    <prize_fund>6691748</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-04-18</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 28</winner_name>
+    <prize_fund>7856403</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2024</name>
+    <date>2024-10-13</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 68</winner_name>
+    <prize_fund>6984285</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2024</name>
+    <date>2024-11-25</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 84</winner_name>
+    <prize_fund>9977143</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cup 2023</name>
+    <date>2023-10-11</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Argentina</winner_name>
+    <prize_fund>2558874</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2024</name>
+    <date>2024-02-21</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 73</winner_name>
+    <prize_fund>9656382</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2024</name>
+    <date>2024-06-23</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 13</winner_name>
+    <prize_fund>2488905</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2025</name>
+    <date>2025-05-16</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>5772899</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2025</name>
+    <date>2025-05-01</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 21</winner_name>
+    <prize_fund>3165959</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2025</name>
+    <date>2025-04-10</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>7227132</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2022</name>
+    <date>2022-07-22</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 41</winner_name>
+    <prize_fund>1042134</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Tournament 2024</name>
+    <date>2024-08-10</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Brazil</winner_name>
+    <prize_fund>5312922</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Championship 2025</name>
+    <date>2025-05-06</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>6422701</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2023</name>
+    <date>2023-06-29</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 62</winner_name>
+    <prize_fund>6881478</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-11-02</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 73</winner_name>
+    <prize_fund>7708145</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-01-22</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 39</winner_name>
+    <prize_fund>2691905</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2024</name>
+    <date>2024-11-26</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>6672175</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2025</name>
+    <date>2025-01-10</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 37</winner_name>
+    <prize_fund>2500377</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-03-09</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 4</winner_name>
+    <prize_fund>2808361</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2024</name>
+    <date>2024-03-15</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>167327</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2023</name>
+    <date>2023-04-17</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 87</winner_name>
+    <prize_fund>1002253</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-05-29</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 52</winner_name>
+    <prize_fund>834889</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2024</name>
+    <date>2024-11-27</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 27</winner_name>
+    <prize_fund>4609510</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cup 2022</name>
+    <date>2022-10-16</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Argentina</winner_name>
+    <prize_fund>7799763</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-01-17</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 51</winner_name>
+    <prize_fund>3483772</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-03-28</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 81</winner_name>
+    <prize_fund>5090358</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2025</name>
+    <date>2025-04-26</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 50</winner_name>
+    <prize_fund>8769201</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2022</name>
+    <date>2022-11-13</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>952549</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-09-26</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 73</winner_name>
+    <prize_fund>9998766</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2022</name>
+    <date>2022-11-08</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 12</winner_name>
+    <prize_fund>2621740</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2022</name>
+    <date>2022-11-15</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 30</winner_name>
+    <prize_fund>6287550</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2024</name>
+    <date>2024-08-30</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>6542703</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-07-02</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 96</winner_name>
+    <prize_fund>669715</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2022</name>
+    <date>2022-12-13</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 58</winner_name>
+    <prize_fund>6370107</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2024</name>
+    <date>2024-01-04</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 33</winner_name>
+    <prize_fund>6183402</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2024</name>
+    <date>2024-04-27</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Alcaraz C.</winner_name>
+    <prize_fund>6320695</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-03-29</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 76</winner_name>
+    <prize_fund>7178604</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2023</name>
+    <date>2023-11-28</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>8146400</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2025</name>
+    <date>2025-04-22</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 5</winner_name>
+    <prize_fund>5468899</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2022</name>
+    <date>2022-06-11</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Djokovic N.</winner_name>
+    <prize_fund>8553886</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2024</name>
+    <date>2024-11-18</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 76</winner_name>
+    <prize_fund>3060245</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Championship 2022</name>
+    <date>2022-09-20</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Alcaraz C.</winner_name>
+    <prize_fund>8384286</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Championship 2023</name>
+    <date>2023-09-26</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Alcaraz C.</winner_name>
+    <prize_fund>2545634</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2022</name>
+    <date>2022-11-27</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 96</winner_name>
+    <prize_fund>1118598</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2022</name>
+    <date>2022-08-01</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 57</winner_name>
+    <prize_fund>5116480</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cup 2024</name>
+    <date>2024-01-09</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Brazil</winner_name>
+    <prize_fund>7961429</prize_fund>
+  </tournament>
+</tournaments>

@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-12-07</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 63</winner_name>
+    <prize_fund>5678455</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2023</name>
+    <date>2023-08-05</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Sabalenka A.</winner_name>
+    <prize_fund>5060798</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2025</name>
+    <date>2025-04-02</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Djokovic N.</winner_name>
+    <prize_fund>8527878</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2024</name>
+    <date>2024-09-14</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 99</winner_name>
+    <prize_fund>7142393</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2024</name>
+    <date>2024-01-13</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 78</winner_name>
+    <prize_fund>5957181</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2022</name>
+    <date>2022-08-29</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 55</winner_name>
+    <prize_fund>9842668</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Tournament 2023</name>
+    <date>2023-10-12</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Manchester City</winner_name>
+    <prize_fund>3738328</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-01-06</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 61</winner_name>
+    <prize_fund>1292825</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2023</name>
+    <date>2023-12-30</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 3</winner_name>
+    <prize_fund>1979650</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2023</name>
+    <date>2023-01-11</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 83</winner_name>
+    <prize_fund>4054773</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2025</name>
+    <date>2025-03-26</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 52</winner_name>
+    <prize_fund>8507316</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2025</name>
+    <date>2025-04-25</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 76</winner_name>
+    <prize_fund>5636134</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2023</name>
+    <date>2023-04-26</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>7982234</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2024</name>
+    <date>2024-08-20</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 34</winner_name>
+    <prize_fund>4010717</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2025</name>
+    <date>2025-04-14</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 54</winner_name>
+    <prize_fund>2323833</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2023</name>
+    <date>2023-08-21</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 62</winner_name>
+    <prize_fund>7707117</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2024</name>
+    <date>2024-02-12</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Alcaraz C.</winner_name>
+    <prize_fund>3495400</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-10-21</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 96</winner_name>
+    <prize_fund>5268452</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2024</name>
+    <date>2024-09-27</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 56</winner_name>
+    <prize_fund>1996650</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-06-03</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 84</winner_name>
+    <prize_fund>2239135</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2024</name>
+    <date>2024-07-14</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 63</winner_name>
+    <prize_fund>3586828</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2025</name>
+    <date>2025-05-08</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 14</winner_name>
+    <prize_fund>7673106</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2025</name>
+    <date>2025-01-31</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 27</winner_name>
+    <prize_fund>2114842</prize_fund>
+  </tournament>
+  <tournament>
+    <name>League 2022</name>
+    <date>2022-06-18</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Argentina</winner_name>
+    <prize_fund>746533</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2025</name>
+    <date>2025-02-03</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 34</winner_name>
+    <prize_fund>4057742</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2022</name>
+    <date>2022-10-09</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 84</winner_name>
+    <prize_fund>3070721</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-06-10</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 63</winner_name>
+    <prize_fund>4426440</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-09-28</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 40</winner_name>
+    <prize_fund>9466276</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2023</name>
+    <date>2023-09-24</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 70</winner_name>
+    <prize_fund>9208519</prize_fund>
+  </tournament>
+  <tournament>
+    <name>League 2024</name>
+    <date>2024-04-11</date>
+    <sport_type>Football</sport_type>
+    <winner_name>France</winner_name>
+    <prize_fund>9481435</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2024</name>
+    <date>2024-04-03</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 44</winner_name>
+    <prize_fund>8941108</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2023</name>
+    <date>2023-09-23</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 76</winner_name>
+    <prize_fund>697567</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2025</name>
+    <date>2025-01-05</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Alcaraz C.</winner_name>
+    <prize_fund>5995542</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cup 2025</name>
+    <date>2025-04-12</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Argentina</winner_name>
+    <prize_fund>3106918</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2023</name>
+    <date>2023-01-09</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 24</winner_name>
+    <prize_fund>5632184</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-08-17</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 64</winner_name>
+    <prize_fund>5150537</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2024</name>
+    <date>2024-01-05</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 57</winner_name>
+    <prize_fund>815718</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2023</name>
+    <date>2023-04-10</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 61</winner_name>
+    <prize_fund>7258656</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Athletics Competition 2024</name>
+    <date>2024-08-08</date>
+    <sport_type>Athletics</sport_type>
+    <winner_name>Player 84</winner_name>
+    <prize_fund>4190431</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Masters 2023</name>
+    <date>2023-02-27</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Swiatek I.</winner_name>
+    <prize_fund>7165997</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-06-12</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 6</winner_name>
+    <prize_fund>9864860</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-04-17</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 62</winner_name>
+    <prize_fund>3164134</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2024</name>
+    <date>2024-02-15</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 60</winner_name>
+    <prize_fund>1255805</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-06-12</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 25</winner_name>
+    <prize_fund>1057382</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cup 2022</name>
+    <date>2022-06-26</date>
+    <sport_type>Football</sport_type>
+    <winner_name>Manchester City</winner_name>
+    <prize_fund>2013236</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-07-06</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 81</winner_name>
+    <prize_fund>9964413</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2023</name>
+    <date>2023-11-17</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 71</winner_name>
+    <prize_fund>613272</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Open 2022</name>
+    <date>2022-09-13</date>
+    <sport_type>Tennis</sport_type>
+    <winner_name>Djokovic N.</winner_name>
+    <prize_fund>9249770</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Basketball Competition 2023</name>
+    <date>2023-06-04</date>
+    <sport_type>Basketball</sport_type>
+    <winner_name>Player 55</winner_name>
+    <prize_fund>7002948</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-03-30</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 11</winner_name>
+    <prize_fund>5085169</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Chess Competition 2024</name>
+    <date>2024-08-06</date>
+    <sport_type>Chess</sport_type>
+    <winner_name>Player 25</winner_name>
+    <prize_fund>3995051</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Swimming Competition 2023</name>
+    <date>2023-04-27</date>
+    <sport_type>Swimming</sport_type>
+    <winner_name>Player 28</winner_name>
+    <prize_fund>6571338</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-09-28</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 81</winner_name>
+    <prize_fund>5084635</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2023</name>
+    <date>2023-07-28</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 39</winner_name>
+    <prize_fund>4475707</prize_fund>
+  </tournament>
+  <tournament>
+    <name>Cycling Competition 2022</name>
+    <date>2022-08-04</date>
+    <sport_type>Cycling</sport_type>
+    <winner_name>Player 31</winner_name>
+    <prize_fund>9889120</prize_fund>
+  </tournament>
+</tournaments>

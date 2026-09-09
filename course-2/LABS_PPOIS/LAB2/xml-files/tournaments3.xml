@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+<tournament>
+<name>Кубок мира 2021</name>
+<date>2021-12-01</date>
+<sport>Футбол</sport>
+<winner>Килиан Мбаппе</winner>
+<prize_pool>30000000.00</prize_pool>
+<earnings>18000000.00</earnings>
+</tournament>
+<tournament>
+<name>Уимблдон 2022</name>
+<date>2022-06-27</date>
+<sport>Теннис</sport>
+<winner>Елена Рыбакина</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по шахматам 2020</name>
+<date>2020-12-15</date>
+<sport>Шахматы</sport>
+<winner>Магнус Карлсен</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>NBA Финал 2021</name>
+<date>2021-07-06</date>
+<sport>Баскетбол</sport>
+<winner>Яннис Адетокумбо</winner>
+<prize_pool>25000000.00</prize_pool>
+<earnings>15000000.00</earnings>
+</tournament>
+<tournament>
+<name>League of Legends Worlds 2023</name>
+<date>2023-11-19</date>
+<sport>Киберспорт</sport>
+<winner>Ли Сан Хёк</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Тур де Франс 2023</name>
+<date>2023-07-01</date>
+<sport>Велоспорт</sport>
+<winner>Йонас Вингегор</winner>
+<prize_pool>500000.00</prize_pool>
+<earnings>300000.00</earnings>
+</tournament>
+<tournament>
+<name>Олимпийские игры 2020</name>
+<date>2021-08-01</date>
+<sport>Лёгкая атлетика</sport>
+<winner>Элейн Томпсон-Хера</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат Европы 2021</name>
+<date>2021-07-11</date>
+<sport>Футбол</sport>
+<winner>Джорджо Кьеллини</winner>
+<prize_pool>20000000.00</prize_pool>
+<earnings>12000000.00</earnings>
+</tournament>
+<tournament>
+<name>Ролан Гаррос 2021</name>
+<date>2021-05-30</date>
+<sport>Теннис</sport>
+<winner>Барбора Крейчикова</winner>
+<prize_pool>1800000.00</prize_pool>
+<earnings>1080000.00</earnings>
+</tournament>
+<tournament>
+<name>Мировая серия покера 2022</name>
+<date>2022-07-03</date>
+<sport>Покер</sport>
+<winner>Джозеф Хех</winner>
+<prize_pool>8000000.00</prize_pool>
+<earnings>4800000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Стэнли 2021</name>
+<date>2021-06-28</date>
+<sport>Хоккей</sport>
+<winner>Андрей Василевский</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по боксу 2020</name>
+<date>2020-10-25</date>
+<sport>Бокс</sport>
+<winner>Канело Альварес</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Суперкубок UEFA 2021</name>
+<date>2021-08-11</date>
+<sport>Футбол</sport>
+<winner>Н'Голо Канте</winner>
+<prize_pool>5000000.00</prize_pool>
+<earnings>3000000.00</earnings>
+</tournament>
+<tournament>
+<name>US Open 2021</name>
+<date>2021-08-30</date>
+<sport>Теннис</sport>
+<winner>Эмма Радукану</winner>
+<prize_pool>2500000.00</prize_pool>
+<earnings>1500000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по баскетболу 2021</name>
+<date>2021-08-25</date>
+<sport>Баскетбол</sport>
+<winner>Кевин Дюрант</winner>
+<prize_pool>8000000.00</prize_pool>
+<earnings>4800000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Америки 2020</name>
+<date>2020-06-14</date>
+<sport>Футбол</sport>
+<winner>Неймар</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по киберспорту 2021</name>
+<date>2021-11-06</date>
+<sport>Киберспорт</sport>
+<winner>Ван Хао</winner>
+<prize_pool>10000000.00</prize_pool>
+<earnings>6000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по лёгкой атлетике 2021</name>
+<date>2021-10-01</date>
+<sport>Лёгкая атлетика</sport>
+<winner>Андре Де Грасс</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по волейболу 2021</name>
+<date>2021-09-24</date>
+<sport>Волейбол</sport>
+<winner>Вильфредо Леон</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок мира по регби 2021</name>
+<date>2021-09-18</date>
+<sport>Регби</sport>
+<winner>Майкл Хупер</winner>
+<prize_pool>4000000.00</prize_pool>
+<earnings>2400000.00</earnings>
+</tournament>
+</tournaments>

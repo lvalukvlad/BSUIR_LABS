@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+<tournament>
+<name>Лига чемпионов 2023</name>
+<date>2023-06-10</date>
+<sport>Футбол</sport>
+<winner>Эрлинг Хааланд</winner>
+<prize_pool>20000000.00</prize_pool>
+<earnings>12000000.00</earnings>
+</tournament>
+<tournament>
+<name>Австралиан Оупен 2023</name>
+<date>2023-01-16</date>
+<sport>Теннис</sport>
+<winner>Арина Соболенко</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по шахматам 2022</name>
+<date>2022-04-15</date>
+<sport>Шахматы</sport>
+<winner>Ян Непомнящий</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>NBA Финал 2022</name>
+<date>2022-06-02</date>
+<sport>Баскетбол</sport>
+<winner>Стефен Карри</winner>
+<prize_pool>25000000.00</prize_pool>
+<earnings>15000000.00</earnings>
+</tournament>
+<tournament>
+<name>CS:GO Major 2023</name>
+<date>2023-05-08</date>
+<sport>Киберспорт</sport>
+<winner>Денис Шарипов</winner>
+<prize_pool>10000000.00</prize_pool>
+<earnings>6000000.00</earnings>
+</tournament>
+<tournament>
+<name>Гран-при Монако 2023</name>
+<date>2023-05-28</date>
+<sport>Автогонки</sport>
+<winner>Макс Ферстаппен</winner>
+<prize_pool>7000000.00</prize_pool>
+<earnings>4200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по плаванию 2023</name>
+<date>2023-07-14</date>
+<sport>Плавание</sport>
+<winner>Леон Маршан</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок африканских наций 2022</name>
+<date>2022-01-09</date>
+<sport>Футбол</sport>
+<winner>Садио Мане</winner>
+<prize_pool>5000000.00</prize_pool>
+<earnings>3000000.00</earnings>
+</tournament>
+<tournament>
+<name>Ролан Гаррос 2023</name>
+<date>2023-05-28</date>
+<sport>Теннис</sport>
+<winner>Ига Свёнтек</winner>
+<prize_pool>2300000.00</prize_pool>
+<earnings>1380000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по покеру 2022</name>
+<date>2022-07-03</date>
+<sport>Покер</sport>
+<winner>Эспен Уленд</winner>
+<prize_pool>10000000.00</prize_pool>
+<earnings>6000000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Стэнли 2022</name>
+<date>2022-06-15</date>
+<sport>Хоккей</sport>
+<winner>Кейл Макар</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по боксу 2022</name>
+<date>2022-05-08</date>
+<sport>Бокс</sport>
+<winner>Дмитрий Бивол</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Суперкубок UEFA 2023</name>
+<date>2023-08-16</date>
+<sport>Футбол</sport>
+<winner>Кевин Де Брёйне</winner>
+<prize_pool>5000000.00</prize_pool>
+<earnings>3000000.00</earnings>
+</tournament>
+<tournament>
+<name>US Open 2022</name>
+<date>2022-08-29</date>
+<sport>Теннис</sport>
+<winner>Ига Свёнтек</winner>
+<prize_pool>2600000.00</prize_pool>
+<earnings>1560000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по баскетболу 2022</name>
+<date>2022-09-01</date>
+<sport>Баскетбол</sport>
+<winner>Руди Гобер</winner>
+<prize_pool>8000000.00</prize_pool>
+<earnings>4800000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Америки 2022</name>
+<date>2022-06-12</date>
+<sport>Футбол</sport>
+<winner>Хуан Кинтеро</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по киберспорту 2023</name>
+<date>2023-11-04</date>
+<sport>Киберспорт</sport>
+<winner>Михаил Шляхта</winner>
+<prize_pool>12000000.00</prize_pool>
+<earnings>7200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по лёгкой атлетике 2023</name>
+<date>2023-08-19</date>
+<sport>Лёгкая атлетика</sport>
+<winner>Фаит Кипьегон</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по волейболу 2023</name>
+<date>2023-09-23</date>
+<sport>Волейбол</sport>
+<winner>Эгон Самек</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок мира по регби 2022</name>
+<date>2022-10-08</date>
+<sport>Регби</sport>
+<winner>Джош Адамс</winner>
+<prize_pool>4000000.00</prize_pool>
+<earnings>2400000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по шахматам 2020</name>
+<date>2020-12-01</date>
+<sport>Шахматы</sport>
+<winner>Магнус Карлсен</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Азии 2022</name>
+<date>2022-01-15</date>
+<sport>Футбол</sport>
+<winner>Али Мабхут</winner>
+<prize_pool>4000000.00</prize_pool>
+<earnings>2400000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по фигурному катанию 2022</name>
+<date>2022-03-21</date>
+<sport>Фигурное катание</sport>
+<winner>Юдзуру Ханю</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по хоккею 2022</name>
+<date>2022-05-13</date>
+<sport>Хоккей</sport>
+<winner>Роман Червенка</winner>
+<prize_pool>4000000.00</prize_pool>
+<earnings>2400000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по гимнастике 2022</name>
+<date>2022-10-29</date>
+<sport>Гимнастика</sport>
+<winner>Даики Хашимото</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок мира по крикету 2022</name>
+<date>2022-10-16</date>
+<sport>Крикет</sport>
+<winner>Джос Баттлер</winner>
+<prize_pool>8000000.00</prize_pool>
+<earnings>4800000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по дзюдо 2022</name>
+<date>2022-10-06</date>
+<sport>Дзюдо</sport>
+<winner>Хифуми Абэ</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по плаванию 2021</name>
+<date>2021-12-16</date>
+<sport>Плавание</sport>
+<winner>Сиобан Хоги</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по фехтованию 2023</name>
+<date>2023-07-22</date>
+<sport>Фехтование</sport>
+<winner>Элиза Ди Франчиска</winner>
+<prize_pool>500000.00</prize_pool>
+<earnings>300000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок мира по биатлону 2022</name>
+<date>2022-11-24</date>
+<sport>Биатлон</sport>
+<winner>Марте Олсбю Ройселанд</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>600000.00</earnings>
+</tournament>
+</tournaments>

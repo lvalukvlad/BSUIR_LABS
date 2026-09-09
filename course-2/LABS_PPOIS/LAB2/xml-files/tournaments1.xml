@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tournaments>
+  <tournament>
+    <name>Лига Конференций УЕФА 2025</name>
+    <date>2025-05-28</date>
+    <sport>Футбол</sport>
+    <winner>Марк Кукурелья</winner>
+    <prize_pool>8000000.0</prize_pool>
+    <earnings>4800000.0</earnings>
+  </tournament>
+  <tournament>
+    <name>Открытый чемпионат Австралии 500 2024</name>
+    <date>2024-02-27</date>
+    <sport>Теннис</sport>
+    <winner>Арина Соболенко</winner>
+    <prize_pool>35000000.0</prize_pool>
+    <earnings>21000000.0</earnings>
+  </tournament>
+  <tournament>
+    <name>Лига Европы УЕФА 2025</name>
+    <date>2025-05-21</date>
+    <sport>Футбол</sport>
+    <winner>Сон Хын Мин</winner>
+    <prize_pool>14000000.0</prize_pool>
+    <earnings>8400000.0</earnings>
+  </tournament>
+  <tournament>
+    <name>Лига Чемпионов УЕФА 2025</name>
+    <date>2025-05-31</date>
+    <sport>Футбол</sport>
+    <winner>Матвей Сафонов</winner>
+    <prize_pool>28000000.0</prize_pool>
+    <earnings>16800000.0</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок мира 2022</name>
+    <date>2022-11-20</date>
+    <sport>Футбол</sport>
+    <winner>Лионель Месси</winner>
+    <prize_pool>44000000.00</prize_pool>
+    <earnings>26400000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Уимблдон 2023</name>
+    <date>2023-07-03</date>
+    <sport>Теннис</sport>
+    <winner>Карлос Алькарас</winner>
+    <prize_pool>2350000.00</prize_pool>
+    <earnings>1410000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по шахматам 2021</name>
+    <date>2021-11-24</date>
+    <sport>Шахматы</sport>
+    <winner>Магнус Карлсен</winner>
+    <prize_pool>2000000.00</prize_pool>
+    <earnings>1200000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>NBA Финал 2023</name>
+    <date>2023-06-01</date>
+    <sport>Баскетбол</sport>
+    <winner>Никола Йокич</winner>
+    <prize_pool>30000000.00</prize_pool>
+    <earnings>18000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>The International 2023</name>
+    <date>2023-10-12</date>
+    <sport>Киберспорт</sport>
+    <winner>Илья Мулярчук</winner>
+    <prize_pool>18000000.00</prize_pool>
+    <earnings>10800000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Тур де Франс 2022</name>
+    <date>2022-07-01</date>
+    <sport>Велоспорт</sport>
+    <winner>Йонас Вингегор</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Олимпийские игры 2020</name>
+    <date>2021-07-23</date>
+    <sport>Плавание</sport>
+    <winner>Калеб Дрессел</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат Европы 2020</name>
+    <date>2021-06-11</date>
+    <sport>Футбол</sport>
+    <winner>Джанлуиджи Доннарумма</winner>
+    <prize_pool>25000000.00</prize_pool>
+    <earnings>15000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Ролан Гаррос 2022</name>
+    <date>2022-05-22</date>
+    <sport>Теннис</sport>
+    <winner>Рафаэль Надаль</winner>
+    <prize_pool>2200000.00</prize_pool>
+    <earnings>1320000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Мировая серия покера 2023</name>
+    <date>2023-05-30</date>
+    <sport>Покер</sport>
+    <winner>Даниэль Вайнман</winner>
+    <prize_pool>10000000.00</prize_pool>
+    <earnings>6000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок Стэнли 2023</name>
+    <date>2023-06-08</date>
+    <sport>Хоккей</sport>
+    <winner>Джонатан Маршессо</winner>
+    <prize_pool>18000000.00</prize_pool>
+    <earnings>10800000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по боксу 2021</name>
+    <date>2021-10-24</date>
+    <sport>Бокс</sport>
+    <winner>Рой Джонс</winner>
+    <prize_pool>1500000.00</prize_pool>
+    <earnings>900000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Суперкубок UEFA 2022</name>
+    <date>2022-08-10</date>
+    <sport>Футбол</sport>
+    <winner>Карим Бензема</winner>
+    <prize_pool>5000000.00</prize_pool>
+    <earnings>3000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>US Open 2023</name>
+    <date>2023-08-28</date>
+    <sport>Теннис</sport>
+    <winner>Новак Джокович</winner>
+    <prize_pool>3000000.00</prize_pool>
+    <earnings>1800000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по баскетболу 2023</name>
+    <date>2023-08-25</date>
+    <sport>Баскетбол</sport>
+    <winner>Деннис Шрёдер</winner>
+    <prize_pool>10000000.00</prize_pool>
+    <earnings>6000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок Америки 2021</name>
+    <date>2021-06-13</date>
+    <sport>Футбол</sport>
+    <winner>Анхель Ди Мария</winner>
+    <prize_pool>20000000.00</prize_pool>
+    <earnings>12000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по киберспорту 2022</name>
+    <date>2022-11-05</date>
+    <sport>Киберспорт</sport>
+    <winner>Александр Костылев</winner>
+    <prize_pool>15000000.00</prize_pool>
+    <earnings>9000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по лёгкой атлетике 2022</name>
+    <date>2022-07-15</date>
+    <sport>Лёгкая атлетика</sport>
+    <winner>Усэйн Болт</winner>
+    <prize_pool>2000000.00</prize_pool>
+    <earnings>1200000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по волейболу 2022</name>
+    <date>2022-08-26</date>
+    <sport>Волейбол</sport>
+    <winner>Квек Казийски</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок мира по регби 2023</name>
+    <date>2023-09-08</date>
+    <sport>Регби</sport>
+    <winner>Сия Колиси</winner>
+    <prize_pool>5000000.00</prize_pool>
+    <earnings>3000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по шахматам 2023</name>
+    <date>2023-04-07</date>
+    <sport>Шахматы</sport>
+    <winner>Дин Лижэнь</winner>
+    <prize_pool>2000000.00</prize_pool>
+    <earnings>1200000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок Азии 2023</name>
+    <date>2023-01-12</date>
+    <sport>Футбол</sport>
+    <winner>Сон Хын Мин</winner>
+    <prize_pool>5000000.00</prize_pool>
+    <earnings>3000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по фигурному катанию 2023</name>
+    <date>2023-03-20</date>
+    <sport>Фигурное катание</sport>
+    <winner>Натан Чен</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по хоккею 2023</name>
+    <date>2023-05-12</date>
+    <sport>Хоккей</sport>
+    <winner>Коннор Макдэвид</winner>
+    <prize_pool>5000000.00</prize_pool>
+    <earnings>3000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по гимнастике 2023</name>
+    <date>2023-09-30</date>
+    <sport>Гимнастика</sport>
+    <winner>Симона Байлс</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок мира по крикету 2023</name>
+    <date>2023-10-05</date>
+    <sport>Крикет</sport>
+    <winner>Вира Кохли</winner>
+    <prize_pool>10000000.00</prize_pool>
+    <earnings>6000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по дзюдо 2023</name>
+    <date>2023-05-07</date>
+    <sport>Дзюдо</sport>
+    <winner>Тедди Ринер</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по плаванию 2022</name>
+    <date>2022-06-18</date>
+    <sport>Плавание</sport>
+    <winner>Кэти Ледеки</winner>
+    <prize_pool>2000000.00</prize_pool>
+    <earnings>1200000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по фехтованию 2022</name>
+    <date>2022-07-15</date>
+    <sport>Фехтование</sport>
+    <winner>Арон Силади</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Кубок мира по биатлону 2023</name>
+    <date>2023-12-01</date>
+    <sport>Биатлон</sport>
+    <winner>Йоханнес Бё</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по гандболу 2023</name>
+    <date>2023-01-11</date>
+    <sport>Гандбол</sport>
+    <winner>Миккель Хансен</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по снукеру 2023</name>
+    <date>2023-04-15</date>
+    <sport>Снукер</sport>
+    <winner>Ронни О'Салливан</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по бадминтону 2023</name>
+    <date>2023-08-21</date>
+    <sport>Бадминтон</sport>
+    <winner>Виктор Аксельсен</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по керлингу 2023</name>
+    <date>2023-04-01</date>
+    <sport>Кёрлинг</sport>
+    <winner>Брюс Моут</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по гребле 2023</name>
+    <date>2023-09-03</date>
+    <sport>Гребля</sport>
+    <winner>Мартин Синкович</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по тхэквондо 2023</name>
+    <date>2023-05-29</date>
+    <sport>Тхэквондо</sport>
+    <winner>Хади Саид</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по триатлону 2023</name>
+    <date>2023-09-24</date>
+    <sport>Триатлон</sport>
+    <winner>Алекс Йи</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по скалолазанию 2023</name>
+    <date>2023-08-01</date>
+    <sport>Скалолазание</sport>
+    <winner>Ян Хойер</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по борьбе 2023</name>
+    <date>2023-09-16</date>
+    <sport>Борьба</sport>
+    <winner>Абдулрашид Садулаев</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по стрельбе 2022</name>
+    <date>2022-10-12</date>
+    <sport>Стрельба</sport>
+    <winner>Лиза Мюллер</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по настольному теннису 2023</name>
+    <date>2023-05-20</date>
+    <sport>Настольный теннис</sport>
+    <winner>Ма Лун</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по синхронному плаванию 2022</name>
+    <date>2022-06-17</date>
+    <sport>Синхронное плавание</sport>
+    <winner>Светлана Ромашина</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по водному поло 2022</name>
+    <date>2022-06-20</date>
+    <sport>Водное поло</sport>
+    <winner>Филипп Филипович</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по велотреку 2022</name>
+    <date>2022-10-12</date>
+    <sport>Велотрек</sport>
+    <winner>Лора Кенни</winner>
+    <prize_pool>500000.00</prize_pool>
+    <earnings>300000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по гольфу 2023</name>
+    <date>2023-04-06</date>
+    <sport>Гольф</sport>
+    <winner>Джон Рам</winner>
+    <prize_pool>15000000.00</prize_pool>
+    <earnings>9000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по автогонкам 2023</name>
+    <date>2023-03-05</date>
+    <sport>Автогонки</sport>
+    <winner>Макс Ферстаппен</winner>
+    <prize_pool>20000000.00</prize_pool>
+    <earnings>12000000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по марафону 2023</name>
+    <date>2023-08-27</date>
+    <sport>Марафон</sport>
+    <winner>Элиуд Кипчоге</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по конному спорту 2022</name>
+    <date>2022-08-06</date>
+    <sport>Конный спорт</sport>
+    <winner>Джессика Спингстен</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по серфингу 2023</name>
+    <date>2023-05-08</date>
+    <sport>Сёрфинг</sport>
+    <winner>Джон Флоренс</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+  <tournament>
+    <name>Чемпионат мира по парусному спорту 2023</name>
+    <date>2023-08-10</date>
+    <sport>Парусный спорт</sport>
+    <winner>Питер Бурлинг</winner>
+    <prize_pool>1000000.00</prize_pool>
+    <earnings>600000.00</earnings>
+  </tournament>
+</tournaments>

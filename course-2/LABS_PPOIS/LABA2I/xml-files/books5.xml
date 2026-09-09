@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<books>
+  <book>
+    <title>Звёздные войны: Тёмная империя</title>
+    <author>Том Вэйд</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>3</volumes>
+    <copies>4500</copies>
+    <totalVolumes>13500</totalVolumes>
+  </book>
+  <book>
+    <title>Три мушкетёра</title>
+    <author>Александр Дюма</author>
+    <publisher>Азбука</publisher>
+    <volumes>3</volumes>
+    <copies>5000</copies>
+    <totalVolumes>15000</totalVolumes>
+  </book>
+  <book>
+    <title>Маленькие женщины</title>
+    <author>Луиза Мэй Олкотт</author>
+    <publisher>АСТ</publisher>
+    <volumes>2</volumes>
+    <copies>3500</copies>
+    <totalVolumes>7000</totalVolumes>
+  </book>
+  <book>
+    <title>Гарри Поттер и тайная комната</title>
+    <author>Джоан Роулинг</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>7000</copies>
+    <totalVolumes>7000</totalVolumes>
+  </book>
+  <book>
+    <title>Грозовой перевал</title>
+    <author>Эмили Бронте</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>2300</copies>
+    <totalVolumes>2300</totalVolumes>
+  </book>
+  <book>
+    <title>Хоббит, или Туда и обратно</title>
+    <author>Дж. Р. Р. Толкин</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>5000</copies>
+    <totalVolumes>5000</totalVolumes>
+  </book>
+  <book>
+    <title>Дети капитана Гранта</title>
+    <author>Жюль Верн</author>
+    <publisher>Азбука</publisher>
+    <volumes>2</volumes>
+    <copies>3800</copies>
+    <totalVolumes>7600</totalVolumes>
+  </book>
+  <book>
+    <title>Сумерки</title>
+    <author>Стефани Майер</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>4</volumes>
+    <copies>6000</copies>
+    <totalVolumes>24000</totalVolumes>
+  </book>
+  <book>
+    <title>Соловьиная ночь</title>
+    <author>Кристин Ханна</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>5000</copies>
+    <totalVolumes>5000</totalVolumes>
+  </book>
+  <book>
+    <title>Меч без имени</title>
+    <author>Грэг Иган</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Лев, колдунья и платяной шкаф</title>
+    <author>Клайв Стейплз Льюис</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>4500</copies>
+    <totalVolumes>4500</totalVolumes>
+  </book>
+  <book>
+    <title>Темные воды</title>
+    <author>Чак Паланик</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3500</copies>
+    <totalVolumes>3500</totalVolumes>
+  </book>
+  <book>
+    <title>Черный лебедь</title>
+    <author>Нассим Талеб</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Остромов, или Утопия</title>
+    <author>Алексей Толстой</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Под небом Сент-Луиса</title>
+    <author>Джон Стейнбек</author>
+    <publisher>АСТ</publisher>
+    <volumes>2</volumes>
+    <copies>2200</copies>
+    <totalVolumes>4400</totalVolumes>
+  </book>
+  <book>
+    <title>Цветы для Элджернона</title>
+    <author>Дэниел Киз</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Гроза</title>
+    <author>Александр Островский</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Книга джунглей</title>
+    <author>Рудьярд Киплинг</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>2000</copies>
+    <totalVolumes>2000</totalVolumes>
+  </book>
+</books>

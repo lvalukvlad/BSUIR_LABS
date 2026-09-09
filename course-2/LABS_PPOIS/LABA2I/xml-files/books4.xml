@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<books>
+  <book>
+    <title>Старик и море</title>
+    <author>Эрнест Хемингуэй</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3200</copies>
+    <totalVolumes>3200</totalVolumes>
+  </book>
+  <book>
+    <title>451 градус по Фаренгейту</title>
+    <author>Рэй Брэдбери</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>5000</copies>
+    <totalVolumes>5000</totalVolumes>
+  </book>
+  <book>
+    <title>Время секонд хэнд</title>
+    <author>Светлана Алексиевич</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>2000</copies>
+    <totalVolumes>2000</totalVolumes>
+  </book>
+  <book>
+    <title>Маленький принц</title>
+    <author>Антуан де Сент-Экзюпери</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Гарри Поттер и Тайная комната</title>
+    <author>Джоан Роулинг</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>8000</copies>
+    <totalVolumes>8000</totalVolumes>
+  </book>
+  <book>
+    <title>Грозовой перевал</title>
+    <author>Эмили Бронте</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>2500</copies>
+    <totalVolumes>2500</totalVolumes>
+  </book>
+  <book>
+    <title>Властелин колец: Две крепости</title>
+    <author>Дж. Р. Р. Толкин</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>4000</copies>
+    <totalVolumes>4000</totalVolumes>
+  </book>
+  <book>
+    <title>1984</title>
+    <author>Джордж Оруэлл</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Три товарища</title>
+    <author>Эрих Мария Ремарк</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>2200</copies>
+    <totalVolumes>2200</totalVolumes>
+  </book>
+  <book>
+    <title>Анна Каренина</title>
+    <author>Лев Толстой</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>2</volumes>
+    <copies>4000</copies>
+    <totalVolumes>8000</totalVolumes>
+  </book>
+  <book>
+    <title>Дон Кихот</title>
+    <author>Мигель де Сервантес</author>
+    <publisher>Азбука</publisher>
+    <volumes>2</volumes>
+    <copies>3000</copies>
+    <totalVolumes>6000</totalVolumes>
+  </book>
+  <book>
+    <title>Убийство в Восточном экспрессе</title>
+    <author>Агата Кристи</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>2500</copies>
+    <totalVolumes>2500</totalVolumes>
+  </book>
+  <book>
+    <title>Женщина в белом</title>
+    <author>Уилки Коллинз</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Крестный отец</title>
+    <author>Марио Пьюзо</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>1800</copies>
+    <totalVolumes>1800</totalVolumes>
+  </book>
+  <book>
+    <title>Зеленая миля</title>
+    <author>Стивен Кинг</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3500</copies>
+    <totalVolumes>3500</totalVolumes>
+  </book>
+  <book>
+    <title>Шерлок Холмс</title>
+    <author>Артур Конан Дойл</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>4000</copies>
+    <totalVolumes>4000</totalVolumes>
+  </book>
+  <book>
+    <title>Отель «У погибшего альпиниста»</title>
+    <author>Юрий Дружков</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Человек в высоком замке</title>
+    <author>Филип К. Дик</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>1800</copies>
+    <totalVolumes>1800</totalVolumes>
+  </book>
+</books>

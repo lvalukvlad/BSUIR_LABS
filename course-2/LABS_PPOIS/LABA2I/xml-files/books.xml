@@ -1,0 +1,419 @@
+<books>
+<book>
+<title>Ведьмак</title>
+<author>Анджей Сапковский</author>
+<publisher>АСТ</publisher>
+<volumes>8</volumes>
+<copies>5000</copies>
+<totalVolumes>40000</totalVolumes>
+</book>
+<book>
+<title>Проклятые короли</title>
+<author>Морис Дрюон</author>
+<publisher>Азбука</publisher>
+<volumes>7</volumes>
+<copies>3000</copies>
+<totalVolumes>21000</totalVolumes>
+</book>
+<book>
+<title>Воспоминания о прошлом Земли</title>
+<author>Лю Цысинь</author>
+<publisher>ЭКСМО</publisher>
+<volumes>3</volumes>
+<copies>4500</copies>
+<totalVolumes>13500</totalVolumes>
+</book>
+<book>
+<title>Фауст</title>
+<author>Иоганн Вели Гёте</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>2200</copies>
+<totalVolumes>2200</totalVolumes>
+</book>
+<book>
+<title>Моби Дик</title>
+<author>Герман Мелвилл</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>1800</copies>
+<totalVolumes>1800</totalVolumes>
+</book>
+<book>
+<title>Кентерберийские рассказы</title>
+<author>Джеффри Чосер</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1500</copies>
+<totalVolumes>1500</totalVolumes>
+</book>
+<book>
+<title>Божественная комедия</title>
+<author>Данте Алигьери</author>
+<publisher>ЭКСМО</publisher>
+<volumes>3</volumes>
+<copies>1300</copies>
+<totalVolumes>3900</totalVolumes>
+</book>
+<book>
+<title>Американская трагедия</title>
+<author>Теодор Драйзер</author>
+<publisher>Азбука</publisher>
+<volumes>2</volumes>
+<copies>2000</copies>
+<totalVolumes>4000</totalVolumes>
+</book>
+<book>
+<title>Портрет Дориана Грея</title>
+<author>Оскар Уайльд</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>4000</copies>
+<totalVolumes>4000</totalVolumes>
+</book>
+<book>
+<title>Гордость и предубеждение</title>
+<author>Джейн Остин</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>5000</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>Джейн Эйр</title>
+<author>Шарлотта Бронте</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3200</copies>
+<totalVolumes>3200</totalVolumes>
+</book>
+<book>
+<title>Грозовой перевал</title>
+<author>Эмили Бронте</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>2700</copies>
+<totalVolumes>2700</totalVolumes>
+</book>
+<book>
+<title>Франкенштейн</title>
+<author>Мэри Шелли</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>3100</copies>
+<totalVolumes>3100</totalVolumes>
+</book>
+<book>
+<title>Зов Ктулху</title>
+<author>Говард Лавкрафт</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2800</copies>
+<totalVolumes>2800</totalVolumes>
+</book>
+<book>
+<title>Старик и море</title>
+<author>Эрнест Хемингуэй</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>3500</copies>
+<totalVolumes>3500</totalVolumes>
+</book>
+<book>
+<title>По ком звонит колокол</title>
+<author>Эрнест Хемингуэй</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>3000</copies>
+<totalVolumes>3000</totalVolumes>
+</book>
+<book>
+<title>Процесс</title>
+<author>Франц Кафка</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2200</copies>
+<totalVolumes>2200</totalVolumes>
+</book>
+<book>
+<title>Замок</title>
+<author>Франц Кафка</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1900</copies>
+<totalVolumes>1900</totalVolumes>
+</book>
+<book>
+<title>Лолита</title>
+<author>Владимир Набоков</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4100</copies>
+<totalVolumes>4100</totalVolumes>
+</book>
+<book>
+<title>Атлант расправил плечи</title>
+<author>Айн Рэнд</author>
+<publisher>Азбука</publisher>
+<volumes>3</volumes>
+<copies>2500</copies>
+<totalVolumes>7500</totalVolumes>
+</book>
+<book>
+<title>Цветы для Элджернона</title>
+<author>Дэниел Киз</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>3800</copies>
+<totalVolumes>3800</totalVolumes>
+</book>
+<book>
+<title>451 градус по Фаренгейту</title>
+<author>Рэй Брэдбери</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4500</copies>
+<totalVolumes>4500</totalVolumes>
+</book>
+<book>
+<title>Механический апельсин</title>
+<author>Энтони Бёрджесс</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3000</copies>
+<totalVolumes>3000</totalVolumes>
+</book>
+<book>
+<title>Корабль дураков</title>
+<author>Кэтрин Портер</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1500</copies>
+<totalVolumes>1500</totalVolumes>
+</book>
+<book>
+<title>Колыбель для кошки</title>
+<author>Курт Воннегут</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>2600</copies>
+<totalVolumes>2600</totalVolumes>
+</book>
+<book>
+<title>Бойня номер пять</title>
+<author>Курт Воннегут</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2900</copies>
+<totalVolumes>2900</totalVolumes>
+</book>
+<book>
+<title>Хроники Нарнии</title>
+<author>Клайв Льюис</author>
+<publisher>АСТ</publisher>
+<volumes>7</volumes>
+<copies>3500</copies>
+<totalVolumes>24500</totalVolumes>
+</book>
+<book>
+<title>Песнь льда и пламени</title>
+<author>Джордж Мартин</author>
+<publisher>ЭКСМО</publisher>
+<volumes>5</volumes>
+<copies>5000</copies>
+<totalVolumes>25000</totalVolumes>
+</book>
+<book>
+<title>Великий Гэтсби</title>
+<author>Фрэнсис Фицджеральд</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>5200</copies>
+<totalVolumes>5200</totalVolumes>
+</book>
+<book>
+<title>Тёмные начала</title>
+<author>Филип Пулман</author>
+<publisher>АСТ</publisher>
+<volumes>3</volumes>
+<copies>3000</copies>
+<totalVolumes>9000</totalVolumes>
+</book>
+<book>
+<title>Сияние</title>
+<author>Стивен Кинг</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4500</copies>
+<totalVolumes>4500</totalVolumes>
+</book>
+<book>
+<title>Оно</title>
+<author>Стивен Кинг</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>4000</copies>
+<totalVolumes>4000</totalVolumes>
+</book>
+
+<book>
+<title>Война и мир</title>
+<author>Лев Толстой</author>
+<publisher>АСТ</publisher>
+<volumes>4</volumes>
+<copies>1000</copies>
+<totalVolumes>4000</totalVolumes>
+</book>
+<book>
+<title>Мастер и Маргарита</title>
+<author>Михаил Булгаков</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>5000</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>Преступление и наказание</title>
+<author>Фёдор Достоевский</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3000</copies>
+<totalVolumes>3000</totalVolumes>
+</book>
+<book>
+<title>Идиот</title>
+<author>Фёдор Достоевский</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2000</copies>
+<totalVolumes>2000</totalVolumes>
+</book>
+<book>
+<title>Братья Карамазовы</title>
+<author>Фёдор Достоевский</author>
+<publisher>ЭКСМО</publisher>
+<volumes>2</volumes>
+<copies>1500</copies>
+<totalVolumes>3000</totalVolumes>
+</book>
+<book>
+<title>Анна Каренина</title>
+<author>Лев Толстой</author>
+<publisher>Азбука</publisher>
+<volumes>2</volumes>
+<copies>2500</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>Отцы и дети</title>
+<author>Иван Тургенев</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1800</copies>
+<totalVolumes>1800</totalVolumes>
+</book>
+<book>
+<title>Герой нашего времени</title>
+<author>Михаил Лермонтов</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>2200</copies>
+<totalVolumes>2200</totalVolumes>
+</book>
+<book>
+<title>Мёртвые души</title>
+<author>Николай Гоголь</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2700</copies>
+<totalVolumes>2700</totalVolumes>
+</book>
+<book>
+<title>Ревизор</title>
+<author>Николай Гоголь</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1500</copies>
+<totalVolumes>1500</totalVolumes>
+</book>
+<book>
+<title>Собачье сердце</title>
+<author>Михаил Булгаков</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>3200</copies>
+<totalVolumes>3200</totalVolumes>
+</book>
+<book>
+<title>Доктор Живаго</title>
+<author>Борис Пастернак</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>2800</copies>
+<totalVolumes>2800</totalVolumes>
+</book>
+<book>
+<title>Чевенгур</title>
+<author>Андрей Платонов</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>1000</copies>
+<totalVolumes>1000</totalVolumes>
+</book>
+<book>
+<title>Двенадцать стульев</title>
+<author>Илья Ильф, Евгений Петров</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4000</copies>
+<totalVolumes>4000</totalVolumes>
+</book>
+<book>
+<title>Золотой телёнок</title>
+<author>Илья Ильф</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>3500</copies>
+<totalVolumes>3500</totalVolumes>
+</book>
+<book>
+<title>Остров сокровищ</title>
+<author>Роберт Стивенсон</author>
+<publisher>АСТ</publisher>
+<volumes>1</volumes>
+<copies>5000</copies>
+<totalVolumes>5000</totalVolumes>
+</book>
+<book>
+<title>1984</title>
+<author>Джордж Оруэлл</author>
+<publisher>ЭКСМО</publisher>
+<volumes>1</volumes>
+<copies>4500</copies>
+<totalVolumes>4500</totalVolumes>
+</book>
+<book>
+<title>Улисс</title>
+<author>Джеймс Джойс</author>
+<publisher>Азбука</publisher>
+<volumes>1</volumes>
+<copies>1200</copies>
+<totalVolumes>1200</totalVolumes>
+</book>
+<book>
+<title>Гарри Поттер и философский камень</title>
+<author>Джоан Роулинг</author>
+<publisher>Росмэн</publisher>
+<volumes>1</volumes>
+<copies>10000</copies>
+<totalVolumes>10000</totalVolumes>
+</book>
+<book>
+<title>Властелин колец</title>
+<author>Дж Толкин</author>
+<publisher>АСТ</publisher>
+<volumes>3</volumes>
+<copies>3000</copies>
+<totalVolumes>9000</totalVolumes>
+</book>
+</books>

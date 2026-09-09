@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tournaments>
+<tournament>
+<name>Лига чемпионов 2021</name>
+<date>2021-05-29</date>
+<sport>Футбол</sport>
+<winner>Кай Хаверц</winner>
+<prize_pool>19000000.00</prize_pool>
+<earnings>10000000.00</earnings>
+</tournament>
+<tournament>
+<name>Австралиан Оупен 2021</name>
+<date>2021-01-17</date>
+<sport>Теннис</sport>
+<winner>Наоми Осака</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по шахматам 2019</name>
+<date>2019-12-10</date>
+<sport>Шахматы</sport>
+<winner>Магнус Карлсен</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>1000000.00</earnings>
+</tournament>
+<tournament>
+<name>NBA Финал 2020</name>
+<date>2020-09-25</date>
+<sport>Баскетбол</sport>
+<winner>Леброн Джеймс</winner>
+<prize_pool>20000000.00</prize_pool>
+<earnings>12000000.00</earnings>
+</tournament>
+<tournament>
+<name>Dota 2 The International 2021</name>
+<date>2021-10-07</date>
+<sport>Киберспорт</sport>
+<winner>Анатолий Дыков</winner>
+<prize_pool>40000000.00</prize_pool>
+<earnings>24000000.00</earnings>
+</tournament>
+<tournament>
+<name>Гран-при Японии 2022</name>
+<date>2022-10-09</date>
+<sport>Автогонки</sport>
+<winner>Макс Ферстапен</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по плаванию 2020</name>
+<date>2020-12-15</date>
+<sport>Плавание</sport>
+<winner>Калеб Дрессел</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>1000000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок африканских наций 2021</name>
+<date>2021-01-09</date>
+<sport>Футбол</sport>
+<winner>Рияд Махрез</winner>
+<prize_pool>4000000.00</prize_pool>
+<earnings>2400000.00</earnings>
+</tournament>
+<tournament>
+<name>Ролан Гаррос 2020</name>
+<date>2020-09-27</date>
+<sport>Теннис</sport>
+<winner>Рафаэль Надаль</winner>
+<prize_pool>1000000.00</prize_pool>
+<earnings>1000000.00</earnings>
+</tournament>
+<tournament>
+<name>Мировая серия покера 2021</name>
+<date>2021-09-30</date>
+<sport>Покер</sport>
+<winner>Кори Алдерсон</winner>
+<prize_pool>8000000.00</prize_pool>
+<earnings>4800000.00</earnings>
+</tournament>
+<tournament>
+<name>Кубок Стэнли 2020</name>
+<date>2020-09-19</date>
+<sport>Хоккей</sport>
+<winner>Виктор Хедман</winner>
+<prize_pool>15000000.00</prize_pool>
+<earnings>9000000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по боксу 2019</name>
+<date>2019-09-10</date>
+<sport>Бокс</sport>
+<winner>Александр Усик</winner>
+<prize_pool>1500000.00</prize_pool>
+<earnings>900000.00</earnings>
+</tournament>
+<tournament>
+<name>Суперкубок UEFA 2020</name>
+<date>2020-08-23</date>
+<sport>Футбол</sport>
+<winner>Тьяго Алькантара</winner>
+<prize_pool>3000000.00</prize_pool>
+<earnings>1800000.00</earnings>
+</tournament>
+<tournament>
+<name>US Open 2020</name>
+<date>2020-08-31</date>
+<sport>Теннис</sport>
+<winner>Доминик Тим</winner>
+<prize_pool>2000000.00</prize_pool>
+<earnings>1200000.00</earnings>
+</tournament>
+<tournament>
+<name>Чемпионат мира по баскетболу 2020</name>
+<date>2020-08-25</date>
+<sport>Баскетбол</sport>
+<winner>Рики Рубио</winner>
+<prize_pool>7000000.00</prize_pool>
+<earnings>4200000.00</earnings>
+</tournament>
+</tournaments>

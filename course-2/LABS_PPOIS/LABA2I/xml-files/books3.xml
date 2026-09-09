@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<books>
+  <book>
+    <title>Мастер и Маргарита</title>
+    <author>Михаил Булгаков</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>6000</copies>
+    <totalVolumes>6000</totalVolumes>
+  </book>
+  <book>
+    <title>Понедельник начинается в субботу</title>
+    <author>Аркадий и Борис Стругацкие</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3500</copies>
+    <totalVolumes>3500</totalVolumes>
+  </book>
+  <book>
+    <title>Далёкая Радуга</title>
+    <author>Рэй Брэдбери</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>1800</copies>
+    <totalVolumes>1800</totalVolumes>
+  </book>
+  <book>
+    <title>Одиночество в Сети</title>
+    <author>Януш Вишневский</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>2200</copies>
+    <totalVolumes>2200</totalVolumes>
+  </book>
+  <book>
+    <title>Слепой музыкант</title>
+    <author>Максим Горький</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>1800</copies>
+    <totalVolumes>1800</totalVolumes>
+  </book>
+  <book>
+    <title>День триффидов</title>
+    <author>Джон Уиндем</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>2500</copies>
+    <totalVolumes>2500</totalVolumes>
+  </book>
+  <book>
+    <title>Властелин колец: Возвращение короля</title>
+    <author>Дж. Р. Р. Толкин</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Судьба человека</title>
+    <author>Михаил Шолохов</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>2000</copies>
+    <totalVolumes>2000</totalVolumes>
+  </book>
+  <book>
+    <title>Три сестры</title>
+    <author>Антон Чехов</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Игра престолов</title>
+    <author>Джордж Мартин</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>5000</copies>
+    <totalVolumes>5000</totalVolumes>
+  </book>
+  <book>
+    <title>Кот в сапогах</title>
+    <author>Шарль Перро</author>
+    <publisher>Росмэн</publisher>
+    <volumes>1</volumes>
+    <copies>8000</copies>
+    <totalVolumes>8000</totalVolumes>
+  </book>
+  <book>
+    <title>Братья Карамазовы</title>
+    <author>Фёдор Достоевский</author>
+    <publisher>АСТ</publisher>
+    <volumes>2</volumes>
+    <copies>3500</copies>
+    <totalVolumes>7000</totalVolumes>
+  </book>
+  <book>
+    <title>Холмс и Ватсон</title>
+    <author>Артур Конан Дойл</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>2000</copies>
+    <totalVolumes>2000</totalVolumes>
+  </book>
+  <book>
+    <title>Моби Дик</title>
+    <author>Герман Мелвилл</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>3000</copies>
+    <totalVolumes>3000</totalVolumes>
+  </book>
+  <book>
+    <title>Сильмариллион</title>
+    <author>Дж. Р. Р. Толкин</author>
+    <publisher>АСТ</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+  <book>
+    <title>Голодные игры</title>
+    <author>Сюзанна Коллинз</author>
+    <publisher>ЭКСМО</publisher>
+    <volumes>1</volumes>
+    <copies>7000</copies>
+    <totalVolumes>7000</totalVolumes>
+  </book>
+  <book>
+    <title>Сто лет одиночества</title>
+    <author>Габриэль Гарсия Маркес</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>4000</copies>
+    <totalVolumes>4000</totalVolumes>
+  </book>
+  <book>
+    <title>Бойня номер пять</title>
+    <author>Курт Воннегут</author>
+    <publisher>Азбука</publisher>
+    <volumes>1</volumes>
+    <copies>1500</copies>
+    <totalVolumes>1500</totalVolumes>
+  </book>
+</books>
