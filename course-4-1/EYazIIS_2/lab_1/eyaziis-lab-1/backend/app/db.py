@@ -1,4 +1,3 @@
-"""Доступ к PostgreSQL: пул соединений и вспомогательные обёртки."""
 import time
 from contextlib import contextmanager
 
@@ -12,7 +11,6 @@ _pool: ThreadedConnectionPool | None = None
 
 
 def init_pool(retries: int = 30, delay: float = 2.0) -> None:
-    """Создаёт пул соединений, дожидаясь готовности СУБД."""
     global _pool
     if _pool is not None:
         return

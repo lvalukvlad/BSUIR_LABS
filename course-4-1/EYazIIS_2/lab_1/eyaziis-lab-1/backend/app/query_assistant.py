@@ -1,4 +1,3 @@
-"""Интеллектуальный интерфейс запроса: подсказки, опечатки, синонимы, сниппеты."""
 import html
 import re
 
@@ -9,8 +8,6 @@ from .text_processing import ABBREVIATIONS, is_meaningful, lemmatize, normalize,
 MAX_EDIT_DISTANCE = 2
 SUGGEST_LIMIT = 8
 
-# Небольшой тезаурус предметной области: синонимы и аббревиатуры,
-# которыми расширяется поисковый образ запроса.
 THESAURUS: dict[str, list[str]] = {
     "ии": ["искусственный", "интеллект"],
     "интеллект": ["ии"],
@@ -30,7 +27,6 @@ THESAURUS: dict[str, list[str]] = {
 
 
 def damerau_levenshtein(a: str, b: str) -> int:
-    """Расстояние Дамерау -- Левенштейна: вставки, удаления, замены, перестановки."""
     if a == b:
         return 0
     len_a, len_b = len(a), len(b)
@@ -49,20 +45,19 @@ def damerau_levenshtein(a: str, b: str) -> int:
                 previous[j - 1] + cost,
             )
             if i > 1 and j > 1 and a[i - 1] == b[j - 2] and a[i - 2] == b[j - 1]:
-                current[j] = min(current[j], before_previous[j - 2] + cost)
+                current[j] = min(current[j], before_previous[j - 2] + 1)
         before_previous, previous = previous, current
     return previous[len_b]
 
 
 def suggest(prefix: str) -> list[str]:
-    """Автодополнение: термины словаря, начинающиеся с введённого префикса."""
-    prefix = prefix.strip().lower()
+    prefix = prefix.strip().lower().replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
     if len(prefix) < 2:
         return []
     rows = fetch_all(
         """
         SELECT term FROM terms
-        WHERE term LIKE %s
+        WHERE term LIKE %s ESCAPE '\\'
         ORDER BY df DESC, term
         LIMIT %s
         """,
@@ -84,7 +79,6 @@ def _vocabulary(length: int) -> list[str]:
 
 
 def correct_query(query: str) -> tuple[str, list[dict]]:
-    """Исправляет опечатки: слова вне словаря заменяются ближайшими по расстоянию."""
     corrections: list[dict] = []
     known = {row["term"] for row in fetch_all("SELECT term FROM terms")}
     result_words: list[str] = []
@@ -114,7 +108,6 @@ def correct_query(query: str) -> tuple[str, list[dict]]:
 
 
 def expand_query(lemmas: list[str]) -> tuple[list[str], list[str]]:
-    """Расширяет поисковый образ запроса синонимами из тезауруса."""
     added: list[str] = []
     expanded = list(lemmas)
     for lemma in lemmas:
@@ -126,10 +119,6 @@ def expand_query(lemmas: list[str]) -> tuple[list[str], list[str]]:
 
 
 def build_snippet(body: str, query_lemmas: set[str]) -> tuple[str, list[str]]:
-    """Строит фрагмент документа с подсветкой найденных слов запроса.
-
-    Возвращает HTML-фрагмент и список словоформ запроса, встреченных в документе.
-    """
     tokens = tokenize(body)
     hits = [token for token in tokens if token.lemma in query_lemmas]
     matched_forms: list[str] = []
@@ -163,7 +152,6 @@ def build_snippet(body: str, query_lemmas: set[str]) -> tuple[str, list[str]]:
 
 
 def highlight_document(body: str, query_lemmas: set[str]) -> str:
-    """Подсвечивает слова запроса во всём тексте документа."""
     if not query_lemmas:
         return html.escape(body)
     pieces: list[str] = []
@@ -179,7 +167,6 @@ def highlight_document(body: str, query_lemmas: set[str]) -> str:
 
 
 def analyze_query(raw_query: str) -> dict:
-    """Полный разбор пользовательского запроса перед обращением к модели поиска."""
     corrected, corrections = correct_query(raw_query)
     lemmas = normalize(corrected)
     expanded, added = expand_query(lemmas)

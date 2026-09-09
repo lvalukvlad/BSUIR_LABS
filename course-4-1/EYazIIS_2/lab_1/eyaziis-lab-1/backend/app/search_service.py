@@ -1,14 +1,12 @@
-"""Оркестрация поиска: разбор запроса, ранжирование, формирование выдачи."""
 import time
 
 from . import probabilistic
-from .config import DEFAULT_TOP_K, SCORE_CUTOFF_RATIO
+from .config import DEFAULT_TOP_K, PRF_ENABLED_BY_DEFAULT, SCORE_CUTOFF_RATIO
 from .db import execute, fetch_all
 from .query_assistant import analyze_query, build_snippet
 
 
 def _cut_off_noise(scored: list) -> list:
-    """Отбрасывает документы, чья оценка много ниже оценки лучшего документа."""
     if not scored:
         return []
     best = max(doc.score for doc in scored)
@@ -36,12 +34,11 @@ def _load_documents(doc_ids: list[int]) -> dict[int, dict]:
 def search(
     query: str,
     top_k: int = DEFAULT_TOP_K,
-    use_prf: bool = True,
+    use_prf: bool = PRF_ENABLED_BY_DEFAULT,
     model: str = "bm25",
     date_from: str | None = None,
     date_to: str | None = None,
 ) -> dict:
-    """Выполняет поиск и возвращает готовую поисковую выдачу с сниппетами."""
     started = time.perf_counter()
     analysis = analyze_query(query)
     lemmas = analysis["expanded"]
@@ -57,7 +54,7 @@ def search(
     query_lemma_set = set(lemmas)
 
     results = []
-    for position, doc in enumerate(scored, start=1):
+    for doc in scored:
         meta = documents.get(doc.doc_id)
         if meta is None or doc.score <= 0:
             continue
@@ -78,7 +75,7 @@ def search(
                 "doc_len": meta["doc_len"],
                 "matched_terms": doc.matched,
                 "matched_words": matched_forms,
-                "position": position,
+                "position": len(results) + 1,
             }
         )
         if len(results) >= top_k:
@@ -108,8 +105,12 @@ def search(
     }
 
 
-def retrieve_ids(query: str, top_k: int, model: str = "bm25", use_prf: bool = True) -> list[int]:
-    """Возвращает только идентификаторы выдачи -- используется модулем оценки."""
+def retrieve_ids(
+    query: str,
+    top_k: int,
+    model: str = "bm25",
+    use_prf: bool = PRF_ENABLED_BY_DEFAULT,
+) -> list[int]:
     analysis = analyze_query(query)
     lemmas = analysis["expanded"]
     if model == "tfidf":

@@ -1,4 +1,3 @@
-"""Индексатор: построение и поддержка инвертированного индекса коллекции."""
 import logging
 from collections import Counter
 
@@ -20,7 +19,6 @@ def make_summary(body: str) -> str:
 
 
 def index_document(title: str, body: str, source_file: str | None = None) -> int:
-    """Добавляет документ в коллекцию и обновляет инвертированный индекс."""
     lemmas = normalize(body + " " + title)
     frequencies = Counter(lemmas)
 
@@ -76,7 +74,6 @@ def delete_document(doc_id: int) -> bool:
 
 
 def refresh_document_frequencies() -> None:
-    """Пересчитывает документные частоты терминов и удаляет осиротевшие термины."""
     with get_cursor() as cur:
         cur.execute(
             """
@@ -141,7 +138,6 @@ def get_document(doc_id: int) -> dict | None:
 
 
 def top_terms(doc_id: int, limit: int = 10) -> list[dict]:
-    """Ключевые термины документа по убыванию веса Робертсона -- Спарк Джонс."""
     with get_cursor() as cur:
         cur.execute(
             """

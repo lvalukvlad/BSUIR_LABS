@@ -1,4 +1,3 @@
-"""REST API информационно-поисковой системы."""
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path

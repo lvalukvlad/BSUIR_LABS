@@ -1,4 +1,3 @@
-"""Первичная инициализация: загрузка тестовой коллекции и эталонной разметки."""
 import json
 import logging
 
@@ -10,14 +9,16 @@ log = logging.getLogger(__name__)
 
 
 def _split_title(raw: str) -> tuple[str, str]:
-    lines = [line for line in raw.splitlines()]
-    title = next((line.strip() for line in lines if line.strip()), "Без названия")
-    body = "\n".join(lines[lines.index(title) + 1:]).strip() if title in lines else raw
+    lines = raw.splitlines()
+    title_idx = next((i for i, line in enumerate(lines) if line.strip()), None)
+    if title_idx is None:
+        return "Без названия", raw
+    title = lines[title_idx].strip()
+    body = "\n".join(lines[title_idx + 1:]).strip()
     return title, body or raw
 
 
 def load_corpus(force: bool = False) -> int:
-    """Индексирует документы каталога corpus. Повторная загрузка не дублирует записи."""
     with get_cursor() as cur:
         cur.execute("SELECT COUNT(*)::int AS cnt FROM documents")
         existing = cur.fetchone()["cnt"]
@@ -38,7 +39,6 @@ def load_corpus(force: bool = False) -> int:
 
 
 def load_qrels() -> int:
-    """Загружает эталонные запросы и разметку релевантности из qrels.json."""
     path = CORPUS_DIR / "qrels.json"
     if not path.exists():
         return 0

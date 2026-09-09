@@ -1,4 +1,3 @@
-"""Оценка качества информационного поиска: метрики и графическое представление."""
 import base64
 import io
 import json
@@ -9,11 +8,11 @@ from pathlib import Path
 import matplotlib
 
 matplotlib.use("Agg")
-import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.pyplot as plt
 
-from .config import DEFAULT_TOP_K, EXPORT_DIR  # noqa: E402
-from .db import execute, fetch_all  # noqa: E402
-from .search_service import retrieve_ids  # noqa: E402
+from .config import DEFAULT_TOP_K, EXPORT_DIR
+from .db import execute, fetch_all
+from .search_service import retrieve_ids
 
 log = logging.getLogger(__name__)
 
@@ -63,7 +62,6 @@ def _precision_at(retrieved: list[int], relevant: set[int], k: int) -> float:
 
 
 def _interpolated_precision(retrieved: list[int], relevant: set[int]) -> list[float]:
-    """11-точечная интерполированная кривая полноты-точности для одного запроса."""
     if not relevant:
         return [0.0] * len(RECALL_LEVELS)
 
@@ -82,7 +80,6 @@ def _interpolated_precision(retrieved: list[int], relevant: set[int]) -> list[fl
 
 
 def _load_gold_standard() -> list[dict]:
-    """Эталонные запросы вместе с идентификаторами релевантных документов."""
     rows = fetch_all(
         """
         SELECT q.id, q.code, q.query, q.comment,
@@ -98,7 +95,6 @@ def _load_gold_standard() -> list[dict]:
 
 
 def evaluate(model_key: str = PRIMARY_MODEL, top_k: int = DEFAULT_TOP_K) -> dict:
-    """Прогоняет эталонные запросы через систему и считает метрики качества."""
     settings = MODELS[model_key]
     gold = _load_gold_standard()
 
@@ -175,7 +171,6 @@ def evaluate(model_key: str = PRIMARY_MODEL, top_k: int = DEFAULT_TOP_K) -> dict
 
 
 def compare_models(top_k: int = DEFAULT_TOP_K) -> dict:
-    """Сравнивает вероятностную модель с базовой векторной."""
     return {key: evaluate(key, top_k=top_k) for key in MODELS}
 
 
@@ -214,8 +209,6 @@ def chart_metrics_by_query(evaluation: dict, target: Path | None = None) -> str:
 
 
 def chart_pr_curve(evaluations: dict[str, dict], target: Path | None = None) -> str:
-    # Кривые моделей на данной коллекции практически совпадают, поэтому линии
-    # рисуются разными стилями и толщиной, иначе видна только последняя из них.
     styles = [
         {"linestyle": "-", "marker": "o", "linewidth": 3.5, "markersize": 9, "alpha": 0.9},
         {"linestyle": "--", "marker": "s", "linewidth": 2.2, "markersize": 7, "alpha": 0.9},
@@ -267,7 +260,6 @@ def chart_model_comparison(evaluations: dict[str, dict], target: Path | None = N
 
 
 def build_charts(evaluations: dict[str, dict], export_dir: Path | None = None) -> dict[str, str]:
-    """Строит все графики; при указании каталога дополнительно сохраняет их в файлы."""
     main = evaluations[PRIMARY_MODEL]
     return {
         "metrics_by_query": chart_metrics_by_query(

@@ -7,7 +7,11 @@ async function request(path, options = {}) {
   })
   const payload = await response.json().catch(() => ({}))
   if (!response.ok) {
-    throw new Error(payload.detail || 'Ошибка обращения к серверу')
+    const detail = payload.detail
+    const message = Array.isArray(detail)
+      ? detail.map((item) => item.msg || JSON.stringify(item)).join('; ')
+      : detail || 'Ошибка обращения к серверу'
+    throw new Error(message)
   }
   return payload
 }

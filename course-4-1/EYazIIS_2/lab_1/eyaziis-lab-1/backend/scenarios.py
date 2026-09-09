@@ -1,9 +1,3 @@
-"""Проверочные сценарии работы системы.
-
-Запуск: docker compose exec backend python scenarios.py
-Скрипт последовательно проверяет предобработку текста, поиск, интеллектуальные
-функции интерфейса и обработку ошибочных ситуаций, печатая результат каждого шага.
-"""
 from app.db import init_pool
 from app.document_loader import UnsupportedFormatError, extract_text
 from app.indexer import collection_stats, delete_document, index_document

@@ -1,4 +1,3 @@
-"""Простой раннер SQL-миграций: применяет ещё не выполненные файлы по порядку."""
 import logging
 
 from .config import MIGRATIONS_DIR

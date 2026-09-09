@@ -1,9 +1,3 @@
-"""Вероятностная модель поиска: веса Робертсона -- Спарк Джонс и Okapi BM25.
-
-Ранжирование опирается на принцип вероятностного ранжирования: документы
-упорядочиваются по убыванию оценки статуса релевантности RSV, которая является
-монотонным преобразованием вероятности релевантности документа запросу.
-"""
 import math
 from collections import Counter
 from dataclasses import dataclass, field
@@ -16,7 +10,6 @@ MIN_WEIGHT = 1e-6
 
 @dataclass
 class QueryTerm:
-    """Термин запроса вместе со статистикой коллекции и текущим весом."""
 
     term_id: int
     term: str
@@ -33,7 +26,6 @@ class ScoredDocument:
 
 
 def collection_size() -> tuple[float, float]:
-    """Возвращает число документов коллекции и среднюю длину документа."""
     row = fetch_one(
         """
         SELECT COUNT(*)::float AS n,
@@ -45,22 +37,10 @@ def collection_size() -> tuple[float, float]:
 
 
 def rsj_weight(n_docs: float, df: int) -> float:
-    """Вес Робертсона -- Спарк Джонс без обратной связи.
-
-    Классическая формула log((N - n + 0.5) / (n + 0.5)) даёт отрицательные веса
-    для терминов, встречающихся более чем в половине документов. Сглаживание
-    вида log(1 + x) сохраняет монотонность и убирает отрицательные вклады.
-    """
     return math.log(1.0 + (n_docs - df + 0.5) / (df + 0.5))
 
 
 def rsj_weight_with_feedback(n_docs: float, df: int, rel_total: int, rel_with_term: int) -> float:
-    """Вес Робертсона -- Спарк Джонс при известном множестве релевантных документов.
-
-    w = log( (r + 0.5) / (R - r + 0.5) / ((n - r + 0.5) / (N - n - R + r + 0.5)) ),
-    где R -- размер релевантного множества, r -- число релевантных документов
-    с данным термином.
-    """
     r = float(rel_with_term)
     big_r = float(rel_total)
     numerator = (r + 0.5) / (big_r - r + 0.5)
@@ -69,7 +49,6 @@ def rsj_weight_with_feedback(n_docs: float, df: int, rel_total: int, rel_with_te
 
 
 def resolve_query_terms(lemmas: list[str]) -> list[QueryTerm]:
-    """Находит термины запроса в словаре коллекции и вычисляет их базовые веса."""
     if not lemmas:
         return []
     counts = Counter(lemmas)
@@ -90,7 +69,6 @@ def resolve_query_terms(lemmas: list[str]) -> list[QueryTerm]:
 
 
 def _score(terms: list[QueryTerm], limit: int) -> list[ScoredDocument]:
-    """Считает RSV по BM25 на стороне СУБД для заданных весов терминов."""
     if not terms:
         return []
     rows = fetch_all(
@@ -133,7 +111,6 @@ def _score(terms: list[QueryTerm], limit: int) -> list[ScoredDocument]:
 def _apply_pseudo_relevance_feedback(
     terms: list[QueryTerm], first_pass: list[ScoredDocument]
 ) -> list[QueryTerm]:
-    """Пересчитывает веса терминов по топ-R документам первого прохода."""
     top_docs = [doc.doc_id for doc in first_pass[:PRF_TOP_R]]
     if len(top_docs) < 2:
         return terms
@@ -168,11 +145,6 @@ def _apply_pseudo_relevance_feedback(
 
 
 def search(lemmas: list[str], limit: int = 10, use_prf: bool = True) -> tuple[list[ScoredDocument], list[QueryTerm]]:
-    """Двухпроходный поиск по вероятностной модели.
-
-    Первый проход ранжирует по весам без обратной связи, второй -- по весам,
-    уточнённым на псевдорелевантном множестве (топ-R документов первого прохода).
-    """
     terms = resolve_query_terms(lemmas)
     if not terms:
         return [], []
@@ -186,7 +158,6 @@ def search(lemmas: list[str], limit: int = 10, use_prf: bool = True) -> tuple[li
 
 
 def search_tfidf(lemmas: list[str], limit: int = 10) -> list[ScoredDocument]:
-    """Базовая векторная модель TF-IDF с косинусной близостью -- для сравнения."""
     if not lemmas:
         return []
     rows = fetch_all(
