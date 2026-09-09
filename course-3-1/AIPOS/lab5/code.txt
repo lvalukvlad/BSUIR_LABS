@@ -1,0 +1,164 @@
+from socket import *           # Библиотека для работы с сетевыми сокетами
+import sys                    # Для работы с аргументами командной строки
+import os                     # Для работы с файловой системой
+import time                   # Для работы со временем (проверка TTL) 
+from urllib.parse import urlparse  # Для разбора URL
+CACHE_TTL = 60                # Время жизни кэша в секундах (1 минута)
+
+### Функция проверки актуальности кэша
+def is_cache_valid(filename):
+    if not os.path.exists(filename):  # Если файла нет вообще
+        return False                   # → кэш не валиден
+    
+    # Проверяем, не устарел ли файл
+    # time.time() - текущее время в секундах
+    # os.path.getmtime(filename) - время последнего изменения файла
+    # Если разница меньше CACHE_TTL (60 сек) → файл актуален
+    return (time.time() - os.path.getmtime(filename)) < CACHE_TTL
+    
+### Проверка аргументов командной строки
+if len(sys.argv) <= 1:  # Если при запуске не указан IP-адрес
+    print('Используйте : "python ProxyServer.py server_ip"\n[server_ip – IP-адрес прокси-сервера]')
+    sys.exit(2)  # Завершаем программу с кодом ошибки 2
+    
+### Создание и настройка серверного сокета
+tcpSerSock = socket(AF_INET, SOCK_STREAM)  # Создаём TCP-сокет
+# AF_INET = IPv4, SOCK_STREAM = TCP (надёжная потоковая передача)
+
+tcpSerSock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+# Разрешаем повторное использование адреса порта сразу после завершения
+
+tcpSerSock.bind((sys.argv[1], 8888))  
+# Привязываем сокет к IP (из аргумента) и порту 8888
+
+tcpSerSock.listen(5)  
+# Начинаем "слушать" порт, 5 - размер очереди ожидающих соединений
+
+### Главный цикл сервера
+while True:  # Бесконечный цикл - сервер работает постоянно
+    print('Готов к обслуживанию...')
+    
+    # accept() ждёт подключения клиента
+    # При подключении возвращает:
+    # tcpCliSock - новый сокет для общения с ЭТИМ клиентом
+    # addr - адрес клиента (IP, порт)
+    tcpCliSock, addr = tcpSerSock.accept()
+    print('Установлено соединение с:', addr)
+    
+### Получение и разбор запроса от клиента
+try:
+    # Получаем данные от клиента (максимум 4096 байт)
+    # .decode() преобразует байты в строку
+    message = tcpCliSock.recv(4096).decode()
+    print(message)  # Выводим сырой HTTP-запрос
+
+    if not message:  # Если клиент отправил пустой запрос
+        raise ValueError("Пустой запрос")
+
+    # Пример HTTP-запроса: GET http://example.com/page HTTP/1.0
+    # split() разбивает строку на части по пробелам
+    # [0] = "GET", [1] = "http://example.com/page", [2] = "HTTP/1.0"
+    url = message.split()[1]  # Берём URL из запроса
+    
+    # Разбираем URL на компоненты
+    parsed = urlparse(url)
+    # parsed.scheme = "http", parsed.netloc = "example.com", parsed.path = "/page"
+
+    if not parsed.netloc:  # Если нет домена (например, в "/page.html")
+        raise ValueError("Неверный URL")
+        
+### Работа с кэшем
+    # Извлекаем хост и путь из URL
+    hostn = parsed.netloc  # Доменное имя, например "example.com"
+    path = parsed.path if parsed.path else "/"  # Путь или "/" по умолчанию
+    
+    # Создаём имя файла для кэша: example.com_ → example.com/index.html → example.com_index.html
+    filename = hostn + path.replace("/", "_")
+    filetouse = filename  # Полный путь к файлу кэша
+    
+###     if is_cache_valid(filetouse):  # Если кэш существует и не устарел
+        with open(filetouse, "rb") as f:  # Открываем файл для чтения в бинарном режиме
+            outputdata = f.read()  # Читаем всё содержимое
+        
+        # Отправляем клиенту HTTP-ответ с данными из кэша
+        tcpCliSock.send(b"HTTP/1.0 200 OK\r\n")  # Статус-строка
+        tcpCliSock.send(b"Content-Type: text/html\r\n\r\n")  # Заголовки + пустая строка
+        tcpCliSock.send(outputdata)  # Тело ответа (HTML-страница)
+        
+        print("Читаем из кэша:", filetouse)
+        
+### Если кэша нет или он устарел
+    else:  # Кэш отсутствует или устарел
+        if os.path.exists(filetouse):  # Если файл существует, но устарел
+            os.remove(filetouse)  # Удаляем старый кэш
+            print("Кэш устарел — удалён")
+        
+        # Создаём новое соединение к целевому серверу
+        c = socket(AF_INET, SOCK_STREAM)  # Сокет для связи с сервером
+        print("Подключаемся к:", hostn)
+        
+        try:
+            # Подключаемся к целевому серверу (порт 80 = HTTP)
+            c.connect((hostn, 80))
+            
+            # Формируем HTTP-запрос к целевому серверу
+            request_line = f"GET {path} HTTP/1.0\r\nHost: {hostn}\r\n\r\n"
+            c.send(request_line.encode())  # Отправляем запрос
+            
+            # Получаем ответ от сервера по частям
+            response = b""  # Пустой бинарный объект для накопления данных
+            while True:
+                data = c.recv(4096)  # Читаем максимум 4096 байт за раз
+                if not data:  # Если данных больше нет
+                    break
+                response += data  # Добавляем к общему ответу
+            
+            # Сохраняем ответ в кэш
+            with open(filetouse, "wb") as tmpFile:  # "wb" = запись в бинарном режиме
+                tmpFile.write(response)  # Записываем весь ответ в файл
+            
+            # Пересылаем ответ клиенту
+            tcpCliSock.send(response)
+            print("Записано в кэш:", filetouse)
+            
+### Обработка ошибок
+        except Exception as e:  # Если ошибка при подключении к серверу
+            print("Ошибка соединения:", e)
+            # Отправляем клиенту ошибку "Bad Gateway" (сервер-посредник не смог связаться)
+            tcpCliSock.send(b"HTTP/1.0 502 Bad Gateway\r\n\r\n")
+        
+        finally:
+            c.close()  # Закрываем соединение с целевым сервером в любом случае
+            
+### Общая обработка ошибок запроса
+except ValueError as e:  # Ошибки разбора запроса
+    print("Ошибка запроса:", e)
+    tcpCliSock.send(b"HTTP/1.0 400 Bad Request\r\n\r\n")  # Неверный запрос
+
+except Exception as e:  # Любые другие ошибки
+    print("Внутренняя ошибка:", e)
+    tcpCliSock.send(b"HTTP/1.0 500 Internal Server Error\r\n\r\n")  # Внутренняя ошибка сервера
+    
+### Завершение обработки клиента
+    finally:
+        tcpCliSock.close()  # Закрываем соединение с клиентом
+
+### Завершение работы сервера
+tcpSerSock.close()  # Эта строка никогда не выполнится из-за бесконечного цикла
+
+
+Клиент → Прокси → Интернет → Целевой сервер
+   ↓         ↓         ↓           ↓
+1. curl  →  Порт 8888 → example.com:80
+   "GET http://example.com"
+
+2. Прокси проверяет кэш:
+   - Есть файл example.com_? ✓
+   - Он создан менее 60 сек назад? ✓
+   → Отдаём из кэша
+   → ❌ Загружаем заново
+
+3. Сохраняем ответ в example.com_
+4. Пересылаем клиенту
+5. При повторном запросе (в течение 60 сек) → из кэша
+6. Через 61 сек → кэш устарел → удаляем → загружаем заново
