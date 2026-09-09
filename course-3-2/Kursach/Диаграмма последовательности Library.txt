@@ -1,0 +1,26 @@
+@startuml
+title Диаграмма последовательности: Library
+actor User
+participant "Library" as Lib
+participant "API Service" as API
+participant "State Manager" as State
+User -> Lib: Открыть раздел библиотеки
+Lib -> State: Установить isLoading = true
+Lib -> API: Запросить компоненты
+API --> Lib: Вернуть список компонентов
+Lib -> State: Установить isLoading = false, сохранить компоненты
+Lib -> Lib: Отобразить <Spinner /> пока isLoading=true
+Lib -> Lib: Рендерить список компонентов
+User -> Lib: Ввести текст поиска
+Lib -> State: Обновить searchText
+State -> Lib: Триггер повторного рендера
+Lib -> Lib: Фильтровать компоненты по searchText
+User -> Lib: Изменить фильтр типов
+Lib -> State: Обновить selectedFilters
+State -> Lib: Триггер повторного рендера
+Lib -> Lib: Фильтровать компоненты по selectedFilters
+Lib -> Lib: Объединенный эффект: filtered = компоненты.filter(by searchText && by selectedFilters)
+User -> Lib: Навести на карточку
+Lib -> Lib: Обрезать description до 150 символов через truncateString()
+Lib -> Lib: Отобразить обрезанное описание + "..."
+@enduml

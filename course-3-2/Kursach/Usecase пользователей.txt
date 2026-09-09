@@ -1,0 +1,38 @@
+@startuml
+' Лево-правое расположение для лучшей читаемости
+left to right direction
+' Определение актеров (ролей пользователей)
+actor "Пользователь-исследователь" as Researcher
+actor "Администратор метасистемы" as Admin
+' Показ наследования прав: администратор наследует все возможности исследователя
+' В UML актеры не наследуют строго, но эта нотация принята для обозначения включения прав
+Researcher .> Admin : наследует все права
+' Определение прецедентов (функций системы)
+usecase "Просмотр и навигация по БЗ" as UC1
+usecase "Визуализация результатов (SCn/SCg)" as UC2
+usecase "Естественно-языковые запросы к AskAI" as UC3
+usecase "Регистрация и смена пароля" as UC4
+usecase "Поиск и фильтрация в Библиотеке OSTIS" as UC5
+usecase "Управление списком пользователей" as UC6
+usecase "Настройка прав доступа" as UC7
+usecase "Администрирование компонентов Библиотеки" as UC8
+usecase "Просмотр журнала действий и аудита" as UC9
+usecase "Настройка глобальных параметров" as UC10
+' Связь актеров с прецедентами
+Researcher --> UC1
+Researcher --> UC2
+Researcher --> UC3
+Researcher --> UC4
+Researcher --> UC5
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC7
+Admin --> UC8
+Admin --> UC9
+Admin --> UC10
+
+@enduml

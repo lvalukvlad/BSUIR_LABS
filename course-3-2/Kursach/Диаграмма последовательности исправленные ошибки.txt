@@ -1,0 +1,39 @@
+@startuml
+title Диаграмма последовательности: Исправленные ошибки интерфейса
+
+actor User
+participant "SwitchMode" as SM
+participant "AskAnswer" as AA
+participant "CardInfo" as CI
+participant "InstallService" as IS
+participant "ToastSystem" as TS
+
+User -> SM: Переключить на AskAI
+SM -> SM: "Установить активную вкладку = ASK_AI (исправлено)"
+SM --> User: Отобразить одну активную вкладку
+
+User -> AA: Ввести вопрос и отправить
+AA -> AA: "useEffect с фикс. зависимостями"
+AA -> TS: Очистить дублирующий вопрос
+AA --> User: Показать вопрос один раз
+
+AA -> IS: Отправить запрос ассистенту
+IS --> AA: Вернуть ответ
+AA --> User: "Ответ отображается, спиннер по центру (исправлено стилями)"
+
+User -> CI: Открыть карточку компонента
+CI -> CI: "useEffect с пустым [] зависимостями (исправлено)"
+CI --> User: Корректная загрузка данных карточки
+
+User -> CI: Нажать "Установить"
+CI -> IS: await initiateComponentInstallAgent()
+
+alt Успех
+    IS -> TS: showSuccessToast()
+    TS --> User: Показать успех
+else Ошибка
+    IS -> TS: showErrorToast()
+    TS --> User: Показать ошибку
+end
+
+@enduml

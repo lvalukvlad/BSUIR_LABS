@@ -1,0 +1,20 @@
+@startuml
+skinparam componentStyle uml2
+title Диаграмма компонентов: Чат AskAI
+
+package "AskAI Components" {
+    component "AskElement" as AskElement
+    component "AnswerText" as AnswerText
+    component "AnswerText.module.scss" as Styles
+    component "SC Tag Link" as ScLink
+    component "App" as App
+    component "ts-sc-client" as SCClient
+}
+
+AskElement --> AnswerText : использует
+AnswerText --> Styles : стилизуется через
+AnswerText --> ScLink : отображает SC-ссылки как
+ScLink --> SCClient : проверяет адрес через
+App --> AskElement : предоставляет контекст
+App --> AnswerText : передаёт текст ответа
+@enduml

@@ -1,0 +1,32 @@
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem
+
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem/ostis-metasystem
+./scripts/run_dev.sh
+
+python3 -m scripts.main
+
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem/ostis-metasystem
+./scripts/build_kb.sh
+./scripts/install_components.sh
+
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem/react-sc-web
+npm install
+npm run start
+
+
+
+
+Если уже запущено:
+pkill -f sc-machine
+pkill -f python
+pkill -f webpack
+pkill -f node
+
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem/ostis-metasystem
+./scripts/run_dev.sh
+
+python3 -m scripts.main
+
+cd /home/ubuntuuser/git-course-ostis-better/git-course-ostis/ostis-metasystem/react-sc-web
+npm install
+npm run start

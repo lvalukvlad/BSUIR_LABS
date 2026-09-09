@@ -1,0 +1,79 @@
+@book{golenkov2023technology,
+  editor    = {Голенков, В.В.},
+  title     = {Технология комплексной поддержки жизненного цикла семантически
+               совместимых интеллектуальных компьютерных систем нового поколения},
+  year      = {2023},
+  publisher = {Бестпринт},
+  address   = {Минск},
+  pages     = {1064},
+  isbn      = {978-985-7267-25-5},
+  note      = {URL: \url{https://libeldoc.bsuir.by/bitstream/123456789/51151/1/Tehnologii_kompleksnoi_podderjki.pdf}, (дата доступа: 25.02.2026)},
+  language  = {russian}
+}
+
+@online{flowiseai,
+  title  = {Flowise — Build AI Agents, Visually : [сайт]. — URL: https://flowiseai.com, (дата доступа: 25.02.2026).},
+  url    = {},
+  note   = {},
+}
+
+@online{n8nio,
+  title  = {n8n.io — Flexible AI workflow automation for technical teams : [сайт]. — URL: https://n8n.io, (дата доступа: 25.02.2026).},
+  url    = {},
+  note   = {},
+}
+
+@online{logseq,
+  title  = {Logseq — A privacy-first, open-source knowledge base : [сайт]. — URL: https://logseq.com, (дата доступа: 25.02.2026).},
+  url    = {},
+  note   = {},
+}
+
+@book{fowler2019uml,
+  author    = {Фаулер, Мартин},
+  title     = {UML. Основы: краткое руководство по стандартному языку моделирования},
+  year      = {2019},
+  publisher = {БХВ-Петербург},
+  address   = {Санкт-Петербург},
+  pages     = {192},
+  isbn      = {978-5-9775-3945-1},
+  language  = {russian},
+  note      = {}
+}
+
+@book{olifer2020networks,
+  author    = {Олифер, В.Г.},
+  title     = {Сетевые технологии и протоколы: учебное пособие},
+  year      = {2020},
+  publisher = {Питер},
+  address   = {Санкт-Петербург},
+  pages     = {512},
+  isbn      = {978-5-4461-0876-3},
+  language  = {russian},
+  note      = {}
+}
+
+@online{habr_bpmn,
+  title  = {BPMN 2.0: нотация моделирования бизнес-процессов: практическое руководство : [сайт]. — URL: https://habr.com/ru/company/pc-administrator/blog/321248/, (дата доступа: 25.03.2026).},
+  url    = {},
+  note   = {},
+}
+
+@online{habr_rest,
+  title  = {REST API Design Rulebook: принципы проектирования веб-сервисов : [сайт]. — URL: https://habr.com/ru/post/141234/, (дата доступа: 25.03.2026).},
+  url    = {},
+  note   = {},
+}
+
+@online{redux_toolkit,
+  title  = {Redux Toolkit — The official, opinionated, batteries-included toolset for efficient Redux development : [сайт]. — URL: https://redux-toolkit.js.org, (дата доступа: 25.03.2026).},
+  url    = {},
+  note   = {},
+}
+
+@online{typescript_handbook,
+  title  = {TypeScript Handbook — TypeScript is a typed superset of JavaScript that compiles to plain JavaScript : [сайт]. — URL: https://www.typescriptlang.org/docs/, (дата доступа: 25.03.2026).},
+  url    = {},
+  note   = {},
+}
+

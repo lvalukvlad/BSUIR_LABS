@@ -1,0 +1,28 @@
+@startuml
+title Последовательность выполнения сценария «Спросить об этом»
+actor Пользователь
+boundary "SCNTreeComponent\n(слой презентации)" as SCNTree
+control "HoverButton\n(AskButtonComponent)" as HoverBtn
+control "AskAIChatComponent\n(слой презентации)" as ChatUI
+control "useAskAIHook\n(слой логики взаимодействия)" as AIService
+control "APICommunicator\n(слой коммуникации)" as API
+entity "AskAIServer\n(внутренняя подсистема)" as Server
+' Пользователь наводит курсор на элемент в SCN-дереве
+Пользователь -> SCNTree : навести курсор на элемент (hover)
+SCNTree -> HoverBtn : показать кнопку «Спросить об этом»
+' Пользователь кликает по кнопке
+Пользователь -> HoverBtn : клик по кнопке
+HoverBtn -> AIService : вызвать askAboutElement(scAddr, query)
+' Логика взаимодействия: хук с ИСПРАВЛЕННЫМИ зависимостями (баг 2 устранен)
+AIService -> AIService : проверить зависимости useEffect\n([scAddr, query] вместо [state])\n→ предотвращает бесконечный цикл и дублирование вопросов
+AIService -> API : отправить запрос /api/ask (метод POST)
+' Коммуникационный слой изолирует детали обмена
+API -> Server : ui_action_reply_to_message({query, scAddr})
+Server --> API : вернуть ответ {answer: строка} (простая строка, не массив)
+API --> AIService : передать ответ в хук
+' Слой взаимодействия обновляет состояние через редюсеры (контролируемо)
+AIService -> ChatUI : обновить состояние чата через редюсер\n(добавить запись: {role: 'user', text: query}\nи {role: 'assistant', text: answer})
+' Слой презентации: отображение с исправлениями
+ChatUI -> ChatUI : сгенерировать HTML-ответ\n- Раскомментирован AnswerText компонент\n- Стили из AnswerText.module.scss (баг 3: центрирован спиннер через корректный CSS)\n- Парсинг ответа на наличие SC-адресов\n- Рендеринг ссылок как <ScTagLink> (пункт 4 Блока 4)
+ChatUI --> Пользователь : отформатированный ответ\nс кликабельными ссылками и центрированным индикатором загрузки\nво время обработки (спиннер по центру)
+@enduml
