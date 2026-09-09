@@ -1,0 +1,4 @@
+add_executable(BigIntegerTests BigIntegerTests.cpp)
+target_link_libraries(BigIntegerTests BigInteger UnitTest++)
+
+add_test(NAME BigIntegerTests COMMAND BigIntegerTests)

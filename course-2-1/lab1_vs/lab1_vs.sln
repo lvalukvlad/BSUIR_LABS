@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab1_vs", "lab1_vs\lab1_vs.vcxproj", "{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{EBEE3838-1E41-4D52-871A-58AFE19A4772}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\googletest\googlemock\include\gmock\gmock.h = ..\..\..\googletest\googlemock\include\gmock\gmock.h
+		..\..\..\googletest\googletest\include\gtest\gtest.h = ..\..\..\googletest\googletest\include\gtest\gtest.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GoogleTest", "GoogleTest\GoogleTest.vcxproj", "{C3154B87-F1C9-4472-BB3D-431E8932B1CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		MinSizeRel|x64 = MinSizeRel|x64
+		MinSizeRel|x86 = MinSizeRel|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		RelWithDebInfo|x64 = RelWithDebInfo|x64
+		RelWithDebInfo|x86 = RelWithDebInfo|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Debug|x64.ActiveCfg = Debug|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Debug|x64.Build.0 = Debug|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Debug|x86.ActiveCfg = Debug|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Debug|x86.Build.0 = Debug|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.MinSizeRel|x64.ActiveCfg = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.MinSizeRel|x64.Build.0 = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.MinSizeRel|x86.ActiveCfg = Release|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.MinSizeRel|x86.Build.0 = Release|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Release|x64.ActiveCfg = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Release|x64.Build.0 = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Release|x86.ActiveCfg = Release|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.Release|x86.Build.0 = Release|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{C34F8C4F-CFB3-4A07-9DE0-6309BBA7D0E6}.RelWithDebInfo|x86.Build.0 = Release|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Debug|x64.ActiveCfg = Debug|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Debug|x64.Build.0 = Debug|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Debug|x86.ActiveCfg = Debug|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Debug|x86.Build.0 = Debug|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.MinSizeRel|x64.ActiveCfg = Debug|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.MinSizeRel|x64.Build.0 = Debug|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.MinSizeRel|x86.ActiveCfg = Debug|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.MinSizeRel|x86.Build.0 = Debug|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Release|x64.ActiveCfg = Release|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Release|x64.Build.0 = Release|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Release|x86.ActiveCfg = Release|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.Release|x86.Build.0 = Release|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.RelWithDebInfo|x64.ActiveCfg = Release|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.RelWithDebInfo|x64.Build.0 = Release|x64
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.RelWithDebInfo|x86.ActiveCfg = Release|Win32
+		{C3154B87-F1C9-4472-BB3D-431E8932B1CB}.RelWithDebInfo|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7DE2E3F-0753-4B03-99ED-9BA13F8FCC39}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,79 @@
+#include <iostream>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <cstdlib>
+
+void print_process_info(const std::string& msg) {
+    pid_t pid = getpid();        // Получаем текущий ID процесса
+    pid_t ppid = getppid();      // Получаем ID родительского процесса
+    std::cout << msg << " PID: " << pid << ", PPID: " << ppid << std::endl;
+}
+
+int main() {
+    print_process_info("Запуск программы. Процесс");
+
+    pid_t pid1 = fork();  // Порождаем процесс 1
+    if (pid1 == -1) {
+        std::cerr << "Ошибка создания процесса 1" << std::endl;
+        return 1;
+    } else if (pid1 == 0) {
+        print_process_info("Процесс 0 породил процесс");
+
+        pid_t pid2 = fork();  // Порождаем процесс 2
+        if (pid2 == -1) {
+            std::cerr << "Ошибка создания процесса 2" << std::endl;
+            return 1;
+        } else if (pid2 == 0) {
+            print_process_info("Процесс 1 породил процесс");
+
+            pid_t pid5 = fork();  // Порождаем процесс 5
+            if (pid5 == -1) {
+                std::cerr << "Ошибка создания процесса 5" << std::endl;
+                return 1;
+            } else if (pid5 == 0) {
+                print_process_info("Процесс 2 породил процесс");
+
+                // Процесс 5 завершает работу
+                print_process_info("Процесс 5 завершает работу.");
+                return 0;
+            }
+        } else {
+            pid_t pid3 = fork();  // Порождаем процесс 3
+            if (pid3 == -1) {
+                std::cerr << "Ошибка создания процесса 3" << std::endl;
+                return 1;
+            } else if (pid3 == 0) {
+                print_process_info("Процесс 1 породил процесс");
+
+                pid_t pid6 = fork();  // Порождаем процесс 6
+                if (pid6 == -1) {
+                    std::cerr << "Ошибка создания процесса 6" << std::endl;
+                    return 1;
+                } else if (pid6 == 0) {
+                    print_process_info("Процесс 3 породил процесс");
+
+                    // Процесс 6 завершает работу
+                    print_process_info("Процесс 6 завершает работу.");
+                    return 0;
+                } else {
+                    // Процесс 3 завершает работу
+                    print_process_info("Процесс 3 завершает работу.");
+                    return 0;
+                }
+            }
+        }
+
+        // Процесс 1 вызывает exec
+        print_process_info("Процесс 1 выполняет exec");
+
+        char* args[] = {(char*)"/bin/date", (char*)"+%Y-%m-%d %H:%M:%S", NULL};
+        execv("/bin/date", args);  // Выполняем команду date
+        std::cerr << "Ошибка вызова exec" << std::endl;
+        return 1;
+    }
+
+    // Ожидание завершения дочерних процессов
+    while (wait(NULL) > 0);
+    print_process_info("Процесс 0 завершает работу.");
+    return 0;
+}

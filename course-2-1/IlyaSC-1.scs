@@ -1,0 +1,55 @@
+concept_sea
+	-> Baltic_sea; North_sea;;
+	(* Baltic_sea => nrel_flows_through_the_strait: North_sea;; *);
+
+	=> nrel_main_identifer: [sea] 
+		(* <-concept_english_language;; *);
+				[море] 
+		(*<- concept_russian_language;; *);;
+
+	<= nrel_subdividing: ...
+		(*
+		<- sc_node_tuple;;
+		-> concept_coast;;
+		-> concept_border_with_a_sea_or_ocean;;
+		-> concept_high_seas;;
+		*)
+	<= nrel_inclusion: concept_natural_object;
+
+	<- rrel_sc_key_element: ...
+		(*
+		<- statement;; 
+		<= nrel_translation: ...
+			(* 
+			-> rrel_example: [Море играет важную роль в формировании ландшафта и жизненном цикле организмов] 
+				(* <- concept_russian_language;; *) 
+			*);;
+		=> nrel_main_identifier: [Утв. море] 
+			(* <- concept_russian_language;; *);; 
+		<= nrel_constant_used: ...
+			(*				
+			<- sc_node_tuple;;
+			-> concept_landscape;;
+			-> concept_life_cycle_of_an_organism;
+			*);;
+		*);
+
+	<- rrel_sc_key_element: ...
+		(* 
+		<- definition;; 
+	 	=> nrel_main_indentifier: [Опр.моря] 
+			(*-> concept_russian_language;; *);; 
+	 		<= nrel_constant_used: ... 
+				(* 
+					<- sc_node_tuple;;
+					-> conscept_land;;
+					-> conscept_underwater_relief;;
+					-> conscept_World_ocean;;
+				*);; 
+		
+			=> nrel_translation: ...
+				(*	
+				-> rrel_example: [Море — часть Мирового океана, обособленная сушей или возвышениями подводного рельефа.] (* <- concept_russian_language;; *);;
+				*);; 
+		*);;
+

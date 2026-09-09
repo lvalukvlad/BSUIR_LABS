@@ -1,0 +1,37 @@
+subject_domain_of_islands <- sc_node_struct;; 
+subject_domain_of_islands => nrel_main_idtf: [Предметная область островов] (*<- lang_ru;;*);;
+subject_domain_of_islands => nrel_main_idtf: [Subject domain of islands] (*<- lang_en;;*);;
+subject_domain_of_islands => nrel_private_subject_domain: subject_domain_countries;;
+subject_domain_of_islands => nrel_private_subject_domain: subject_domain_islands;;
+subject_domain_of_islands => nrel_maximum_studied_object_class: concept_island;;
+subject_domain_of_islands => nrel_not_maximum_studied_object_class: concept_country;;
+subject_domain_of_islands => nrel_explored_relation: nrel_belonging;;
+
+section_subject_domain_of_islands <- non_atomic_section;; 
+section_subject_domain_of_islands => nrel_main_idtf: [Раздел. Предметная область островов] (*<- lang_ru;;*);;
+section_subject_domain_of_islands => nrel_main_idtf: [Section. Subject domain of islands] (*<- lang_en;;*);;
+section_subject_domain_of_islands => nrel_section_decomposition: section_subject_domain_of_countries;;
+section_subject_domain_of_islands => nrel_section_decomposition: section_subject_domain_of_islands;;
+section_subject_domain_of_islands => rrel_key_sc_element: nrel_belonging;;
+
+nrel_belonging <- sc_node_norole_relation;; 
+nrel_belonging => nrel_main_idtf: [принадлежность] (*<- lang_ru;;*);;
+nrel_belonging => nrel_main_idtf: [belonging] (*<- lang_en;;*);;
+
+subject_domain_countries <- sc_node_struct;; 
+subject_domain_countries => nrel_main_idtf: [Предметная область стран] (*<- lang_ru;;*);;
+subject_domain_countries => nrel_main_idtf: [Subject domain of countries] (*<- lang_en;;*);;
+
+subject_domain_islands <- sc_node_struct;; 
+subject_domain_islands => nrel_main_idtf: [Предметная область островов] (*<- lang_ru;;*);;
+subject_domain_islands => nrel_main_idtf: [Subject domain of islands] (*<- lang_en;;*);;
+
+concept_island <- sc_node_class;; 
+concept_island => nrel_main_idtf: [остров] (*<- lang_ru;;*);;
+concept_island => nrel_main_idtf: [island] (*<- lang_en;;*);;
+concept_island => nrel_belonging: concept_country;;
+
+concept_country <- sc_node_class;; 
+concept_country => nrel_main_idtf: [страна] (*<- lang_ru;;*);;
+concept_country => nrel_main_idtf: [country] (*<- lang_en;;*);;
+concept_country => nrel_has_ownership: concept_island;;

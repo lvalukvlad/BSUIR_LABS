@@ -1,0 +1,55 @@
+#include <iostream>
+#include <chrono>
+#include <iomanip>
+#include <ctime>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <locale>
+
+void print_time() {
+    auto now = std::chrono::system_clock::now();
+    std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+    std::tm local_tm;
+    localtime_r(&now_c, &local_tm); // Безопасная версия
+
+    std::wcout << L"Текущее время: " << std::put_time(&local_tm, L"%H:%M:%S") << std::endl;
+}
+
+void create_process(int process_number) {
+    if (process_number < 2) {
+        std::wcout << L"Создание дочернего процесса..." << std::endl;
+
+        pid_t pid = fork(); // Создаем новый процесс
+
+        if (pid == 0) {
+            // Дочерний процесс
+            execlp("echo", "echo", "Hello, World!", (char*)nullptr);
+            std::cerr << "Ошибка выполнения процесса" << std::endl;
+            exit(1);
+        } else if (pid > 0) {
+            // Родительский процесс
+            wait(nullptr); // Ждем завершения дочернего процесса
+            std::wcout << L"Создан процесс с ID: " << pid << std::endl;
+            print_time();
+        } else {
+            std::cerr << "Ошибка создания процесса" << std::endl;
+        }
+
+        create_process(process_number + 1); // Создаем следующий дочерний процесс
+    }
+}
+
+int main() {
+    // Устанавливаем локаль для корректного отображения кириллицы
+    setlocale(LC_ALL, "ru_RU.UTF-8");
+
+    std::wcout << L"Процесс с ID: " << getpid() << std::endl;
+    print_time();
+
+    // Создаем первые два дочерних процесса
+    create_process(0);
+
+    std::wcout << L"Процесс завершает работу" << std::endl;
+    return 0;
+}

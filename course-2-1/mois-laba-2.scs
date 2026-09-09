@@ -1,0 +1,86 @@
+section_subject_domain_of_sea = [*
+        subject_domain_of_sea => nrel_main_idtf:[Предметная область моря] (*<- lang_ru;;*);[Subject domain of the sea](*<- lang_en;;*);
+                               <- sc_node_struct;
+                               -> rrel_explored_relation: nrel_be_the_owner_of_this_vessel; 
+                                                          nrel_navigational_training;
+                                                          nrel_ocean_stewardship;
+                                                          nrel_marine_healthcare; 
+                                                          nrel_aesthetic_effect;
+                               => nrel_private_subject_domain: subject_domain_sea_surface; 
+                                                               subject_domain_sea_floors; 
+                                                               subject_domain_sea_currents; 
+                                                               subject_domain_sea_resources; 
+                                                               subject_domain_oceanography;
+                               <- subject_domain;
+                               -> rrel_maximum_studied_object_class: concept_sea_surface; 
+                               -> rrel_not_maximum_studied_object_class: concept_sea_surface;concept_sea_floors; concept_sea_currents; concept_sea_resources;;                          
+*];;
+
+section_subject_domain_of_sea  => nrel_main_idtf:[Раздел. Предметная область моря] (*<- lang_ru;;*);[Section. Subject domain of the sea](*<- lang_en;;*);
+                                <= nrel_section_decomposition: ...
+                                                            (* <-sc_node_tuple;; 
+                                                               -> section_subject_domain_of_sea_surface;;
+                                                               -> section_subject_domain_of_sea_floors;;
+                                                               -> section_subject_domain_of_sea_currents;;
+                                                               -> section_subject_domain_of_sea_resources;;
+                                                             *);
+                                -> rrel_key_sc_element: nrel_be_the_owner_of_this_vessel; 
+                                                        nrel_navigational_training;
+                                                        nrel_ocean_stewardship;
+                                                        nrel_marine_healthcare; 
+                                                        nrel_aesthetic_effect;
+                                <- non_atomic_section;;
+
+nrel_be_the_owner_of_this_vessel <- sc_node_norole_relation; 
+                               => nrel_main_idtf:[быть владельцем этого судна*] (*<- lang_ru;;*);[be the owner of this vessel](*<- lang_en;;*);;
+
+nrel_navigational_training <- sc_node_norole_relation; 
+              => nrel_main_idtf:[обучение навигации*] (*<- lang_ru;;*);[navigational training*](*<- lang_en;;*);;
+
+nrel_ocean_stewardship <- sc_node_norole_relation; 
+          => nrel_main_idtf:[охрана океана*] (*<- lang_ru;;*);[ocean stewardship*](*<- lang_en;;*);;
+
+nrel_marine_healthcare <- sc_node_norole_relation; 
+                 => nrel_main_idtf:[уход за морской средой*] (*<- lang_ru;;*);[marine healthcare*](*<- lang_en;;*);;
+
+nrel_aesthetic_effect <- sc_node_norole_relation; 
+                     => nrel_main_idtf:[эстетический эффект*] (*<- lang_ru;;*);[aesthetic effect*](*<- lang_en;;*);;
+
+section_subject_domain_of_sea_surface = [**];
+                               => nrel_main_idtf:[Раздел. Предметная область поверхности моря] (*<- lang_ru;;*);[Section. Subject domain of the sea surface](*<- lang_en;;*);;
+
+section_subject_domain_of_sea_floors = [**];
+                               => nrel_main_idtf:[Раздел. Предметная область морского дна] (*<- lang_ru;;*);[Section. Subject domain of the sea floors](*<- lang_en;;*);;
+
+section_subject_domain_of_sea_currents = [**];
+                                => nrel_main_idtf:[Раздел. Предметная область морских течений] (*<- lang_ru;;*);[Section. Subject domain of sea currents](*<- lang_en;;*);;
+
+section_subject_domain_of_sea_resources => nrel_main_idtf:[Раздел. Предметная область морских ресурсов] (*<- lang_ru;;*);[Section. Subject domain of sea resources](*<- lang_en;;*);
+                               <- sc_node_struct;;                                 
+
+subject_domain_sea_surface => nrel_main_idtf:[Предметная область поверхности моря] (*<- lang_ru;;*);[Subject domain of the sea surface](*<- lang_en;;*);
+                        <- sc_node_struct;;
+
+subject_domain_sea_floors => nrel_main_idtf:[Предметная область морского дна] (*<- lang_ru;;*);[Subject domain of the sea floors](*<- lang_en;;*);
+                        <- sc_node_struct;;
+
+subject_domain_sea_currents => nrel_main_idtf:[Предметная область морских течений] (*<- lang_ru;;*);[Subject domain of sea currents](*<- lang_en;;*);
+                           <- sc_node_struct;; 
+
+subject_domain_sea_resources => nrel_main_idtf:[Предметная область морских ресурсов] (*<- lang_ru;;*);[Subject domain of sea resources](*<- lang_en;;*);
+                               <- sc_node_struct;;  
+
+subject_domain_oceanography => nrel_main_idtf:[Предметная область океанографии] (*<- lang_ru;;*);[Subject domain of oceanography](*<- lang_en;;*);
+                               <- sc_node_struct;;                                
+
+concept_sea_surface <- sc_node_class;
+                => nrel_main_idtf:[поверхность моря] (*<- lang_ru;;*);[sea surface](*<- lang_en;;*);;
+
+concept_sea_floors <- sc_node_class;
+                 => nrel_main_idtf:[морское дно] (*<- lang_ru;;*);[sea floors](*<- lang_en;;*);; 
+
+concept_sea_currents <- sc_node_class;
+                => nrel_main_idtf:[морские течения] (*<- lang_ru;;*);[sea currents](*<- lang_en;;*);;
+
+concept_sea_resources <- sc_node_class;
+              => nrel_main_idtf:[морские ресурсы] (*<- lang_ru;;*);[sea resources](*<- lang_en;;*);;

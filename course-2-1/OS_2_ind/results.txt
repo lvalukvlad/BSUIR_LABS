@@ -1,0 +1,4 @@
+Index	Value
+0	0
+1	0.863971
+Sum of all y[i]: 0.863971

@@ -1,0 +1,128 @@
+    
+section_subject_domain_of_pets = [*
+        subject_domain_of_pets => nrel_main_idtf:[Предметная область домашних животных] (*<- lang_ru;;*);[Subject domain of pets](*<- lang_en;;*);
+                               <- sc_node_struct;
+                               -> rrel_explored_relation: nrel_be_the_owner_of_this_pet; 
+                                                          nrel_training;
+                                                          nrel_breeding;
+                                                          nrel_care;
+                                                          nrel_health_care; 
+                                                          nrel_aesthetic_effect;
+                               => nrel_private_subject_domain: subject_domain_dog_care;
+                                                               subject_domain_cat_care; 
+                                                               subject_domain_fishkeeping; 
+                                                               subject_domain_poultry_farming; 
+                                                               subject_domain_rodent_care; 
+                                                               subject_domain_reptile_care;                      
+                               <- subject_domain;
+                               -> rrel_maximum_studied_object_class: concept_animals; 
+                               -> rrel_not_maximum_studied_object_class: concept_reptiles; concept_mammals;concept_birds; concept_fish;;                          
+*];;
+
+
+
+section_subject_domain_of_pets  => nrel_main_idtf:[Раздел. Предметная область домашних животных] (*<- lang_ru;;*);[Section. Subject domain of pets](*<- lang_en;;*);
+                                <= nrel_section_decomposition: ...
+                                                            (* <-sc_node_tuple;; 
+                                                               -> section_subject_domain_of_dogs;;
+                                                               -> section_subject_domain_of_cats;;
+                                                               -> section_subject_domain_of_birds;;
+                                                               -> section_subject_domain_of_rodents;;
+                                                               -> section_subject_domain_of_reptiles;;
+                                                               -> section_subject_domain_of_fish;;
+                                                             *);
+                                -> rrel_key_sc_element: nrel_be_the_owner_of_this_pet; 
+                                                        nrel_training;
+                                                        nrel_breeding;
+                                                        nrel_care;
+                                                        nrel_health_care; 
+                                                        nrel_aesthetic_effect;
+                                <- non_atomic_section;;
+  
+  
+                                
+                                   
+nrel_be_the_owner_of_this_pet  <- sc_node_norole_relation; 
+                               => nrel_main_idtf:[быть владельцем этого животного*] (*<- lang_ru;;*);[be the owner of this pet](*<- lang_en;;*);;
+                               
+nrel_training <- sc_node_norole_relation; 
+              => nrel_main_idtf:[дрессировка*] (*<- lang_ru;;*);[training*](*<- lang_en;;*);;
+                               
+nrel_breeding <- sc_node_norole_relation; 
+              => nrel_main_idtf:[разведение*] (*<- lang_ru;;*);[breeding*](*<- lang_en;;*);;
+                               
+nrel_care <- sc_node_norole_relation; 
+          => nrel_main_idtf:[уход*] (*<- lang_ru;;*);[care*](*<- lang_en;;*);;
+ 
+nrel_health_care <- sc_node_norole_relation; 
+                 => nrel_main_idtf:[уход за здоровьем*] (*<- lang_ru;;*);[health care*](*<- lang_en;;*);;
+                               
+nrel_aesthetic_effect <- sc_node_norole_relation; 
+                     => nrel_main_idtf:[эстетический эффект*] (*<- lang_ru;;*);[aesthetic effect*](*<- lang_en;;*);;
+                                
+                                
+  
+  
+                                                                                            
+section_subject_domain_of_dogs = [**];
+                               => nrel_main_idtf:[Раздел. Предметная область собак] (*<- lang_ru;;*);[Section. Subject domain of dogs](*<- lang_en;;*);;   
+                               
+section_subject_domain_of_cats = [**];
+                               => nrel_main_idtf:[Раздел. Предметная область котов] (*<- lang_ru;;*);[Section. Subject domain of cats](*<- lang_en;;*);;   
+                               
+section_subject_domain_of_birds = [**];
+                                => nrel_main_idtf:[Раздел. Предметная область птиц] (*<- lang_ru;;*);[Section. Subject domain of birds](*<- lang_en;;*);;
+                               
+section_subject_domain_of_rodents => nrel_main_idtf:[Раздел. Предметная область грызунов] (*<- lang_ru;;*);[Section. Subject domain of rodents](*<- lang_en;;*);
+                                  <- sc_node_struct;;
+   
+section_subject_domain_of_rodents = [*
+concept_rats -> Krisa_Larisa;
+             -> Mo;;            
+*];;   
+ concept_rats <- sc_node_class;;  
+
+section_subject_domain_of_reptiles => nrel_main_idtf:[Раздел. Предметная область рептилий] (*<- lang_ru;;*);[Section. Subject domain of reptiles](*<- lang_en;;*);
+                                   <- sc_node_struct;;
+   
+section_subject_domain_of_fish => nrel_main_idtf:[Раздел. Предметная область рыб] (*<- lang_ru;;*);[Section. Subject domain of fish](*<- lang_en;;*);
+                               <- sc_node_struct;;
+                                                     
+                                                     
+  
+                                                     
+subject_domain_dog_care => nrel_main_idtf:[Предметная область собак] (*<- lang_ru;;*);[Subject domain of dogs](*<- lang_en;;*);
+                        <- sc_node_struct;;
+                               
+subject_domain_cat_care => nrel_main_idtf:[Предметная область котов] (*<- lang_ru;;*);[Subject domain of cats](*<- lang_en;;*);
+                        <- sc_node_struct;;
+                               
+subject_domain_fishkeeping => nrel_main_idtf:[Предметная область рыб] (*<- lang_ru;;*);[Subject domain of fish](*<- lang_en;;*);
+                           <- sc_node_struct;; 
+                               
+subject_domain_poultry_farming => nrel_main_idtf:[Предметная область птиц] (*<- lang_ru;;*);[Subject domain of birds](*<- lang_en;;*);
+                               <- sc_node_struct;;  
+
+subject_domain_rodent_care => nrel_main_idtf:[Предметная область грызунов] (*<- lang_ru;;*);[Subject domain of rodents](*<- lang_en;;*);
+                               <- sc_node_struct;;                                
+
+subject_domain_reptile_care => nrel_main_idtf:[Предметная область рептилий] (*<- lang_ru;;*);[Subject domain of reptiles](*<- lang_en;;*);
+                               <- sc_node_struct;;                                
+                                                              
+
+
+concept_animals <- sc_node_class;
+                => nrel_main_idtf:[животные] (*<- lang_ru;;*);[animals](*<- lang_en;;*);;  
+                
+concept_reptiles <- sc_node_class;
+                 => nrel_main_idtf:[рептилии] (*<- lang_ru;;*);[reptiles](*<- lang_en;;*);; 
+                
+concept_mammals <- sc_node_class;
+                => nrel_main_idtf:[млекопитающие] (*<- lang_ru;;*);[mammals](*<- lang_en;;*);; 
+                
+concept_birds <- sc_node_class;
+              => nrel_main_idtf:[птицы] (*<- lang_ru;;*);[birds](*<- lang_en;;*);;  
+              
+concept_fish <- sc_node_class;
+             => nrel_main_idtf:[рыбы] (*<- lang_ru;;*);[fish](*<- lang_en;;*);;                                             
+                                                                                                                                                                               
