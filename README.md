@@ -14,12 +14,6 @@ course-3-2/    — 3 курс, 2 семестр
 course-4-1/    — 4 курс, 1 семестр
 ```
 
-## Прочее
-
-```
-T-Bank/    — материалы и решения конкурса T-Bank
-```
-
 ## Автор
 
 Vlad Lukashov ([@lvalukvlad](https://github.com/lvalukvlad))
