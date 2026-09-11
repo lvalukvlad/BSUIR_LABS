@@ -1,0 +1,9 @@
+dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_delete_20260912_010217.bin
+pid: 47132
+label: after_delete
+time: 20260912_010217
+
+marker LAB3_PUBLIC_NOTE_ALPHA: count=1
+marker LAB3_SECRET_PLAIN_BRAVO: count=1
+marker LAB3_SECRET_PLAIN_CHARLIE: count=0
+marker LAB3_SECRET_UPDATED_DELTA: count=0

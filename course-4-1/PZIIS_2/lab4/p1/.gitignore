@@ -1,0 +1,5 @@
+keys/
+logs/*.pid
+logs/paramiko.debug
+logs/ssh.out
+app/.venv/

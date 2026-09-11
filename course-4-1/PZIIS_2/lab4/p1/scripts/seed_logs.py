@@ -175,17 +175,19 @@ def main() -> None:
     end = datetime(2026, 9, 10, 18, 0, 0, tzinfo=MINSK)
     http, ssh = build(args.days, end)
     (LOG_DIR / "access.log").write_text("\n".join(http) + "\n", encoding="utf-8")
-    err = [ln for ln in http if ' 404 ' in ln or ' 400 ' in ln]
-    # error.log — укороченный вид Apache error
-    elines = []
-    for line in err:
+    err = []
+    for line in http:
+        if " 404 " not in line and " 400 " not in line:
+            continue
         ip = line.split()[0]
+        stamp = line.split("[")[1].split("]")[0]
+        dt = datetime.strptime(stamp, "%d/%b/%Y:%H:%M:%S %z")
         uri = line.split('"')[1].split()[1]
         status = line.split('"')[2].split()[0]
-        elines.append(f"[{end.strftime('%a %b %d %H:%M:%S 2026')}] [client {ip}] {status} for {uri}")
-    (LOG_DIR / "error.log").write_text("\n".join(elines) + "\n", encoding="utf-8")
+        err.append(f"[{dt.strftime('%a %b %d %H:%M:%S %Y')}] [client {ip}] {status} for {uri}")
+    (LOG_DIR / "error.log").write_text("\n".join(err) + "\n", encoding="utf-8")
     (LOG_DIR / "auth.log").write_text("\n".join(ssh) + "\n", encoding="utf-8")
-    print(f"HTTP {len(http)} строк, SSH {len(ssh)} строк, error {len(elines)}")
+    print(f"HTTP {len(http)} строк, SSH {len(ssh)} строк, error {len(err)}")
 
 
 if __name__ == "__main__":

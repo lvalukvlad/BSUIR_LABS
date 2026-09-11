@@ -1,8 +1,10 @@
-"""Secure Notes Lab — учебное приложение для лаб. №2 ПЗИИС (часть 1)."""
+"""Учебное веб-приложение: заметки и секреты."""
 from __future__ import annotations
 
 import os
 import secrets
+import time
+from collections import defaultdict
 from datetime import datetime
 from functools import wraps
 
@@ -22,11 +24,12 @@ from sqlalchemy import or_
 from werkzeug.security import check_password_hash, generate_password_hash
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
-DB_PATH = os.path.join(BASE_DIR, "instance", "secure_notes.db")
-KEY_PATH = os.path.join(BASE_DIR, "instance", "fernet.key")
+INSTANCE_DIR = os.path.join(BASE_DIR, "instance")
+DB_PATH = os.path.join(INSTANCE_DIR, "notes.db")
+KEY_PATH = os.path.join(INSTANCE_DIR, "fernet.key")
+SECRET_PATH = os.path.join(INSTANCE_DIR, "flask.secret")
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = os.environ.get("LAB2_SECRET_KEY", secrets.token_hex(32))
 app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{DB_PATH}"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SESSION_COOKIE_HTTPONLY"] = True
@@ -36,12 +39,54 @@ app.config["SESSION_COOKIE_SECURE"] = os.environ.get("LAB2_HTTPS", "") == "1"
 
 db = SQLAlchemy(app)
 
+_LOGIN_FAILS: dict[str, list[float]] = defaultdict(list)
+_LOGIN_WINDOW = 60.0
+_LOGIN_MAX = 8
+
+
+def _client_ip() -> str:
+    return request.remote_addr or "0.0.0.0"
+
+
+def _login_blocked(ip: str) -> bool:
+    now = time.time()
+    hits = [t for t in _LOGIN_FAILS[ip] if now - t < _LOGIN_WINDOW]
+    _LOGIN_FAILS[ip] = hits
+    return len(hits) >= _LOGIN_MAX
+
+
+def _register_fail(ip: str) -> None:
+    _LOGIN_FAILS[ip].append(time.time())
+
+
+def _clear_fails(ip: str) -> None:
+    _LOGIN_FAILS.pop(ip, None)
+
+
+def _chmod_private(path: str) -> None:
+    if os.path.exists(path):
+        os.chmod(path, 0o600)
+
 
 def _ensure_instance() -> None:
-    os.makedirs(os.path.join(BASE_DIR, "instance"), exist_ok=True)
+    os.makedirs(INSTANCE_DIR, exist_ok=True)
+    os.chmod(INSTANCE_DIR, 0o700)
     if not os.path.exists(KEY_PATH):
-        with open(KEY_PATH, "wb") as f:
-            f.write(Fernet.generate_key())
+        with open(KEY_PATH, "wb") as fh:
+            fh.write(Fernet.generate_key())
+    _chmod_private(KEY_PATH)
+    if not os.path.exists(SECRET_PATH):
+        with open(SECRET_PATH, "w", encoding="utf-8") as fh:
+            fh.write(secrets.token_hex(32))
+        _chmod_private(SECRET_PATH)
+    _chmod_private(SECRET_PATH)
+    _chmod_private(DB_PATH)
+
+
+_ensure_instance()
+app.config["SECRET_KEY"] = os.environ.get(
+    "LAB2_SECRET_KEY", open(SECRET_PATH, encoding="utf-8").read().strip()
+)
 
 
 def get_fernet() -> Fernet:
@@ -128,6 +173,15 @@ def _csrf_protect():
             abort(400, description="CSRF token missing or invalid")
 
 
+@app.after_request
+def _headers(response):
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Referrer-Policy"] = "no-referrer"
+    response.headers["Content-Security-Policy"] = "default-src 'self'"
+    return response
+
+
 @app.context_processor
 def inject_globals():
     return {"current_user": current_user(), "csrf_token": session.get("_csrf", "")}
@@ -170,15 +224,21 @@ def login():
     if current_user():
         return redirect(url_for("dashboard"))
     if request.method == "POST":
+        ip = _client_ip()
+        if _login_blocked(ip):
+            flash("Слишком много неудачных попыток. Подождите минуту.", "error")
+            return render_template("login.html")
         username = (request.form.get("username") or "").strip()
         password = request.form.get("password") or ""
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password_hash, password):
+            _clear_fails(ip)
             session.clear()
             session["user_id"] = user.id
             session["_csrf"] = secrets.token_hex(16)
             flash(f"Добро пожаловать, {user.username}.", "ok")
             return redirect(url_for("dashboard"))
+        _register_fail(ip)
         flash("Неверные идентификационные данные.", "error")
     return render_template("login.html")
 
@@ -297,7 +357,7 @@ def secrets_create():
             secret.set_body(body)
             db.session.add(secret)
             db.session.commit()
-            flash("Конфиденциальная запись создана (данные зашифрованы).", "ok")
+            flash("Секрет создан. Содержимое на диске хранится в зашифрованном виде.", "ok")
             return redirect(url_for("secrets_list"))
     return render_template("secret_form.html", secret=None, body="")
 
@@ -335,6 +395,7 @@ def init_db() -> None:
     _ensure_instance()
     with app.app_context():
         db.create_all()
+    _chmod_private(DB_PATH)
 
 
 if __name__ == "__main__":

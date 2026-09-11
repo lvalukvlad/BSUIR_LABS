@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Secure Notes Lab{% endblock %}</title>
+  <meta name="color-scheme" content="light">
+  <title>{% block title %}Заметки{% endblock %}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="{{ url_for('index') }}">Secure Notes Lab</a>
+    <a class="brand" href="{{ url_for('index') }}">Заметки</a>
     <nav>
       {% if current_user %}
         <a href="{{ url_for('dashboard') }}">Кабинет</a>
-        <a href="{{ url_for('notes_list') }}">Заметки</a>
+        <a href="{{ url_for('notes_list') }}">Обычные</a>
         <a href="{{ url_for('secrets_list') }}">Секреты</a>
         <form class="inline" method="post" action="{{ url_for('logout') }}">
           <input type="hidden" name="_csrf" value="{{ csrf_token }}">

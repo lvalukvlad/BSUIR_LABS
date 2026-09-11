@@ -2,7 +2,7 @@
 
 - `methodology.md` — методика оценки безопасности кода
 - `provided_app/` — предоставленный (небезопасный) алгоритм для сравнения
-- `comparison.md` — сравнение с Memory Vault Lab
+- `comparison.md` — сравнение своей и предоставленной реализации
 - `scripts/run_provided_dump.sh` — дамп after_create для provided
 
 ```bash

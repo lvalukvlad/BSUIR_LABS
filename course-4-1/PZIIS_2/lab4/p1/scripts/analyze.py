@@ -18,7 +18,8 @@ COMBINED = re.compile(
 )
 
 SSH = re.compile(
-    r'^(?P<mon>\w{3})\s+(?P<day>\d+)\s+(?P<time>\d{2}:\d{2}:\d{2})\s+\S+\s+sshd\[\d+\]:\s+(?P<msg>.*)$'
+    r"^(?P<mon>\w{3})\s+(?P<day>\d+)\s+(?P<time>\d{2}:\d{2}:\d{2})\s+\S+\s+"
+    r"(?:sshd|lab-ssh)\[\d+\]:\s+(?P<msg>.*)$"
 )
 
 
@@ -106,7 +107,7 @@ def top(counter: Counter, n: int = 8) -> list[list]:
 
 
 def main() -> None:
-    http = parse_http(LOG_DIR / "access.log")
+    http = [r for r in parse_http(LOG_DIR / "access.log") if r["ip"] != "127.0.0.1"]
     ssh = parse_ssh(LOG_DIR / "auth.log")
     http_by_day = Counter(r["day"] for r in http)
     ssh_by_day = Counter(r["day"] for r in ssh)

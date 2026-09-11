@@ -12,7 +12,7 @@
 <body>
   <header class="top">
     <p class="brand">Записи</p>
-    <p class="meta">{{ notes_count }} заметок · {{ secrets_count }} секретов</p>
+    <p class="meta">заметок: {{ notes_count }} · секретов: {{ secrets_count }}</p>
   </header>
 
   {% with messages = get_flashed_messages(with_categories=true) %}

@@ -2,19 +2,20 @@
 {% block title %}Кабинет{% endblock %}
 {% block content %}
 <section class="hero">
-  <h1>Кабинет: {{ current_user.username }}</h1>
-  <p>Вы авторизованы. Ниже — разделы данных. Конфиденциальные записи хранятся в зашифрованном виде.</p>
+  <p class="kicker">Сессия</p>
+  <h1>{{ current_user.username }}</h1>
+  <p>Два класса данных разделены: обычные заметки и секреты с шифрованием на диске.</p>
 </section>
 <div class="grid">
   <a class="card link" href="{{ url_for('notes_list') }}">
-    <h2>Неконфиденциальные данные</h2>
+    <h2>Обычные</h2>
     <p class="stat">{{ notes_count }}</p>
-    <p class="hint">Заметки: создание, редактирование, удаление, поиск</p>
+    <p class="hint">Открытый текст: создание, правка, удаление, поиск</p>
   </a>
   <a class="card link" href="{{ url_for('secrets_list') }}">
-    <h2>Конфиденциальные данные</h2>
+    <h2>Секреты</h2>
     <p class="stat">{{ secrets_count }}</p>
-    <p class="hint">Секреты с шифрованием Fernet (только ваш доступ)</p>
+    <p class="hint">Тело на диске — шифртекст, список без расшифровки</p>
   </a>
 </div>
 {% endblock %}

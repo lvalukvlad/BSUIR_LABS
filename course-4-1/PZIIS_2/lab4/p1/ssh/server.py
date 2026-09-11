@@ -50,7 +50,7 @@ def ensure_keys() -> tuple[paramiko.RSAKey, paramiko.RSAKey]:
 
 def syslog(msg: str) -> None:
     now = datetime.now(MINSK).strftime("%b %e %H:%M:%S")
-    line = f"{now} {HOST_NAME} sshd[{os.getpid()}]: {msg}\n"
+    line = f"{now} {HOST_NAME} lab-ssh[{os.getpid()}]: {msg}\n"
     with AUTH_LOG.open("a", encoding="utf-8") as fh:
         fh.write(line)
 
@@ -107,7 +107,7 @@ def handle(client: socket.socket, addr: tuple, host_key: paramiko.RSAKey, user_k
     peer, port = addr[0], addr[1]
     try:
         transport = paramiko.Transport(client)
-        transport.local_version = "SSH-2.0-OpenSSH_9.6"
+        transport.local_version = "SSH-2.0-lab-ssh"
         transport.add_server_key(host_key)
         server = LabServer(peer, port, user_key)
         try:

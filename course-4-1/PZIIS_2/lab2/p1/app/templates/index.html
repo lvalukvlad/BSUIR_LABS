@@ -1,26 +1,13 @@
 {% extends "base.html" %}
-{% block title %}Secure Notes Lab{% endblock %}
+{% block title %}Заметки{% endblock %}
 {% block content %}
 <section class="hero">
-  <h1>Secure Notes Lab</h1>
-  <p>Учебное веб-приложение для лабораторной №2 ПЗИИС: регистрация и вход пользователей, работа с обычными заметками и конфиденциальными секретами (шифрование Fernet), безопасный выход из сессии.</p>
+  <p class="kicker">Публичный вход</p>
+  <h1>Заметки</h1>
+  <p>Обычные записи хранятся открытым текстом. Секреты после ввода шифруются и показываются только владельцу.</p>
   <p class="actions">
-    <a class="btn" href="{{ url_for('register') }}">Добавить пользователя</a>
-    <a class="btn secondary" href="{{ url_for('login') }}">Авторизоваться</a>
+    <a class="btn" href="{{ url_for('register') }}">Регистрация</a>
+    <a class="btn secondary" href="{{ url_for('login') }}">Вход</a>
   </p>
-  <div class="features">
-    <div class="feature">
-      <h3>Учётные записи</h3>
-      <p>Регистрация, вход по паролю (PBKDF2), выход с очисткой сессии.</p>
-    </div>
-    <div class="feature">
-      <h3>Заметки</h3>
-      <p>Неконфиденциальные данные: создание, правка, удаление и поиск.</p>
-    </div>
-    <div class="feature">
-      <h3>Секреты</h3>
-      <p>Конфиденциальные записи: тело шифруется на диске, доступ только владельцу.</p>
-    </div>
-  </div>
 </section>
 {% endblock %}

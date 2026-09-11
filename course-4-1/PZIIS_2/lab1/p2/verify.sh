@@ -88,6 +88,8 @@ check_op guest_user guest_pass DELETE \
   "DELETE FROM lab_schema.test_table WHERE id=1;" "НЕТ"
 check_op guest_user guest_pass CREATE_TABLE \
   "CREATE TABLE lab_schema.guest_tmp (id int);" "НЕТ"
+check_op guest_user guest_pass DROP_TABLE \
+  "DROP TABLE lab_schema.test_table;" "НЕТ"
 
 echo | tee -a "${TXT}"
 fails="$(awk -F'\t' 'NR>1 && $5=="FAIL" {c++} END{print c+0}' "${TSV}")"

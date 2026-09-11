@@ -1,36 +1,36 @@
-Memory Vault Lab — dump marker summary
-date: 2026-09-10T17:26:33+03:00
+Dump marker summary
+date: 2026-09-12T01:02:18+03:00
 
------ core_after_create_20260910_172629_summary.txt -----
-dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_create_20260910_172629.bin
-pid: 62310
+----- core_after_create_20260912_010214_summary.txt -----
+dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_create_20260912_010214.bin
+pid: 47132
 label: after_create
-time: 20260910_172629
+time: 20260912_010214
 
 marker LAB3_PUBLIC_NOTE_ALPHA: count=1
-marker LAB3_SECRET_PLAIN_BRAVO: count=2
+marker LAB3_SECRET_PLAIN_BRAVO: count=3
 marker LAB3_SECRET_PLAIN_CHARLIE: count=0
 marker LAB3_SECRET_UPDATED_DELTA: count=0
 
------ core_after_delete_20260910_172632_summary.txt -----
-dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_delete_20260910_172632.bin
-pid: 62310
+----- core_after_delete_20260912_010217_summary.txt -----
+dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_delete_20260912_010217.bin
+pid: 47132
 label: after_delete
-time: 20260910_172632
+time: 20260912_010217
 
 marker LAB3_PUBLIC_NOTE_ALPHA: count=1
-marker LAB3_SECRET_PLAIN_BRAVO: count=0
+marker LAB3_SECRET_PLAIN_BRAVO: count=1
 marker LAB3_SECRET_PLAIN_CHARLIE: count=0
 marker LAB3_SECRET_UPDATED_DELTA: count=0
 
------ core_after_update_20260910_172631_summary.txt -----
-dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_update_20260910_172631.bin
-pid: 62310
+----- core_after_update_20260912_010216_summary.txt -----
+dump: /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/results/dumps/core_after_update_20260912_010216.bin
+pid: 47132
 label: after_update
-time: 20260910_172631
+time: 20260912_010216
 
 marker LAB3_PUBLIC_NOTE_ALPHA: count=2
-marker LAB3_SECRET_PLAIN_BRAVO: count=0
+marker LAB3_SECRET_PLAIN_BRAVO: count=1
 marker LAB3_SECRET_PLAIN_CHARLIE: count=0
 marker LAB3_SECRET_UPDATED_DELTA: count=0
 

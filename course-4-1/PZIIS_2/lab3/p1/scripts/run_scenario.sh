@@ -21,11 +21,10 @@ else
   source "${APP_DIR}/.venv/bin/activate"
 fi
 
-pkill -f "python app.py" 2>/dev/null || true
+pkill -f "${APP_DIR}/app.py" 2>/dev/null || true
 sleep 0.5
 
-cd "${APP_DIR}"
-python app.py >"${RES}/app.log" 2>&1 &
+python "${APP_DIR}/app.py" >"${RES}/app.log" 2>&1 &
 APP_PID=$!
 echo "app pid=${APP_PID}" | tee "${RES}/run_meta.txt"
 
@@ -93,7 +92,7 @@ PY
 
 # aggregate marker summary
 {
-  echo "Memory Vault Lab — dump marker summary"
+  echo "Dump marker summary"
   echo "date: $(date -Iseconds)"
   echo
   for f in "${RES}/dumps"/core_*_summary.txt; do

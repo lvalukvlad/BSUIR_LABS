@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Снятие дампа ОЗУ процесса Memory Vault и поиск маркеров.
+# Снятие дампа ОЗУ процесса и поиск маркеров.
 # Запуск: ./dump_and_analyze.sh <pid> <label>
 set -euo pipefail
 

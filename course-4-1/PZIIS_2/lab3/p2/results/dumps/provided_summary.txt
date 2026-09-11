@@ -1,3 +1,15 @@
-provided dump after_create pid=63049
+provided dump summaries
+provided dump after_create pid=47954
 marker LAB3_PUBLIC_NOTE_ALPHA: count=2
 marker LAB3_SECRET_PLAIN_BRAVO: count=1
+marker LAB3_SECRET_UPDATED_DELTA: count=0
+
+provided dump after_update pid=47954
+marker LAB3_PUBLIC_NOTE_ALPHA: count=1
+marker LAB3_SECRET_PLAIN_BRAVO: count=0
+marker LAB3_SECRET_UPDATED_DELTA: count=2
+
+provided dump after_delete pid=47954
+marker LAB3_PUBLIC_NOTE_ALPHA: count=1
+marker LAB3_SECRET_PLAIN_BRAVO: count=0
+marker LAB3_SECRET_UPDATED_DELTA: count=1

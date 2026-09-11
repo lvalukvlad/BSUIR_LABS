@@ -29,7 +29,11 @@ _fernet: Fernet | None = None
 
 
 def _ensure_key() -> bytes:
+    env = os.environ.get("LAB3_FERNET_KEY", "").strip().encode("ascii")
+    if env:
+        return env
     os.makedirs(os.path.join(BASE_DIR, "instance"), exist_ok=True)
+    os.chmod(os.path.join(BASE_DIR, "instance"), 0o700)
     if not os.path.exists(KEY_PATH):
         with open(KEY_PATH, "wb") as f:
             f.write(Fernet.generate_key())

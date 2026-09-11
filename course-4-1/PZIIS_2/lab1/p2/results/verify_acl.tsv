@@ -16,3 +16,4 @@ guest_user	INSERT	НЕТ	НЕТ	OK
 guest_user	UPDATE	НЕТ	НЕТ	OK
 guest_user	DELETE	НЕТ	НЕТ	OK
 guest_user	CREATE_TABLE	НЕТ	НЕТ	OK
+guest_user	DROP_TABLE	НЕТ	НЕТ	OK

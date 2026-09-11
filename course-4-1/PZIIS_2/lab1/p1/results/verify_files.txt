@@ -1,12 +1,13 @@
 === Проверка доступа к файлам (п.14) ===
 Дата: 2026-09-10T15:04:02+03:00
+EXEC: реальный запуск скрипта (нужны биты x и чтения для shebang)
 
 === Пользователь: iit11 ===
   pzs11    file11 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs11    file12 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs11    file13 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs11    file14 READ=ДА WRITE=ДА EXEC=ДА
-  pzs11    file15 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs11    file15 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file21 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file22 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file23 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -21,7 +22,7 @@
   pzs11    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs11    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs11    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs11    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs11    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs11    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -31,7 +32,7 @@
   pzs12    file12 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs12    file13 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs12    file14 READ=ДА WRITE=ДА EXEC=ДА
-  pzs12    file15 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs12    file15 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file21 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file22 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file23 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -46,7 +47,7 @@
   pzs12    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs12    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs12    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs12    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs12    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -56,7 +57,7 @@
   pzs13    file12 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file13 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file14 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file15 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file15 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file21 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file22 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file23 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -71,7 +72,7 @@
   pzs13    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -81,7 +82,7 @@
   pzs14    file12 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file13 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file14 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file15 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file15 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file21 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file22 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file23 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -96,7 +97,7 @@
   pzs14    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -163,17 +164,17 @@
   pzs12    file22 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs12    file23 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs12    file24 READ=ДА WRITE=ДА EXEC=ДА
-  pzs12    file25 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs12    file25 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file31 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs12    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs12    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs12    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs12    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs12    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs12    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs12    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs12    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs12    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs12    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs12    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -188,17 +189,17 @@
   pzs13    file22 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file23 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file24 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file25 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file25 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file31 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs13    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs13    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -213,17 +214,17 @@
   pzs14    file22 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file23 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file24 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file25 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file25 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file31 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs14    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs14    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -320,12 +321,12 @@
   pzs13    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs13    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -345,12 +346,12 @@
   pzs14    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs14    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -447,12 +448,12 @@
   pzs13    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs13    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -472,12 +473,12 @@
   pzs14    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs14    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -574,12 +575,12 @@
   pzs13    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs13    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs13    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs13    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs13    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs13    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
@@ -599,12 +600,12 @@
   pzs14    file32 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file33 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file34 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file35 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file41 READ=ДА WRITE=НЕТ EXEC=НЕТ
   pzs14    file42 READ=ДА WRITE=ДА EXEC=НЕТ
   pzs14    file43 READ=НЕТ WRITE=ДА EXEC=НЕТ
   pzs14    file44 READ=ДА WRITE=ДА EXEC=ДА
-  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=ДА
+  pzs14    file45 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file51 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file52 READ=НЕТ WRITE=НЕТ EXEC=НЕТ
   pzs14    file53 READ=НЕТ WRITE=НЕТ EXEC=НЕТ

@@ -1,6 +1,6 @@
 #!/bin/bash
-# П.16: проверка каталогов — чтение содержимого, создание файла, удаление.
-# Существующие file* не трогаются: запись/удаление только зонда .__probe_*
+# П.16: чтение каталога, создание файла, удаление каждого существующего file*.
+# Существующие файлы копируются, удаляются проверяемым uid и восстанавливаются.
 # Запуск: sudo ./verify_dirs.sh
 set -euo pipefail
 
@@ -21,7 +21,7 @@ DIRS=(pzs11 pzs12 pzs13 pzs14 pzs15)
 
 : > "${TSV}"
 : > "${TXT}"
-printf 'user\tdir\tlist\tcreate\tdelete_probe\n' >> "${TSV}"
+printf 'user\tdir\tlist\tcreate\tdelete_existing\n' >> "${TSV}"
 
 yesno() { [[ $1 -eq 0 ]] && echo "ДА" || echo "НЕТ"; }
 
@@ -36,6 +36,7 @@ for user in "${USERS[@]}"; do
   for dir in "${DIRS[@]}"; do
     dpath="${BASE}/${dir}"
     probe=".__probe_${user}_$$"
+    bak="$(mktemp -d)"
 
     set +e
     if [[ ${user} == root ]]; then
@@ -43,29 +44,40 @@ for user in "${USERS[@]}"; do
       l_rc=$?
       touch "${dpath}/${probe}" 2>/dev/null
       c_rc=$?
-      if [[ ${c_rc} -eq 0 ]]; then
-        rm -f "${dpath}/${probe}" 2>/dev/null
-        d_rc=$?
-      else
-        d_rc=1
-      fi
+      rm -f "${dpath}/${probe}" 2>/dev/null
     else
       runuser -u "${user}" -- ls "${dpath}" &>/dev/null
       l_rc=$?
       runuser -u "${user}" -- touch "${dpath}/${probe}" 2>/dev/null
       c_rc=$?
-      if [[ ${c_rc} -eq 0 ]]; then
-        runuser -u "${user}" -- rm -f "${dpath}/${probe}" 2>/dev/null
-        d_rc=$?
-      else
-        d_rc=1
-        rm -f "${dpath}/${probe}" 2>/dev/null
-      fi
+      rm -f "${dpath}/${probe}" 2>/dev/null || true
+    fi
+
+    # Удаление каждого существующего file* с последующим восстановлением
+    shopt -s nullglob
+    files=("${dpath}"/file*)
+    shopt -u nullglob
+    if ((${#files[@]})); then
+      cp -a -- "${files[@]}" "${bak}/" 2>/dev/null
+    fi
+    failed=0
+    if ((${#files[@]} == 0)); then
+      failed=1
+    else
+      for f in "${files[@]}"; do
+        if [[ ${user} == root ]]; then
+          rm -f -- "${f}" 2>/dev/null || failed=1
+        else
+          runuser -u "${user}" -- rm -f -- "${f}" 2>/dev/null || failed=1
+        fi
+      done
+    fi
+    d_rc=${failed}
+    if [[ -d ${bak} ]]; then
+      cp -a -- "${bak}/." "${dpath}/" 2>/dev/null || true
+      rm -rf "${bak}"
     fi
     set -e
-
-    # Подчистка зонда на всякий случай
-    rm -f "${dpath}/${probe}" 2>/dev/null || true
 
     l=$(yesno "${l_rc}")
     c=$(yesno "${c_rc}")

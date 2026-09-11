@@ -1,11 +1,11 @@
-=== /proc/62310/status (Vm*) ===
+=== /proc/47132/status (Vm*) ===
 Name:	python
-Pid:	62310
-VmPeak:	  193996 kB
-VmSize:	  128460 kB
-VmRSS:	   37696 kB
+Pid:	47132
+VmPeak:	  194000 kB
+VmSize:	  128464 kB
+VmRSS:	   37376 kB
 Threads:	1
 
 === sample ps ===
     PID %CPU %MEM   RSS    VSZ     ELAPSED CMD
-  62310  2.6  0.2 37696 128460       00:05 python app.py
+  47132  3.7  0.2 37376 128464       00:04 python /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/app.py

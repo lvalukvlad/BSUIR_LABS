@@ -1,0 +1,22 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Liberation Sans
+skinparam backgroundColor white
+left to right direction
+
+actor "Пользователь" as U
+rectangle "Приложение" {
+  rectangle "Сессия + CSRF" as S
+  rectangle "Заметки" as N
+  rectangle "Секреты" as C
+}
+database "SQLite" as D
+file "fernet.key" as K
+
+U --> S : вход
+S --> N
+S --> C
+N --> D : открытый текст
+C --> K : ключ
+C --> D : шифртекст
+@enduml

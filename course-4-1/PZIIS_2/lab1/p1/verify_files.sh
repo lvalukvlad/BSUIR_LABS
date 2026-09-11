@@ -1,6 +1,6 @@
 #!/bin/bash
 # П.14: проверка чтения / записи / исполнения файлов для каждого пользователя.
-# Не удаляет и не портит исходные файлы (запись — проба с откатом содержимого).
+# Запись — проба с откатом содержимого. Исполнение — реальный запуск с тайм-аутом.
 # Запуск: sudo ./verify_files.sh
 # Результаты: ./results/verify_files.tsv и ./results/verify_files.txt
 set -uo pipefail
@@ -70,17 +70,19 @@ check_write() {
 
 check_exec() {
   local user="$1" path="$2"
-  # test -x: право исполнения для uid без запуска (filex5 содержит read)
+  # Реальный запуск, не test -x: скрипту с shebang нужно ещё и чтение.
+  # filex5 делает read — подаём пустую строку и ограничиваем время.
   if [[ ${user} == root ]]; then
-    test -x "${path}"
+    timeout 1s bash -c 'printf "\n" | "$1"' _ "${path}" &>/dev/null
   else
-    runuser -u "${user}" -- test -x "${path}"
+    timeout 1s runuser -u "${user}" -- bash -c 'printf "\n" | "$1"' _ "${path}" &>/dev/null
   fi
 }
 
 {
-  echo "=== Проверка доступа к файлам (п.14) ==="
-  echo "Дата: $(date -Is)"
+echo "=== Проверка доступа к файлам (п.14) ==="
+echo "Дата: $(date -Is)"
+echo "EXEC: реальный запуск скрипта (нужны биты x и чтения для shebang)"
   echo
 } | tee -a "${TXT}"
 

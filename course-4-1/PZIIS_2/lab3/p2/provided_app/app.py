@@ -24,14 +24,14 @@ _next_secret_id = 1
 
 PAGE = """
 <!doctype html><html lang="ru"><head><meta charset="utf-8">
-<title>Provided Insecure Vault</title>
+<title>Предоставленный вариант</title>
 <style>
 body{font-family:sans-serif;max-width:900px;margin:1.5rem auto;padding:0 1rem}
 .item{border:1px solid #ccc;padding:.75rem;margin:.5rem 0}
 .warn{color:#a00;font-weight:700}
 </style></head><body>
-<h1>Provided Insecure Vault</h1>
-<p class="warn">Учебный «предоставленный» вариант: секреты в ОЗУ как plaintext str.</p>
+<h1>Предоставленный вариант</h1>
+<p class="warn">Секреты в ОЗУ хранятся открытым текстом, без шифрования и затирания.</p>
 <p>PID {{ pid }}</p>
 {% with messages = get_flashed_messages() %}{% if messages %}<ul>{% for m in messages %}<li>{{ m }}</li>{% endfor %}</ul>{% endif %}{% endwith %}
 <h2>Notes</h2>
