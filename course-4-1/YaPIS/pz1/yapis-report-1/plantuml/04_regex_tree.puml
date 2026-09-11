@@ -1,0 +1,32 @@
+@startuml
+digraph regex {
+  bgcolor="white";
+  pad=0.2;
+  nodesep=0.35;
+  ranksep=0.45;
+  fontname="Liberation Sans";
+  node [fontname="Liberation Sans", fontsize=13, shape=box, style=filled, fillcolor="white", color="#1B242E", fontcolor="#1B242E"];
+  edge [color="#1B242E"];
+
+  R [label="·"];
+  A2 [label="a²"];
+  Star [label="*"];
+  Plus [label="+"];
+  AB [label="·"];
+  A [label="a"];
+  B [label="b"];
+  U [label="|"];
+  C [label="c"];
+  D [label="d"];
+
+  R -> A2;
+  R -> Star;
+  R -> Plus;
+  Star -> AB;
+  AB -> A;
+  AB -> B;
+  Plus -> U;
+  U -> C;
+  U -> D;
+}
+@enduml

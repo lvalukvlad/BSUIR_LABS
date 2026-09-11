@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Кабинет{% endblock %}
+{% block content %}
+<section class="hero">
+  <h1>Кабинет: {{ current_user.username }}</h1>
+  <p>Вы авторизованы. Ниже — разделы данных. Конфиденциальные записи хранятся в зашифрованном виде.</p>
+</section>
+<div class="grid">
+  <a class="card link" href="{{ url_for('notes_list') }}">
+    <h2>Неконфиденциальные данные</h2>
+    <p class="stat">{{ notes_count }}</p>
+    <p class="hint">Заметки: создание, редактирование, удаление, поиск</p>
+  </a>
+  <a class="card link" href="{{ url_for('secrets_list') }}">
+    <h2>Конфиденциальные данные</h2>
+    <p class="stat">{{ secrets_count }}</p>
+    <p class="hint">Секреты с шифрованием Fernet (только ваш доступ)</p>
+  </a>
+</div>
+{% endblock %}

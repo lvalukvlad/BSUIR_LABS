@@ -1,0 +1,74 @@
+=== Проверка остановки процессов filex5 (п.15) ===
+Дата: 2026-09-10T15:04:13+03:00
+Каталог: /home/pzs/pzs14
+
+--- Файл file15 ---
+  PID=19533; попытка kill от iit11
+  kill от iit11: ДА
+  PID=19549; попытка kill от iit12
+  kill от iit12: НЕТ
+  PID=19565; попытка kill от iit21
+  kill от iit21: НЕТ
+  PID=19581; попытка kill от iit22
+  kill от iit22: НЕТ
+  PID=19597; попытка kill от iit3
+  kill от iit3: НЕТ
+  PID=19613; попытка kill от root
+  kill от root: ДА
+
+--- Файл file25 ---
+  PID=19632; попытка kill от iit11
+  kill от iit11: ДА
+  PID=19648; попытка kill от iit12
+  kill от iit12: НЕТ
+  PID=19664; попытка kill от iit21
+  kill от iit21: НЕТ
+  PID=19681; попытка kill от iit22
+  kill от iit22: НЕТ
+  PID=19697; попытка kill от iit3
+  kill от iit3: НЕТ
+  PID=19713; попытка kill от root
+  kill от root: ДА
+
+--- Файл file35 ---
+  PID=19731; попытка kill от iit11
+  kill от iit11: ДА
+  PID=19747; попытка kill от iit12
+  kill от iit12: НЕТ
+  PID=19763; попытка kill от iit21
+  kill от iit21: НЕТ
+  PID=19779; попытка kill от iit22
+  kill от iit22: НЕТ
+  PID=19795; попытка kill от iit3
+  kill от iit3: НЕТ
+  PID=19811; попытка kill от root
+  kill от root: ДА
+
+--- Файл file45 ---
+  PID=19829; попытка kill от iit11
+  kill от iit11: ДА
+  PID=19845; попытка kill от iit12
+  kill от iit12: НЕТ
+  PID=19862; попытка kill от iit21
+  kill от iit21: НЕТ
+  PID=19878; попытка kill от iit22
+  kill от iit22: НЕТ
+  PID=19894; попытка kill от iit3
+  kill от iit3: НЕТ
+  PID=19910; попытка kill от root
+  kill от root: ДА
+
+--- Файл file55 ---
+  PID=19928; попытка kill от iit11
+  kill от iit11: ДА
+  PID=19944; попытка kill от iit12
+  kill от iit12: НЕТ
+  PID=19960; попытка kill от iit21
+  kill от iit21: НЕТ
+  PID=19976; попытка kill от iit22
+  kill от iit22: НЕТ
+  PID=19992; попытка kill от iit3
+  kill от iit3: НЕТ
+  PID=20008; попытка kill от root
+  kill от root: ДА
+

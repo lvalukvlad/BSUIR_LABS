@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}{% if note %}Изменить заметку{% else %}Новая заметка{% endif %}{% endblock %}
+{% block content %}
+<h1>{% if note %}Редактирование заметки{% else %}Новая заметка{% endif %}</h1>
+<form method="post" class="card">
+  <input type="hidden" name="_csrf" value="{{ csrf_token }}">
+  <label>Заголовок
+    <input name="title" required maxlength="200" value="{{ note.title if note else '' }}">
+  </label>
+  <label>Текст
+    <textarea name="body" rows="8">{{ note.body if note else '' }}</textarea>
+  </label>
+  <button type="submit">Сохранить</button>
+</form>
+{% endblock %}

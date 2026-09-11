@@ -1,0 +1,45 @@
+=== Проверка доступа к каталогам (п.16) ===
+Дата: 2026-09-10T15:04:30+03:00
+
+=== Пользователь: iit11 ===
+  pzs11    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs12    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+
+=== Пользователь: iit12 ===
+  pzs11    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs12    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+
+=== Пользователь: iit21 ===
+  pzs11    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs12    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+
+=== Пользователь: iit22 ===
+  pzs11    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs12    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+
+=== Пользователь: iit3 ===
+  pzs11    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs12    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=НЕТ CREATE=НЕТ DELETE=НЕТ
+
+=== Пользователь: root ===
+  pzs11    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs12    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs13    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs14    LIST=ДА CREATE=ДА DELETE=ДА
+  pzs15    LIST=ДА CREATE=ДА DELETE=ДА
+

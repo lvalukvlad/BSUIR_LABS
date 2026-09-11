@@ -1,0 +1,3 @@
+provided dump after_create pid=63049
+marker LAB3_PUBLIC_NOTE_ALPHA: count=2
+marker LAB3_SECRET_PLAIN_BRAVO: count=1

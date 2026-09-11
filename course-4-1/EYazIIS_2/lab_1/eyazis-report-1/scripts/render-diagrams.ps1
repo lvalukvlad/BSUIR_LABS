@@ -5,6 +5,7 @@
     расположения самого скрипта. При первом запуске загружает plantuml.jar.
 
     Запуск: .\scripts\render-diagrams.ps1
+    На Linux: ./scripts/render-diagrams.sh
 #>
 
 $ErrorActionPreference = 'Stop'

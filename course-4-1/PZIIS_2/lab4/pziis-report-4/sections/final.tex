@@ -1,0 +1,33 @@
+\sectioncentered*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+В лабораторной работе на учебном узле размещены веб-сервер с тестовой страницей и служба SSH, настроено журналирование Combined и syslog, выполнен разбор запросов за семь суток и подключена сетевая IDS Snort с локальными сигнатурами и списком блокировки.
+
+\textbf{Семантическая составляющая.} Безопасность удалённого сервера в сети Internet определяется не фактом наличия SSH и HTTP, а тем, какие попытки доступа попадают в журнал и как они читаются. Перебор пароля \texttt{root}, словарь несуществующих имён, сканирование CMS и поиск \texttt{.env}~\mdash  это не сбой узла, а ожидаемый фон. Корреляция одного адреса сразу в SSH и HTTP важнее изолированного кода 404. IDS не заменяет журнал: она добавляет класс события и точку реакции.
+
+\textbf{Прагматическая составляющая.} Получены воспроизводимый стенд публикации, недельные журналы двух подсистем, набор сигнатур Snort и список из четырёх внешних адресов для ACL. Практические шаги: ключи вместо пароля, запрет \texttt{root}, ограничение источников, порог отказов и перевод срабатываний IDS в правило межсетевого экрана.
+
+\begin{thebibliography}{9}
+	\addcontentsline{toc}{section}{Список использованных источников}
+
+	\bibitem{rfc4252}
+	RFC 4252. The Secure Shell (SSH) Authentication Protocol [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.rfc-editor.org/rfc/rfc4252}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{rfc5737}
+	RFC 5737. IPv4 Address Blocks Reserved for Documentation [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.rfc-editor.org/rfc/rfc5737}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{combined}
+	Apache HTTP Server. Combined Log Format [Электронный ресурс]. \mdash  Режим доступа: \url{https://httpd.apache.org/docs/2.4/logs.html}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{snort}
+	Snort. Official documentation [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.snort.org/}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{suricata}
+	Suricata. Open source IDS/IPS [Электронный ресурс]. \mdash  Режим доступа: \url{https://suricata.io/}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{ossec}
+	OSSEC. Host-based intrusion detection [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.ossec.net/}. \mdash  Дата доступа: 10.09.2026.
+
+	\bibitem{fail2ban}
+	Fail2ban [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.fail2ban.org/}. \mdash  Дата доступа: 10.09.2026.
+\end{thebibliography}

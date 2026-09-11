@@ -1,0 +1,11 @@
+09/10-18:20:00.000000  [**] [1:1000003:1] WEB WordPress login probe [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 198.51.100.12:41001 -> 10.206.216.245:8088
+09/10-18:20:01.000000  [**] [1:1000001:1] WEB phpMyAdmin probe [**] [Classification: access to a potentially vulnerable web application] [Priority: 2] {TCP} 198.51.100.12:41002 -> 10.206.216.245:8088
+09/10-18:20:02.000000  [**] [1:1000005:1] WEB sqlmap scanner [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 198.51.100.77:41003 -> 10.206.216.245:8088
+09/10-18:20:02.000000  [**] [1:1000002:1] WEB path traversal [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 198.51.100.77:41003 -> 10.206.216.245:8088
+09/10-18:20:03.000000  [**] [1:1000005:1] WEB sqlmap scanner [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 198.51.100.77:41004 -> 10.206.216.245:8088
+09/10-18:20:03.000000  [**] [1:1000008:1] WEB SQLi pattern [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 198.51.100.77:41004 -> 10.206.216.245:8088
+09/10-18:20:04.000000  [**] [1:1000006:1] WEB hydra user-agent [**] [Classification: Misc Attack] [Priority: 2] {TCP} 192.0.2.88:41005 -> 10.206.216.245:8088
+09/10-18:20:04.000000  [**] [1:1000004:1] WEB env file probe [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.0.2.88:41005 -> 10.206.216.245:8088
+09/10-18:20:05.000000  [**] [1:1000006:1] WEB hydra user-agent [**] [Classification: Misc Attack] [Priority: 2] {TCP} 192.0.2.88:41006 -> 10.206.216.245:8088
+09/10-18:20:06.000000  [**] [1:1000007:1] SSH SYN probe [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 203.0.113.40:51022 -> 10.206.216.245:2222
+09/10-18:20:07.000000  [**] [1:1000007:1] SSH SYN probe [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 203.0.113.40:51023 -> 10.206.216.245:2222

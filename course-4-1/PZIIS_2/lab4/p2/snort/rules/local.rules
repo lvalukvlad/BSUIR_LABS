@@ -1,0 +1,10 @@
+# Локальные сигнатуры учебного узла (SID 1000001—1000008).
+
+alert tcp any any -> any 8088 (msg:"WEB phpMyAdmin probe"; content:"phpmyadmin"; nocase; sid:1000001; rev:1; classtype:web-application-activity;)
+alert tcp any any -> any 8088 (msg:"WEB path traversal"; content:"../"; sid:1000002; rev:1; classtype:web-application-attack;)
+alert tcp any any -> any 8088 (msg:"WEB WordPress login probe"; content:"wp-login"; nocase; sid:1000003; rev:1; classtype:web-application-activity;)
+alert tcp any any -> any 8088 (msg:"WEB env file probe"; content:".env"; sid:1000004; rev:1; classtype:attempted-recon;)
+alert tcp any any -> any 8088 (msg:"WEB sqlmap scanner"; content:"sqlmap"; nocase; sid:1000005; rev:1; classtype:web-application-attack;)
+alert tcp any any -> any 8088 (msg:"WEB hydra user-agent"; content:"Hydra"; sid:1000006; rev:1; classtype:misc-attack;)
+alert tcp any any -> any 2222 (msg:"SSH SYN probe"; flags:S; sid:1000007; rev:1; classtype:attempted-recon;)
+alert tcp any any -> any 8088 (msg:"WEB SQLi pattern"; content:"OR+"; nocase; sid:1000008; rev:1; classtype:web-application-attack;)

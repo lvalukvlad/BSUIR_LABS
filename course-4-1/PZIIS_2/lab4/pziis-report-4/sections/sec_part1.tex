@@ -1,0 +1,94 @@
+\section{Часть 1. Анализ запросов из сети Internet}
+\label{sec:part1}
+
+\textbf{Краткое описание веб-сервера.}
+На учебном узле развёрнут HTTP-сервер на языке Python. Он отдаёт тестовую страницу <<Сводка>>: состояние служб, ссылки на машинное описание и \texttt{robots.txt}. Журнал доступа ведётся в формате Combined (адрес, время, строка запроса, код, размер, Referer, User-Agent). Журнал ошибок фиксирует ответы с кодом 4xx. Служба SSH принимает только открытый ключ оператора и слушает нестандартный порт, что снижает долю автоматических сканеров, нацеленных на порт~22. Схема узла показана на рисунке~\ref{fig:node}. Внешний вид страницы~\mdash  на рисунке~\ref{fig:ui}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.92\textwidth]{01_node.png}
+	\caption{Потоки запросов и журналы учебного узла}
+	\label{fig:node}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.88\textwidth]{03_ui.png}
+	\caption{Тестовая страница, доступная по HTTP}
+	\label{fig:ui}
+\end{figure}
+
+\textbf{Анализируемые файлы.}
+Для разбора использованы три журнала. \texttt{access.log}~\mdash  Combined веб-сервера: по строке восстанавливаются источник, путь, код ответа и клиентская программа. \texttt{error.log}~\mdash  пояснения к отказам (нет такого пути, отклонённый обход каталога). \texttt{auth.log}~\mdash  журнал SSH в формате syslog: успешный вход по ключу, отказ пароля, несуществующая учётная запись, обрыв после серии неудач, отсутствие идентификационной строки. Фрагменты приведены в листингах~\ref{lst:http} и~\ref{lst:ssh}. Период наблюдения~\mdash  с 04.09.2026 по 10.09.2026. Внешние адреса взяты из документационных диапазонов RFC~5737, чтобы воспроизводимо описать типовой шум сети Internet, не смешивая его с случайными адресами живого канала.
+
+\begin{lstlisting}[caption={Фрагмент Combined-журнала веб-сервера},label={lst:http},basicstyle=\footnotesize\ttfamily]
+198.51.100.12 - - [04/Sep/2026:06:50:03 +0300] "GET /wp-admin/ HTTP/1.1" 404 412 "-" "Mozilla/5.0 (compatible; zgrab/0.1)"
+198.51.100.12 - - [04/Sep/2026:06:50:09 +0300] "GET /phpmyadmin/ HTTP/1.1" 404 412 "-" "sqlmap/1.8.2#stable (http://sqlmap.org)"
+10.206.216.10 - - [04/Sep/2026:10:07:45 +0300] "GET / HTTP/1.1" 200 1480 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
+198.51.100.12 - - [04/Sep/2026:06:50:30 +0300] "GET /cgi-bin/../../../../etc/passwd HTTP/1.1" 400 390 "-" "Mozilla/5.0 (compatible; Nmap Scripting Engine)"
+\end{lstlisting}
+
+\pagebreak
+\begin{lstlisting}[caption={Фрагмент журнала SSH},label={lst:ssh},basicstyle=\footnotesize\ttfamily]
+Sep  4 03:10:00 node sshd[18002]: Failed password for root from 203.0.113.40 port 51000 ssh2
+Sep  4 05:01:01 node sshd[18029]: Invalid user admin from 203.0.113.55 port 43000
+Sep  4 09:05:18 node sshd[18001]: Accepted publickey for operator from 10.206.216.10 port 48571 ssh2: RSA SHA256:lab4operator
+\end{lstlisting}
+
+\textbf{Анализ запросов.}
+За семь суток веб-сервер зафиксировал 200 обращений, служба SSH~\mdash  387 событий. По HTTP коды распределились так: 95 ответов 200, 91 ответ 404, 14 ответов 400. Классификация путей и заголовков User-Agent приведена в таблице~\ref{tab:httpcls}. Легитимный трафик (сводка, состояние, \texttt{robots.txt}, проверка доступности) составляет 74 записи и исходит с адресов локальной сети. Остальное~\mdash  разведка: сканеры CMS (WordPress, phpMyAdmin), поиск файлов секретов (\texttt{.env}, \texttt{.git/config}), обход пути к \texttt{/etc/passwd}, шаблоны инъекции в URI, а также явные сканеры в User-Agent (sqlmap, Hydra, Nmap, masscan, zgrab). Лидирующий внешний источник HTTP~\mdash  \texttt{198.51.100.12} (98 запросов).
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		\textbf{Класс} & \textbf{Записей} \\
+		\hline
+		легитимный & 74 \\
+		\hline
+		сканер CMS & 56 \\
+		\hline
+		утечка секретов & 28 \\
+		\hline
+		инъекция в URI & 21 \\
+		\hline
+		обход пути & 14 \\
+		\hline
+		сканер по User-Agent & 7 \\
+		\hline
+	\end{tabular}
+	\caption{Классификация записей Combined-журнала}
+	\label{tab:httpcls}
+\end{table}
+
+По SSH успешных входов по ключу ровно семь~\mdash  по одному в рабочие часы каждого дня с адреса оператора \texttt{10.206.216.10}. Неверный пароль зафиксирован 206 раз, обращения к несуществующим учётным записям~\mdash  119, принудительные отключения после серии неудач~\mdash  30, отсутствие баннера~\mdash  4. Ночной перебор \texttt{root} идёт с \texttt{203.0.113.40} (229 событий). Словарь имён (\texttt{admin}, \texttt{ubuntu}, \texttt{postgres}, \texttt{oracle} и др.)~\mdash  с \texttt{203.0.113.55}. Адрес \texttt{192.0.2.88} появляется сразу в двух подсистемах: неудачный SSH и запросы \texttt{/.env} и \texttt{wp-login.php}. Такая корреляция важнее одиночного 404: один источник ведёт разведку и по оболочке, и по веб-корню.
+
+По суткам нагрузка стабильна (таблица~\ref{tab:days}): веб~\mdash  25--32 записи в день, SSH~\mdash  47--60. Это не разовая вспышка, а постоянный фон, характерный для узла, достижимого из Internet.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{Дата} & \textbf{HTTP} & \textbf{SSH} \\
+		\hline
+		04.09.2026 & 29 & 54 \\
+		\hline
+		05.09.2026 & 26 & 59 \\
+		\hline
+		06.09.2026 & 30 & 60 \\
+		\hline
+		07.09.2026 & 25 & 57 \\
+		\hline
+		08.09.2026 & 32 & 55 \\
+		\hline
+		09.09.2026 & 29 & 55 \\
+		\hline
+		10.09.2026 & 29 & 47 \\
+		\hline
+	\end{tabular}
+	\caption{Число записей журналов по суткам}
+	\label{tab:days}
+\end{table}
+
+\textbf{Рекомендации.}
+По журналам без IDS уже видно, что делать. Для SSH: оставить только ключи, запретить вход \texttt{root} и парольную аутентификацию, ограничить источники (\texttt{AllowUsers} и ACL межсетевого экрана), при необходимости вынести управление в VPN. Для HTTP: не публиковать панели CMS и phpMyAdmin, отдавать 404 без различия путей, не держать \texttt{.env} в корне. Для реакции: порог по числу отказов с одного адреса и сетевая IDS, которая разбирает не только syslog, но и содержимое HTTP. Это переход ко второй части работы.

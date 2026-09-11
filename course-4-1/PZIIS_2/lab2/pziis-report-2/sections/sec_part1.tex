@@ -1,0 +1,66 @@
+\section{Часть 1. Оценка защищённости разработанного приложения}
+\label{sec:part1}
+
+Разработано веб-приложение \textbf{Secure Notes Lab} (каталог \texttt{lab2/p1/app}) на Python~3 / Flask с СУБД SQLite. Основные возможности:
+
+\begin{itemize}
+	\item регистрация пользователя и вход по паролю;
+	\item CRUD и поиск \textbf{заметок} (неконфиденциальные данные, хранятся открытым текстом);
+	\item CRUD и поиск \textbf{секретов} (конфиденциальные данные, тело шифруется Fernet перед записью в БД);
+	\item выход из сессии.
+\end{itemize}
+
+Запуск:
+
+\begin{lstlisting}[caption={Запуск Secure Notes Lab},label={lst:run}]
+cd lab2/p1/app
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+python app.py
+# http://127.0.0.1:5050
+\end{lstlisting}
+
+На рисунках~\ref{fig:home}--\ref{fig:secrets} приведены снимки экрана интерфейса приложения.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{01_home.png}
+	\caption{Главная страница Secure Notes Lab}
+	\label{fig:home}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{02_register.png}
+	\caption{Форма регистрации пользователя}
+	\label{fig:register}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{03_dashboard.png}
+	\caption{Кабинет авторизованного пользователя}
+	\label{fig:dashboard}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{04_notes.png}
+	\caption{Список неконфиденциальных заметок}
+	\label{fig:notes}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{05_secrets.png}
+	\caption{Конфиденциальные секреты (расшифровка только для владельца)}
+	\label{fig:secrets}
+\end{figure}
+
+Анализ защищённости выполнен по четырём аспектам. Приложение запускается от непривилегированного пользователя и не требует прав \texttt{root}; файлы БД и ключа шифрования размещаются в \texttt{instance/}. Риск: любой процесс того же пользователя ОС может прочитать \texttt{fernet.key} и расшифровать секреты. Меры: права доступа \texttt{600}, отдельный системный пользователь, шифрование диска.
+
+С точки зрения компонентов и взаимодействия: пароли хранятся как хэш PBKDF2-SHA256 (Werkzeug); изменяющие запросы защищены CSRF-токеном сессии; доступ к записям фильтруется по \texttt{user\_id}; работа с БД через ORM снижает риск SQL-инъекций; шаблоны Jinja2 экранируют вывод по умолчанию. Ограничения: нет ограничения частоты попыток входа; единый ключ Fernet на всё приложение.
+
+Сетевая политика: сервер по умолчанию слушает только \texttt{127.0.0.1}; cookie сессии имеют флаги \texttt{HttpOnly} и \texttt{SameSite=Lax}; флаг \texttt{Secure} включается переменной окружения \texttt{LAB2\_HTTPS=1}. Без TLS при публикации порта наружу возможен перехват сессии.
+
+Тела секретов в SQLite хранятся как ciphertext; расшифрование выполняется только для владельца после авторизации. К конфиденциальным отнесены пароли учётных записей, содержимое секретов, ключ шифрования и идентификатор сессии; к неконфиденциальным~\mdash  заголовки и тексты заметок владельца. Разделение реализовано разными сущностями (\texttt{Note} / \texttt{Secret}) и разным способом хранения. Ключ Fernet необходимо защищать на уровне ОС и не помещать в систему контроля версий.

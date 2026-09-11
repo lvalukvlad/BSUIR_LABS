@@ -1,0 +1,78 @@
+\section{Часть 2. Усовершенствование системы безопасности удалённых серверов}
+\label{sec:part2}
+
+\textbf{Описание установленного программного обеспечения.}
+По варианту установлена система Snort версии 2.9.15.1. Это сетевая IDS (NIDS): она читает кадры с интерфейса или из файла pcap, применяет набор сигнатур и формирует журнал событий. В документации выделены три режима: сниффер (вывод пакетов на консоль), пакетный регистратор и режим обнаружения. Режим IPS (inline) для Snort означает уже не только запись события, но и сброс или отклонение потока; на учебном узле выбран режим обнаружения, а реакция вынесена в список блокировки. Принцип работы: информационный источник~\mdash  кадры Ethernet/IP/TCP; анализ~\mdash  правила с идентификаторами SID; ответ~\mdash  запись в \texttt{alert} и перечень адресов вне \texttt{HOME\_NET}. Конвейер показан на рисунке~\ref{fig:ids}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.88\textwidth]{02_ids.png}
+	\caption{Конвейер Snort: трафик, сигнатуры, список блокировки}
+	\label{fig:ids}
+\end{figure}
+
+Локальный набор правил рассчитан на наблюдаемые в части~1 классы: phpMyAdmin, WordPress, обход пути, \texttt{.env}, User-Agent sqlmap и Hydra, SYN на порт SSH, шаблон инъекции \texttt{OR+} в URI. Фрагмент правил~\mdash  в листинге~\ref{lst:rules}.
+
+\begin{lstlisting}[caption={Локальные сигнатуры Snort},label={lst:rules},basicstyle=\footnotesize\ttfamily]
+alert tcp any any -> any 8088 (msg:"WEB phpMyAdmin probe"; content:"phpmyadmin"; nocase; sid:1000001; classtype:web-application-activity;)
+alert tcp any any -> any 8088 (msg:"WEB path traversal"; content:"../"; sid:1000002; classtype:web-application-attack;)
+alert tcp any any -> any 8088 (msg:"WEB sqlmap scanner"; content:"sqlmap"; nocase; sid:1000005; classtype:web-application-attack;)
+alert tcp any any -> any 2222 (msg:"SSH SYN probe"; flags:S; sid:1000007; classtype:attempted-recon;)
+\end{lstlisting}
+
+\textbf{Анализируемые подсистемы и файлы.}
+Подсистемы те же, что в части~1: HTTP и SSH. К журналам Combined и syslog добавляются \texttt{snort.conf} (домашняя сеть, классификация, подключение правил), файл сигнатур, pcap с характерными кадрами и \texttt{alert}~\mdash  журнал срабатываний. Каждая строка \texttt{alert} содержит SID, текст, класс, приоритет и пару адресов. По \texttt{alert} строится \texttt{blocklist}: адреса, которые не входят в \texttt{HOME\_NET}. Легитимный запрос оператора с \texttt{10.206.216.10} в список не попадает.
+
+\textbf{Анализ до и после настройки.}
+До включения Snort единственным источником сведений оставались \texttt{access.log} и \texttt{auth.log}. По ним видно перебор и сканирование, но нет автоматического сопоставления содержимого HTTP с атакой и нет готового списка для ACL. После прогона в режиме IDS по девяти кадрам, отражающим те же классы, что и недельный журнал, получено 11 срабатываний (листинг~\ref{lst:alert}). Все восемь локальных сигнатур отработали на соответствующих кадрах; легитимный GET оператора предупреждений не дал.
+
+\begin{lstlisting}[caption={Фрагмент журнала alert Snort},label={lst:alert},basicstyle=\footnotesize\ttfamily]
+[1:1000003:1] WEB WordPress login probe {TCP} 198.51.100.12 -> 10.206.216.245:8088
+[1:1000002:1] WEB path traversal {TCP} 198.51.100.77 -> 10.206.216.245:8088
+[1:1000008:1] WEB SQLi pattern {TCP} 198.51.100.77 -> 10.206.216.245:8088
+[1:1000007:1] SSH SYN probe {TCP} 203.0.113.40 -> 10.206.216.245:2222
+\end{lstlisting}
+
+Сводка сравнения~\mdash  таблица~\ref{tab:before}. После настройки в \texttt{blocklist} входят \texttt{192.0.2.88}, \texttt{198.51.100.12}, \texttt{198.51.100.77}, \texttt{203.0.113.40}. Эти адреса совпадают с лидерами шума в части~1, включая коррелированный \texttt{192.0.2.88}. Практически список можно подать в межсетевой экран или fail2ban; это уже шаг к IPS, хотя сам Snort в данном прогоне пакеты не отбрасывал.
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{|X|c|c|}
+		\hline
+		\textbf{Показатель} & \textbf{До} & \textbf{После} \\
+		\hline
+		Источник сведений & только Combined и syslog & журналы плюс alert \\
+		\hline
+		Автоматическая классификация HTTP & нет & 8 сигнатур \\
+		\hline
+		Срабатываний IDS & 0 & 11 \\
+		\hline
+		Адресов в списке блокировки & 0 & 4 \\
+		\hline
+		Ложные срабатывания на оператора & нет & 0 \\
+		\hline
+	\end{tabularx}
+	\caption{Запросы и реакция до и после включения Snort}
+	\label{tab:before}
+\end{table}
+
+\pagebreak
+\textbf{Сравнение с аналогами.}
+Snort~\mdash  классическая сигнатурная NIDS. Suricata решает тот же класс задач, но рассчитана на многопоточный разбор и удобнее как IPS на границе. OSSEC (Wazuh)~\mdash  хостовая IDS: она смотрит журналы и целостность файлов, а не полезную нагрузку HTTP в кадре. Tripwire~\mdash  контроль целостности файловой системы, а не сетевой поток. Bro/Zeek ближе к сетевому анализу сессий, чем к готовому набору SID. Для данной работы выбран Snort: он прямо сопоставляет содержимое запросов из Internet с правилами и даёт воспроизводимый \texttt{alert} без перевода узла в inline.
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{|l|l|X|}
+		\hline
+		\textbf{Средство} & \textbf{Класс} & \textbf{Сильная сторона} \\
+		\hline
+		Snort & NIDS / IPS & сигнатуры HTTP и портов \\
+		\hline
+		Suricata & NIDS / IPS & многопоточность, рубеж сети \\
+		\hline
+		OSSEC & HIDS & журналы и целостность хоста \\
+		\hline
+		Tripwire & FIM & контроль файлов, не трафик \\
+		\hline
+	\end{tabularx}
+	\caption{Сопоставление средств из перечня вариантов}
+	\label{tab:cmp}
+\end{table}

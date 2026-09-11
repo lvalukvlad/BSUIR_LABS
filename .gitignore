@@ -45,9 +45,29 @@ htmlcov/
 .pytest_cache/
 .mypy_cache/
 
+# LaTeX build junk
+*.aux
+*.fls
+*.fdb_latexmk
+*.toc
+*.synctex.gz
+*.out
+*.lof
+*.lot
+
 # ML / local artifacts
 *.joblib
 optbinning_env/
+
+# Lab memory dumps (keep *_strings.txt / *_summary.txt)
+**/results/dumps/*.bin
+
+# Local lab secrets / keys (keep *.pub)
+**/instance/fernet.key
+**/keys/operator
+**/keys/ssh_host_rsa
+**/keys/ssh_host_*
+!**/keys/*.pub
 
 # Office lock leftovers
 ~$*

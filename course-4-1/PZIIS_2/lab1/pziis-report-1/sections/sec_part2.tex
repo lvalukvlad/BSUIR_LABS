@@ -1,0 +1,81 @@
+\section{Часть 2. Управление доступом к приложениям и системам базам данных}
+\label{sec:part2}
+
+PostgreSQL~\mdash  объектно-реляционная система управления базами данных с развитой моделью ролей и привилегий (\texttt{GRANT}/\texttt{REVOKE}) на уровне баз данных, схем, таблиц, последовательностей и функций. Роли могут наследовать права других ролей, что позволяет отделить политику доступа (\texttt{*\_role}) от учётных записей входа (\texttt{*\_user}).
+
+Скрипты части~2 расположены в каталоге \texttt{lab1/p2} (таблица~\ref{tab:p2-scripts}).
+
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		\textbf{Скрипт} & \textbf{Назначение} \\
+		\hline
+		\texttt{install.sh} & Установка пакетов PostgreSQL и запуск службы \\
+		\hline
+		\texttt{setup\_acl.sh} & Создание БД \texttt{lab\_db}, схемы, ролей, таблицы и настройка \texttt{pg\_hba.conf} \\
+		\hline
+		\texttt{verify.sh} & Матрица операций SELECT / INSERT / UPDATE / DELETE / CREATE / DROP \\
+		\hline
+		\texttt{cleanup.sh} & Удаление объектов лабы; ключ \texttt{-{}-purge} удаляет пакеты СУБД \\
+		\hline
+	\end{tabularx}
+	\caption{Скрипты части 2}
+	\label{tab:p2-scripts}
+\end{table}
+
+В системе присутствуют три роли в соответствии с методичкой (таблица~\ref{tab:p2-roles}). Объекты стенда: база данных \texttt{lab\_db}, схема \texttt{lab\_schema}, таблица \texttt{lab\_schema.test\_table}.
+
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{|l|l|l|X|}
+		\hline
+		\textbf{Учётка} & \textbf{Пароль} & \textbf{Роль} & \textbf{Права} \\
+		\hline
+		\texttt{admin\_user} & \texttt{admin\_pass} & \texttt{admin\_role} & полный доступ к схеме (DML и DDL) \\
+		\hline
+		\texttt{app\_user} & \texttt{user\_pass} & \texttt{user\_role} & SELECT, INSERT, UPDATE, DELETE \\
+		\hline
+		\texttt{guest\_user} & \texttt{guest\_pass} & \texttt{guest\_role} & только SELECT \\
+		\hline
+	\end{tabularx}
+	\caption{Роли и учётные записи PostgreSQL}
+	\label{tab:p2-roles}
+\end{table}
+
+Порядок запуска:
+
+\begin{lstlisting}[caption={Запуск сценариев части 2},label={lst:p2-run}]
+cd lab1/p2
+chmod +x *.sh
+sudo ./install.sh
+sudo ./setup_acl.sh
+./verify.sh
+# sudo ./cleanup.sh
+\end{lstlisting}
+
+Прогон выполнен 10.09.2026. Проверка политики безопасности завершилась без расхождений с ожиданиями (\texttt{FAILS=0}). Сводка~\mdash  таблица~\ref{tab:p2-res}; полный лог~\mdash  \texttt{lab1/p2/results/verify\_acl.txt}.
+
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{|l|c|c|c|c|c|c|}
+		\hline
+		\textbf{Учётка} & SELECT & INSERT & UPDATE & DELETE & CREATE & DROP \\
+		\hline
+		\texttt{admin\_user} & ДА & ДА & ДА & ДА & ДА & ДА \\
+		\hline
+		\texttt{app\_user} & ДА & ДА & ДА & ДА & НЕТ & НЕТ \\
+		\hline
+		\texttt{guest\_user} & ДА & НЕТ & НЕТ & НЕТ & НЕТ & --- \\
+		\hline
+	\end{tabularx}
+	\caption{Результаты проверки ACL PostgreSQL, 10.09.2026}
+	\label{tab:p2-res}
+\end{table}
+
+Таким образом, администратор имеет полный доступ, пользователь приложения~\mdash  только DML (CRUD), гость~\mdash  только чтение, что соответствует требованиям методички. Фрагмент назначения привилегий приведён в листинге~\ref{lst:p2-grant}.
+
+\begin{lstlisting}[caption={Назначение привилегий ролям},label={lst:p2-grant}]
+GRANT ALL PRIVILEGES ON SCHEMA lab_schema TO admin_role;
+GRANT CREATE ON SCHEMA lab_schema TO admin_role;
+GRANT SELECT, INSERT, UPDATE, DELETE
+  ON ALL TABLES IN SCHEMA lab_schema TO user_role;
+GRANT SELECT ON ALL TABLES IN SCHEMA lab_schema TO guest_role;
+\end{lstlisting}

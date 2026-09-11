@@ -1,0 +1,11 @@
+=== /proc/62310/status (Vm*) ===
+Name:	python
+Pid:	62310
+VmPeak:	  193996 kB
+VmSize:	  128460 kB
+VmRSS:	   37696 kB
+Threads:	1
+
+=== sample ps ===
+    PID %CPU %MEM   RSS    VSZ     ELAPSED CMD
+  62310  2.6  0.2 37696 128460       00:05 python app.py

@@ -1,0 +1,25 @@
+@startuml
+digraph dfa {
+  rankdir=LR;
+  bgcolor="white";
+  pad=0.25;
+  nodesep=0.5;
+  ranksep=0.7;
+  fontname="Liberation Sans";
+  node [fontname="Liberation Sans", fontsize=14, shape=circle, width=0.55, height=0.55, style=filled, fillcolor="white", color="#1B242E", fontcolor="#1B242E"];
+  edge [fontname="Liberation Sans", fontsize=13, color="#1B242E"];
+
+  start [shape=point, width=0.16, fillcolor="#1B242E", label=""];
+  s5 [shape=doublecircle];
+
+  start -> s0;
+  s0 -> s1 [label="a"];
+  s1 -> s2 [label="a"];
+  s2 -> s3 [label="a"];
+  s3 -> s4 [label="b"];
+  s4 -> s3 [label="a"];
+  s2 -> s5 [label="c, d"];
+  s4 -> s5 [label="c, d"];
+  s5 -> s5 [label="c, d"];
+}
+@enduml

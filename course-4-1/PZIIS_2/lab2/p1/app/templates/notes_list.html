@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Заметки{% endblock %}
+{% block content %}
+<h1>Заметки (неконфиденциальные)</h1>
+<form class="search" method="get">
+  <input name="q" value="{{ q }}" placeholder="Поиск…">
+  <button type="submit">Найти</button>
+  <a class="btn" href="{{ url_for('notes_create') }}">Создать</a>
+</form>
+{% if notes %}
+<ul class="list">
+  {% for n in notes %}
+  <li class="card">
+    <h3>{{ n.title }}</h3>
+    <p>{{ n.body[:240] }}{% if n.body|length > 240 %}…{% endif %}</p>
+    <div class="row">
+      <a href="{{ url_for('notes_edit', note_id=n.id) }}">Изменить</a>
+      <form method="post" action="{{ url_for('notes_delete', note_id=n.id) }}" onsubmit="return confirm('Удалить?');">
+        <input type="hidden" name="_csrf" value="{{ csrf_token }}">
+        <button type="submit" class="danger">Удалить</button>
+      </form>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>Записей нет.</p>
+{% endif %}
+{% endblock %}

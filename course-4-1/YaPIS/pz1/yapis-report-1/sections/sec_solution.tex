@@ -1,0 +1,160 @@
+\section{Построение конечного автомата}
+\label{sec:solution}
+
+Регулярное выражение варианта~8 разбирается как конкатенация трёх фрагментов: префикса~$a^{2}$, итерации~$(ab)^{*}$ и однократного или многократного выбора~$(c\mid d)^{+}$. Дерево разбора приведено на рисунке~\ref{fig:regex-tree}.
+
+\begin{center}
+	\includegraphics[width=0.52\textwidth]{04_regex_tree.png}
+	\captionof{figure}{Дерево разбора регулярного выражения $a^{2}(ab)^{*}(c\mid d)^{+}$}
+	\label{fig:regex-tree}
+\end{center}
+
+По дереву разбора построен недетерминированный конечный автомат с $\varepsilon$-переходами (рисунок~\ref{fig:nfa}). Префикс~$a^{2}$ реализован цепочкой $q_{0}\xrightarrow{a}q_{1}\xrightarrow{a}q_{2}$. Цикл~$(ab)^{*}$ начинается в~$q_{3}$: переход $q_{3}\xrightarrow{a}q_{4}\xrightarrow{b}q_{5}$ и возврат по~$\varepsilon$ в~$q_{3}$. Нулевое число повторений~$(ab)$ задаётся $\varepsilon$-переходом $q_{2}\to q_{6}$. Фрагмент~$(c\mid d)^{+}$ начинается в~$q_{6}$ и переводит автомат в допускающее состояние~$q_{7}$, из которого по символам~$c$ и~$d$ есть петля.
+
+\begin{center}
+	\includegraphics[width=0.98\textwidth]{01_nfa.png}
+	\captionof{figure}{Недетерминированный конечный автомат с $\varepsilon$-переходами}
+	\label{fig:nfa}
+\end{center}
+
+Начальное состояние~\mdash{} $q_{0}$, множество заключительных состояний $F = \{q_{7}\}$. Таблица переходов приведена в таблице~\ref{tab:nfa}.
+
+\begin{center}
+	\begin{minipage}{\textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Состояние & $a$ & $b$ & $c$ & $d$ & $\varepsilon$ \\
+		\hline
+		$q_{0}$ & $\{q_{1}\}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+		\hline
+		$q_{1}$ & $\{q_{2}\}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+		\hline
+		$q_{2}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\{q_{3}, q_{6}\}$ \\
+		\hline
+		$q_{3}$ & $\{q_{4}\}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+		\hline
+		$q_{4}$ & $\varnothing$ & $\{q_{5}\}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ \\
+		\hline
+		$q_{5}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & $\{q_{3}, q_{6}\}$ \\
+		\hline
+		$q_{6}$ & $\varnothing$ & $\varnothing$ & $\{q_{7}\}$ & $\{q_{7}\}$ & $\varnothing$ \\
+		\hline
+		$q_{7}$ & $\varnothing$ & $\varnothing$ & $\{q_{7}\}$ & $\{q_{7}\}$ & $\varnothing$ \\
+		\hline
+	\end{tabular}
+	\captionof{table}{Таблица переходов НКА}
+	\label{tab:nfa}
+	\end{minipage}
+\end{center}
+
+Построенный автомат является недетерминированным. Во-первых, из состояний~$q_{2}$ и~$q_{5}$ существуют эпсилон-переходы. Во-вторых, эпсилон-замыкание этих состояний содержит более одного элемента, поэтому при чтении входной цепочки автомат может одновременно находиться в нескольких состояниях. Для каждого символа алфавита из одного состояния есть не более одного перехода, однако наличие эпсилон-дуг достаточно, чтобы автомат не был детерминированным.
+
+Детерминизация выполняется построением подмножеств. Эпсилон-замыкания состояний НКА:
+\begin{align*}
+	\varepsilon\text{-closure}(q_{0}) &= \{q_{0}\}, \\
+	\varepsilon\text{-closure}(q_{1}) &= \{q_{1}\}, \\
+	\varepsilon\text{-closure}(q_{2}) &= \{q_{2}, q_{3}, q_{6}\}, \\
+	\varepsilon\text{-closure}(q_{3}) &= \{q_{3}\}, \\
+	\varepsilon\text{-closure}(q_{4}) &= \{q_{4}\}, \\
+	\varepsilon\text{-closure}(q_{5}) &= \{q_{5}, q_{3}, q_{6}\}, \\
+	\varepsilon\text{-closure}(q_{6}) &= \{q_{6}\}, \\
+	\varepsilon\text{-closure}(q_{7}) &= \{q_{7}\}.
+\end{align*}
+
+Начальное состояние ДКА~\mdash{} $s_{0} = \varepsilon\text{-closure}(q_{0}) = \{q_{0}\}$. Применение операции $\mathrm{move}$ и повторного эпсилон-замыкания даёт состояния таблицы~\ref{tab:dfa-subsets}. Недостижимые комбинации подмножеств не включаются. Неопределённые переходы считаются переходами в неявное отвергающее состояние (на диаграмме не изображается).
+
+\begin{center}
+	\begin{minipage}{\textwidth}
+	\centering
+	\small
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		Состояние ДКА & Подмножество НКА & $a$ & $b$ & $c$ & $d$ & $F$ \\
+		\hline
+		$s_{0}$ & $\{q_{0}\}$ & $s_{1}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$s_{1}$ & $\{q_{1}\}$ & $s_{2}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$s_{2}$ & $\{q_{2}, q_{3}, q_{6}\}$ & $s_{3}$ & $\varnothing$ & $s_{5}$ & $s_{5}$ & нет \\
+		\hline
+		$s_{3}$ & $\{q_{4}\}$ & $\varnothing$ & $s_{4}$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$s_{4}$ & $\{q_{5}, q_{3}, q_{6}\}$ & $s_{3}$ & $\varnothing$ & $s_{5}$ & $s_{5}$ & нет \\
+		\hline
+		$s_{5}$ & $\{q_{7}\}$ & $\varnothing$ & $\varnothing$ & $s_{5}$ & $s_{5}$ & да \\
+		\hline
+	\end{tabular}
+	\captionof{table}{Таблица переходов ДКА после построения подмножеств}
+	\label{tab:dfa-subsets}
+	\end{minipage}
+\end{center}
+
+Диаграмма полученного ДКА приведена на рисунке~\ref{fig:dfa}. Начальное состояние~\mdash{} $s_{0}$, единственное заключительное~\mdash{} $s_{5}$. Для любого состояния и любого символа алфавита существует не более одного перехода, $\varepsilon$-дуг нет, поэтому автомат детерминирован.
+
+\begin{center}
+	\includegraphics[width=0.98\textwidth]{02_dfa.png}
+	\captionof{figure}{Детерминированный конечный автомат после построения подмножеств}
+	\label{fig:dfa}
+\end{center}
+
+ДКА не является минимальным: состояния~$s_{2}$ и~$s_{4}$ неотличимы. Оба не являются заключительными, оба по символу~$a$ переходят в~$s_{3}$, по~$b$~\mdash{} в отвергающее состояние, по~$c$ и~$d$~\mdash{} в~$s_{5}$. Следовательно, их можно склеить.
+
+Минимизация выполняется алгоритмом разбиения. Начальное разбиение множества состояний по признаку заключительности:
+\[
+	\Pi_{0} = \bigl\{ \{s_{0}, s_{1}, s_{2}, s_{3}, s_{4}\},\; \{s_{5}\} \bigr\}.
+\]
+По символам~$c$ и~$d$ состояния~$s_{2}$ и~$s_{4}$ переходят в группу заключительных, а~$s_{0}$, $s_{1}$ и~$s_{3}$~\mdash{} нет:
+\[
+	\Pi_{1} = \bigl\{ \{s_{0}, s_{1}, s_{3}\},\; \{s_{2}, s_{4}\},\; \{s_{5}\} \bigr\}.
+\]
+В группе $\{s_{0}, s_{1}, s_{3}\}$ переходы по~$a$ ведут в разные группы текущего разбиения: $s_{0}\xrightarrow{a}s_{1}$ (та же группа), $s_{1}\xrightarrow{a}s_{2}$ (группа $\{s_{2}, s_{4}\}$), $s_{3}\xrightarrow{a}\varnothing$. По~$b$ только~$s_{3}$ переходит в $\{s_{2}, s_{4}\}$. Поэтому
+\[
+	\Pi_{2} = \bigl\{ \{s_{0}\},\; \{s_{1}\},\; \{s_{3}\},\; \{s_{2}, s_{4}\},\; \{s_{5}\} \bigr\}.
+\]
+Группа $\{s_{2}, s_{4}\}$ далее не расщепляется: для всех символов алфавита оба состояния переходят в представителей одних и тех же групп. Так как $\Pi_{3} = \Pi_{2}$, разбиение стабильно.
+
+В качестве представителей групп берутся $q_{0} = s_{0}$, $q_{1} = s_{1}$, $q_{2} = \{s_{2}, s_{4}\}$, $q_{3} = s_{3}$, $q_{4} = s_{5}$. Заключительное состояние минимального автомата~\mdash{} $q_{4}$. Таблица переходов~\mdash{} таблица~\ref{tab:min-dfa}, диаграмма~\mdash{} рисунок~\ref{fig:min-dfa}.
+
+\begin{center}
+	\begin{minipage}{\textwidth}
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		Состояние & $a$ & $b$ & $c$ & $d$ & $F$ \\
+		\hline
+		$q_{0}$ & $q_{1}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$q_{1}$ & $q_{2}$ & $\varnothing$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$q_{2}$ & $q_{3}$ & $\varnothing$ & $q_{4}$ & $q_{4}$ & нет \\
+		\hline
+		$q_{3}$ & $\varnothing$ & $q_{2}$ & $\varnothing$ & $\varnothing$ & нет \\
+		\hline
+		$q_{4}$ & $\varnothing$ & $\varnothing$ & $q_{4}$ & $q_{4}$ & да \\
+		\hline
+	\end{tabular}
+	\captionof{table}{Таблица переходов минимального ДКА}
+	\label{tab:min-dfa}
+	\end{minipage}
+\end{center}
+
+\begin{center}
+	\includegraphics[width=0.78\textwidth]{03_min_dfa.png}
+	\captionof{figure}{Минимальный детерминированный конечный автомат}
+	\label{fig:min-dfa}
+\end{center}
+
+Повторное разбиение минимального ДКА сразу даёт пять одноэлементных групп: единственное заключительное состояние~$q_{4}$; среди незаключительных $q_{2}$ отличается переходами по~$c$ и~$d$ в~$F$; $q_{3}$~\mdash{} единственное состояние с переходом по~$b$; $q_{0}$ и~$q_{1}$ различаются тем, что из~$q_{1}$ по~$a$ достигается~$q_{2}$, а из~$q_{0}$~\mdash{} нет. Число состояний уменьшить нельзя.
+
+Так как автомат преобразовывался, по минимальному ДКА восстанавливается регулярное выражение методом исключения состояний. Удаление~$q_{1}$ даёт дугу $q_{0}\xrightarrow{aa}q_{2}$. Удаление~$q_{3}$ даёт петлю $q_{2}\xrightarrow{ab}q_{2}$. После этого
+\[
+	q_{0}\xrightarrow{aa}q_{2}\xrightarrow{(ab)^{*}}q_{2}\xrightarrow{c\mid d}q_{4}\xrightarrow{(c\mid d)^{*}}q_{4}.
+\]
+Язык минимального автомата
+\[
+	L = aa\,(ab)^{*}\,(c\mid d)\,(c\mid d)^{*} = a^{2}(ab)^{*}(c\mid d)^{+},
+\]
+что совпадает с исходным регулярным выражением.
+
+Примеры допускаемых цепочек: $aac$, $aad$, $aacddc$, $aaabc$, $aaababccdcdc$, $aaabccc$. Примеры отвергаемых: $\varepsilon$, $aa$, $ab$, $aacb$, $abacdcd$, $bcda$, $aabc$.

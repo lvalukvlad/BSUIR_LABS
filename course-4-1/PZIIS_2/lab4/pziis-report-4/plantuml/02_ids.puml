@@ -1,0 +1,15 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Liberation Sans
+skinparam backgroundColor white
+left to right direction
+
+rectangle "Трафик\nHTTP / SSH" as T
+rectangle "Snort\nNIDS" as I
+database "alert" as A
+rectangle "blocklist" as B
+
+T --> I : pcap / поток
+I --> A : сигнатуры
+A --> B : адреса вне HOME_NET
+@enduml

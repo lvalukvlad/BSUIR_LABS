@@ -1,0 +1,24 @@
+@startuml
+skinparam shadowing false
+skinparam defaultFontName Liberation Sans
+skinparam backgroundColor white
+skinparam rectangle {
+  BackgroundColor #F7F1E4
+  BorderColor #1B242E
+}
+left to right direction
+
+actor "Клиенты" as C
+rectangle "Удалённый узел" {
+  rectangle "HTTP\nCombined" as W
+  rectangle "SSH\nтолько ключ" as S
+}
+database "Журналы" as L
+rectangle "Разбор" as A
+
+C --> W : запросы страниц
+C --> S : вход
+W --> L
+S --> L
+L --> A : access.log\nauth.log
+@enduml

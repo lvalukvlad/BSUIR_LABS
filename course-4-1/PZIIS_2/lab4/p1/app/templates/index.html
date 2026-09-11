@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Сводка</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="sheet">
+    <header class="mast">
+      <div>
+        <p class="kicker">Публичный узел</p>
+        <h1>Сводка</h1>
+      </div>
+      <p class="when">{{ generated }}</p>
+    </header>
+
+    <p class="lead">
+      Узел принимает запросы по HTTP и управление по SSH с аутентификацией по ключу.
+      На этой странице публикуется только состояние служб.
+    </p>
+
+    <dl class="grid">
+      <div>
+        <dt>HTTP</dt>
+        <dd>отвечает</dd>
+      </div>
+      <div>
+        <dt>SSH</dt>
+        <dd>только ключ</dd>
+      </div>
+      <div>
+        <dt>Журнал</dt>
+        <dd>Combined</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2>Публикации</h2>
+      <ul class="links">
+        <li><a href="/">Эта страница</a></li>
+        <li><a href="/status.json">Машинное состояние</a></li>
+        <li><a href="/robots.txt">robots.txt</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Доступ к управлению ограничен списком ключей. Парольный вход по SSH отключён.</p>
+    </footer>
+  </div>
+</body>
+</html>

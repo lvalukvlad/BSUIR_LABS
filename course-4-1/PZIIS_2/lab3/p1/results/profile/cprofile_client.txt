@@ -1,0 +1,24 @@
+         256785 function calls (256180 primitive calls) in 0.213 seconds
+
+   Ordered by: cumulative time
+   List reduced from 647 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       40    0.000    0.000    0.211    0.005 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/api.py:24(request)
+       40    0.000    0.000    0.206    0.005 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/sessions.py:557(request)
+    60/40    0.001    0.000    0.167    0.004 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/sessions.py:752(send)
+       20    0.000    0.000    0.155    0.008 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/api.py:117(post)
+       60    0.001    0.000    0.125    0.002 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/adapters.py:634(send)
+       60    0.001    0.000    0.100    0.002 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:592(urlopen)
+       60    0.001    0.000    0.095    0.002 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:377(_make_request)
+       40    0.000    0.000    0.086    0.002 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/sessions.py:805(<listcomp>)
+    80/60    0.001    0.000    0.086    0.001 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/requests/sessions.py:186(resolve_redirects)
+       60    0.001    0.000    0.081    0.001 /home/ubuntuuser/Desktop/BSUIR_LABS/course-4-1/PZIIS_2/lab3/p1/app/.venv/lib/python3.10/site-packages/urllib3/connection.py:540(getresponse)
+       60    0.000    0.000    0.075    0.001 /usr/lib/python3.10/http/client.py:1351(getresponse)
+       60    0.001    0.000    0.073    0.001 /usr/lib/python3.10/http/client.py:316(begin)
+       60    0.000    0.000    0.062    0.001 /usr/lib/python3.10/http/client.py:283(_read_status)
+      109    0.000    0.000    0.062    0.001 /usr/lib/python3.10/socket.py:691(readinto)
+      520    0.000    0.000    0.062    0.000 {method 'readline' of '_io.BufferedReader' objects}
+
+
+

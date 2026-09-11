@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Записи</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="top">
+    <p class="brand">Записи</p>
+    <p class="meta">{{ notes_count }} заметок · {{ secrets_count }} секретов</p>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash">
+        {% for cat, msg in messages %}
+          <li class="{{ cat }}">{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <main class="grid">
+    <section>
+      <h1>Заметки</h1>
+      <p class="hint">Обычные записи</p>
+      <form method="post" action="{{ url_for('note_create') }}" class="card-form">
+        <input name="title" placeholder="Заголовок" required>
+        <textarea name="body" placeholder="Текст" rows="3"></textarea>
+        <button type="submit">Создать</button>
+      </form>
+      {% for n in notes %}
+        <article class="item">
+          <form method="post" action="{{ url_for('note_update', nid=n.id) }}">
+            <input name="title" value="{{ n.title }}">
+            <textarea name="body" rows="3">{{ n.body }}</textarea>
+            <button type="submit">Обновить</button>
+          </form>
+          <form method="post" action="{{ url_for('note_delete', nid=n.id) }}">
+            <button type="submit" class="danger">Удалить</button>
+          </form>
+        </article>
+      {% else %}
+        <p class="empty">Пока пусто</p>
+      {% endfor %}
+    </section>
+
+    <section>
+      <h1>Секреты</h1>
+      <p class="hint">Содержимое хранится в зашифрованном виде</p>
+      <form method="post" action="{{ url_for('secret_create') }}" class="card-form">
+        <input name="title" placeholder="Заголовок" required>
+        <textarea name="body" placeholder="Секрет" rows="3" required></textarea>
+        <button type="submit">Создать</button>
+      </form>
+      {% for s in secrets %}
+        <article class="item">
+          <p class="item-title"><strong>{{ s.title }}</strong></p>
+          <p class="cipher">Содержимое зашифровано</p>
+          <form method="post" action="{{ url_for('secret_update', sid=s.id) }}">
+            <input name="title" value="{{ s.title }}">
+            <textarea name="body" rows="2" placeholder="Новый текст, если нужно заменить"></textarea>
+            <button type="submit">Обновить</button>
+          </form>
+          <div class="row">
+            <a class="btn" href="{{ url_for('secret_reveal', sid=s.id) }}">Показать</a>
+            <form method="post" action="{{ url_for('secret_delete', sid=s.id) }}">
+              <button type="submit" class="danger">Удалить</button>
+            </form>
+          </div>
+        </article>
+      {% else %}
+        <p class="empty">Пока пусто</p>
+      {% endfor %}
+    </section>
+  </main>
+</body>
+</html>
