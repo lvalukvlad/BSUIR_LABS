@@ -1,0 +1,34 @@
+\sectioncentered*{Заключение}
+\addcontentsline{toc}{section}{Заключение}
+
+Сделана система, которая по PDF показывает все языки варианта, которые есть в тексте: русский, немецкий или оба. Используются короткие слова, частотные слова и нейросеть. Всё запускается локально через Docker Compose.
+
+На шестнадцати проверочных текстах методы уже различаются по качеству: короткие слова дают F1~$0{,}672$, частотные \mdash $0{,}875$, нейросеть \mdash $1{,}000$. На длинном документе заметно быстрее метод частотных слов: ему не нужно просматривать весь текст.
+
+\begin{thebibliography}{9}
+	\addcontentsline{toc}{section}{Список использованных источников}
+
+	\bibitem{cavnar}
+	Cavnar W., Trenkle J. N-Gram-Based Text Categorization // Proceedings of SDAIR-94. \mdash 1994. \mdash Режим доступа: \url{https://www.let.rug.nl/vannoord/TextCat/textcat.pdf}. \mdash Дата доступа: 23.09.2026.
+
+	\bibitem{scikit}
+	Pedregosa F. и др. Scikit-learn: Machine Learning in Python // Journal of Machine Learning Research. \mdash 2011. \mdash Vol.~12. \mdash P.~2825--2830.
+
+	\bibitem{fastapi}
+	FastAPI documentation [Электронный ресурс]. \mdash Режим доступа: \url{https://fastapi.tiangolo.com/}. \mdash Дата доступа: 23.09.2026.
+
+	\bibitem{pymorphy}
+	Korobov M. Morphological Analyzer and Generator for Russian and Ukrainian Languages // Analysis of Images, Social Networks and Texts. \mdash 2015. \mdash P.~320--332.
+
+	\bibitem{pypdf}
+	pypdf [Электронный ресурс]. \mdash Режим доступа: \url{https://pypdf.readthedocs.io/}. \mdash Дата доступа: 23.09.2026.
+
+	\bibitem{postgres}
+	PostgreSQL 16 Documentation [Электронный ресурс]. \mdash Режим доступа: \url{https://www.postgresql.org/docs/16/}. \mdash Дата доступа: 23.09.2026.
+
+	\bibitem{react}
+	React documentation [Электронный ресурс]. \mdash Режим доступа: \url{https://react.dev/}. \mdash Дата доступа: 23.09.2026.
+
+	\bibitem{sklearnmlp}
+	MLPClassifier [Электронный ресурс]. \mdash Режим доступа: \url{https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}. \mdash Дата доступа: 23.09.2026.
+\end{thebibliography}

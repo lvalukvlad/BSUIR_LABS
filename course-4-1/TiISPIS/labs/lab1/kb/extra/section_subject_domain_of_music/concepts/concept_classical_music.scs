@@ -1,0 +1,14 @@
+concept_classical_music
+<- sc_node_class;
+<- class;
+<- concept_musical_genre;
+=> nrel_main_idtf:
+	[классическая музыка]
+	(* <- lang_ru;; *);
+	[classical music]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Европейская академическая традиция композиции и исполнения, связанная с нотной письменностью и концертной практикой.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_genre;;

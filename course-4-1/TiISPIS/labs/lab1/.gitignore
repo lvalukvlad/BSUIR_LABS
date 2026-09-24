@@ -1,0 +1,11 @@
+# Отчёт
+tiispis-report-1/*.aux
+tiispis-report-1/*.log
+tiispis-report-1/*.out
+tiispis-report-1/*.toc
+tiispis-report-1/*.fls
+tiispis-report-1/*.fdb_latexmk
+tiispis-report-1/*.synctex.gz
+tiispis-report-1/*.bbl
+tiispis-report-1/*.blg
+tiispis-report-1/scripts/plantuml.jar

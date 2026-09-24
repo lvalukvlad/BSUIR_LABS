@@ -1,0 +1,12 @@
+the_beatles
+<- concept_musical_group;
+<- concept_performer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[The Beatles]
+	(* <- lang_ru;; *);
+	[The Beatles]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Британская рок-группа 1960-х годов, оказавшая огромное влияние на популярную музыку.]
+	(* <- lang_ru;; *);;

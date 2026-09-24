@@ -1,0 +1,11 @@
+electric_guitar
+<- concept_string_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[электрогитара]
+	(* <- lang_ru;; *);
+	[electric guitar]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Струнный инструмент с электромагнитными звукоснимателями, базовый для рок-музыки.]
+	(* <- lang_ru;; *);;

@@ -1,0 +1,11 @@
+trumpet
+<- concept_wind_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[труба]
+	(* <- lang_ru;; *);
+	[trumpet]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Медный духовой инструмент высокого регистра; основной инструмент Майлса Дэвиса.]
+	(* <- lang_ru;; *);;

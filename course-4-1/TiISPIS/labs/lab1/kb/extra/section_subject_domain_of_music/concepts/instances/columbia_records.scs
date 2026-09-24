@@ -1,0 +1,10 @@
+columbia_records
+<- concept_record_label;
+=> nrel_main_idtf:
+	[Columbia Records]
+	(* <- lang_ru;; *);
+	[Columbia Records]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Один из старейших крупных звукозаписывающих лейблов США.]
+	(* <- lang_ru;; *);;

@@ -1,0 +1,26 @@
+symphony_no_5_beethoven
+<- concept_symphony;
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Симфония № 5 c-moll]
+	(* <- lang_ru;; *);
+	[Symphony No. 5 in C minor]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Одна из самых известных симфоний Бетховена; премьера состоялась в 1808 году в Театре ан дер Вин.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	ludwig_van_beethoven;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_performer_of:
+	vienna_philharmonic;
+=> nrel_performed_on_instrument:
+	violin;
+=> nrel_performed_on_instrument:
+	piano;
+=> nrel_duration:
+	[около 30–40 минут]
+	(* <- lang_ru;; *);;

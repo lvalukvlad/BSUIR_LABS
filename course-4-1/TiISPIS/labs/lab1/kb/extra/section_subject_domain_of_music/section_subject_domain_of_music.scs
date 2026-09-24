@@ -1,0 +1,94 @@
+/* Раздел. Предметная область музыки (вариант 15). */
+section_subject_domain_of_music
+=> nrel_main_idtf:
+	[Раздел. Предметная область музыки]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of music]
+	(* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_music = [*
+	subject_domain_of_music
+	<- sc_node_struct;
+	=> nrel_main_idtf:
+		[Предметная область музыки]
+		(* <- lang_ru;; *);
+		[Subject domain of music]
+		(* <- lang_en;; *);
+	<- subject_domain;
+	-> rrel_maximum_studied_object_class:
+		concept_music;
+	-> rrel_not_maximum_studied_object_class:
+		concept_musical_work;
+		concept_song;
+		concept_symphony;
+		concept_opera;
+		concept_album;
+		concept_musical_genre;
+		concept_classical_music;
+		concept_rock_music;
+		concept_jazz_music;
+		concept_pop_music;
+		concept_musician;
+		concept_composer;
+		concept_performer;
+		concept_singer;
+		concept_musical_group;
+		concept_orchestra;
+		concept_musical_instrument;
+		concept_string_instrument;
+		concept_keyboard_instrument;
+		concept_wind_instrument;
+		concept_percussion_instrument;
+		concept_concert;
+		concept_record_label;
+	-> rrel_explored_relation:
+		nrel_author;
+		nrel_performer_of;
+		nrel_work_genre;
+		nrel_included_in_album;
+		nrel_performed_on_instrument;
+		nrel_member_of_ensemble;
+		nrel_release_year;
+		nrel_duration;
+		nrel_record_label;
+		nrel_influence;;
+*];;
+
+section_subject_domain_of_music
+-> rrel_key_sc_element:
+	subject_domain_of_music;
+	concept_music;
+	concept_musical_work;
+	concept_song;
+	concept_symphony;
+	concept_opera;
+	concept_album;
+	concept_musical_genre;
+	concept_classical_music;
+	concept_rock_music;
+	concept_jazz_music;
+	concept_pop_music;
+	concept_musician;
+	concept_composer;
+	concept_performer;
+	concept_singer;
+	concept_musical_group;
+	concept_orchestra;
+	concept_musical_instrument;
+	concept_string_instrument;
+	concept_keyboard_instrument;
+	concept_wind_instrument;
+	concept_percussion_instrument;
+	concept_concert;
+	concept_record_label;
+	nrel_author;
+	nrel_performer_of;
+	nrel_work_genre;
+	nrel_included_in_album;
+	nrel_performed_on_instrument;
+	nrel_member_of_ensemble;
+	nrel_release_year;
+	nrel_duration;
+	nrel_record_label;
+	nrel_influence;;

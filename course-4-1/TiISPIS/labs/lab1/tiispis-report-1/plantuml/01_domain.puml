@@ -1,0 +1,39 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam shadowing false
+skinparam packageStyle rectangle
+
+title Предметная область музыки: классы объектов исследования
+
+package "concept_music\n(максимальный класс)" as music {
+  [concept_musical_work]
+  [concept_musician]
+  [concept_musical_genre]
+  [concept_musical_instrument]
+  [concept_album]
+  [concept_concert]
+  [concept_record_label]
+}
+
+[concept_musical_work] --> [concept_song]
+[concept_musical_work] --> [concept_symphony]
+[concept_musical_work] --> [concept_opera]
+
+[concept_musician] --> [concept_composer]
+[concept_musician] --> [concept_performer]
+[concept_musician] --> [concept_singer]
+
+[concept_performer] --> [concept_musical_group]
+[concept_performer] --> [concept_orchestra]
+
+[concept_musical_genre] --> [concept_classical_music]
+[concept_musical_genre] --> [concept_rock_music]
+[concept_musical_genre] --> [concept_jazz_music]
+[concept_musical_genre] --> [concept_pop_music]
+
+[concept_musical_instrument] --> [concept_string_instrument]
+[concept_musical_instrument] --> [concept_keyboard_instrument]
+[concept_musical_instrument] --> [concept_wind_instrument]
+[concept_musical_instrument] --> [concept_percussion_instrument]
+
+@enduml

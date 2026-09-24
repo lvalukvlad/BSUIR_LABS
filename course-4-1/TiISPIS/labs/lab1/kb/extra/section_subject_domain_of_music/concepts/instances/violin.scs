@@ -1,0 +1,11 @@
+violin
+<- concept_string_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[скрипка]
+	(* <- lang_ru;; *);
+	[violin]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Смычковый струнный инструмент высокого регистра, основа струнной группы оркестра.]
+	(* <- lang_ru;; *);;

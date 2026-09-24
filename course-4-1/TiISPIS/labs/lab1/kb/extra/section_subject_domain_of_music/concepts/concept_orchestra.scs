@@ -1,0 +1,13 @@
+concept_orchestra
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[оркестр]
+	(* <- lang_ru;; *);
+	[orchestra]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Крупный инструментальный коллектив со стандартными группами инструментов.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_performer;;

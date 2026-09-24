@@ -1,0 +1,25 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor "Пользователь" as User
+participant "FastAPI" as API
+participant "evaluator" as Eval
+participant "language_model" as LM
+participant "PostgreSQL" as DB
+
+User -> API : GET /api/metrics
+API -> Eval : compare_methods()
+loop для каждого метода
+  Eval -> DB : загрузить эталонные запросы
+  DB --> Eval : запросы
+  Eval -> LM : распознание по запросам
+  LM --> Eval : результаты
+  Eval -> DB : подсчёт метрик
+end
+Eval -> DB : сохранить eval_runs
+DB --> Eval : подтверждение
+Eval --> API : сводка метрик
+API --> User : таблица + графики
+
+@enduml

@@ -1,0 +1,22 @@
+yesterday_song
+<- concept_song;
+<- concept_musical_work;
+<- concept_pop_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Yesterday]
+	(* <- lang_ru;; *);
+	[Yesterday]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Песня The Beatles (1965), одна из наиболее покрываемых композиций в истории поп-музыки.]
+	(* <- lang_ru;; *);
+=> nrel_work_genre:
+	concept_pop_music;
+=> nrel_performer_of:
+	the_beatles;
+=> nrel_performed_on_instrument:
+	acoustic_guitar;
+=> nrel_duration:
+	[2:05]
+	(* <- lang_en;; *);;

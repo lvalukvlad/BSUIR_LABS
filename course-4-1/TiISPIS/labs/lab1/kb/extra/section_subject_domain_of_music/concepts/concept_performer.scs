@@ -1,0 +1,16 @@
+concept_performer
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[исполнитель]
+	(* <- lang_ru;; *);
+	[performer]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Музыкант или коллектив, реализующий произведение в звучании.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musician;
+=> nrel_inclusion:
+	concept_musical_group;
+	concept_orchestra;;

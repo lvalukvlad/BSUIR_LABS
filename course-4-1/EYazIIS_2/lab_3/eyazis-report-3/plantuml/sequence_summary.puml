@@ -1,0 +1,27 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor "Пользователь" as User
+participant "React SPA" as SPA
+participant "nginx" as Nginx
+participant "FastAPI" as API
+participant "document_loader" as Loader
+participant "summarizer" as Sum
+participant "PostgreSQL" as DB
+
+User -> SPA : TXT или PDF + область
+SPA -> Nginx : POST /api/documents/upload
+Nginx -> API : проксирование
+API -> Loader : извлечь текст
+Loader --> API : заголовок и тело
+API -> DB : сохранить документ
+API -> Sum : пересчитать DF и рефераты
+Sum -> DB : профили терминов
+DB --> Sum : df, |DB|
+Sum --> API : 10 предложений, ключи, сеть
+API --> Nginx : document_id
+Nginx --> SPA : JSON
+SPA --> User : ссылка на реферат
+
+@enduml

@@ -1,0 +1,13 @@
+concept_percussion_instrument
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[ударный инструмент]
+	(* <- lang_ru;; *);
+	[percussion instrument]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Инструмент, звук которого извлекается ударом или встряхиванием.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_instrument;;

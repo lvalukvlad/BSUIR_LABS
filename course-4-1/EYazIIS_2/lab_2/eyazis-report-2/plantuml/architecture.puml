@@ -1,0 +1,45 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+actor "Пользователь\nв ЛВС" as User
+
+node "Клиентский уровень" {
+  component "React SPA\n(Vite, react-router)" as SPA
+  component "nginx\n(раздача статики, прокси /api)" as Nginx
+}
+
+node "Серверный уровень" {
+  component "FastAPI\n(REST API)" as API
+  component "language_model\n3 метода распознавания" as LM
+  component "text_processing\nтокенизация, лемматизация" as NLP
+  component "document_loader\nизвлечение текста из PDF" as Loader
+  component "indexer\nдокументы и результаты" as Indexer
+  component "evaluator\nметрики, matplotlib" as Eval
+}
+
+database "PostgreSQL 16" as DB {
+  component "documents" as TDoc
+  component "training_texts" as TTrain
+  component "language_profiles" as TProf
+  component "recognition_results" as TRes
+  component "eval_queries / eval_runs" as TEval
+}
+
+User --> SPA : HTTP
+SPA --> Nginx
+Nginx --> API : /api/*
+API --> Loader
+API --> NLP
+API --> LM
+API --> Indexer
+API --> Eval
+Loader --> NLP
+LM --> DB
+Indexer --> TDoc
+Indexer --> TRes
+Eval --> TEval
+Eval --> TProf
+
+@enduml

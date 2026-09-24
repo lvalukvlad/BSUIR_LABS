@@ -1,0 +1,13 @@
+concept_album
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[альбом]
+	(* <- lang_ru;; *);
+	[album]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Сборник музыкальных треков, изданный как единое целое на носителе или в цифровой форме.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_music;;

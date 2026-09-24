@@ -1,0 +1,42 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+entity "documents" as Doc {
+  * id : int
+  --
+  title : text
+  body : text
+  language : text
+  domain : text
+  source_file : text
+  char_len : int
+  summary_classic : text
+  baseline_classic : text
+  keywords_json : jsonb
+  network_json : jsonb
+  selected_json : jsonb
+  baseline_selected : jsonb
+  sentences_json : jsonb
+  elapsed_ms : int
+  created_at : timestamp
+}
+
+entity "doc_terms" as Terms {
+  * doc_id : int
+  * term : text
+  --
+  tf : int
+  weight : float
+}
+
+entity "global_terms" as Global {
+  * term : text
+  --
+  df : int
+}
+
+Doc ||--o{ Terms : термины
+Global .. Terms : документная частота
+
+@enduml

@@ -215,21 +215,15 @@
 
 \DeclareRobustCommand{\x}[1]{\text{#1}}
 
-% Зачем: Задание подписей, разделителя и нумерации частей рисунков
-% сказали что надо без курсива
-% \DeclareCaptionLabelFormat{stbfigure}{Рисунок \emph{#2}}
-% \DeclareCaptionLabelFormat{stbtable}{Таблица \emph{#2}}
-% \DeclareCaptionLabelFormat{stblisting}{Листинг \emph{#2}}
+% Подписи таблиц, рисунков и листингов: курсив, по центру, под объектом.
 \DeclareCaptionLabelFormat{stbfigure}{Рисунок #2}
 \DeclareCaptionLabelFormat{stbtable}{Таблица #2}
 \DeclareCaptionLabelFormat{stblisting}{Листинг #2}
 \DeclareCaptionLabelSeparator{stb}{~--~}
 \captionsetup{labelsep=stb}
-\captionsetup[figure]{labelformat=stbfigure, justification=centering, font={small}}
-\captionsetup[lstlisting]{labelformat=stblisting,justification=centering, font={small}}
-% сказали что надо слева
-% \captionsetup[table]{labelformat=stbtable, justification=centering, font={small}}
-\captionsetup[table]{labelformat=stbtable, justification=raggedright,singlelinecheck=false, font={small}}
+\captionsetup[figure]{labelformat=stbfigure, justification=centering, font={small,it}}
+\captionsetup[lstlisting]{labelformat=stblisting, justification=centering, font={small,it}}
+\captionsetup[table]{labelformat=stbtable, justification=centering, font={small,it}}
 \renewcommand{\thesubfigure}{\asbuk{subfigure}}
 
 % Зачем: Окружения для оформления формул
@@ -426,4 +420,5 @@
 \usepackage{tabularx} % в преамбулу
 
 \setcounter{tocdepth}{3}  % Включает в оглавление section и subsection
+\newcommand{\mdash}{\nobreak\,\raisebox{0.12ex}{\rule{0.9em}{0.55pt}}\,}
 % В preamble.tex найдите место, где подключаете пакеты

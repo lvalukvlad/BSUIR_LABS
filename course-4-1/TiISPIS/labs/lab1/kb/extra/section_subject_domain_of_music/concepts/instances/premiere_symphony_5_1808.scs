@@ -1,0 +1,10 @@
+premiere_symphony_5_1808
+<- concept_concert;
+=> nrel_main_idtf:
+	[премьера Симфонии № 5 Бетховена (1808)]
+	(* <- lang_ru;; *);
+	[premiere of Beethoven's Symphony No. 5 (1808)]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Концерт 22 декабря 1808 года в Театре ан дер Вин (Вена), на котором впервые прозвучала Пятая симфония.]
+	(* <- lang_ru;; *);;

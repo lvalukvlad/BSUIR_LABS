@@ -1,0 +1,22 @@
+concept_musical_genre
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[музыкальный жанр]
+	(* <- lang_ru;; *);
+	[musical genre]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Класс произведений и практик, объединённых общими стилевыми и формальными признаками.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_music;
+<= nrel_subdividing:
+	..music_genre_decomposition
+	(*
+		<- sc_node_tuple;;
+		-> concept_classical_music;;
+		-> concept_rock_music;;
+		-> concept_jazz_music;;
+		-> concept_pop_music;;
+	*);;

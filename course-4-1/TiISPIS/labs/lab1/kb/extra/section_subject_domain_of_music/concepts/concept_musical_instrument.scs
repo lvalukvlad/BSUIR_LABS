@@ -1,0 +1,22 @@
+concept_musical_instrument
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[музыкальный инструмент]
+	(* <- lang_ru;; *);
+	[musical instrument]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Устройство для извлечения музыкальных звуков.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_music;
+<= nrel_subdividing:
+	..instrument_decomposition
+	(*
+		<- sc_node_tuple;;
+		-> concept_string_instrument;;
+		-> concept_keyboard_instrument;;
+		-> concept_wind_instrument;;
+		-> concept_percussion_instrument;;
+	*);;

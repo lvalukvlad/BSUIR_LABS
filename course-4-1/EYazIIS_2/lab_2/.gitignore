@@ -1,0 +1,13 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+.env
+.venv/
+*.egg-info/
+.idea/
+.vscode/
+*.swp
+*.log
+pdf/
+Thumbs.db

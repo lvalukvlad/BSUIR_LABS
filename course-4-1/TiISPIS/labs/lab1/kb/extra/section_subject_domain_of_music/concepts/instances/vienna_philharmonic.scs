@@ -1,0 +1,12 @@
+vienna_philharmonic
+<- concept_orchestra;
+<- concept_performer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Венский филармонический оркестр]
+	(* <- lang_ru;; *);
+	[Vienna Philharmonic]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Один из ведущих симфонических оркестров мира, базируется в Вене.]
+	(* <- lang_ru;; *);;

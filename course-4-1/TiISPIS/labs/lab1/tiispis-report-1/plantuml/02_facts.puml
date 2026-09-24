@@ -1,0 +1,49 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam shadowing false
+left to right direction
+
+title Фактографические сюжеты предметной области «Музыка»
+
+rectangle "Классика" {
+  (ludwig_van_beethoven) as beet
+  (symphony_no_5_beethoven) as s5
+  (vienna_philharmonic) as vp
+  (piano) as piano
+  (violin) as violin
+  (premiere_symphony_5_1808) as prem
+  beet --> s5 : nrel_author
+  s5 --> vp : nrel_performer_of
+  s5 --> piano : nrel_performed_on_instrument
+  s5 --> violin : nrel_performed_on_instrument
+}
+
+rectangle "Рок" {
+  (john_lennon) as jl
+  (the_beatles) as tb
+  (come_together) as ct
+  (abbey_road) as ar
+  (apple_records) as ap
+  (electric_guitar) as eg
+  jl --> tb : nrel_member_of_ensemble
+  jl --> ct : nrel_author
+  ct --> ar : nrel_included_in_album
+  ct --> tb : nrel_performer_of
+  ct --> eg : nrel_performed_on_instrument
+  ar --> ap : nrel_record_label
+}
+
+rectangle "Джаз" {
+  (miles_davis) as md
+  (so_what) as sw
+  (kind_of_blue) as kb
+  (trumpet) as tr
+  (columbia_records) as col
+  md --> sw : nrel_author
+  sw --> kb : nrel_included_in_album
+  sw --> md : nrel_performer_of
+  sw --> tr : nrel_performed_on_instrument
+  kb --> col : nrel_record_label
+}
+
+@enduml

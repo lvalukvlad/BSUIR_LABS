@@ -1,0 +1,14 @@
+concept_rock_music
+<- sc_node_class;
+<- class;
+<- concept_musical_genre;
+=> nrel_main_idtf:
+	[рок-музыка]
+	(* <- lang_ru;; *);
+	[rock music]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Жанр популярной музыки XX века, опирающийся на электрогитару, ритм-секцию и песенные формы.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_genre;;

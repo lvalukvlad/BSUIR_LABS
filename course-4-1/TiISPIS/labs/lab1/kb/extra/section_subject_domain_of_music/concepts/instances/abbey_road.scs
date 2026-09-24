@@ -1,0 +1,16 @@
+abbey_road
+<- concept_album;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Abbey Road]
+	(* <- lang_ru;; *);
+	[Abbey Road]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Одиннадцатый студийный альбом The Beatles, выпущенный в сентябре 1969 года на лейбле Apple Records.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	apple_records;
+=> nrel_release_year:
+	[1969]
+	(* <- lang_en;; *);;

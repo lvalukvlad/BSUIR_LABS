@@ -1,0 +1,100 @@
+{
+  "queries": [
+    {
+      "code": "01",
+      "query": "текст_1",
+      "text": "Пациент поступил в городскую больницу с жалобами на высокую температуру и сильную головную боль",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "02",
+      "query": "texte_1",
+      "text": "Der Patient wurde in das städtische Krankenhaus aufgenommen mit Fieber und starken Kopfschmerzen",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "03",
+      "query": "текст_2",
+      "text": "Врач назначил антибиотики и провёл осмотр пациента в отделении терапии",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "04",
+      "query": "texte_2",
+      "text": "Der Arzt verschrieb Antibiotika und untersuchte den Patienten in der internistischen Abteilung",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "05",
+      "query": "текст_3",
+      "text": "Хирургическое отделение проводило лапароскопическую операцию пациенту с острым аппендицитом",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "06",
+      "query": "texte_3",
+      "text": "Die chirurgische Abteilung führte eine laparoskopische Operation beim Patienten mit akuter Appendizitis durch",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "07",
+      "query": "текст_4",
+      "text": "Медсестра контролировала температуру пациента и проводила ингаляции с физиологическим раствором",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "08",
+      "query": "texte_4",
+      "text": "Die Krankenschwester kontrollierte die Temperatur des Patienten und führte Inhalationen mit physiologischer Lösung durch",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "09",
+      "query": "текст_5",
+      "text": "Лаборатория выполнила анализы крови и мочи для диагностики инфекционного заболевания",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "10",
+      "query": "texte_5",
+      "text": "Das Labor führte Blut- und Urinanalysen zur Diagnose einer Infektionskrankheit durch",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "11",
+      "query": "длинные_частые_ru",
+      "text": "Пациент поступил стационар назначена антибактериальная терапия диагностика пневмония лечение отделение",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "12",
+      "query": "lange_häufig_de",
+      "text": "Patient Krankenhaus Abteilung Behandlung Operation Untersuchung Diagnostik Therapie",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "13",
+      "query": "редкие_длинные_ru",
+      "text": "электронейромиография фотоплетизмография хронотерапия капилляроскопия",
+      "relevant": ["русский"]
+    },
+    {
+      "code": "14",
+      "query": "seltene_lange_de",
+      "text": "Photoplethysmographie Elektroencephalographie Chronotherapie Kapillaroskopie",
+      "relevant": ["немецкий"]
+    },
+    {
+      "code": "15",
+      "query": "смешанный",
+      "text": "Пациент поступил в больницу с температурой. Der Patient wurde ins Krankenhaus aufgenommen.",
+      "relevant": ["русский", "немецкий"]
+    },
+    {
+      "code": "16",
+      "query": "смешанный_длинный",
+      "text": "Пациент стационар лечение диагностика. Patient Krankenhaus Behandlung Diagnostik.",
+      "relevant": ["русский", "немецкий"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+concept_pop_music
+<- sc_node_class;
+<- class;
+<- concept_musical_genre;
+=> nrel_main_idtf:
+	[поп-музыка]
+	(* <- lang_ru;; *);
+	[pop music]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Массовая популярная музыка с акцентом на мелодичность, коммерческий формат и широкую аудиторию.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_genre;;

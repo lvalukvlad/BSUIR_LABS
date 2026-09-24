@@ -1,0 +1,123 @@
+\section{Разработка системы распознавания языка}
+\label{sec:development}
+
+Система запускается через Docker Compose. Внутри три части: база PostgreSQL, сервер на Python и страница в браузере. Загружать можно только PDF.
+
+Как части связаны, показано на рисунке~\ref{fig:architecture}. Сервер принимает файл, достаёт из него текст, прогоняет три метода и сохраняет результат. На странице видны все найденные языки, их доли и время.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{architecture.png}
+	\caption{Структура системы распознавания языка.}
+	\label{fig:architecture}
+\end{figure}
+
+При первом запуске сервер сам читает учебные тексты, строит образы языков и обучает сеть. Проверочные тексты тоже появляются в списке документов. Эта последовательность показана на рисунке~\ref{fig:seq-train}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{sequence_train.png}
+	\caption{Обучение моделей при запуске сервера.}
+	\label{fig:seq-train}
+\end{figure}
+
+Обычная проверка проще: пользователь выбирает PDF, сервер распознаёт язык и возвращает ответ каждого метода. Это показано на рисунке~\ref{fig:seq-search}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{sequence_search.png}
+	\caption{Распознавание загруженного PDF.}
+	\label{fig:seq-search}
+\end{figure}
+
+Учебные тексты в списке документов не показываются. Там лежат проверочные фразы и файлы, которые загрузил пользователь. Назначение таблиц собрано в таблице~\ref{tab:db-tables}, схема \mdash на рисунке~\ref{fig:db}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|p{4.2cm}|p{8.8cm}|}
+		\hline
+		\textbf{Таблица} & \textbf{Назначение} \\
+		\hline
+		\texttt{documents} & Заголовок, текст, язык, результат \\
+		\hline
+		\texttt{training\_texts} & Учебные тексты \\
+		\hline
+		\texttt{language\_profiles} & Слова и частоты образов языков \\
+		\hline
+		\texttt{recognition\_results} & Ответ каждого метода \\
+		\hline
+		\texttt{eval\_queries} & Проверочные фразы \\
+		\hline
+		\texttt{eval\_runs} & Сводка прогона оценки \\
+		\hline
+	\end{tabular}
+	\caption{Таблицы базы данных.}
+	\label{tab:db-tables}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{db_schema.png}
+	\caption{Схема базы данных.}
+	\label{fig:db}
+\end{figure}
+
+В браузере четыре страницы: распознавание, список документов, оценка качества и справка. После запуска интерфейс открывается по адресу \texttt{http://localhost:8080}. Список документов можно сохранить и распечатать. Внешний вид страниц показан на рисунках~\ref{fig:ui-recognition}--\ref{fig:ui-metrics}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_recognition.png}
+	\caption{Страница распознавания смешанного PDF.}
+	\label{fig:ui-recognition}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_documents.png}
+	\caption{Список документов с найденными языками.}
+	\label{fig:ui-documents}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_metrics.png}
+	\caption{Страница оценки качества методов.}
+	\label{fig:ui-metrics}
+\end{figure}
+
+Качество проверялось на шестнадцати текстах: обычные русские и немецкие фразы, длинные слова из частотного списка, редкие длинные слова и смешанные фрагменты. Accuracy здесь \mdash доля текстов, у которых набор найденных языков в точности совпал с эталоном. Точность и полнота считаются по языкам внутри каждого текста и усредняются. Цифры собраны в таблице~\ref{tab:metrics}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|c|}
+		\hline
+		\textbf{Метод} & \textbf{Acc} & \textbf{P} & \textbf{R} & \textbf{F1} & \textbf{мс} \\
+		\hline
+		Коротких слов & 0,625 & 0,688 & 0,656 & 0,672 & 1,39 \\
+		\hline
+		Частотных слов & 0,875 & 0,875 & 0,875 & 0,875 & 1,44 \\
+		\hline
+		Нейросетевой & 1,000 & 1,000 & 1,000 & 1,000 & 23,10 \\
+		\hline
+	\end{tabular}
+	\caption{Результаты на шестнадцати проверочных текстах.}
+	\label{tab:metrics}
+\end{table}
+
+Метод коротких слов не срабатывает на тексте без лексем короче шести букв. Метод частотных слов не видит редкие слова вне топ-50. Нейросеть по алфавиту находит оба языка даже в смешанном документе. На длинном документе по времени методы тоже различаются. Частотные слова заканчивают быстрее: им хватает короткого списка. Сравнение показано на рисунках~\ref{fig:method-cmp} и~\ref{fig:time-cmp}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{method_comparison.png}
+	\caption{Сравнение методов по качеству.}
+	\label{fig:method-cmp}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{time_comparison.png}
+	\caption{Среднее время на проверочных текстах.}
+	\label{fig:time-cmp}
+\end{figure}
+
+Для ручной проверки рядом с программой лежат PDF: русские, немецкие и смешанный \texttt{de\_ru\_text.pdf}. Их можно загрузить на странице распознавания.

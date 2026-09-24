@@ -1,0 +1,21 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor "Пользователь" as User
+participant "React SPA" as SPA
+participant "FastAPI" as API
+participant "evaluator" as Eval
+participant "PostgreSQL" as DB
+
+User -> SPA : Рассчитать метрики
+SPA -> API : GET /api/metrics
+API -> Eval : evaluate()
+Eval -> DB : selected_json, baseline_selected
+DB --> Eval : эталонные документы
+Eval -> Eval : P, R, F1, графики
+Eval --> API : JSON + PNG
+API --> SPA : сравнение методов
+SPA --> User : таблицы и диаграммы
+
+@enduml

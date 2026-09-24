@@ -64,13 +64,34 @@ FastAPI выбран как лёгкий фреймворк с явной схе
 	\item \texttt{bootstrap.py} "--- первичная загрузка коллекции и эталонной разметки.
 \end{itemize}
 
-Клиентский уровень содержит пять страниц: поиск, список документов, загрузка, оценка качества и справка. Основной сценарий "--- обработка поискового запроса "--- показан на рисунке~\ref{fig:seq-search}.
+Клиентский уровень содержит пять страниц: поиск, список документов, загрузка, оценка качества и справка. Основной сценарий "--- обработка поискового запроса "--- показан на рисунке~\ref{fig:seq-search}. Внешний вид интерфейса приведён на рисунках~\ref{fig:ui-search}--\ref{fig:ui-metrics}.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\textwidth]{sequence_search.png}
 	\caption{Диаграмма последовательности обработки поискового запроса.}
 	\label{fig:seq-search}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_search.png}
+	\caption{Страница поиска с результатами запроса.}
+	\label{fig:ui-search}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_document.png}
+	\caption{Карточка документа с текстом и сниппетом.}
+	\label{fig:ui-document}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_metrics.png}
+	\caption{Страница оценки качества поиска.}
+	\label{fig:ui-metrics}
 \end{figure}
 
 Развёртывание выполняется командой \texttt{docker compose up -{}-build} из каталога программной части. При старте контейнер бэкенда дожидается готовности PostgreSQL, применяет миграции и, если база пуста, индексирует тестовую коллекцию. Интерфейс доступен по адресу \texttt{http://<host>:8080}.

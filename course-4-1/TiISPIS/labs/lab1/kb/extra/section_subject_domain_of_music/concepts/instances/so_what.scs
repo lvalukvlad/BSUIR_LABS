@@ -1,0 +1,26 @@
+so_what
+<- concept_song;
+<- concept_musical_work;
+<- concept_jazz_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[So What]
+	(* <- lang_ru;; *);
+	[So What]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Открывающий трек альбома Kind of Blue; пример модального джаза.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	miles_davis;
+=> nrel_work_genre:
+	concept_jazz_music;
+=> nrel_included_in_album:
+	kind_of_blue;
+=> nrel_performer_of:
+	miles_davis;
+=> nrel_performed_on_instrument:
+	trumpet;
+=> nrel_duration:
+	[9:22]
+	(* <- lang_en;; *);;

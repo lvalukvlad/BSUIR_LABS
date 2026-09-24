@@ -1,0 +1,13 @@
+concept_record_label
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[звукозаписывающий лейбл]
+	(* <- lang_ru;; *);
+	[record label]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Организация, занимающаяся записью, изданием и продвижением музыкальных альбомов.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_music;;

@@ -1,0 +1,43 @@
+\section{Тестирование фрагментов базы знаний в системе NIKA}
+\label{sec:part2}
+
+Исходники предметной области скопированы в локальный клон системы NIKA (ветка \texttt{tpis-2023}) в каталог \texttt{kb/extra/section\_subject\_domain\_of\_music}. База знаний пересобирается командой \texttt{docker compose run machine build}, после чего система запускается через \texttt{docker compose up}.
+
+Проверка корректности формализации выполняется средствами навигации по базе знаний (граф окрестности sc-элемента, контекстное меню). Для лабораторной работы №1 достаточно убедиться, что:
+\begin{itemize}
+	\item раздел предметной области загружается без ошибок сборки;
+	\item ключевые понятия (\texttt{concept\_music}, жанры, инструменты) присутствуют в памяти;
+	\item экземпляры связаны указанными относительными понятиями (автор*, входить в альбом*, лейбл записи* и др.).
+\end{itemize}
+
+Согласно методическому пособию, ответ системы на вопрос <<Что такое \ldots?>> в диалоговом окне может отсутствовать до обучения классификатора Wit.ai (лабораторная работа №2). Поэтому в рамках данной работы тестирование ориентировано на графовую навигацию по загруженным фрагментам.
+
+Иллюстрации тестирования:
+\begin{itemize}
+	\item рисунок~\ref{fig:ui-section} \mdash окрестность раздела предметной области музыки;
+	\item рисунок~\ref{fig:ui-beethoven} \mdash окрестность экземпляра <<Людвиг ван Бетховен>> и связанных произведений;
+	\item рисунок~\ref{fig:ui-album} \mdash окрестность песни Come Together (связь с альбомом Abbey Road, The Beatles, жанром и инструментом).
+\end{itemize}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{03_nika_section.png}
+	\caption{Окрестность раздела предметной области музыки в NIKA}
+	\label{fig:ui-section}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{04_nika_beethoven.png}
+	\caption{Окрестность экземпляра Людвига ван Бетховена}
+	\label{fig:ui-beethoven}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.9\textwidth]{05_nika_abbey_road.png}
+	\caption{Окрестность песни Come Together и связей с Abbey Road}
+	\label{fig:ui-album}
+\end{figure}
+
+Исходники SCs остаются каноническими в каталоге лабораторной работы и синхронизируются скриптом \texttt{scripts/sync\_to\_nika.sh}. На рисунках~\ref{fig:ui-section}--\ref{fig:ui-album} зафиксированы реальные окрестности загруженных элементов в sc-web после успешной сборки базы знаний.

@@ -1,0 +1,16 @@
+kind_of_blue
+<- concept_album;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Kind of Blue]
+	(* <- lang_ru;; *);
+	[Kind of Blue]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Студийный альбом Майлса Дэвиса 1959 года, эталон модального джаза.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	columbia_records;
+=> nrel_release_year:
+	[1959]
+	(* <- lang_en;; *);;

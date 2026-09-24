@@ -1,0 +1,6 @@
+ALTER TABLE documents
+    ADD COLUMN IF NOT EXISTS sentences_json JSONB NOT NULL DEFAULT '[]';
+ALTER TABLE documents
+    ADD COLUMN IF NOT EXISTS baseline_classic TEXT NOT NULL DEFAULT '';
+ALTER TABLE documents
+    ADD COLUMN IF NOT EXISTS baseline_selected JSONB NOT NULL DEFAULT '[]';

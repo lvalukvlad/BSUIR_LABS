@@ -1,0 +1,11 @@
+drum_kit
+<- concept_percussion_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[ударная установка]
+	(* <- lang_ru;; *);
+	[drum kit]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Набор ударных и тарелок, стандартный для рок- и джаз-групп.]
+	(* <- lang_ru;; *);;

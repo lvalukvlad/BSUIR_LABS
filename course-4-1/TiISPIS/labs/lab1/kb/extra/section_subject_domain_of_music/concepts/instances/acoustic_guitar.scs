@@ -1,0 +1,11 @@
+acoustic_guitar
+<- concept_string_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[акустическая гитара]
+	(* <- lang_ru;; *);
+	[acoustic guitar]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Струнный щипковый инструмент без электромагнитного усиления.]
+	(* <- lang_ru;; *);;

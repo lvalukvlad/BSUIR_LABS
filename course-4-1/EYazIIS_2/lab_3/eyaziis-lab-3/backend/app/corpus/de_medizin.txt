@@ -1,0 +1,21 @@
+Antibiotische Therapie der ambulant erworbenen Pneumonie
+
+Die ambulant erworbene Pneumonie bleibt ein häufiger Grund für die stationäre Aufnahme erwachsener Patienten. Häufige Erreger sind Pneumokokken und atypische Mikroorganismen. Eine frühe Schweregradeinschätzung bestimmt den Behandlungsort und das erste Schema. Eine verzögerte erste Antibiotikagabe verschlechtert die Prognose bei schwerem Verlauf.
+
+Das klinische Bild umfasst meist Husten, Fieber, Brustschmerz und Atemnot. Körperliche Zeichen einer Lungenverdichtung müssen mit dem Röntgenbild abgeglichen werden. Entzündungsmarker helfen, einen bakteriellen Prozess von einem viralen zu trennen, ersetzen aber die mikrobiologische Suche nicht. Blutkultur und Sputumuntersuchung sind bei stationärer Aufnahme sinnvoll.
+
+Der CURB-65-Score berücksichtigt Verwirrtheit, Harnstoff, Atemfrequenz, Blutdruck und Alter. Ein niedriger Wert erlaubt die ambulante Behandlung bei zuverlässiger Überwachung. Ein hoher Wert spricht für die Intensivstation. Sauerstoffmangel und beidseitige Infiltrate erhöhen die Aufmerksamkeit unabhängig von der Punktzahl.
+
+Die Starttherapie muss Pneumokokken abdecken und die lokale Resistenzlage beachten. Bei leichtem Verlauf ohne Begleiterkrankungen genügt ein Beta-Laktam oder ein respiratorisches Fluorchinolon. Die Kombination aus Beta-Laktam und Makrolid ist gerechtfertigt, wenn Legionellen und Mykoplasmen nicht ausgeschlossen sind. Die Therapiedauer beträgt in der Regel fünf bis sieben Tage nach Stabilisierung.
+
+Therapiefehler entstehen oft durch einen späten Wechsel und durch Ignorieren der Nierenfunktion. Eine Niereninsuffizienz verlangt die Dosisanpassung von Aminoglykosiden und manchen Beta-Laktamen. Bei älteren Patienten steigt nach Breitspektrumantibiotika das Risiko für Clostridioides difficile. Deshalb senkt die Deeskalation nach Kultur die Toxizität und den Selektionsdruck.
+
+Eine virale Pneumonie, auch die Influenza, braucht keine empirischen Antibiotika ohne Zeichen einer bakteriellen Superinfektion. Hinweise auf eine bakterielle Beteiligung sind erneutes Fieber, eitriges Sputum und ein Anstieg des Procalcitonins. Sauerstoffgabe und Flüssigkeitstherapie bleiben die Grundlage unabhängig vom gewählten Wirkstoff. Impfungen gegen Influenza und Pneumokokken senken erneute Aufnahmen.
+
+Der Abschluss der Beobachtung muss das Kriterium der Genesung und den Kontrollplan festhalten. Fieberfreiheit über achtundvierzig Stunden und eine sinkende Atemfrequenz erlauben den Wechsel auf die orale Gabe. Eine Kontrollaufnahme ist nicht für alle nötig, sondern für Patienten mit Tumorrisiko und langsamer Rückbildung. Der Patient wird mit schriftlichen Warnzeichen entlassen.
+
+Die Wahl des Behandlungsorts nach der ersten Bewertung verdient einen eigenen Absatz. Ein Patient mit niedriger Punktzahl, der das Mittel nicht kaufen kann und allein wohnt, bleibt Kandidat für eine kurze Beobachtung. Umgekehrt kann ein junger Kranker mit hohem Score und rascher Antwort auf Sauerstoff früher als der Score allein nahelegt von der Intensivstation verlegt werden. Die Abweichung wird in der Akte mit dem Grund festgehalten.
+
+Die mikrobiologische Suche darf nach dem ersten negativen Sputum nicht abbrechen. Eine späte Blutkultur ändert das Schema noch, wenn das Fieber länger als zwei Tage bleibt. Legionellen verlangen ein eigenes Harnantigen, sonst wird das Makrolid zu früh abgesetzt. Atypische Erreger geben selten eitriges Sputum, und das darf nicht gegen die Abdeckung gelesen werden.
+
+Die praktische Folgerung des Textes betrifft nicht den Husten und nicht den allgemeinen Ruf, rechtzeitig zu behandeln. Ein klassisches Referat der medizinischen Arbeit muss drei Knoten behalten: das Schweregradkriterium, die Regel des Startschemas und die Bedingung der Deeskalation nach Kultur. Ohne diese drei Sätze zerfällt der Text in eine alltägliche Schilderung der Symptome. Gerade sie sollen in die Auswahl der Sätze mit dem höchsten Gewicht, auch wenn sie näher am Ende des Dokuments stehen.

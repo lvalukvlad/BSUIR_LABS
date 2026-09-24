@@ -1,0 +1,19 @@
+concept_music
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[музыка]
+	(* <- lang_ru;; *);
+	[music]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Искусство организации звуков во времени; в данной предметной области — максимальный класс объектов исследования.]
+	(* <- lang_ru;; *);
+=> nrel_inclusion:
+	concept_musical_work;
+	concept_musician;
+	concept_musical_genre;
+	concept_musical_instrument;
+	concept_album;
+	concept_concert;
+	concept_record_label;;

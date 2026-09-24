@@ -1,0 +1,24 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+participant "FastAPI" as API
+participant "bootstrap" as Boot
+participant "language_model" as LM
+participant "PostgreSQL" as DB
+
+API -> Boot : initialize()
+Boot -> DB : training_texts
+alt коллекция пуста
+  Boot -> Boot : читать corpus/train
+  Boot -> DB : INSERT training_texts
+end
+Boot -> LM : train MLP, build_all_profiles
+LM --> Boot : модель и ПОЯ
+Boot -> DB : language_profiles
+Boot -> DB : eval_queries из qrels.json
+Boot -> LM : распознать эталонные фразы
+Boot -> DB : documents (eval_*.txt)
+Boot --> API : статистика инициализации
+
+@enduml

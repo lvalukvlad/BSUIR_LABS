@@ -1,0 +1,10 @@
+apple_records
+<- concept_record_label;
+=> nrel_main_idtf:
+	[Apple Records]
+	(* <- lang_ru;; *);
+	[Apple Records]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Лейбл, основанный The Beatles в 1968 году.]
+	(* <- lang_ru;; *);;

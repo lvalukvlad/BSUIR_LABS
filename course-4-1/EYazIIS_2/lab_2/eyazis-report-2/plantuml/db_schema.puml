@@ -1,0 +1,65 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+entity "documents" as Doc {
+  * id : int
+  --
+  title : text
+  body : text
+  source_file : text
+  doc_len : int
+  detected_language : text
+  result_json : jsonb
+  created_at : timestamp
+}
+
+entity "training_texts" as Train {
+  * id : int
+  --
+  language : text
+  text : text
+  source_file : text
+}
+
+entity "language_profiles" as Prof {
+  * id : int
+  --
+  language : text
+  lexeme : text
+  frequency : float
+  method : text
+}
+
+entity "recognition_results" as Res {
+  * id : int
+  --
+  doc_id : int
+  method : text
+  language : text
+  confidence : float
+  result_json : jsonb
+}
+
+entity "eval_queries" as Q {
+  * id : int
+  --
+  code : text
+  query : text
+  text : text
+  relevant : text[]
+}
+
+entity "eval_runs" as R {
+  * id : int
+  --
+  model : text
+  top_k : int
+  summary : jsonb
+}
+
+Train ||--o{ Prof : язык
+Doc ||--o{ Res : результаты
+Q ..> R : оценка
+
+@enduml

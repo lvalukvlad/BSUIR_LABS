@@ -1,0 +1,29 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor "Пользователь" as User
+participant "FastAPI" as API
+participant "language_model" as LM
+participant "ShortWordsRecognizer" as SW
+participant "FrequentWordsRecognizer" as FW
+participant "NeuralNetworkRecognizer" as NN
+participant "PostgreSQL" as DB
+
+User -> API : POST /api/recognize (метод)
+API -> LM : recognize_language()
+LM -> SW : recognize(text, profile)
+SW -> DB : получить профиль коротких слов
+DB --> SW : профиль
+SW --> LM : язык + confidence
+LM -> FW : recognize(text, profile)
+FW -> DB : получить профиль частотных слов
+DB --> FW : профиль
+FW --> LM : язык + confidence
+LM -> NN : recognize(text)
+NN -> NN : извлечь N-граммы
+NN --> LM : язык + confidence
+LM --> API : результаты всех методов
+API --> User : детальное сравнение
+
+@enduml

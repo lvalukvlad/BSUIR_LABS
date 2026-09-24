@@ -1,0 +1,13 @@
+concept_song
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[песня]
+	(* <- lang_ru;; *);
+	[song]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Музыкальное произведение, как правило вокальное, с относительно завершённой формой и текстом.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_work;;

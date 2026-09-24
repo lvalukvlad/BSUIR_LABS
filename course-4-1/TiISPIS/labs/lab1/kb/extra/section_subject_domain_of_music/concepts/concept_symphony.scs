@@ -1,0 +1,13 @@
+concept_symphony
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[симфония]
+	(* <- lang_ru;; *);
+	[symphony]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Крупная форма оркестровой музыки, обычно состоящая из нескольких частей.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_work;;

@@ -1,0 +1,13 @@
+concept_composer
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[композитор]
+	(* <- lang_ru;; *);
+	[composer]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Автор музыкальных произведений.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musician;;

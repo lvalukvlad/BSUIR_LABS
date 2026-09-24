@@ -1,0 +1,134 @@
+\section{Разработка и исследование системы}
+\label{sec:development}
+
+Система собрана из трёх контейнеров Docker Compose: React-интерфейс за nginx, FastAPI и PostgreSQL~16. Порты 8082 и 8002, чтобы не пересекаться со второй лабораторной. Схема уровней \mdash на рисунке~\ref{fig:arch}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{architecture.png}
+	\caption{Архитектура системы реферирования.}
+	\label{fig:arch}
+\end{figure}
+
+На сервере модули разделены по ролям. \texttt{document\_loader} читает TXT и PDF. \texttt{text\_processing} токенизирует и лемматизирует. \texttt{summarizer} считает Posd, Posp, Score, дерево ключей и тройки сети. \texttt{indexer} хранит коллекцию и пересчитывает документные частоты при каждой загрузке или удалении: IDF зависит от всей базы. \texttt{evaluator} сравнивает выбранные предложения с эталоном и рисует графики.
+
+Сценарий загрузки показан на рисунке~\ref{fig:seq-sum}. Пользователь указывает предметную область варианта, получает активную ссылку на документ и два раздела реферата. Сценарий оценки \mdash на рисунке~\ref{fig:seq-metrics}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{sequence_summary.png}
+	\caption{Построение реферата после загрузки файла.}
+	\label{fig:seq-sum}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{sequence_metrics.png}
+	\caption{Расчёт точности и выгрузка графиков.}
+	\label{fig:seq-metrics}
+\end{figure}
+
+Вход и выход лежат в трёх таблицах, рисунок~\ref{fig:db}. В \texttt{documents} хранятся текст, классический реферат, базовый реферат, дерево ключей, сеть и разбор каждого предложения. \texttt{doc\_terms} держит частоты слов документа, \texttt{global\_terms} \mdash документную частоту для IDF.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{db_schema.png}
+	\caption{Схема базы данных.}
+	\label{fig:db}
+\end{figure}
+
+Интерфейс открывается по адресу \texttt{http://localhost:8082}. На карточке документа есть ссылка на исходный текст, сохранение в файл и печать. Предложения реферата подсвечены в источнике. Сеть рисуется графом, отношения подписаны. Внешний вид \mdash на рисунках~\ref{fig:ui-upload}--\ref{fig:ui-metrics}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_upload.png}
+	\caption{Страница загрузки документа.}
+	\label{fig:ui-upload}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_document.png}
+	\caption{Классический реферат и подсветка в исходном тексте.}
+	\label{fig:ui-document}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_network.png}
+	\caption{Семантическая сеть и дерево ключевых слов.}
+	\label{fig:ui-network}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{ui_metrics.png}
+	\caption{Сравнение sentence extraction с базовым методом.}
+	\label{fig:ui-metrics}
+\end{figure}
+
+Тестовая коллекция \mdash четыре авторских текста близкой длины: внебольничная пневмония и разбор «Чёрного квадрата», каждый по-русски и по-немецки. Это не выгрузки Wikipedia: нужны связные абзацы, на которых позиционные функции и TF-IDF вообще различимы. Состав коллекции \mdash в таблице~\ref{tab:collection}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|c|c|}
+		\hline
+		\textbf{Файл} & \textbf{Язык} & \textbf{Область} & \textbf{Предл.} & \textbf{Симв.} \\
+		\hline
+		ru\_medicina.txt & русский & медицина & 40 & 3652 \\
+		\hline
+		de\_medizin.txt & немецкий & медицина & 40 & 3930 \\
+		\hline
+		ru\_iskusstvo.txt & русский & критика искусства & 40 & 3116 \\
+		\hline
+		de\_kunst.txt & немецкий & критика искусства & 40 & 3621 \\
+		\hline
+	\end{tabular}
+	\caption{Тестовая коллекция варианта 22.}
+	\label{tab:collection}
+\end{table}
+
+Готовые компоненты: FastAPI и Uvicorn, React и Vite, nginx, PostgreSQL, psycopg2, pymorphy3, Snowball, pypdf, matplotlib. Морфология и стеммер нужны, чтобы «пневмонии» и «пневмония», «Quadrate» и «Quadrat» не считались разными терминами. Остальная логика весов написана в \texttt{summarizer.py}.
+
+Результаты оценки по эталонной разметке собраны в таблице~\ref{tab:metrics}. Sentence extraction сравнивается с первыми десятью предложениями. Цифры не подогнаны: эталон специально включает поздние тезисы о деэскалации и о том, что критик обязан описать поверхность.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|c|c|c|c|}
+		\hline
+		\textbf{Метод} & \textbf{P} & \textbf{R} & \textbf{F1} & \textbf{мс} \\
+		\hline
+		Sentence extraction & 0,200 & 0,200 & 0,200 & 1{,}75 \\
+		\hline
+		Первые 10 предложений & 0,100 & 0,100 & 0,100 & --- \\
+		\hline
+		Русский & 0,200 & 0,200 & 0,200 & --- \\
+		\hline
+		Немецкий & 0,200 & 0,200 & 0,200 & --- \\
+		\hline
+		Медицина & 0,300 & 0,300 & 0,300 & --- \\
+		\hline
+		Критика искусства & 0,100 & 0,100 & 0,100 & --- \\
+		\hline
+	\end{tabular}
+	\caption{Средние метрики на четырёх эталонных текстах, по языкам и областям.}
+	\label{tab:metrics}
+\end{table}
+
+Эталон специально сдвинут к поздним тезисам: деэскалация, три узла медицинской схемы, граница изображения и обязанность критика описать поверхность. База из первых десяти предложений даёт F1~$0{,}100$. Sentence extraction поднимает оценку вдвое, потому что находит CURB-65, стартовую схему и отказ от эмпирических антибиотиков при вирусной пневмонии. На критике искусства Posd сильнее опускает конец, и F1 остаётся $0{,}100$. По языкам цифры совпадают: тексты параллельны. Время на этих объёмах остаётся миллисекундами. Сравнение показано на рисунках~\ref{fig:method-cmp} и~\ref{fig:time-cmp}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{method_comparison.png}
+	\caption{F1 sentence extraction и базового метода.}
+	\label{fig:method-cmp}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\textwidth]{time_comparison.png}
+	\caption{Время построения реферата по документам.}
+	\label{fig:time-cmp}
+\end{figure}
+
+Если F1 весового метода недалеко от базы, это не ошибка расчёта. Функции Posd и Posp по методичке сильно поднимают начало текста, а информативные выводы в учебных статьях часто стоят в конце. Это видно по таблице весов на карточке документа: позднее предложение может иметь высокий Score и низкий итог.

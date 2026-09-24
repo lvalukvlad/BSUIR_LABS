@@ -1,0 +1,41 @@
+nrel_influence
+<- sc_node_norole_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+=> nrel_main_idtf:
+	[влияние*]
+	(* <- lang_ru;; *);
+	[influence*]
+	(* <- lang_en;; *);
+=> nrel_first_domain: concept_musician;
+=> nrel_second_domain: concept_musician;
+=> nrel_definitional_domain:
+	..nrel_influence_def_domain
+	(*
+		<= nrel_combination: {
+			concept_musician;
+			concept_musician
+		};;
+	*);
+<- rrel_key_sc_element:
+	..nrel_influence_definition
+	(*
+		=> nrel_main_idtf:
+			[Опр. (влияние*)]
+			(* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			..nrel_influence_definition_text
+			(*
+				-> rrel_example:
+					[Влияние* — бинарное ориентированное отношение между музыкантами (или школами), отражающее художественное воздействие одного на другого.]
+					(* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants: {
+			concept_musician;
+			concept_musician
+		};;
+	*);;

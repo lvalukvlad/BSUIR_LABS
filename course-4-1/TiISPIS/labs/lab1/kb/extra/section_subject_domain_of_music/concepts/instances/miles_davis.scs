@@ -1,0 +1,13 @@
+miles_davis
+<- concept_composer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Майлс Дэвис]
+	(* <- lang_ru;; *);
+	[Miles Davis]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский джазовый трубач и композитор, один из ведущих новаторов джаза XX века.]
+	(* <- lang_ru;; *);;

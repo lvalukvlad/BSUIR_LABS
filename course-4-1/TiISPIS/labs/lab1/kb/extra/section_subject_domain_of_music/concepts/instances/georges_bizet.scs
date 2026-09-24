@@ -1,0 +1,11 @@
+georges_bizet
+<- concept_composer;
+<- concept_musician;
+=> nrel_main_idtf:
+	[Жорж Бизе]
+	(* <- lang_ru;; *);
+	[Georges Bizet]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Французский композитор XIX века, автор оперы «Кармен».]
+	(* <- lang_ru;; *);;

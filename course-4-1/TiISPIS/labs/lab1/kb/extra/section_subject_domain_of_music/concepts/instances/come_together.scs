@@ -1,0 +1,26 @@
+come_together
+<- concept_song;
+<- concept_musical_work;
+<- concept_rock_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Come Together]
+	(* <- lang_ru;; *);
+	[Come Together]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Открывающий трек альбома Abbey Road; авторство песен Beatles обычно указывается как Lennon–McCartney.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	john_lennon;
+=> nrel_work_genre:
+	concept_rock_music;
+=> nrel_included_in_album:
+	abbey_road;
+=> nrel_performer_of:
+	the_beatles;
+=> nrel_performed_on_instrument:
+	electric_guitar;
+=> nrel_duration:
+	[4:20]
+	(* <- lang_en;; *);;

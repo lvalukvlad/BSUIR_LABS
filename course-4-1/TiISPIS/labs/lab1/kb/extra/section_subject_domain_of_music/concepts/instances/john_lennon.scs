@@ -1,0 +1,15 @@
+john_lennon
+<- concept_singer;
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Джон Леннон]
+	(* <- lang_ru;; *);
+	[John Lennon]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Английский музыкант, певец и автор песен, один из основателей The Beatles.]
+	(* <- lang_ru;; *);
+=> nrel_member_of_ensemble:
+	the_beatles;;

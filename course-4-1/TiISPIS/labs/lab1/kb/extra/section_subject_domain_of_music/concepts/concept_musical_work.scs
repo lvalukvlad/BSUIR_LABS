@@ -1,0 +1,17 @@
+concept_musical_work
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[музыкальное произведение]
+	(* <- lang_ru;; *);
+	[musical work]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Целостная художественная единица музыкального творчества (песня, симфония, опера и др.).]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_music;
+=> nrel_inclusion:
+	concept_song;
+	concept_symphony;
+	concept_opera;;

@@ -1,0 +1,20 @@
+ludwig_van_beethoven
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Людвиг ван Бетховен]
+	(* <- lang_ru;; *);
+	[Ludwig van Beethoven]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Немецкий композитор и пианист (1770–1827), ключевая фигура перехода от классицизма к романтизму.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	later_european_composers
+	(*
+		=> nrel_main_idtf:
+			[позднейшие европейские композиторы]
+			(* <- lang_ru;; *);;
+		<- concept_musician;;
+	*);;

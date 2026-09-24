@@ -1,0 +1,17 @@
+carmen_opera
+<- concept_opera;
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Кармен]
+	(* <- lang_ru;; *);
+	[Carmen]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Опера Жоржа Бизе (премьера 1875), один из наиболее часто исполняемых оперных спектаклей.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	georges_bizet;
+=> nrel_work_genre:
+	concept_classical_music;;

@@ -1,0 +1,137 @@
+\section{Формализация предметной области <<Музыка>>}
+\label{sec:part1}
+
+В каталоге \texttt{kb/extra} форка системы NIKA создан атомарный раздел \texttt{section\_subject\_domain\_of\_music}. В спецификации предметной области указаны:
+\begin{itemize}
+	\item максимальный класс объектов исследования \mdash \texttt{concept\_music};
+	\item немаксимальные классы объектов исследования (произведения, жанры, музыканты, инструменты, альбомы, концерты, лейблы и их специализации);
+	\item исследуемые отношения (\texttt{nrel\_author}, \texttt{nrel\_performer\_of}, \texttt{nrel\_work\_genre}, \texttt{nrel\_included\_in\_album}, \texttt{nrel\_performed\_on\_instrument}, \texttt{nrel\_member\_of\_ensemble}, \texttt{nrel\_release\_year}, \texttt{nrel\_duration}, \texttt{nrel\_record\_label}, \texttt{nrel\_influence}).
+\end{itemize}
+
+Суммарно формализовано \textbf{34} понятия: 24 абсолютных и 10 относительных. Между классами заданы теоретико-множественные отношения включения (\texttt{nrel\_inclusion}) и разбиения (\texttt{nrel\_subdividing} для жанров и групп инструментов). Для отношений указаны свойства (бинарность, ориентированность, антирефлексивность и др.), домены и определения.
+
+Схема классов объектов исследования приведена на рисунке~\ref{fig:domain}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{01_domain.png}
+	\caption{Иерархия классов предметной области <<Музыка>>}
+	\label{fig:domain}
+\end{figure}
+
+Фрагмент описания раздела предметной области на языке SCs приведён в листинге~\ref{lst:section}.
+
+\begin{lstlisting}[caption={Фрагмент раздела предметной области музыки},label={lst:section}]
+section_subject_domain_of_music
+=> nrel_main_idtf:
+  [Section. Subject domain of music]
+  (* <- lang_en;; *);
+<- atomic_section;;
+
+section_subject_domain_of_music = [*
+  subject_domain_of_music
+  <- subject_domain;
+  -> rrel_maximum_studied_object_class:
+      concept_music;
+  -> rrel_explored_relation:
+      nrel_author;
+      nrel_performer_of;
+*];;
+\end{lstlisting}
+
+Русские идентификаторы заданы в исходных файлах через \texttt{nrel\_main\_idtf} и \texttt{lang\_ru}. Пример абсолютного понятия с включением подклассов \mdash листинг~\ref{lst:work}. Пример относительного понятия с доменами \mdash листинг~\ref{lst:author}.
+
+\begin{lstlisting}[caption={Понятие musical work},label={lst:work}]
+concept_musical_work
+<- sc_node_class;
+=> nrel_main_idtf:
+  [musical work] (* <- lang_en;; *);
+<= nrel_inclusion: concept_music;
+=> nrel_inclusion:
+  concept_song; concept_symphony; concept_opera;;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Отношение author*},label={lst:author}]
+nrel_author
+<- sc_node_norole_relation;
+<- binary_relation; <- oriented_relation;
+=> nrel_first_domain: concept_musical_work;
+=> nrel_second_domain: concept_composer;;
+\end{lstlisting}
+
+Перечень формализованных понятий приведён в таблице~\ref{tab:concepts}.
+
+\begin{table}[H]
+\centering
+\caption{Абсолютные и относительные понятия ПрО <<Музыка>>}
+\label{tab:concepts}
+\begin{tabular}{|c|p{6.2cm}|p{5.5cm}|}
+\hline
+№ & Системный идентификатор & Русский идентификатор \\
+\hline
+1 & \texttt{concept\_music} & музыка \\
+2 & \texttt{concept\_musical\_work} & музыкальное произведение \\
+3 & \texttt{concept\_song} & песня \\
+4 & \texttt{concept\_symphony} & симфония \\
+5 & \texttt{concept\_opera} & опера \\
+6 & \texttt{concept\_album} & альбом \\
+7 & \texttt{concept\_musical\_genre} & музыкальный жанр \\
+8 & \texttt{concept\_classical\_music} & классическая музыка \\
+9 & \texttt{concept\_rock\_music} & рок-музыка \\
+10 & \texttt{concept\_jazz\_music} & джаз \\
+11 & \texttt{concept\_pop\_music} & поп-музыка \\
+12 & \texttt{concept\_musician} & музыкант \\
+13 & \texttt{concept\_composer} & композитор \\
+14 & \texttt{concept\_performer} & исполнитель \\
+15 & \texttt{concept\_singer} & певец \\
+16 & \texttt{concept\_musical\_group} & музыкальная группа \\
+17 & \texttt{concept\_orchestra} & оркестр \\
+18 & \texttt{concept\_musical\_instrument} & музыкальный инструмент \\
+19 & \texttt{concept\_string\_instrument} & струнный инструмент \\
+20 & \texttt{concept\_keyboard\_instrument} & клавишный инструмент \\
+21 & \texttt{concept\_wind\_instrument} & духовой инструмент \\
+22 & \texttt{concept\_percussion\_instrument} & ударный инструмент \\
+23 & \texttt{concept\_concert} & концерт \\
+24 & \texttt{concept\_record\_label} & звукозаписывающий лейбл \\
+25 & \texttt{nrel\_author} & автор* \\
+26 & \texttt{nrel\_performer\_of} & исполнитель произведения* \\
+27 & \texttt{nrel\_work\_genre} & жанр произведения* \\
+28 & \texttt{nrel\_included\_in\_album} & входить в альбом* \\
+29 & \texttt{nrel\_performed\_on\_instrument} & исполняется на инструменте* \\
+30 & \texttt{nrel\_member\_of\_ensemble} & участник коллектива* \\
+31 & \texttt{nrel\_release\_year} & год выпуска* \\
+32 & \texttt{nrel\_duration} & длительность* \\
+33 & \texttt{nrel\_record\_label} & лейбл записи* \\
+34 & \texttt{nrel\_influence} & влияние* \\
+\hline
+\end{tabular}
+\end{table}
+
+Для каждого понятия описан не менее чем один экземпляр. Фактографическое ядро образуют три связанных сюжета (рисунок~\ref{fig:facts}):
+\begin{itemize}
+	\item классика: Л.~ван~Бетховен \mdash Симфония №~5 \mdash Венский филармонический оркестр \mdash фортепиано/скрипка \mdash премьера 1808~г.;
+	\item рок: Дж.~Леннон \mdash The Beatles \mdash песня Come Together \mdash альбом Abbey Road (Apple Records, 1969) \mdash электрогитара;
+	\item джаз: М.~Дэвис \mdash So What \mdash альбом Kind of Blue (Columbia Records, 1959) \mdash труба.
+\end{itemize}
+Дополнительно формализованы опера <<Кармен>> (Ж.~Бизе), поп-песня Yesterday, ударная установка и акустическая гитара.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.98\textwidth]{02_facts.png}
+	\caption{Связи экземпляров в трёх фактографических сюжетах}
+	\label{fig:facts}
+\end{figure}
+
+Пример экземпляра на SCs приведён в листинге~\ref{lst:instance}.
+
+\begin{lstlisting}[caption={Экземпляр Come Together},label={lst:instance}]
+come_together
+<- concept_song;
+<- concept_rock_music;
+=> nrel_author: john_lennon;
+=> nrel_included_in_album: abbey_road;
+=> nrel_performer_of: the_beatles;
+=> nrel_performed_on_instrument: electric_guitar;;
+\end{lstlisting}
+
+Факты взяты из открытых источников (Википедия и Britannica); перечень URL приведён в файле \texttt{sources.md} каталога лабораторной работы и в списке использованных источников.

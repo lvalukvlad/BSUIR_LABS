@@ -1,0 +1,44 @@
+{
+  "short_words": {
+    "model": "short_words",
+    "label": "Коротких слов",
+    "queries": 16,
+    "accuracy": 0.625,
+    "precision": 0.6875,
+    "recall": 0.65625,
+    "f1": 0.6715116279069767,
+    "f05": 0.6810141509433962,
+    "f2": 0.6622706422018348,
+    "correct": 10,
+    "elapsed_ms": 22.31,
+    "avg_elapsed_ms": 1.39
+  },
+  "frequent_words": {
+    "model": "frequent_words",
+    "label": "Частотных слов",
+    "queries": 16,
+    "accuracy": 0.875,
+    "precision": 0.875,
+    "recall": 0.875,
+    "f1": 0.875,
+    "f05": 0.875,
+    "f2": 0.875,
+    "correct": 14,
+    "elapsed_ms": 23.11,
+    "avg_elapsed_ms": 1.44
+  },
+  "neural_network": {
+    "model": "neural_network",
+    "label": "Нейросетевой",
+    "queries": 16,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "f05": 1.0,
+    "f2": 1.0,
+    "correct": 16,
+    "elapsed_ms": 369.66,
+    "avg_elapsed_ms": 23.1
+  }
+}

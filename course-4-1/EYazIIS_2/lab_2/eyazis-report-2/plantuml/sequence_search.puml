@@ -1,0 +1,31 @@
+@startuml
+skinparam defaultFontName Arial
+skinparam shadowing false
+
+actor "Пользователь" as User
+participant "React SPA" as SPA
+participant "nginx" as Nginx
+participant "FastAPI" as API
+participant "document_loader" as Loader
+participant "language_model" as LM
+participant "indexer" as Indexer
+participant "PostgreSQL" as DB
+
+User -> SPA : выбирает PDF-файл
+SPA -> Nginx : POST /api/recognize
+Nginx -> API : проксирование
+API -> Loader : извлечь текст из PDF
+Loader --> API : извлечённый текст
+API -> LM : recognize_language()
+LM -> DB : загрузить профили
+DB --> LM : профили языков
+LM --> API : три метода + OoP + время
+API -> Indexer : сохранить документ
+Indexer -> DB : documents / recognition_results
+DB --> Indexer : doc_id
+Indexer --> API : doc_id
+API --> Nginx : JSON-ответ
+Nginx --> SPA : результат
+SPA --> User : языки, доли, сравнение
+
+@enduml

@@ -1,0 +1,13 @@
+concept_keyboard_instrument
+<- sc_node_class;
+<- class;
+=> nrel_main_idtf:
+	[клавишный инструмент]
+	(* <- lang_ru;; *);
+	[keyboard instrument]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Инструмент с клавиатурой (фортепиано, орган и др.).]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_instrument;;

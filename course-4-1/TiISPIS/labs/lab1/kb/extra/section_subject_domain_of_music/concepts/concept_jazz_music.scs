@@ -1,0 +1,14 @@
+concept_jazz_music
+<- sc_node_class;
+<- class;
+<- concept_musical_genre;
+=> nrel_main_idtf:
+	[джаз]
+	(* <- lang_ru;; *);
+	[jazz]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Музыкальный жанр, возникший в США, с импровизацией, свинг-ритмом и характерной гармонией.]
+	(* <- lang_ru;; *);
+<= nrel_inclusion:
+	concept_musical_genre;;

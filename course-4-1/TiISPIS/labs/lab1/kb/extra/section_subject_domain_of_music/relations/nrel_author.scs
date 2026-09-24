@@ -1,0 +1,42 @@
+nrel_author
+<- sc_node_norole_relation;
+<- relation;
+<- binary_relation;
+<- oriented_relation;
+<- antireflexive_relation;
+<- asymmetric_relation;
+<- antitransitive_relation;
+=> nrel_main_idtf:
+	[автор*]
+	(* <- lang_ru;; *);
+	[author*]
+	(* <- lang_en;; *);
+=> nrel_first_domain: concept_musical_work;
+=> nrel_second_domain: concept_composer;
+=> nrel_definitional_domain:
+	..nrel_author_def_domain
+	(*
+		<= nrel_combination: {
+			concept_musical_work;
+			concept_composer
+		};;
+	*);
+<- rrel_key_sc_element:
+	..nrel_author_definition
+	(*
+		=> nrel_main_idtf:
+			[Опр. (автор*)]
+			(* <- lang_ru;; *);;
+		<- definition;;
+		<= nrel_sc_text_translation:
+			..nrel_author_definition_text
+			(*
+				-> rrel_example:
+					[Автор* — бинарное ориентированное отношение, связывающее музыкальное произведение и его композитора.]
+					(* <- lang_ru;; *);;
+			*);;
+		<= nrel_using_constants: {
+			concept_musical_work;
+			concept_composer
+		};;
+	*);;

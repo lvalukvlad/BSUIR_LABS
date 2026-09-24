@@ -1,0 +1,11 @@
+piano
+<- concept_keyboard_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[фортепиано]
+	(* <- lang_ru;; *);
+	[piano]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Клавишный ударно-струнный инструмент, широко используемый в классической и популярной музыке.]
+	(* <- lang_ru;; *);;
