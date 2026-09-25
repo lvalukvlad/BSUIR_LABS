@@ -109,7 +109,7 @@
 	\label{tab:p1-files-iit11}
 \end{table}
 
-Ключевые фрагменты сценария настройки приведены в листингах~\ref{lst:p1-dirs} и~\ref{lst:p1-files}.
+Ключевые фрагменты сценария настройки приведены в листингах~\ref{lst:p1-dirs} и~\ref{lst:p1-files}. Проверка исполнения файла~\mdash  листинг~\ref{lst:p1-exec}; удаление существующих \texttt{file*} с восстановлением~\mdash  листинг~\ref{lst:p1-rm}.
 
 \begin{lstlisting}[caption={Владельцы и режимы каталогов},label={lst:p1-dirs}]
 chown iit11:group_iit1 "${BASE}/pzs11"; chmod 700 "${BASE}/pzs11"
@@ -127,4 +127,29 @@ done
 for d in pzs11 pzs12 pzs13 pzs14; do
   chown root:root "${BASE}/${d}/file5"{1,2,3,4,5}
 done
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Исполнение файла: реальный запуск, не проверка бита x},label={lst:p1-exec}]
+check_exec() {
+  local user="$1" path="$2"
+  if [[ ${user} == root ]]; then
+    timeout 1s bash -c 'printf "\n" | "$1"' _ "${path}"
+  else
+    timeout 1s runuser -u "${user}" -- \
+      bash -c 'printf "\n" | "$1"' _ "${path}"
+  fi
+}
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Удаление существующих file* с восстановлением из копии},label={lst:p1-rm}]
+cp -a -- "${files[@]}" "${bak}/"
+failed=0
+for f in "${files[@]}"; do
+  if [[ ${user} == root ]]; then
+    rm -f -- "${f}" || failed=1
+  else
+    runuser -u "${user}" -- rm -f -- "${f}" || failed=1
+  fi
+done
+cp -a -- "${bak}/." "${dpath}/"
 \end{lstlisting}

@@ -24,10 +24,10 @@
 Недельный ряд (04.09.2026--10.09.2026) сформирован генератором типового шума: внешние адреса взяты из документационных диапазонов RFC~5737, чтобы воспроизводимо показать классы разведки из Internet, не смешивая их с адресами живого канала. Это учебная модель журналов, а не выгрузка с публичного VPS. Живой endpoint при демонстрации пишет в те же файлы уже фактические обращения к локальному стенду.
 
 \begin{lstlisting}[caption={Фрагмент Combined-журнала веб-сервера},label={lst:http},basicstyle=\footnotesize\ttfamily]
+198.51.100.12 - - [04/Sep/2026:06:50:00 +0300] "GET /wp-login.php HTTP/1.1" 404 412 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 198.51.100.12 - - [04/Sep/2026:06:50:03 +0300] "GET /wp-admin/ HTTP/1.1" 404 412 "-" "Mozilla/5.0 (compatible; zgrab/0.1)"
+198.51.100.12 - - [04/Sep/2026:06:50:06 +0300] "GET /xmlrpc.php HTTP/1.1" 404 412 "-" "Mozilla/5.0 (compatible; Nmap Scripting Engine)"
 198.51.100.12 - - [04/Sep/2026:06:50:09 +0300] "GET /phpmyadmin/ HTTP/1.1" 404 412 "-" "sqlmap/1.8.2#stable (http://sqlmap.org)"
-10.206.216.10 - - [04/Sep/2026:10:07:45 +0300] "GET / HTTP/1.1" 200 1480 "-" "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0"
-198.51.100.12 - - [04/Sep/2026:06:50:30 +0300] "GET /cgi-bin/../../../../etc/passwd HTTP/1.1" 400 390 "-" "Mozilla/5.0 (compatible; Nmap Scripting Engine)"
 \end{lstlisting}
 
 \pagebreak

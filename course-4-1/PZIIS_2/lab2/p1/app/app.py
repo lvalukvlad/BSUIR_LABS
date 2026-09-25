@@ -332,15 +332,10 @@ def notes_delete(note_id: int):
 def secrets_list():
     user = current_user()
     q = (request.args.get("q") or "").strip()
-    secrets_q = Secret.query.filter_by(user_id=user.id).order_by(Secret.updated_at.desc()).all()
-    # Поиск по заголовку и расшифрованному телу только у владельца
+    secrets_q = Secret.query.filter_by(user_id=user.id).order_by(Secret.updated_at.desc())
     if q:
-        ql = q.lower()
-        secrets_q = [
-            s
-            for s in secrets_q
-            if ql in s.title.lower() or ql in s.get_body().lower()
-        ]
+        secrets_q = secrets_q.filter(Secret.title.ilike(f"%{q}%"))
+    secrets_q = secrets_q.all()
     return render_template("secrets_list.html", secrets=secrets_q, q=q)
 
 

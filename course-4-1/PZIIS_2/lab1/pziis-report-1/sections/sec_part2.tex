@@ -44,7 +44,7 @@ PostgreSQL~\mdash  объектно-реляционная система упр
 	\label{tab:p2-res}
 \end{table}
 
-Таким образом, администратор имеет полный доступ, пользователь приложения~\mdash  только DML (CRUD), гость~\mdash  только чтение, что соответствует требованиям методички. Фрагмент назначения привилегий приведён в листинге~\ref{lst:p2-grant}.
+Таким образом, администратор имеет полный доступ, пользователь приложения~\mdash  только DML (CRUD), гость~\mdash  только чтение, что соответствует требованиям методички. Фрагмент назначения привилегий приведён в листинге~\ref{lst:p2-grant}. Проверка гостя (SELECT разрешён, DROP = НЕТ)~\mdash  листинг~\ref{lst:p2-guest}.
 
 \begin{lstlisting}[caption={Назначение привилегий ролям},label={lst:p2-grant}]
 GRANT ALL PRIVILEGES ON SCHEMA lab_schema TO admin_role;
@@ -52,4 +52,11 @@ GRANT CREATE ON SCHEMA lab_schema TO admin_role;
 GRANT SELECT, INSERT, UPDATE, DELETE
   ON ALL TABLES IN SCHEMA lab_schema TO user_role;
 GRANT SELECT ON ALL TABLES IN SCHEMA lab_schema TO guest_role;
+\end{lstlisting}
+
+\begin{lstlisting}[caption={Проверка гостя: SELECT разрешён, DROP ожидается как отказ},label={lst:p2-guest}]
+check_op guest_user guest_pass SELECT \
+  "SELECT * FROM lab_schema.test_table LIMIT 1;"
+check_op guest_user guest_pass DROP_TABLE \
+  "DROP TABLE lab_schema.test_table;"
 \end{lstlisting}
