@@ -5,10 +5,10 @@
 \begin{itemize}
 	\item максимальный класс объектов исследования \mdash \texttt{concept\_music};
 	\item немаксимальные классы объектов исследования (произведения, жанры, музыканты, инструменты, альбомы, концерты, лейблы и их специализации);
-	\item исследуемые отношения (\texttt{nrel\_author}, \texttt{nrel\_performer\_of}, \texttt{nrel\_work\_genre}, \texttt{nrel\_included\_in\_album}, \texttt{nrel\_performed\_on\_instrument}, \texttt{nrel\_member\_of\_ensemble}, \texttt{nrel\_release\_year}, \texttt{nrel\_duration}, \texttt{nrel\_record\_label}, \texttt{nrel\_influence}).
+	\item исследуемые отношения (\texttt{nrel\_author}, \texttt{nrel\_performer\_of}, \texttt{nrel\_work\_genre}, \texttt{nrel\_included\_in\_album}, \texttt{nrel\_performed\_on\_instrument}, \texttt{nrel\_member\_of\_ensemble}, \texttt{nrel\_release\_year}, \texttt{nrel\_duration}, \texttt{nrel\_record\_label}, \texttt{nrel\_influence}, \texttt{nrel\_concert}).
 \end{itemize}
 
-Суммарно формализовано \textbf{34} понятия: 24 абсолютных и 10 относительных. Между классами заданы теоретико-множественные отношения включения (\texttt{nrel\_inclusion}) и разбиения (\texttt{nrel\_subdividing} для жанров и групп инструментов). Для отношений указаны свойства (бинарность, ориентированность, антирефлексивность и др.), домены и определения.
+Суммарно формализовано \textbf{35} понятий: 24 абсолютных и 11 относительных. Между классами заданы теоретико-множественные отношения включения (\texttt{nrel\_inclusion}) и разбиения (\texttt{nrel\_subdividing} для жанров и групп инструментов). Для отношений указаны свойства (бинарность, ориентированность, антирефлексивность и др.), домены и определения.
 
 Схема классов объектов исследования приведена на рисунке~\ref{fig:domain}.
 
@@ -103,6 +103,7 @@ nrel_author
 32 & \texttt{nrel\_duration} & длительность* \\
 33 & \texttt{nrel\_record\_label} & лейбл записи* \\
 34 & \texttt{nrel\_influence} & влияние* \\
+35 & \texttt{nrel\_concert} & концертное исполнение* \\
 \hline
 \end{tabular}
 \end{table}
@@ -110,7 +111,7 @@ nrel_author
 Для каждого понятия описан не менее чем один экземпляр. Фактографическое ядро образуют три связанных сюжета (рисунок~\ref{fig:facts}):
 \begin{itemize}
 	\item классика: Л.~ван~Бетховен \mdash Симфония №~5 \mdash Венский филармонический оркестр \mdash фортепиано/скрипка \mdash премьера 1808~г.;
-	\item рок: Дж.~Леннон \mdash The Beatles \mdash песня Come Together \mdash альбом Abbey Road (Apple Records, 1969) \mdash электрогитара;
+	\item рок: Дж.~Леннон \mdash The Beatles \mdash песня Come Together \mdash альбом Abbey Road (Apple Records, 1969) \mdash электрогитара и ударная установка;
 	\item джаз: М.~Дэвис \mdash So What \mdash альбом Kind of Blue (Columbia Records, 1959) \mdash труба.
 \end{itemize}
 Дополнительно формализованы опера <<Кармен>> (Ж.~Бизе), поп-песня Yesterday, ударная установка и акустическая гитара.

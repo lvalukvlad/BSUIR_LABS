@@ -21,6 +21,8 @@ symphony_no_5_beethoven
 	violin;
 => nrel_performed_on_instrument:
 	piano;
+=> nrel_concert:
+	premiere_symphony_5_1808;
 => nrel_duration:
 	[около 30–40 минут]
 	(* <- lang_ru;; *);;

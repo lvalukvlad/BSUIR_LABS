@@ -28,11 +28,12 @@
 
 Клон **не** хранится в git репозитория лаб (см. `labs/.gitignore`). Рекомендуемый путь: `course-4-1/TiISPIS/labs/nika`.
 
+Форк с фрагментом БЗ: <https://github.com/lvalukvlad/nika> (ветка `tpis-2023`, каталог `kb/extra/section_subject_domain_of_music`).
+
 ```bash
 cd course-4-1/TiISPIS/labs
-git clone -b tpis-2023 --recursive https://github.com/ostis-apps/nika nika
-# либо форк:
-# git clone -b tpis-2023 --recursive https://github.com/<ваш_аккаунт>/nika nika
+git clone -b tpis-2023 --recursive https://github.com/lvalukvlad/nika nika
+# исходный репозиторий: https://github.com/ostis-apps/nika
 
 cd lab1
 chmod +x scripts/sync_to_nika.sh
@@ -54,9 +55,9 @@ docker compose up --no-build
 
 ```bash
 # в корне форка nika, после sync_to_nika.sh
-git add kb/extra/
+git add kb/extra/section_subject_domain_of_music
 git commit -m "feat(kb): музыка"
-git push
+git push origin tpis-2023
 ```
 
 Pull-request в `ostis-apps/nika` — только по решению преподавателя (оценка 9–10).

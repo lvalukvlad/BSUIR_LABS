@@ -11,6 +11,8 @@ yesterday_song
 => nrel_note:
 	[Песня The Beatles (1965), одна из наиболее покрываемых композиций в истории поп-музыки.]
 	(* <- lang_ru;; *);
+=> nrel_author:
+	john_lennon;
 => nrel_work_genre:
 	concept_pop_music;
 => nrel_performer_of:

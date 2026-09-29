@@ -16,6 +16,7 @@ rectangle "Классика" {
   s5 --> vp : nrel_performer_of
   s5 --> piano : nrel_performed_on_instrument
   s5 --> violin : nrel_performed_on_instrument
+  s5 --> prem : nrel_concert
 }
 
 rectangle "Рок" {
@@ -25,11 +26,13 @@ rectangle "Рок" {
   (abbey_road) as ar
   (apple_records) as ap
   (electric_guitar) as eg
+  (drum_kit) as dk
   jl --> tb : nrel_member_of_ensemble
   jl --> ct : nrel_author
   ct --> ar : nrel_included_in_album
   ct --> tb : nrel_performer_of
   ct --> eg : nrel_performed_on_instrument
+  ct --> dk : nrel_performed_on_instrument
   ar --> ap : nrel_record_label
 }
 

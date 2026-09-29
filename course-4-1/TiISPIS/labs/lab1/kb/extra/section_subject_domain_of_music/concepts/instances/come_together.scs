@@ -21,6 +21,8 @@ come_together
 	the_beatles;
 => nrel_performed_on_instrument:
 	electric_guitar;
+=> nrel_performed_on_instrument:
+	drum_kit;
 => nrel_duration:
 	[4:20]
 	(* <- lang_en;; *);;

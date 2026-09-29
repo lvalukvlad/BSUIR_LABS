@@ -52,7 +52,8 @@ section_subject_domain_of_music = [*
 		nrel_release_year;
 		nrel_duration;
 		nrel_record_label;
-		nrel_influence;;
+		nrel_influence;
+		nrel_concert;;
 *];;
 
 section_subject_domain_of_music
@@ -91,4 +92,5 @@ section_subject_domain_of_music
 	nrel_release_year;
 	nrel_duration;
 	nrel_record_label;
-	nrel_influence;;
+	nrel_influence;
+	nrel_concert;;
