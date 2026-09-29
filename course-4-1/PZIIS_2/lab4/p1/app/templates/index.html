@@ -19,7 +19,7 @@
 
     <p class="lead">
       Узел принимает запросы по HTTP и управление по SSH с аутентификацией по ключу.
-      На этой странице публикуется только состояние служб.
+      Ниже — состояние служб и ссылки на журналы для разбора.
     </p>
 
     <dl class="grid">
@@ -36,6 +36,32 @@
         <dd>Combined</dd>
       </div>
     </dl>
+
+    <dl class="grid stats">
+      <div>
+        <dt>Записей HTTP</dt>
+        <dd>{{ summary.http_total }}</dd>
+      </div>
+      <div>
+        <dt>Событий SSH</dt>
+        <dd>{{ summary.ssh_total }}</dd>
+      </div>
+      <div>
+        <dt>Alert Snort</dt>
+        <dd>{{ summary.alerts }}</dd>
+      </div>
+    </dl>
+
+    <section>
+      <h2>Разбор</h2>
+      <ul class="links">
+        <li><a href="/logs">Журналы и IDS</a></li>
+        <li><a href="/logs/access">access.log (HTTP)</a></li>
+        <li><a href="/logs/auth">auth.log (SSH)</a></li>
+        <li><a href="/logs/alert">alert Snort</a></li>
+        <li><a href="/logs/blocklist">blocklist</a></li>
+      </ul>
+    </section>
 
     <section>
       <h2>Публикации</h2>

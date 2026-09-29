@@ -1,5 +1,5 @@
 #!/bin/bash
-# Часть 2: установка PostgreSQL.
+
 # Запуск: sudo ./install.sh
 set -euo pipefail
 

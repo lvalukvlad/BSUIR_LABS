@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Результаты дампов</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.4rem; }
+    th, td { text-align: left; padding: 0.45rem 0.6rem; border-bottom: 1px solid rgba(0,0,0,.12); }
+    a { color: inherit; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <p class="brand"><a href="/">Записи</a></p>
+    <p class="meta">дампы gcore</p>
+  </header>
+  <main class="grid" style="display:block;max-width:52rem;margin:0 auto;padding:1.2rem;">
+    <h1>Что видно в памяти</h1>
+    <p class="hint">Своя реализация хранит секрет как шифртекст. В дампе всё равно могут остаться короткие копии строки из запроса. У предоставленного варианта секрет лежит открытым текстом.</p>
+    <table>
+      <tr><th>Момент</th><th>Заметка</th><th>Исходный секрет</th><th>Новый секрет</th></tr>
+      <tr><td>После создания</td><td>1</td><td>3</td><td>0</td></tr>
+      <tr><td>После обновления</td><td>2</td><td>1</td><td>0</td></tr>
+      <tr><td>После удаления</td><td>1</td><td>1</td><td>0</td></tr>
+    </table>
+    <p class="hint">Сравнение по методике: своя реализация 14/16, предоставленный вариант 5/16.</p>
+    <p><a href="/">← к записям</a></p>
+  </main>
+</body>
+</html>

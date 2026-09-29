@@ -1,6 +1,5 @@
 #!/bin/bash
-# Часть 2: удаление объектов лабораторной в PostgreSQL.
-# Запуск: sudo ./cleanup.sh [--purge]
+
 #   --purge  — дополнительно удалить пакеты PostgreSQL
 set -euo pipefail
 
@@ -24,7 +23,6 @@ DROP ROLE IF EXISTS user_role;
 DROP ROLE IF EXISTS guest_role;
 EOF
 
-# Восстановление pg_hba при наличии бэкапа
 PG_HBA="$(sudo -u postgres psql -tA -c "SHOW hba_file;" 2>/dev/null | tr -d '[:space:]' || true)"
 if [[ -n ${PG_HBA} && -f ${PG_HBA}.lab1.bak ]]; then
   echo "==> Восстановление ${PG_HBA} из .lab1.bak"

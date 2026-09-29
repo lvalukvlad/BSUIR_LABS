@@ -1,4 +1,3 @@
-"""Учебное веб-приложение: заметки и секреты."""
 from __future__ import annotations
 
 import os
@@ -395,5 +394,4 @@ def init_db() -> None:
 
 if __name__ == "__main__":
     init_db()
-    # 127.0.0.1 — не слушаем все интерфейсы без явного согласия
     app.run(host="127.0.0.1", port=int(os.environ.get("PORT", "5050")), debug=False)

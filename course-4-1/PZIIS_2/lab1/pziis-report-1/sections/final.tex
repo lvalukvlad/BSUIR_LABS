@@ -1,7 +1,7 @@
 \sectioncentered*{Заключение}
 \addcontentsline{toc}{section}{Заключение}
 
-В рамках лабораторной работы №1 исследованы и программно реализованы механизмы избирательного управления доступом на двух уровнях: объектов файловой системы Linux и ролевой модели PostgreSQL. Экспериментальный прогон выполнен 10.09.2026.
+В рамках лабораторной работы №1 исследованы и программно реализованы механизмы избирательного управления доступом на двух уровнях: объектов файловой системы Linux и ролевой модели PostgreSQL.
 
 \textbf{Семантическая составляющая.} Работа демонстрирует принципы ACL/DAC: в операционной системе~\mdash  через классы <<владелец / группа / остальные>> и биты \texttt{rwx}, в СУБД~\mdash  через роли и привилегии SQL. Показано, что эффективные права зависят не только от заданного набора битов или \texttt{GRANT}, но и от правил проверки доступа (в UNIX владелец не <<проваливается>> в групповые права) и от наследования ролей PostgreSQL.
 
@@ -22,11 +22,11 @@
 	Ховард М., Лебланк Д. Защищённый код. \mdash  М. : Русская редакция, 2004. \mdash  704~с.
 
 	\bibitem{cwe}
-	CWE: Common Weakness Enumeration [Электронный ресурс]. \mdash  Режим доступа: \url{http://cwe.mitre.org/}. \mdash  Дата доступа: 10.09.2026.
+	CWE: Common Weakness Enumeration [Электронный ресурс]. \mdash  Режим доступа: \url{http://cwe.mitre.org/}.
 
 	\bibitem{postgres}
-	PostgreSQL Documentation [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.postgresql.org/docs/}. \mdash  Дата доступа: 10.09.2026.
+	PostgreSQL Documentation [Электронный ресурс]. \mdash  Режим доступа: \url{https://www.postgresql.org/docs/}.
 
 	\bibitem{chmod}
-	chmod(1) \mdash  Linux manual page [Электронный ресурс]. \mdash  Режим доступа: \url{https://man7.org/linux/man-pages/man1/chmod.1.html}. \mdash  Дата доступа: 10.09.2026.
+	chmod(1) \mdash  Linux manual page [Электронный ресурс]. \mdash  Режим доступа: \url{https://man7.org/linux/man-pages/man1/chmod.1.html}.
 \end{thebibliography}

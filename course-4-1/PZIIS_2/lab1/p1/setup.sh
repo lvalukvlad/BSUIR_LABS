@@ -1,6 +1,5 @@
 #!/bin/bash
-# Лабораторная №1, часть 1: создание пользователей, каталогов и файлов с ACL (chmod/chown).
-# Запуск: sudo ./setup.sh
+
 set -euo pipefail
 
 if [[ ${EUID} -ne 0 ]]; then
@@ -38,8 +37,6 @@ fi
 echo "==> Создание каталога ${BASE}"
 mkdir -p "${BASE}"
 
-# Unix DAC: права владельца проверяются раньше групповых.
-# Каталоги «только группа/остальные» не должны принадлежать тестируемому владельцу iit11.
 echo "==> Создание подкаталогов"
 mkdir -p "${BASE}/pzs11" "${BASE}/pzs12" "${BASE}/pzs13" "${BASE}/pzs14" "${BASE}/pzs15"
 
@@ -58,7 +55,6 @@ chmod 777 "${BASE}/pzs14"
 chown root:root "${BASE}/pzs15"
 chmod 700 "${BASE}/pzs15"
 
-# Вспомогательный скрипт создания файлов (выполняется от нужного uid)
 CREATE_HELPER="$(mktemp)"
 cat > "${CREATE_HELPER}" <<'HELPER'
 #!/bin/bash

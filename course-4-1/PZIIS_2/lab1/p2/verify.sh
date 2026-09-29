@@ -1,6 +1,6 @@
 #!/bin/bash
-# Часть 2: проверка политики доступа admin / app_user / guest.
-# Запуск: ./verify.sh  (root не обязателен, нужен доступ к localhost:5432)
+
+# Запуск: ./verify.sh  
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

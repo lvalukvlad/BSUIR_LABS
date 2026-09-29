@@ -1,5 +1,5 @@
 #!/bin/bash
-# П.15: запуск файлов шаблона filex5 от iit11 и проверка, кто может остановить процесс.
+
 # Запуск: sudo ./verify_procs.sh
 set -uo pipefail
 
@@ -43,7 +43,6 @@ cleanup() {
 }
 trap cleanup EXIT
 
-# Долгоживущие обёртки (содержимое filex5 + sleep), запуск от iit11
 for f in "${TARGETS[@]}"; do
   src="${DIR}/${f}"
   if [[ ! -f ${src} ]]; then
@@ -66,7 +65,7 @@ start_proc() {
   local runner="${WORK}/${f}.run"
   local pidfile="${WORK}/${f}.pid"
   rm -f "${pidfile}"
-  # setsid + nohup: процесс не умирает при выходе оболочки runuser
+
   runuser -u iit11 -- bash -c "nohup setsid '${runner}' >/dev/null 2>&1 & echo \$! > '${pidfile}'"
   sleep 0.3
   if [[ ! -s ${pidfile} ]]; then
@@ -75,7 +74,7 @@ start_proc() {
   fi
   local pid
   pid="$(tr -d '[:space:]' < "${pidfile}")"
-  # Убедимся, что это живой процесс пользователя iit11
+  
   if ! kill -0 "${pid}" 2>/dev/null; then
     echo ""
     return 1

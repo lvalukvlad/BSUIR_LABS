@@ -1,6 +1,5 @@
 #!/bin/bash
-# Часть 2: роли admin / user / guest и объекты БД.
-# Запуск: sudo ./setup_acl.sh
+
 set -euo pipefail
 
 if [[ ${EUID} -ne 0 ]]; then
@@ -18,7 +17,7 @@ if [[ -n ${PG_HBA} && -f ${PG_HBA} ]]; then
   if [[ ! -f ${PG_HBA}.lab1.bak ]]; then
     cp -a "${PG_HBA}" "${PG_HBA}.lab1.bak"
   fi
-  # Удаляем прошлые правила лабы, затем добавляем точечные
+ 
   grep -vE 'lab_db.*(admin_user|app_user|guest_user|LAB1)' "${PG_HBA}" > "${PG_HBA}.tmp" || cp -a "${PG_HBA}" "${PG_HBA}.tmp"
   {
     echo "# LAB1: password auth for lab accounts only"

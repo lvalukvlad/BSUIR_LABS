@@ -1,8 +1,7 @@
 #!/bin/bash
-# П.14: проверка чтения / записи / исполнения файлов для каждого пользователя.
-# Запись — проба с откатом содержимого. Исполнение — реальный запуск с тайм-аутом.
+
 # Запуск: sudo ./verify_files.sh
-# Результаты: ./results/verify_files.tsv и ./results/verify_files.txt
+
 set -uo pipefail
 
 if [[ ${EUID} -ne 0 ]]; then
@@ -10,7 +9,6 @@ if [[ ${EUID} -ne 0 ]]; then
   exit 1
 fi
 
-# Ожидаемые отказы доступа не должны ронять скрипт
 set +e
 
 BASE="/home/pzs"
@@ -70,8 +68,7 @@ check_write() {
 
 check_exec() {
   local user="$1" path="$2"
-  # Реальный запуск, не test -x: скрипту с shebang нужно ещё и чтение.
-  # filex5 делает read — подаём пустую строку и ограничиваем время.
+  
   if [[ ${user} == root ]]; then
     timeout 1s bash -c 'printf "\n" | "$1"' _ "${path}" &>/dev/null
   else

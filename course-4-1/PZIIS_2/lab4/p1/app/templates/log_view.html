@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="sheet wide">
+    <header class="mast">
+      <div>
+        <p class="kicker">
+          <a class="crumb" href="/">Сводка</a> /
+          <a class="crumb" href="/logs">журналы</a> /
+          {{ name }}
+        </p>
+        <h1>{{ title }}</h1>
+      </div>
+      <p class="when">{{ generated }}</p>
+    </header>
+
+    <p class="lead">
+      {% if show_all %}
+      Показаны все {{ total }} строк.
+      {% else %}
+      Показаны последние {{ shown }} из {{ total }} строк.
+      {% endif %}
+      Варианты:
+      <a href="/logs/{{ name }}?n=80">80</a>,
+      <a href="/logs/{{ name }}?n=200">200</a>,
+      <a href="/logs/{{ name }}?n=all"><strong>все</strong></a>.
+    </p>
+
+    {% if lines %}
+    <pre class="logbox">{% for line in lines %}{{ line }}
+{% endfor %}</pre>
+    {% else %}
+    <p class="lead">Файл пуст или ещё не создан.</p>
+    {% endif %}
+
+    <footer>
+      <p><a href="/logs">← ко всем журналам</a></p>
+    </footer>
+  </div>
+</body>
+</html>

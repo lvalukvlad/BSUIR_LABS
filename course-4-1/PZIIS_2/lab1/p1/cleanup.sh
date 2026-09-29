@@ -1,6 +1,5 @@
 #!/bin/bash
-# П.17: удаление файлов, каталогов, пользователей и групп лабораторной.
-# Запуск: sudo ./cleanup.sh
+
 set -euo pipefail
 
 if [[ ${EUID} -ne 0 ]]; then

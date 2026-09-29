@@ -79,6 +79,11 @@ def inject_meta():
     }
 
 
+@app.get("/results")
+def results():
+    return render_template("results.html")
+
+
 @app.get("/")
 def index():
     with _lock:

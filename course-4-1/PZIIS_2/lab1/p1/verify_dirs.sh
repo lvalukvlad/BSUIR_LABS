@@ -1,6 +1,5 @@
 #!/bin/bash
-# П.16: чтение каталога, создание файла, удаление каждого существующего file*.
-# Существующие файлы копируются, удаляются проверяемым uid и восстанавливаются.
+
 # Запуск: sudo ./verify_dirs.sh
 set -euo pipefail
 
@@ -53,7 +52,6 @@ for user in "${USERS[@]}"; do
       rm -f "${dpath}/${probe}" 2>/dev/null || true
     fi
 
-    # Удаление каждого существующего file* с последующим восстановлением
     shopt -s nullglob
     files=("${dpath}"/file*)
     shopt -u nullglob
