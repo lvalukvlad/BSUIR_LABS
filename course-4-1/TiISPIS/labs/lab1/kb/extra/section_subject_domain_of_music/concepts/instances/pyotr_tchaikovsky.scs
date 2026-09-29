@@ -1,0 +1,14 @@
+pyotr_tchaikovsky
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Пётр Ильич Чайковский]
+	(* <- lang_ru;; *);
+	[Pyotr Ilyich Tchaikovsky]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Русский композитор (1840–1893), автор симфоний, балетов и опер позднего романтизма.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	later_european_composers;;

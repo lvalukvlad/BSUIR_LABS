@@ -1,0 +1,14 @@
+johann_sebastian_bach
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Иоганн Себастьян Бах]
+	(* <- lang_ru;; *);
+	[Johann Sebastian Bach]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Немецкий композитор эпохи барокко (1685–1750), автор органных, хоровых и оркестровых сочинений.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	wolfgang_amadeus_mozart;;

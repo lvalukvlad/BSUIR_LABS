@@ -1,0 +1,64 @@
+@startuml
+skinparam defaultFontName DejaVu Sans
+skinparam shadowing false
+left to right direction
+
+title Дополнительные связанные экземпляры («Музыка»)
+
+rectangle "Классика" {
+  (johann_sebastian_bach) as bach
+  (wolfgang_amadeus_mozart) as moz
+  (pyotr_tchaikovsky) as tch
+  (toccata_and_fugue_d_minor) as toc
+  (symphony_no_40_mozart) as s40
+  (the_magic_flute) as fl
+  (symphony_no_6_tchaikovsky) as s6
+  (berlin_philharmonic) as bp
+  (organ) as organ
+  (clarinet) as cl
+  bach --> toc : nrel_author
+  bach --> moz : nrel_influence
+  moz --> s40 : nrel_author
+  moz --> fl : nrel_author
+  tch --> s6 : nrel_author
+  toc --> organ : nrel_performed_on_instrument
+  s40 --> bp : nrel_performer_of
+  s40 --> cl : nrel_performed_on_instrument
+}
+
+rectangle "Рок и поп" {
+  (freddie_mercury) as fm
+  (queen_band) as qn
+  (bohemian_rhapsody) as br
+  (a_night_at_the_opera_queen) as an
+  (live_aid_1985) as la
+  (michael_jackson) as mj
+  (billie_jean) as bj
+  (thriller_album) as th
+  fm --> qn : nrel_member_of_ensemble
+  fm --> br : nrel_author
+  br --> an : nrel_included_in_album
+  br --> qn : nrel_performer_of
+  br --> la : nrel_concert
+  mj --> bj : nrel_author
+  bj --> th : nrel_included_in_album
+}
+
+rectangle "Рок и джаз" {
+  (jimmy_page) as jp
+  (led_zeppelin) as lz
+  (stairway_to_heaven) as st
+  (pink_floyd) as pf
+  (money_pink_floyd) as mn
+  (john_coltrane) as jc
+  (giant_steps_coltrane) as gs
+  (saxophone) as sax
+  jp --> lz : nrel_member_of_ensemble
+  jp --> st : nrel_author
+  st --> lz : nrel_performer_of
+  mn --> pf : nrel_performer_of
+  jc --> gs : nrel_author
+  gs --> sax : nrel_performed_on_instrument
+}
+
+@enduml

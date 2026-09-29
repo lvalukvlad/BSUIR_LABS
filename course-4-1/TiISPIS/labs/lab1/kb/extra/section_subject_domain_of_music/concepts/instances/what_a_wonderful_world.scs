@@ -1,0 +1,22 @@
+what_a_wonderful_world
+<- concept_song;
+<- concept_musical_work;
+<- concept_jazz_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[What a Wonderful World]
+	(* <- lang_ru;; *);
+	[What a Wonderful World]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Песня, исполненная Луи Армстронгом (запись 1967); один из самых узнаваемых джазовых вокальных стандартов.]
+	(* <- lang_ru;; *);
+=> nrel_work_genre:
+	concept_jazz_music;
+=> nrel_performer_of:
+	louis_armstrong;
+=> nrel_performed_on_instrument:
+	trumpet;
+=> nrel_duration:
+	[2:21]
+	(* <- lang_en;; *);;

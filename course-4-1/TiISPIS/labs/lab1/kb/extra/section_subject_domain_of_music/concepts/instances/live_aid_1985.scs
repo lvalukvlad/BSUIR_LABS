@@ -1,0 +1,11 @@
+live_aid_1985
+<- concept_concert;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Live Aid (1985)]
+	(* <- lang_ru;; *);
+	[Live Aid (1985)]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Благотворительный концерт 13 июля 1985 года; выступление Queen на стадионе Уэмбли считается одним из лучших в истории рок-сцены.]
+	(* <- lang_ru;; *);;

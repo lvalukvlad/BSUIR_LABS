@@ -1,0 +1,26 @@
+symphony_no_6_tchaikovsky
+<- concept_symphony;
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Симфония № 6 «Патетическая»]
+	(* <- lang_ru;; *);
+	[Symphony No. 6 Pathétique]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Последняя симфония Чайковского (1893), одно из центральных сочинений позднего романтизма.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	pyotr_tchaikovsky;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_performer_of:
+	vienna_philharmonic;
+=> nrel_performed_on_instrument:
+	violin;
+=> nrel_performed_on_instrument:
+	cello;
+=> nrel_duration:
+	[около 45 минут]
+	(* <- lang_ru;; *);;

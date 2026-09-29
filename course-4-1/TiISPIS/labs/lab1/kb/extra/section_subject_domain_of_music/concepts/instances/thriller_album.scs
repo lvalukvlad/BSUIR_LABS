@@ -1,0 +1,16 @@
+thriller_album
+<- concept_album;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Thriller]
+	(* <- lang_ru;; *);
+	[Thriller]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Шестой студийный альбом Майкла Джексона (1982), один из самых продаваемых альбомов в истории.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	epic_records;
+=> nrel_release_year:
+	[1982]
+	(* <- lang_en;; *);;

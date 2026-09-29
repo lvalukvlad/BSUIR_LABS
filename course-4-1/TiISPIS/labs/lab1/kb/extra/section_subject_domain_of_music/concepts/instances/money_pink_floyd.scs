@@ -1,0 +1,26 @@
+money_pink_floyd
+<- concept_song;
+<- concept_musical_work;
+<- concept_rock_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Money]
+	(* <- lang_ru;; *);
+	[Money]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Композиция Pink Floyd с альбома The Dark Side of the Moon (1973), отличается размером 7/4 во вступлении.]
+	(* <- lang_ru;; *);
+=> nrel_work_genre:
+	concept_rock_music;
+=> nrel_included_in_album:
+	the_dark_side_of_the_moon;
+=> nrel_performer_of:
+	pink_floyd;
+=> nrel_performed_on_instrument:
+	bass_guitar;
+=> nrel_performed_on_instrument:
+	saxophone;
+=> nrel_duration:
+	[6:22]
+	(* <- lang_en;; *);;

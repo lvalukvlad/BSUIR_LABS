@@ -1,0 +1,15 @@
+jimmy_page
+<- concept_composer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Джимми Пейдж]
+	(* <- lang_ru;; *);
+	[Jimmy Page]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Английский гитарист и композитор, основатель и гитарист Led Zeppelin.]
+	(* <- lang_ru;; *);
+=> nrel_member_of_ensemble:
+	led_zeppelin;;

@@ -1,0 +1,15 @@
+freddie_mercury
+<- concept_singer;
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Фредди Меркьюри]
+	(* <- lang_ru;; *);
+	[Freddie Mercury]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Британский певец и автор песен, вокалист группы Queen.]
+	(* <- lang_ru;; *);
+=> nrel_member_of_ensemble:
+	queen_band;;

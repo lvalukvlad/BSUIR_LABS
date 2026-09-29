@@ -1,0 +1,30 @@
+bohemian_rhapsody
+<- concept_song;
+<- concept_musical_work;
+<- concept_rock_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Bohemian Rhapsody]
+	(* <- lang_ru;; *);
+	[Bohemian Rhapsody]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Песня Queen (1975) с альбома A Night at the Opera; исполнялась на Live Aid в 1985 году.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	freddie_mercury;
+=> nrel_work_genre:
+	concept_rock_music;
+=> nrel_included_in_album:
+	a_night_at_the_opera_queen;
+=> nrel_performer_of:
+	queen_band;
+=> nrel_performed_on_instrument:
+	piano;
+=> nrel_performed_on_instrument:
+	electric_guitar;
+=> nrel_concert:
+	live_aid_1985;
+=> nrel_duration:
+	[5:55]
+	(* <- lang_en;; *);;

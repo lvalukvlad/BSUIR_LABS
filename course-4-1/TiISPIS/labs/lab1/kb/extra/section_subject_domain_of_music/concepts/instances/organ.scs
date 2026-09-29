@@ -1,0 +1,11 @@
+organ
+<- concept_keyboard_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[орган]
+	(* <- lang_ru;; *);
+	[organ]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Клавишный духовой инструмент, традиционный для европейской церковной и академической музыки.]
+	(* <- lang_ru;; *);;

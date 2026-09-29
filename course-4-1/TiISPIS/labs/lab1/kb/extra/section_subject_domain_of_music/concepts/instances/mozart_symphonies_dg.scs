@@ -1,0 +1,15 @@
+mozart_symphonies_dg
+<- concept_album;
+=> nrel_main_idtf:
+	[Симфонии Моцарта (Deutsche Grammophon)]
+	(* <- lang_ru;; *);
+	[Mozart Symphonies (Deutsche Grammophon)]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Запись симфоний Моцарта в каталоге Deutsche Grammophon; используется как экземпляр альбома академической музыки.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	deutsche_grammophon;
+=> nrel_release_year:
+	[1960-е]
+	(* <- lang_ru;; *);;

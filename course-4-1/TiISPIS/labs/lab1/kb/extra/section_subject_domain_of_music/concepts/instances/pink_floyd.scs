@@ -1,0 +1,12 @@
+pink_floyd
+<- concept_musical_group;
+<- concept_performer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Pink Floyd]
+	(* <- lang_ru;; *);
+	[Pink Floyd]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Британская рок-группа, известная концептуальными альбомами и прогрессивным роком 1970-х.]
+	(* <- lang_ru;; *);;

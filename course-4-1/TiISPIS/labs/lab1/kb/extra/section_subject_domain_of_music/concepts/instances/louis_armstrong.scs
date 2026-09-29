@@ -1,0 +1,13 @@
+louis_armstrong
+<- concept_singer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Луи Армстронг]
+	(* <- lang_ru;; *);
+	[Louis Armstrong]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский джазовый трубач и певец, ключевая фигура раннего джаза.]
+	(* <- lang_ru;; *);;

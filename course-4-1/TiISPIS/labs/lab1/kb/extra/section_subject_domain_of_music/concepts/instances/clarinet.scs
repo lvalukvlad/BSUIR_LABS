@@ -1,0 +1,11 @@
+clarinet
+<- concept_wind_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[кларнет]
+	(* <- lang_ru;; *);
+	[clarinet]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Деревянный духовой язычковый инструмент, важный в классическом оркестре и в операх Моцарта.]
+	(* <- lang_ru;; *);;

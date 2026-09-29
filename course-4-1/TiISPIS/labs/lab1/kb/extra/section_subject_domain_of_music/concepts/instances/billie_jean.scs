@@ -1,24 +1,26 @@
-yesterday_song
+billie_jean
 <- concept_song;
 <- concept_musical_work;
 <- concept_pop_music;
 <- concept_wit_entity;
 => nrel_main_idtf:
-	[Yesterday]
+	[Billie Jean]
 	(* <- lang_ru;; *);
-	[Yesterday]
+	[Billie Jean]
 	(* <- lang_en;; *);
 => nrel_note:
-	[Песня The Beatles (1965), одна из наиболее покрываемых композиций в истории поп-музыки.]
+	[Сингл Майкла Джексона с альбома Thriller (1982), один из ключевых хитов поп-музыки 1980-х.]
 	(* <- lang_ru;; *);
 => nrel_author:
-	paul_mccartney;
+	michael_jackson;
 => nrel_work_genre:
 	concept_pop_music;
+=> nrel_included_in_album:
+	thriller_album;
 => nrel_performer_of:
-	the_beatles;
+	michael_jackson;
 => nrel_performed_on_instrument:
-	acoustic_guitar;
+	bass_guitar;
 => nrel_duration:
-	[2:05]
+	[4:54]
 	(* <- lang_en;; *);;

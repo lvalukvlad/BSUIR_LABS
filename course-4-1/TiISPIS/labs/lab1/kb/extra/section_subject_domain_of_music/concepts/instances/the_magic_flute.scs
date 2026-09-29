@@ -1,0 +1,21 @@
+the_magic_flute
+<- concept_opera;
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Волшебная флейта]
+	(* <- lang_ru;; *);
+	[The Magic Flute]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Опера Моцарта (премьера 1791, Вена), сочетает зингшпиль и масонскую символику.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	wolfgang_amadeus_mozart;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_performed_on_instrument:
+	clarinet;
+=> nrel_concert:
+	premiere_magic_flute_1791;;

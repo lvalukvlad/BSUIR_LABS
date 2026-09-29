@@ -1,0 +1,14 @@
+wolfgang_amadeus_mozart
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Вольфганг Амадей Моцарт]
+	(* <- lang_ru;; *);
+	[Wolfgang Amadeus Mozart]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Австрийский композитор (1756–1791), ключевая фигура венской классической школы.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	ludwig_van_beethoven;;

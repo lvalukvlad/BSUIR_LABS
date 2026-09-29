@@ -1,0 +1,16 @@
+a_night_at_the_opera_queen
+<- concept_album;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[A Night at the Opera]
+	(* <- lang_ru;; *);
+	[A Night at the Opera]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Четвёртый студийный альбом Queen (1975), содержит Bohemian Rhapsody.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	emi_records;
+=> nrel_release_year:
+	[1975]
+	(* <- lang_en;; *);;

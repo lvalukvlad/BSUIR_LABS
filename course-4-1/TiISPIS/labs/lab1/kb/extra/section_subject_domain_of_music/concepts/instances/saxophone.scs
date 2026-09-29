@@ -1,0 +1,11 @@
+saxophone
+<- concept_wind_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[саксофон]
+	(* <- lang_ru;; *);
+	[saxophone]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Духовой язычковый инструмент, широко используемый в джазе и популярной музыке.]
+	(* <- lang_ru;; *);;

@@ -1,0 +1,11 @@
+cello
+<- concept_string_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[виолончель]
+	(* <- lang_ru;; *);
+	[cello]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Смычковый струнный инструмент низкого регистра, входящий в состав симфонического оркестра.]
+	(* <- lang_ru;; *);;

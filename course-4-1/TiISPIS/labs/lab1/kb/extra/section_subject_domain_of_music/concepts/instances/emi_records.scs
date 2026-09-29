@@ -1,0 +1,10 @@
+emi_records
+<- concept_record_label;
+=> nrel_main_idtf:
+	[EMI]
+	(* <- lang_ru;; *);
+	[EMI]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Британская звукозаписывающая компания, выпускавшая записи Queen, Pink Floyd и других исполнителей.]
+	(* <- lang_ru;; *);;

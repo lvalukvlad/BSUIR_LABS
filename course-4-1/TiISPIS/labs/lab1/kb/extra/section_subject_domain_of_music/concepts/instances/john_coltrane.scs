@@ -1,0 +1,13 @@
+john_coltrane
+<- concept_composer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Джон Колтрейн]
+	(* <- lang_ru;; *);
+	[John Coltrane]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский джазовый саксофонист и композитор, один из ведущих новаторов модального и свободного джаза.]
+	(* <- lang_ru;; *);;

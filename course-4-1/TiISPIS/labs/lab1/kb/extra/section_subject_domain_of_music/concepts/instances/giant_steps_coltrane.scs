@@ -1,0 +1,24 @@
+giant_steps_coltrane
+<- concept_song;
+<- concept_musical_work;
+<- concept_jazz_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Giant Steps]
+	(* <- lang_ru;; *);
+	[Giant Steps]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Композиция Джона Колтрейна (1959), известная сложной гармонической последовательностью «Coltrane changes».]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	john_coltrane;
+=> nrel_work_genre:
+	concept_jazz_music;
+=> nrel_performer_of:
+	john_coltrane;
+=> nrel_performed_on_instrument:
+	saxophone;
+=> nrel_duration:
+	[4:43]
+	(* <- lang_en;; *);;

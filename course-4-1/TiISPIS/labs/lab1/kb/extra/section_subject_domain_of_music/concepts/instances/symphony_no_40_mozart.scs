@@ -1,0 +1,28 @@
+symphony_no_40_mozart
+<- concept_symphony;
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Симфония № 40 g-moll]
+	(* <- lang_ru;; *);
+	[Symphony No. 40 in G minor]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Одна из наиболее известных симфоний Моцарта (1788), KV 550.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	wolfgang_amadeus_mozart;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_included_in_album:
+	mozart_symphonies_dg;
+=> nrel_performer_of:
+	berlin_philharmonic;
+=> nrel_performed_on_instrument:
+	violin;
+=> nrel_performed_on_instrument:
+	clarinet;
+=> nrel_duration:
+	[около 25–30 минут]
+	(* <- lang_ru;; *);;

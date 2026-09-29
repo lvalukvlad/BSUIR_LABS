@@ -1,0 +1,10 @@
+epic_records
+<- concept_record_label;
+=> nrel_main_idtf:
+	[Epic Records]
+	(* <- lang_ru;; *);
+	[Epic Records]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский лейбл, подразделение Sony Music; выпускал альбомы Майкла Джексона.]
+	(* <- lang_ru;; *);;

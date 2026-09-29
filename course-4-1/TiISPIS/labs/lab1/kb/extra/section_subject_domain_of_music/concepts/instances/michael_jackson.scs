@@ -1,0 +1,14 @@
+michael_jackson
+<- concept_singer;
+<- concept_composer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Майкл Джексон]
+	(* <- lang_ru;; *);
+	[Michael Jackson]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский певец и автор песен, один из самых продаваемых исполнителей в истории поп-музыки.]
+	(* <- lang_ru;; *);;

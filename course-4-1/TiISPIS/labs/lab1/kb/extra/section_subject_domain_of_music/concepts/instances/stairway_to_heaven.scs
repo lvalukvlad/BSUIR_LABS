@@ -1,0 +1,28 @@
+stairway_to_heaven
+<- concept_song;
+<- concept_musical_work;
+<- concept_rock_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Stairway to Heaven]
+	(* <- lang_ru;; *);
+	[Stairway to Heaven]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Песня Led Zeppelin с безымянного четвёртого альбома (1971), одна из самых известных рок-композиций.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	jimmy_page;
+=> nrel_work_genre:
+	concept_rock_music;
+=> nrel_included_in_album:
+	led_zeppelin_iv;
+=> nrel_performer_of:
+	led_zeppelin;
+=> nrel_performed_on_instrument:
+	electric_guitar;
+=> nrel_performed_on_instrument:
+	bass_guitar;
+=> nrel_duration:
+	[8:02]
+	(* <- lang_en;; *);;

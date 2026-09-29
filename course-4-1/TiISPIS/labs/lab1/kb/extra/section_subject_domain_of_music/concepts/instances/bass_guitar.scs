@@ -1,0 +1,11 @@
+bass_guitar
+<- concept_string_instrument;
+<- concept_musical_instrument;
+=> nrel_main_idtf:
+	[бас-гитара]
+	(* <- lang_ru;; *);
+	[bass guitar]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Струнный щипковый инструмент низкого регистра, основа ритм-секции рок- и поп-ансамблей.]
+	(* <- lang_ru;; *);;

@@ -1,0 +1,12 @@
+queen_band
+<- concept_musical_group;
+<- concept_performer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Queen]
+	(* <- lang_ru;; *);
+	[Queen]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Британская рок-группа, образованная в 1970 году; известна театральностью звучания и концертами.]
+	(* <- lang_ru;; *);;

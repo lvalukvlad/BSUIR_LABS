@@ -1,0 +1,16 @@
+the_dark_side_of_the_moon
+<- concept_album;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[The Dark Side of the Moon]
+	(* <- lang_ru;; *);
+	[The Dark Side of the Moon]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Восьмой студийный альбом Pink Floyd (1973), один из самых долго присутствовавших в чартах альбомов.]
+	(* <- lang_ru;; *);
+=> nrel_record_label:
+	emi_records;
+=> nrel_release_year:
+	[1973]
+	(* <- lang_en;; *);;

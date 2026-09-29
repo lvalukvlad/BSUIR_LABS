@@ -1,0 +1,11 @@
+premiere_magic_flute_1791
+<- concept_concert;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[премьера «Волшебной флейты» (1791)]
+	(* <- lang_ru;; *);
+	[premiere of The Magic Flute (1791)]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Премьера оперы Моцарта 30 сентября 1791 года в Theater auf der Wieden (Вена).]
+	(* <- lang_ru;; *);;

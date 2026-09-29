@@ -1,0 +1,18 @@
+toccata_and_fugue_d_minor
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Токката и фуга ре минор]
+	(* <- lang_ru;; *);
+	[Toccata and Fugue in D minor]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Органное сочинение, традиционно приписываемое И. С. Баху (BWV 565).]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	johann_sebastian_bach;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_performed_on_instrument:
+	organ;;
