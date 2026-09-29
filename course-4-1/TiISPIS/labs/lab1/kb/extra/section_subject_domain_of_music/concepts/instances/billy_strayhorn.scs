@@ -1,0 +1,14 @@
+billy_strayhorn
+<- concept_composer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Билли Стрейхорн]
+	(* <- lang_ru;; *);
+	[Billy Strayhorn]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский джазовый композитор и аранжировщик, многолетний соавтор Дюка Эллингтона.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	duke_ellington;;

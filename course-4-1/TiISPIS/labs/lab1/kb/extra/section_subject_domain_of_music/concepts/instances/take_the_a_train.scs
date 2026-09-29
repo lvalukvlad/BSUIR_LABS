@@ -1,0 +1,26 @@
+take_the_a_train
+<- concept_song;
+<- concept_musical_work;
+<- concept_jazz_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Take the "A" Train]
+	(* <- lang_ru;; *);
+	[Take the "A" Train]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Джазовый стандарт 1939 года, визитная карточка оркестра Дюка Эллингтона; автор музыки — Билли Стрейхорн.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	billy_strayhorn;
+=> nrel_work_genre:
+	concept_jazz_music;
+=> nrel_performer_of:
+	duke_ellington;
+=> nrel_performed_on_instrument:
+	piano;
+=> nrel_performed_on_instrument:
+	saxophone;
+=> nrel_duration:
+	[около 3 минут]
+	(* <- lang_ru;; *);;

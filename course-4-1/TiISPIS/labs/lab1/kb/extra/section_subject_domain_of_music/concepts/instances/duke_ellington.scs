@@ -1,0 +1,13 @@
+duke_ellington
+<- concept_composer;
+<- concept_performer;
+<- concept_musician;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Дюк Эллингтон]
+	(* <- lang_ru;; *);
+	[Duke Ellington]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский джазовый композитор, пианист и руководитель оркестра (1899–1974).]
+	(* <- lang_ru;; *);;

@@ -11,4 +11,4 @@ pyotr_tchaikovsky
 	[Русский композитор (1840–1893), автор симфоний, балетов и опер позднего романтизма.]
 	(* <- lang_ru;; *);
 => nrel_influence:
-	later_european_composers;;
+	wolfgang_amadeus_mozart;;

@@ -52,6 +52,15 @@
 - Billie Jean — https://en.wikipedia.org/wiki/Billie_Jean
 - Epic Records — https://en.wikipedia.org/wiki/Epic_Records
 
+- Frédéric Chopin — https://en.wikipedia.org/wiki/Frédéric_Chopin
+- Nocturnes, Op. 9 (Chopin) — https://en.wikipedia.org/wiki/Nocturnes,_Op._9_(Chopin)
+- Duke Ellington — https://en.wikipedia.org/wiki/Duke_Ellington
+- Billy Strayhorn — https://en.wikipedia.org/wiki/Billy_Strayhorn
+- Take the "A" Train — https://en.wikipedia.org/wiki/Take_the_%22A%22_Train
+- Jimi Hendrix — https://en.wikipedia.org/wiki/Jimi_Hendrix
+- Purple Haze — https://en.wikipedia.org/wiki/Purple_Haze
+- Woodstock — https://en.wikipedia.org/wiki/Woodstock
+
 ## Общие справочники
 
 - Music (Britannica) — https://www.britannica.com/art/music

@@ -1,0 +1,14 @@
+jimi_hendrix
+<- concept_performer;
+<- concept_composer;
+<- concept_musician;
+<- concept_singer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Джими Хендрикс]
+	(* <- lang_ru;; *);
+	[Jimi Hendrix]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Американский гитарист, певец и автор песен (1942–1970), одна из ключевых фигур электрогитары в роке.]
+	(* <- lang_ru;; *);;

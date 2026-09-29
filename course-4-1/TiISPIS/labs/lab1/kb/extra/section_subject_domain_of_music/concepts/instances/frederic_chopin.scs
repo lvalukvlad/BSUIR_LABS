@@ -1,0 +1,15 @@
+frederic_chopin
+<- concept_composer;
+<- concept_musician;
+<- concept_performer;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Фредерик Шопен]
+	(* <- lang_ru;; *);
+	[Frédéric Chopin]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Польский композитор и пианист (1810–1849), автор ноктюрнов, мазурок и полонезов.]
+	(* <- lang_ru;; *);
+=> nrel_influence:
+	johann_sebastian_bach;;

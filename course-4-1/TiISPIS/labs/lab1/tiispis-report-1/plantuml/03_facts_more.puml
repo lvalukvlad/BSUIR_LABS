@@ -16,14 +16,19 @@ rectangle "Классика" {
   (berlin_philharmonic) as bp
   (organ) as organ
   (clarinet) as cl
+  (piano) as pno
   bach --> toc : nrel_author
   bach --> moz : nrel_influence
   moz --> s40 : nrel_author
   moz --> fl : nrel_author
   tch --> s6 : nrel_author
+  (frederic_chopin) as ch
+  (nocturne_op9_no2) as noc
   toc --> organ : nrel_performed_on_instrument
   s40 --> bp : nrel_performer_of
   s40 --> cl : nrel_performed_on_instrument
+  ch --> noc : nrel_author
+  noc --> pno : nrel_performed_on_instrument
 }
 
 rectangle "Рок и поп" {
@@ -40,8 +45,14 @@ rectangle "Рок и поп" {
   br --> an : nrel_included_in_album
   br --> qn : nrel_performer_of
   br --> la : nrel_concert
+  (jimi_hendrix) as jh
+  (purple_haze) as ph
+  (woodstock_1969) as ws
   mj --> bj : nrel_author
   bj --> th : nrel_included_in_album
+  jh --> ph : nrel_author
+  ph --> jh : nrel_performer_of
+  ph --> ws : nrel_concert
 }
 
 rectangle "Рок и джаз" {
@@ -53,12 +64,18 @@ rectangle "Рок и джаз" {
   (john_coltrane) as jc
   (giant_steps_coltrane) as gs
   (saxophone) as sax
+  (duke_ellington) as de
+  (billy_strayhorn) as bs
+  (take_the_a_train) as atrain
   jp --> lz : nrel_member_of_ensemble
   jp --> st : nrel_author
   st --> lz : nrel_performer_of
   mn --> pf : nrel_performer_of
   jc --> gs : nrel_author
   gs --> sax : nrel_performed_on_instrument
+  bs --> de : nrel_influence
+  bs --> atrain : nrel_author
+  atrain --> de : nrel_performer_of
 }
 
 @enduml

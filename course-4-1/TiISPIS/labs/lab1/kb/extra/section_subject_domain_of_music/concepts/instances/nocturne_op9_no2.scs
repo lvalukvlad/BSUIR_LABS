@@ -1,0 +1,23 @@
+nocturne_op9_no2
+<- concept_musical_work;
+<- concept_classical_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Ноктюрн Op. 9 No. 2]
+	(* <- lang_ru;; *);
+	[Nocturne Op. 9 No. 2]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Один из самых известных фортепианных ноктюрнов Шопена (1830–1832).]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	frederic_chopin;
+=> nrel_work_genre:
+	concept_classical_music;
+=> nrel_performer_of:
+	frederic_chopin;
+=> nrel_performed_on_instrument:
+	piano;
+=> nrel_duration:
+	[около 4 минут]
+	(* <- lang_ru;; *);;

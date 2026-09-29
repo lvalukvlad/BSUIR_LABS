@@ -1,0 +1,11 @@
+woodstock_1969
+<- concept_concert;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Woodstock (1969)]
+	(* <- lang_ru;; *);
+	[Woodstock (1969)]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Музыкальный фестиваль 15–18 августа 1969 года в штате Нью-Йорк; одно из ключевых событий рок-культуры.]
+	(* <- lang_ru;; *);;

@@ -1,0 +1,26 @@
+purple_haze
+<- concept_song;
+<- concept_musical_work;
+<- concept_rock_music;
+<- concept_wit_entity;
+=> nrel_main_idtf:
+	[Purple Haze]
+	(* <- lang_ru;; *);
+	[Purple Haze]
+	(* <- lang_en;; *);
+=> nrel_note:
+	[Песня The Jimi Hendrix Experience (1967); исполнялась на фестивале Woodstock в 1969 году.]
+	(* <- lang_ru;; *);
+=> nrel_author:
+	jimi_hendrix;
+=> nrel_work_genre:
+	concept_rock_music;
+=> nrel_performer_of:
+	jimi_hendrix;
+=> nrel_performed_on_instrument:
+	electric_guitar;
+=> nrel_concert:
+	woodstock_1969;
+=> nrel_duration:
+	[2:50]
+	(* <- lang_en;; *);;
